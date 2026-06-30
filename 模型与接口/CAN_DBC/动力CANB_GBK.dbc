@@ -1,0 +1,622 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: PDU PMSM SRM TWV VCU Vector__XXX
+
+
+BO_ 2550173648 VCU_DCDC1: 8 VCU
+ SG_ VCU_DCDC1_En : 0|2@1+ (1,0) [0|3] ""  Vector__XXX
+
+BO_ 2550178053 Ctrl_HVC: 8 VCU
+ SG_ EDrv1_PowOnCmd : 0|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ EDrv2_PowOnCmd : 2|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ PaxAC_PowOnCmd : 4|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ PTC_PowOnCmd : 6|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ HvcCmd_Life : 60|4@1+ (1,0) [0|15] ""  Vector__XXX
+
+BO_ 2550190223 DCDC1_1: 8 Vector__XXX
+ SG_ DCDC1_OutVolt : 0|16@1+ (0.1,0) [0|1000] "V"  Vector__XXX
+ SG_ DCDC1_OutCurr : 16|16@1+ (0.1,0) [0|1000] "A"  Vector__XXX
+ SG_ DCDC1_InputVolt : 32|16@1+ (0.1,0) [0|1000] "V"  Vector__XXX
+ SG_ DCDC1_ModuleTemp : 48|8@1+ (1,-40) [-40|215] "C"  Vector__XXX
+
+BO_ 2550203809 HVC1_LV: 8 Vector__XXX
+ SG_ Batt_Vol : 0|8@1+ (0.2,0) [0|51] "V"  Vector__XXX
+ SG_ DCDC_OutVol : 8|8@1+ (0.2,0) [0|51] "V"  Vector__XXX
+ SG_ HVC_KL15Vol : 24|8@1+ (0.2,0) [0|51] "V"  Vector__XXX
+ SG_ HVC_ChgWakeUpVol : 32|8@1+ (0.2,0) [0|51] "V"  Vector__XXX
+ SG_ HVC1_Life : 60|4@1+ (1,0) [0|15] ""  Vector__XXX
+
+BO_ 2550255759 DCDC1_2: 8 Vector__XXX
+ SG_ DCDC1_FaultLevel : 0|2@1+ (1,0) [0|3] ""  Vector__XXX
+ SG_ DCDC1_WorkSt : 2|4@1+ (1,0) [0|15] ""  Vector__XXX
+ SG_ DCDC1_FaultSt : 8|16@1+ (1,0) [0|65535] ""  Vector__XXX
+ SG_ DCDC1_HWVersion : 48|8@1+ (1,0) [0|255] ""  Vector__XXX
+ SG_ DCDC1_SWVersion : 56|8@1+ (1,0) [0|255] ""  Vector__XXX
+
+BO_ 2550334881 HVC3_Temp: 8 Vector__XXX
+ SG_ PDU_Temp : 0|8@1+ (1,-40) [-40|210] "℃"  Vector__XXX
+ SG_ Out_Temp : 40|8@1+ (1,-40) [-40|210] "℃"  Vector__XXX
+ SG_ In_Temp : 48|8@1+ (1,-40) [-40|210] "℃"  Vector__XXX
+ SG_ HVC3_Life : 60|4@1+ (1,0) [0|15] ""  Vector__XXX
+
+BO_ 2550400417 HVC4_RlySt: 8 Vector__XXX
+ SG_ KM01_MotDrv1MainSt : 0|2@1+ (1,0) [0|3] ""  Vector__XXX
+ SG_ KM04_MotDrv1PreSt : 2|2@1+ (1,0) [0|3] ""  Vector__XXX
+ SG_ KM02_MotDrv2MainSt : 4|2@1+ (1,0) [0|3] ""  Vector__XXX
+ SG_ KM05_MotDrv2PreSt : 6|2@1+ (1,0) [0|3] ""  Vector__XXX
+ SG_ KM03_PaxACSt : 8|2@1+ (1,0) [0|3] ""  Vector__XXX
+ SG_ KM06_PTCSt : 10|2@1+ (1,0) [0|3] ""  Vector__XXX
+ SG_ MotDrv1_PowOnSt : 16|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ MotDrv2_PowOnSt : 17|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ PaxAC_PowOnSt : 18|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ PTC_PowOnSt : 19|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ HVC_FaultCode : 24|32@1+ (1,0) [0|4294967295] ""  Vector__XXX
+ SG_ HVC_FaultLevel : 56|2@1+ (1,0) [0|3] ""  Vector__XXX
+ SG_ HVC4_Life : 60|4@1+ (1,0) [0|15] ""  Vector__XXX
+
+BO_ 2550597025 HVC7_HV1: 8 Vector__XXX
+ SG_ PwrPos_Vol : 0|12@1+ (0.5,-1024) [-1024|1023.5] "V"  Vector__XXX
+ SG_ PTC_Vol : 12|12@1+ (0.5,-1024) [-1024|1023.5] "V"  Vector__XXX
+ SG_ MotDrv1_Vol : 24|12@1+ (0.5,-1024) [-1024|1023.5] "V"  Vector__XXX
+ SG_ MotDrv2_Vol : 36|12@1+ (0.5,-1024) [-1024|1023.5] "V"  Vector__XXX
+ SG_ PaxAC_Vol : 48|12@1+ (0.5,-1024) [-1024|1023.5] "V"  Vector__XXX
+ SG_ HVC5_Life : 60|4@1+ (1,0) [0|15] ""  Vector__XXX
+
+BO_ 2352082896 VCU2MCU1: 8 VCU
+ SG_ VCU2OilMotor_En : 0|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ VCU2OilMotor_WorkMode : 1|2@1+ (1,0) [0|3] ""  Vector__XXX
+ SG_ VCU2OilMotor_CtrlMode : 3|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ VCU2OilMotor_AntiSlipEn : 4|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ VCU2OilMotor_ActiveDisCharge : 5|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ VCU2OilMotor_BusCurLimit : 8|8@1+ (4,0) [0|1000] ""  Vector__XXX
+ SG_ VCU2OilMotor_TarSpd : 16|16@1+ (0.25,0) [0|16383.75] ""  Vector__XXX
+ SG_ VCU2OilMotor_TarTrq : 32|16@1+ (0.1,0) [0|6553.5] ""  Vector__XXX
+ SG_ VCU2OilMotor_RegenVoltLimit : 48|8@1+ (4,0) [0|255] ""  Vector__XXX
+ SG_ VCU2OilMotor_CtrlBusCounter : 56|8@1+ (1,0) [0|255] ""  Vector__XXX
+
+BO_ 2352083408 VCU2MCU2: 8 VCU
+ SG_ VCU2DrvMotor_En : 0|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ VCU2DrvMotor_WorkMode : 1|2@1+ (1,0) [0|3] ""  Vector__XXX
+ SG_ VCU2DrvMotor_CtrlMode : 3|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ VCU2DrvMotor_AntiSlipEn : 4|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ VCU2DrvMotor_ActiveDisCharge : 5|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ VCU2DrvMotor_BusCurLimit : 8|8@1+ (4,0) [0|1000] ""  Vector__XXX
+ SG_ VCU2DrvMotor_TarSpd : 16|16@1+ (0.25,0) [0|16383.75] ""  Vector__XXX
+ SG_ VCU2DrvMotor_TarTrq : 32|16@1+ (0.1,0) [0|6553.5] ""  Vector__XXX
+ SG_ VCU2DrvMotor_RegenVoltLimit : 48|8@1+ (4,0) [0|255] ""  Vector__XXX
+ SG_ VCU2DrvMotor_CtrlBusCounter : 56|8@1+ (1,0) [0|255] ""  Vector__XXX
+
+BO_ 2553729263 MCU1Msg1: 8 Vector__XXX
+ SG_ OilMotorBusCur : 0|16@1- (0.1,-600) [-600|5953.5] ""  Vector__XXX
+ SG_ OilMotorBusVolt : 16|16@1+ (1,0) [0|65535] ""  Vector__XXX
+ SG_ OilMotorSpd : 32|16@1- (1,-30000) [-30000|35535] ""  Vector__XXX
+ SG_ OilMotorTrq : 48|16@1+ (0.1,0) [0|6553.5] ""  Vector__XXX
+
+BO_ 2553794799 MCU1Msg2: 8 Vector__XXX
+ SG_ OilMotorSt : 0|4@1+ (1,0) [0|15] ""  Vector__XXX
+ SG_ OilMotorWorkModeSt : 4|3@1+ (1,0) [0|15] ""  Vector__XXX
+ SG_ OilMotorAntiSlipSt : 7|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ OilMotorFaultLevel : 8|2@1+ (1,0) [0|3] ""  Vector__XXX
+ SG_ OilMotorPwrLimitpct : 16|8@1+ (1,0) [0|100] ""  Vector__XXX
+ SG_ OilMotorFaultCode : 24|8@1+ (1,0) [0|100] ""  Vector__XXX
+ SG_ OilMotorMCUID : 32|16@1+ (1,0) [0|65535] ""  Vector__XXX
+ SG_ Reserved : 48|8@1+ (1,0) [0|255] ""  Vector__XXX
+ SG_ OilMotorBusCounter : 56|8@1+ (1,0) [0|255] ""  Vector__XXX
+
+BO_ 2553860335 MCU1Msg3: 8 Vector__XXX
+ SG_ OilMotorTemp1 : 0|8@1- (1,-50) [-50|205] ""  Vector__XXX
+ SG_ OilMotorTemp2 : 8|8@1- (1,-50) [-50|205] ""  Vector__XXX
+ SG_ OilMotorTemp3 : 16|8@1- (1,-50) [-50|205] ""  Vector__XXX
+ SG_ OilMotorMCUTemp1 : 24|8@1- (1,-50) [-50|205] ""  Vector__XXX
+ SG_ OilMotorMCUTemp2 : 32|8@1- (1,-50) [-50|205] ""  Vector__XXX
+ SG_ OilMotorMCUTemp3 : 40|8@1- (1,-50) [-50|205] ""  Vector__XXX
+
+BO_ 2553729265 MCU2Msg1: 8 Vector__XXX
+ SG_ DrvMotorBusCur : 0|16@1- (0.1,-600) [-600|5953.5] ""  Vector__XXX
+ SG_ DrvMotorBusVolt : 16|16@1+ (1,0) [0|65535] ""  Vector__XXX
+ SG_ DrvMotorSpd : 32|16@1- (1,-30000) [-30000|35535] ""  Vector__XXX
+ SG_ DrvMotorTrq : 48|16@1+ (0.1,0) [0|6553.5] ""  Vector__XXX
+
+BO_ 2553794801 MCU2Msg2: 8 Vector__XXX
+ SG_ DrvMotorSt : 0|4@1+ (1,0) [0|15] ""  Vector__XXX
+ SG_ DrvMotorWorkModeSt : 4|3@1+ (1,0) [0|15] ""  Vector__XXX
+ SG_ DrvMotorAntiSlipSt : 7|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ DrvMotorFaultLevel : 8|2@1+ (1,0) [0|3] ""  Vector__XXX
+ SG_ DrvMotorPwrLimitpct : 16|8@1+ (1,0) [0|100] ""  Vector__XXX
+ SG_ DrvMotorFaultCode : 24|8@1+ (1,0) [0|100] ""  Vector__XXX
+ SG_ DrvMotorMCUID : 32|16@1+ (1,0) [0|65535] ""  Vector__XXX
+ SG_ Reserved : 48|8@1+ (1,0) [0|255] ""  Vector__XXX
+ SG_ DrvMotorBusCounter : 56|8@1+ (1,0) [0|255] ""  Vector__XXX
+
+BO_ 2553860337 MCU2Msg3: 8 Vector__XXX
+ SG_ DrvMotorTemp1 : 0|8@1- (1,-50) [-50|205] ""  Vector__XXX
+ SG_ DrvMotorTemp2 : 8|8@1- (1,-50) [-50|205] ""  Vector__XXX
+ SG_ DrvMotorTemp3 : 16|8@1- (1,-50) [-50|205] ""  Vector__XXX
+ SG_ DrvMotorMCUTemp1 : 24|8@1- (1,-50) [-50|205] ""  Vector__XXX
+ SG_ DrvMotorMCUTemp2 : 32|8@1- (1,-50) [-50|205] ""  Vector__XXX
+ SG_ DrvMotorMCUTemp3 : 40|8@1- (1,-50) [-50|205] ""  Vector__XXX
+
+BO_ 2349308583 VCU_ACU1: 8 VCU
+ SG_ DcdcCmd : 0|8@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ DcacEpsCmd : 16|8@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ DcacEpsMode : 24|8@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ DcacAcCmd : 32|8@1+ (1,0) [0|0] ""  Vector__XXX
+
+BO_ 2349377434 ACU1: 8 Vector__XXX
+ SG_ OutputVoltage : 0|16@1- (0.1,-1000) [-1000|1000] "V"  Vector__XXX
+ SG_ OutputCurrent : 16|16@1- (0.1,-1000) [-1000|1000] "A"  Vector__XXX
+ SG_ InputVoltage : 32|16@1- (0.1,-1000) [-1000|1000] "V"  Vector__XXX
+ SG_ Temp : 48|8@1- (1,-50) [-50|200] "℃"  Vector__XXX
+ SG_ FaultCode : 56|8@1+ (1,0) [0|255] ""  Vector__XXX
+
+BO_ 2349442971 ACU2: 8 Vector__XXX
+ SG_ CurrentW : 0|16@1- (0.1,-1000) [-1000|1000] "A"  Vector__XXX
+ SG_ CurrentV : 16|16@1- (0.1,-1000) [-1000|1000] "A"  Vector__XXX
+ SG_ CurrentU : 32|16@1- (0.1,-1000) [-1000|1000] "A"  Vector__XXX
+ SG_ Temp : 48|8@1- (1,-50) [-50|200] "℃"  Vector__XXX
+ SG_ FaultCode : 56|8@1+ (1,0) [0|255] ""  Vector__XXX
+
+BO_ 2349508509 ACU3: 8 Vector__XXX
+ SG_ CurrentW : 0|16@1- (0.1,-1000) [-1000|1000] "A"  Vector__XXX
+ SG_ CurrentV : 16|16@1- (0.1,-1000) [-1000|1000] "A"  Vector__XXX
+ SG_ CurrentU : 32|16@1- (0.1,-1000) [-1000|1000] "A"  Vector__XXX
+ SG_ Temp : 48|8@1- (1,-50) [-50|200] "℃"  Vector__XXX
+ SG_ FaultCode : 56|8@1+ (1,0) [0|255] ""  Vector__XXX
+
+BO_ 2364690491 VCU_PDU: 8 VCU
+ SG_ VCU_ShrRlyCtl : 0|2@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ VCU_HVACRlyCtl : 6|2@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ VCU_PTCRlyCtl : 8|2@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ VCU_HghVtgCnt : 16|2@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ VCU_DCCpstRlyCtl : 40|2@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ VCU_HrtBt : 56|8@1+ (1,0) [0|0] ""  Vector__XXX
+
+BO_ 2566859720 PDU_RelaySts: 8 PDU
+ SG_ PDU_ShrRlySts : 0|2@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ PDU_PosRlySts : 2|2@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ PDU_PosRlyPcgRlySts : 4|2@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ PDU_HVACRlySts : 6|2@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ PDU_PTCRlySts : 8|2@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ MultiOne_HVACPcgRlySts : 10|2@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ PDU_HrtBt : 56|8@1+ (1,0) [0|0] ""  Vector__XXX
+
+BO_ 2365523439 TM_HCU_Command: 8 VCU
+ SG_ MCU_Enable : 0|1@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ Fault_Reset : 1|1@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ Control_Mode : 2|2@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ Gear : 4|2@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ FootBrake : 6|1@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ HandBrake : 7|1@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ Demand_Limit_High_Positive_Value : 8|12@1+ (4,0) [0|16384] "rpm"  Vector__XXX
+ SG_ Demand_Limit_Low_Negative_Value : 20|12@1+ (4,0) [0|16384] "rpm"  Vector__XXX
+ SG_ Demand_Torque : 32|16@1+ (1,-5000) [-5000|5000] "Nm"  Vector__XXX
+ SG_ Demand_Speed : 48|16@1+ (1,-15000) [-15000|15000] "rpm"  Vector__XXX
+
+BO_ 2365521925 TM_MCU_STATUS_1: 8 PMSM
+ SG_ Motor_Speed : 0|16@1+ (1,-15000) [-15000|15000] "rpm"  Vector__XXX
+ SG_ Motor_Torque : 16|16@1+ (1,-5000) [-5000|5000] "Nm"  Vector__XXX
+ SG_ Motor_AC_Current : 32|16@1+ (0.1,0) [0|1000] "A"  Vector__XXX
+ SG_ Precharge_Allow : 52|1@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ Active_Discharge_Enable_Feedback : 53|1@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ IGBT_Enable_Feedback : 54|1@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ Life_counter : 60|4@1+ (1,0) [0|0] ""  Vector__XXX
+
+BO_ 2365522181 TM_MCU_STATUS2: 8 PMSM
+ SG_ Motor_Temperature : 0|8@1+ (1,-40) [-40|215] "℃"  Vector__XXX
+ SG_ MCU_temperature : 8|8@1+ (1,-40) [-40|215] "℃"  Vector__XXX
+ SG_ Torque_Limit_High : 16|16@1+ (1,0) [0|5000] "Nm"  Vector__XXX
+ SG_ Torque_Limit_Low : 32|16@1+ (1,-5000) [-5000|0] "Nm"  Vector__XXX
+ SG_ Fail_Grade : 48|4@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ Life_counter : 60|4@1+ (1,0) [0|0] ""  Vector__XXX
+
+BO_ 2365522437 TM_MCU_STATUS3: 8 PMSM
+ SG_ Fault_Code : 0|8@1+ (1,0) [0|255] ""  Vector__XXX
+ SG_ Alarm_Code : 8|8@1+ (1,0) [0|255] ""  Vector__XXX
+ SG_ DC_Current_A : 16|16@1+ (1,-1000) [-1000|1000] "A"  Vector__XXX
+ SG_ DC_Voltage_V : 32|16@1+ (0.1,0) [0|1000] "V"  Vector__XXX
+ SG_ Life_counter : 48|4@1+ (1,0) [0|15] ""  Vector__XXX
+
+BO_ 2365523695 ISG_HCU_Command: 8 VCU
+ SG_ MCU_Enable : 0|1@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ Fault_Reset : 1|1@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ Control_Mode : 2|2@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ Gear : 4|2@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ FootBrake : 6|1@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ HandBrake : 7|1@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ Demand_Limit_High_Positive_Value : 8|12@1+ (4,0) [0|16384] "rpm"  Vector__XXX
+ SG_ Demand_Limit_Low_Negative_Value : 20|12@1+ (4,0) [0|16384] "rpm"  Vector__XXX
+ SG_ Demand_Torque : 32|16@1+ (1,-5000) [-5000|5000] "Nm"  Vector__XXX
+ SG_ Demand_Speed : 48|16@1+ (1,-15000) [-15000|15000] "rpm"  Vector__XXX
+
+BO_ 2365521926 ISG_MCU_STATUS_1: 8 PMSM
+ SG_ Motor_Speed : 0|16@1+ (1,-15000) [-15000|15000] "rpm"  Vector__XXX
+ SG_ Motor_Torque : 16|16@1+ (1,-5000) [-5000|5000] "Nm"  Vector__XXX
+ SG_ Motor_AC_Current : 32|16@1+ (0.1,0) [0|1000] "A"  Vector__XXX
+ SG_ Precharge_Allow : 52|1@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ Active_Discharge_Enable_Feedback : 53|1@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ IGBT_Enable_Feedback : 54|1@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ Life_counter : 60|4@1+ (1,0) [0|0] ""  Vector__XXX
+
+BO_ 2365522182 ISG_MCU_STATUS2: 8 PMSM
+ SG_ Motor_Temperature : 0|8@1+ (1,-40) [-40|215] "℃"  Vector__XXX
+ SG_ MCU_temperature : 8|8@1+ (1,-40) [-40|215] "℃"  Vector__XXX
+ SG_ Torque_Limit_High : 16|16@1+ (1,0) [0|5000] "Nm"  Vector__XXX
+ SG_ Torque_Limit_Low : 32|16@1+ (1,-5000) [-5000|0] "Nm"  Vector__XXX
+ SG_ Fail_Grade : 48|4@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ Life_counter : 60|4@1+ (1,0) [0|0] ""  Vector__XXX
+
+BO_ 2365522438 ISG_MCU_STATUS3: 8 PMSM
+ SG_ Fault_Code : 0|8@1+ (1,0) [0|255] ""  Vector__XXX
+ SG_ Alarm_Code : 8|8@1+ (1,0) [0|255] ""  Vector__XXX
+ SG_ DC_Current_A : 16|16@1+ (1,-1000) [-1000|1000] "A"  Vector__XXX
+ SG_ DC_Voltage_V : 32|16@1+ (0.1,0) [0|1000] "V"  Vector__XXX
+ SG_ Life_counter : 48|4@1+ (1,0) [0|15] ""  Vector__XXX
+
+BO_ 2566858223 VCU_TWV: 8 VCU
+ SG_ VCU_TWV1_P_PosSet : 24|8@1+ (0.4,0) [0|100] "%"  Vector__XXX
+ SG_ VCU_TWV1_P_MoveEnable : 33|1@1+ (1,0) [0|1] ""  Vector__XXX
+
+BO_ 2566857787 TWV: 8 TWV
+ SG_ TWV1_P_RESP_ERROR : 0|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ TWV1_P_OverVoltageFlt : 1|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ TWV1_P_OverCurrent : 2|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ TWV1_P_OverTempFlt : 3|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ TWV1_P_UnderVoltageFlt : 4|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ TWV1_P_StallFlt : 5|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ TWV1_P_MotorOpenCircuitFlt : 6|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ TWV1_P_MotorSta : 7|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ TWV1_P_RealSta : 8|8@1+ (0.4,0) [0|100] "%"  Vector__XXX
+
+
+
+CM_ SG_ 2550173648 VCU_DCDC1_En "DCDC工作使能命令; 0x3: 预留; 0x2: 停止; 0x1: 启动; 0x0: 预留";
+CM_ SG_ 2550178053 EDrv1_PowOnCmd "电驱1上电指令; 0x1: 闭合; 0x0: 断开";
+CM_ SG_ 2550178053 EDrv2_PowOnCmd "电驱2上电指令; 0x1: 闭合; 0x0: 断开";
+CM_ SG_ 2550178053 PaxAC_PowOnCmd "空调上电指令; 0x1: 闭合; 0x0: 断开";
+CM_ SG_ 2550178053 PTC_PowOnCmd "PTC上电指令; 0x1: 闭合; 0x0: 断开";
+CM_ SG_ 2550178053 HvcCmd_Life "控制消息心跳信号";
+CM_ SG_ 2550190223 DCDC1_OutVolt "DCDC输出电压";
+CM_ SG_ 2550190223 DCDC1_OutCurr "DCDC输出电流";
+CM_ SG_ 2550190223 DCDC1_InputVolt "DCDC输入电压";
+CM_ SG_ 2550190223 DCDC1_ModuleTemp "DCDC模块温度";
+CM_ SG_ 2550203809 Batt_Vol "低压输入电压";
+CM_ SG_ 2550203809 DCDC_OutVol "DCDC输出电压";
+CM_ SG_ 2550203809 HVC_KL15Vol "高压控制板KL15电压";
+CM_ SG_ 2550203809 HVC_ChgWakeUpVol "充电唤醒电压";
+CM_ SG_ 2550203809 HVC1_Life "心跳信号";
+CM_ SG_ 2550255759 DCDC1_FaultLevel "DCDC故障等级; 0x3: 3级故障（告警）; 0x2: 2级故障（降额运行）; 0x1: 1级故障（关机保护）; 0x0: 无故障";
+CM_ SG_ 2550255759 DCDC1_WorkSt "DCDC工作状态; 0x6: 保护关机; 0x5: 正常关机; 0x4: 运行; 0x3: 启动; 0x2: 待机; 0x1: 自检; 0x0: 预留";
+CM_ SG_ 2550255759 DCDC1_FaultSt "DCDC故障状态; 0x400: 母线故障; 0x200: 通信故障; 0x100: 硬件故障; 0x80: 内部通信故障; 0x40: 输出过流; 0x20: 过温; 0x10: 输出欠压; 0x8: 输出短路; 0x4: 输出过压; 0x2: 输入欠压; 0x1: 输入过压; 0x0: 无故障";
+CM_ SG_ 2550255759 DCDC1_HWVersion "DCDC硬件版本";
+CM_ SG_ 2550255759 DCDC1_SWVersion "DCDC软件件版本";
+CM_ SG_ 2550334881 PDU_Temp "PDU控制器温度";
+CM_ SG_ 2550334881 Out_Temp "出水口温度";
+CM_ SG_ 2550334881 In_Temp "进水口温度";
+CM_ SG_ 2550334881 HVC3_Life "心跳信号";
+CM_ SG_ 2550400417 KM01_MotDrv1MainSt "KM01:电驱1主接接触器状态; 0x3: 保留; 0x2: 异常; 0x1: 闭合; 0x0: 断开";
+CM_ SG_ 2550400417 KM04_MotDrv1PreSt "KM04:电驱1预充接触器状态; 0x3: 保留; 0x2: 异常; 0x1: 闭合; 0x0: 断开";
+CM_ SG_ 2550400417 KM02_MotDrv2MainSt "KM02:电驱2主接接触器状态; 0x3: 保留; 0x2: 异常; 0x1: 闭合; 0x0: 断开";
+CM_ SG_ 2550400417 KM05_MotDrv2PreSt "KM05:电驱2预充接触器状态; 0x3: 保留; 0x2: 异常; 0x1: 闭合; 0x0: 断开";
+CM_ SG_ 2550400417 KM03_PaxACSt "KM03:空调接触器状态; 0x3: 保留; 0x2: 异常; 0x1: 闭合; 0x0: 断开";
+CM_ SG_ 2550400417 KM06_PTCSt "KM06:PTC接触器状态; 0x3: 保留; 0x2: 异常; 0x1: 闭合; 0x0: 断开";
+CM_ SG_ 2550400417 MotDrv1_PowOnSt "电驱1上电状态; 0x1: 上电完成; 0x0: 未上电";
+CM_ SG_ 2550400417 MotDrv2_PowOnSt "电驱2上电状态; 0x1: 上电完成; 0x0: 未上电";
+CM_ SG_ 2550400417 PaxAC_PowOnSt "空调上电状态; 0x1: 上电完成; 0x0: 未上电";
+CM_ SG_ 2550400417 PTC_PowOnSt "PTC上电状态; 0x1: 上电完成; 0x0: 未上电";
+CM_ SG_ 2550400417 HVC_FaultCode "高压控制板故障码";
+CM_ SG_ 2550400417 HVC_FaultLevel "高压控制板故障等级";
+CM_ SG_ 2550400417 HVC4_Life "心跳信号";
+CM_ SG_ 2550597025 PwrPos_Vol "多合一输入电压";
+CM_ SG_ 2550597025 PTC_Vol "电除霜电压";
+CM_ SG_ 2550597025 MotDrv1_Vol "电驱1电压";
+CM_ SG_ 2550597025 MotDrv2_Vol "电驱2电压";
+CM_ SG_ 2550597025 PaxAC_Vol "乘客空调电压";
+CM_ SG_ 2550597025 HVC5_Life "心跳信号";
+CM_ SG_ 2352082896 VCU2OilMotor_En "油泵电机使能";
+CM_ SG_ 2352082896 VCU2OilMotor_WorkMode "油泵电机工作模式";
+CM_ SG_ 2352082896 VCU2OilMotor_CtrlMode "油泵电机控制模式";
+CM_ SG_ 2352082896 VCU2OilMotor_AntiSlipEn "防溜坡使能";
+CM_ SG_ 2352082896 VCU2OilMotor_ActiveDisCharge "油泵电机主动放电功能";
+CM_ SG_ 2352082896 VCU2OilMotor_BusCurLimit "油泵电机母线电流限制";
+CM_ SG_ 2352082896 VCU2OilMotor_TarSpd "油泵电机目标转速";
+CM_ SG_ 2352082896 VCU2OilMotor_TarTrq "油泵电机目标转矩";
+CM_ SG_ 2352082896 VCU2OilMotor_RegenVoltLimit "油泵电机发电限制电压";
+CM_ SG_ 2352082896 VCU2OilMotor_CtrlBusCounter "油泵电机控制报文循环计数值";
+CM_ SG_ 2352083408 VCU2DrvMotor_En "驱动电机使能";
+CM_ SG_ 2352083408 VCU2DrvMotor_WorkMode "驱动电机工作模式";
+CM_ SG_ 2352083408 VCU2DrvMotor_CtrlMode "驱动电机控制模式";
+CM_ SG_ 2352083408 VCU2DrvMotor_AntiSlipEn "防溜坡使能";
+CM_ SG_ 2352083408 VCU2DrvMotor_ActiveDisCharge "驱动电机主动放电功能";
+CM_ SG_ 2352083408 VCU2DrvMotor_BusCurLimit "驱动电机母线电流限制";
+CM_ SG_ 2352083408 VCU2DrvMotor_TarSpd "驱动电机目标转速";
+CM_ SG_ 2352083408 VCU2DrvMotor_TarTrq "驱动电机目标转矩";
+CM_ SG_ 2352083408 VCU2DrvMotor_RegenVoltLimit "驱动电机发电限制电压";
+CM_ SG_ 2352083408 VCU2DrvMotor_CtrlBusCounter "驱动电机控制报文循环计数值";
+CM_ SG_ 2553729263 OilMotorBusCur "油泵电机母线电流";
+CM_ SG_ 2553729263 OilMotorBusVolt "油泵电机母线电压";
+CM_ SG_ 2553729263 OilMotorSpd "油泵电机当前转速";
+CM_ SG_ 2553729263 OilMotorTrq "油泵电机当前转矩";
+CM_ SG_ 2553794799 OilMotorSt "油泵电机状态";
+CM_ SG_ 2553794799 OilMotorWorkModeSt "油泵电机工作模式反馈";
+CM_ SG_ 2553794799 OilMotorAntiSlipSt "油泵电机防溜坡状态反馈";
+CM_ SG_ 2553794799 OilMotorFaultLevel "油泵电机故障状态";
+CM_ SG_ 2553794799 OilMotorPwrLimitpct "油泵电机限功率百分比";
+CM_ SG_ 2553794799 OilMotorFaultCode "油泵电机故障代码";
+CM_ SG_ 2553794799 OilMotorMCUID "油泵电机MCU身份ID";
+CM_ SG_ 2553794799 Reserved "预留";
+CM_ SG_ 2553794799 OilMotorBusCounter "油泵电机反馈报文循环计数值";
+CM_ SG_ 2553860335 OilMotorTemp1 "油泵电机U相温度";
+CM_ SG_ 2553860335 OilMotorTemp2 "油泵电机V相温度";
+CM_ SG_ 2553860335 OilMotorTemp3 "油泵电机W相温度";
+CM_ SG_ 2553860335 OilMotorMCUTemp1 "油泵电机控制器U相温度";
+CM_ SG_ 2553860335 OilMotorMCUTemp2 "油泵电机控制器V相温度";
+CM_ SG_ 2553860335 OilMotorMCUTemp3 "油泵电机控制器W相温度";
+CM_ SG_ 2553729265 DrvMotorBusCur "驱动电机母线电流";
+CM_ SG_ 2553729265 DrvMotorBusVolt "驱动电机母线电压";
+CM_ SG_ 2553729265 DrvMotorSpd "驱动电机当前转速";
+CM_ SG_ 2553729265 DrvMotorTrq "驱动电机当前转矩";
+CM_ SG_ 2553794801 DrvMotorSt "驱动电机状态";
+CM_ SG_ 2553794801 DrvMotorWorkModeSt "驱动电机工作模式反馈";
+CM_ SG_ 2553794801 DrvMotorAntiSlipSt "驱动电机防溜坡状态反馈";
+CM_ SG_ 2553794801 DrvMotorFaultLevel "驱动电机故障状态";
+CM_ SG_ 2553794801 DrvMotorPwrLimitpct "驱动电机限功率百分比";
+CM_ SG_ 2553794801 DrvMotorFaultCode "驱动电机故障代码";
+CM_ SG_ 2553794801 DrvMotorMCUID "驱动电机MCU身份ID";
+CM_ SG_ 2553794801 Reserved "预留";
+CM_ SG_ 2553794801 DrvMotorBusCounter "驱动电机反馈报文循环计数值";
+CM_ SG_ 2553860337 DrvMotorTemp1 "驱动电机U相温度";
+CM_ SG_ 2553860337 DrvMotorTemp2 "驱动电机V相温度";
+CM_ SG_ 2553860337 DrvMotorTemp3 "驱动电机W相温度";
+CM_ SG_ 2553860337 DrvMotorMCUTemp1 "驱动电机控制器U相温度";
+CM_ SG_ 2553860337 DrvMotorMCUTemp2 "驱动电机控制器V相温度";
+CM_ SG_ 2553860337 DrvMotorMCUTemp3 "驱动电机控制器W相温度";
+CM_ SG_ 2349308583 DcdcCmd "DC/DC启动指令; 0x55：启动，0xAA：关闭";
+CM_ SG_ 2349308583 DcacEpsCmd "DC/AC（助力转向）启动指令; 0x55：启动，0xAA：关闭";
+CM_ SG_ 2349308583 DcacEpsMode "DC/AC（助力转向）工作模式; 0x55：正常运行，0xAA：待机";
+CM_ SG_ 2349308583 DcacAcCmd "DC/AC（空压机）启动指令; 0x55：启动，0xAA：关闭";
+CM_ SG_ 2349377434 OutputVoltage "输出电压";
+CM_ SG_ 2349377434 OutputCurrent "输出电流";
+CM_ SG_ 2349377434 InputVoltage "输入电压";
+CM_ SG_ 2349377434 Temp "散热器温度";
+CM_ SG_ 2349377434 FaultCode "故障代码";
+CM_ SG_ 2349442971 CurrentW "油泵DC/AC W相输出电流";
+CM_ SG_ 2349442971 CurrentV "油泵DC/AC V相输出电流";
+CM_ SG_ 2349442971 CurrentU "油泵DC/AC U相输出电流";
+CM_ SG_ 2349442971 Temp "散热温度";
+CM_ SG_ 2349442971 FaultCode "故障代码";
+CM_ SG_ 2349508509 CurrentW "气泵DC/AC W相输出电流";
+CM_ SG_ 2349508509 CurrentV "气泵DC/AC V相输出电流";
+CM_ SG_ 2349508509 CurrentU "气泵DC/AC U相输出电流";
+CM_ SG_ 2349508509 Temp "散热温度";
+CM_ SG_ 2349508509 FaultCode "故障代码";
+CM_ SG_ 2364690491 VCU_ShrRlyCtl "DCDC，DCAC(油泵)，DCAC(气泵); 共用继电器控制指令; 0=断开; 1=接通; 2=异常; 3=无效";
+CM_ SG_ 2364690491 VCU_HVACRlyCtl "HVAC(空调)继电器控制指令; (空调预充，空调接触器); 0=断开; 1=接通; 2=异常; 3=无效";
+CM_ SG_ 2364690491 VCU_PTCRlyCtl "PTC继电器控制指令; 0=断开; 1=接通; 2=异常; 3=无效";
+CM_ SG_ 2364690491 VCU_HghVtgCnt "高压上下电指令; (总正，预充接触器上电); 0=下电指令; 1=上电指令; 2=异常; 3=无效";
+CM_ SG_ 2364690491 VCU_DCCpstRlyCtl "充电控制指令; 0=断开; 1=接通; 2=异常; 3=无效";
+CM_ SG_ 2364690491 VCU_HrtBt "心跳信号";
+CM_ SG_ 2566859720 PDU_ShrRlySts "DCDC，DCAC(油泵)，DCAC(气泵); 共用继电器状态; 0=断开; 1=接通; 2=异常; 3=无效";
+CM_ SG_ 2566859720 PDU_PosRlySts "总正接触器状态; 0=断开; 1=接通; 2=异常; 3=无效";
+CM_ SG_ 2566859720 PDU_PosRlyPcgRlySts "预充接触器状态; 0=断开; 1=接通; 2=异常; 3=无效";
+CM_ SG_ 2566859720 PDU_HVACRlySts "HVAC(空调)继电器状态; 0=断开; 1=接通; 2=异常; 3=无效";
+CM_ SG_ 2566859720 PDU_PTCRlySts "PTC继电器状态; 0=断开; 1=接通; 2=异常; 3=无效";
+CM_ SG_ 2566859720 MultiOne_HVACPcgRlySts "HVAC(空调)预充继电器状态; 0=断开; 1=接通; 2=异常; 3=无效";
+CM_ SG_ 2566859720 PDU_HrtBt "心跳信号";
+CM_ SG_ 2365523439 MCU_Enable "0 = disable; 1 = enable";
+CM_ SG_ 2365523439 Fault_Reset "0 = disable; 1 = enable";
+CM_ SG_ 2365523439 Control_Mode "0 = Reserved; 1 = Speed Control; 2 = Torque Control; 3 = Active Discharge";
+CM_ SG_ 2365523439 Gear "0=Neutral; 1=Drive; 2=Reverse";
+CM_ SG_ 2365523439 FootBrake "0=No FootBrake; 1= FootBrake";
+CM_ SG_ 2365523439 HandBrake "0=No HandBrake; 1=HandBrake";
+CM_ SG_ 2365521925 Precharge_Allow "0 = disable; 1 = enable";
+CM_ SG_ 2365521925 Active_Discharge_Enable_Feedback "0 = disable; 1 = enable";
+CM_ SG_ 2365521925 IGBT_Enable_Feedback "0 = disable; 1 = enable";
+CM_ SG_ 2365522181 Motor_Temperature "电机温度";
+CM_ SG_ 2365522181 MCU_temperature "电机控制器温度";
+CM_ SG_ 2365522181 Torque_Limit_High "转矩上限";
+CM_ SG_ 2365522181 Torque_Limit_Low "转矩下限";
+CM_ SG_ 2365522181 Fail_Grade "故障等级; 0 = No Fault; 1 = Warning (degraded); 2 = Fault (zero torque output); 3 = Fault (shut down MCU)";
+CM_ SG_ 2365522181 Life_counter "循环计数器";
+CM_ SG_ 2365522437 Fault_Code "错误故障码";
+CM_ SG_ 2365522437 Alarm_Code "告警故障码";
+CM_ SG_ 2365522437 DC_Current_A "直流电流（估计值，不建议作为控制量），电机驱动状态为负，发电状态为正。";
+CM_ SG_ 2365522437 DC_Voltage_V "直流电压";
+CM_ SG_ 2365522437 Life_counter "循环计数器";
+CM_ SG_ 2365523695 MCU_Enable "0 = disable; 1 = enable";
+CM_ SG_ 2365523695 Fault_Reset "0 = disable; 1 = enable";
+CM_ SG_ 2365523695 Control_Mode "0 = Reserved; 1 = Speed Control; 2 = Torque Control; 3 = Active Discharge";
+CM_ SG_ 2365523695 Gear "0=Neutral; 1=Drive; 2=Reverse";
+CM_ SG_ 2365523695 FootBrake "0=No FootBrake; 1= FootBrake";
+CM_ SG_ 2365523695 HandBrake "0=No HandBrake; 1=HandBrake";
+CM_ SG_ 2365521926 Precharge_Allow "0 = disable; 1 = enable";
+CM_ SG_ 2365521926 Active_Discharge_Enable_Feedback "0 = disable; 1 = enable";
+CM_ SG_ 2365521926 IGBT_Enable_Feedback "0 = disable; 1 = enable";
+CM_ SG_ 2365522182 Motor_Temperature "电机温度";
+CM_ SG_ 2365522182 MCU_temperature "电机控制器温度";
+CM_ SG_ 2365522182 Torque_Limit_High "转矩上限";
+CM_ SG_ 2365522182 Torque_Limit_Low "转矩下限";
+CM_ SG_ 2365522182 Fail_Grade "故障等级; 0 = No Fault; 1 = Warning (degraded); 2 = Fault (zero torque output); 3 = Fault (shut down MCU)";
+CM_ SG_ 2365522182 Life_counter "循环计数器";
+CM_ SG_ 2365522438 Fault_Code "错误故障码";
+CM_ SG_ 2365522438 Alarm_Code "告警故障码";
+CM_ SG_ 2365522438 DC_Current_A "直流电流（估计值，不建议作为控制量），电机驱动状态为负，发电状态为正。";
+CM_ SG_ 2365522438 DC_Voltage_V "直流电压";
+CM_ SG_ 2365522438 Life_counter "循环计数器";
+CM_ SG_ 2566858223 VCU_TWV1_P_PosSet "三通阀1位置设定; 0x0(0%):V1→V2→V3全通 ; 0x7D(50%):V2→V3全通，V1关闭; 0xFA(100%):V1→V3全通，V2关闭; 0x7D - 0xFA:50%-100%; 0xFA - 0xFF:100%";
+CM_ SG_ 2566858223 VCU_TWV1_P_MoveEnable "三通阀1移动使能位; 0x0:Disable; 0x1:Enable";
+CM_ SG_ 2566857787 TWV1_P_RESP_ERROR "三通阀1CAN通信错误; 0x0:正常; 0x1:错误";
+CM_ SG_ 2566857787 TWV1_P_OverVoltageFlt "三通阀1过压故障; 0x0:normal 正常; 0x1:fail 故障";
+CM_ SG_ 2566857787 TWV1_P_OverCurrent "三通阀1过流故障; 0x0:normal 正常; 0x1:fail 故障";
+CM_ SG_ 2566857787 TWV1_P_OverTempFlt "三通阀1过温故障; 0x0:normal 正常; 0x1:fail 故障";
+CM_ SG_ 2566857787 TWV1_P_UnderVoltageFlt "三通阀1欠压故障; 0x0:normal 正常; 0x1:fail 故障";
+CM_ SG_ 2566857787 TWV1_P_StallFlt "三通阀1堵转故障; 0x0:normal 正常; 0x1:fail 故障";
+CM_ SG_ 2566857787 TWV1_P_MotorOpenCircuitFlt "三通阀1电机开路保护故障; 0x0:normal 正常; 0x1:fail 故障";
+CM_ SG_ 2566857787 TWV1_P_MotorSta "三通阀1电机状态; 0x0:Motor Running; 0x1:Motor Stop";
+CM_ SG_ 2566857787 TWV1_P_RealSta "三通阀1当前状态; 0x0(0%):V1→V2→V3全通 ; 0x7D(50%):V2→V3全通，V1关闭; 0xFA(100%):V1→V3全通，V2关闭; 0x7D - 0xFA:50%-100%; 0xFA - 0xFF:100%";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 60000;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_ SG_  "SystemSignalLongSymbol" STRING ;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "VFrameFormat" "ExtendedCAN";
+BA_DEF_DEF_  "SystemSignalLongSymbol" "";
+BA_ "GenMsgCycleTime" BO_ 2550173648 100;
+BA_ "VFrameFormat" BO_ 2550173648 1;
+BA_ "GenMsgCycleTime" BO_ 2550178053 100;
+BA_ "VFrameFormat" BO_ 2550178053 1;
+BA_ "GenMsgCycleTime" BO_ 2550190223 100;
+BA_ "VFrameFormat" BO_ 2550190223 1;
+BA_ "GenMsgCycleTime" BO_ 2550203809 100;
+BA_ "VFrameFormat" BO_ 2550203809 1;
+BA_ "GenMsgCycleTime" BO_ 2550255759 100;
+BA_ "VFrameFormat" BO_ 2550255759 1;
+BA_ "GenMsgCycleTime" BO_ 2550334881 100;
+BA_ "VFrameFormat" BO_ 2550334881 1;
+BA_ "GenMsgCycleTime" BO_ 2550400417 100;
+BA_ "VFrameFormat" BO_ 2550400417 1;
+BA_ "GenMsgCycleTime" BO_ 2550597025 100;
+BA_ "VFrameFormat" BO_ 2550597025 1;
+BA_ "GenMsgCycleTime" BO_ 2352082896 10;
+BA_ "VFrameFormat" BO_ 2352082896 1;
+BA_ "GenMsgCycleTime" BO_ 2352083408 10;
+BA_ "VFrameFormat" BO_ 2352083408 1;
+BA_ "GenMsgCycleTime" BO_ 2553729263 10;
+BA_ "VFrameFormat" BO_ 2553729263 1;
+BA_ "GenMsgCycleTime" BO_ 2553794799 100;
+BA_ "VFrameFormat" BO_ 2553794799 1;
+BA_ "GenMsgCycleTime" BO_ 2553860335 1000;
+BA_ "VFrameFormat" BO_ 2553860335 1;
+BA_ "GenMsgCycleTime" BO_ 2553729265 10;
+BA_ "VFrameFormat" BO_ 2553729265 1;
+BA_ "GenMsgCycleTime" BO_ 2553794801 100;
+BA_ "VFrameFormat" BO_ 2553794801 1;
+BA_ "GenMsgCycleTime" BO_ 2553860337 1000;
+BA_ "VFrameFormat" BO_ 2553860337 1;
+BA_ "GenMsgCycleTime" BO_ 2349308583 100;
+BA_ "VFrameFormat" BO_ 2349308583 1;
+BA_ "GenMsgCycleTime" BO_ 2349377434 100;
+BA_ "VFrameFormat" BO_ 2349377434 1;
+BA_ "GenMsgCycleTime" BO_ 2349442971 100;
+BA_ "VFrameFormat" BO_ 2349442971 1;
+BA_ "GenMsgCycleTime" BO_ 2349508509 100;
+BA_ "VFrameFormat" BO_ 2349508509 1;
+BA_ "GenMsgCycleTime" BO_ 2364690491 100;
+BA_ "VFrameFormat" BO_ 2364690491 1;
+BA_ "GenMsgCycleTime" BO_ 2566859720 300;
+BA_ "VFrameFormat" BO_ 2566859720 1;
+BA_ "GenMsgCycleTime" BO_ 2365523439 10;
+BA_ "VFrameFormat" BO_ 2365523439 1;
+BA_ "GenMsgCycleTime" BO_ 2365521925 10;
+BA_ "VFrameFormat" BO_ 2365521925 1;
+BA_ "GenMsgCycleTime" BO_ 2365522181 50;
+BA_ "VFrameFormat" BO_ 2365522181 1;
+BA_ "GenMsgCycleTime" BO_ 2365522437 100;
+BA_ "VFrameFormat" BO_ 2365522437 1;
+BA_ "GenMsgCycleTime" BO_ 2365523695 10;
+BA_ "VFrameFormat" BO_ 2365523695 1;
+BA_ "GenMsgCycleTime" BO_ 2365521926 10;
+BA_ "VFrameFormat" BO_ 2365521926 1;
+BA_ "GenMsgCycleTime" BO_ 2365522182 50;
+BA_ "VFrameFormat" BO_ 2365522182 1;
+BA_ "GenMsgCycleTime" BO_ 2365522438 100;
+BA_ "VFrameFormat" BO_ 2365522438 1;
+BA_ "GenMsgCycleTime" BO_ 2566858223 100;
+BA_ "VFrameFormat" BO_ 2566858223 1;
+BA_ "GenMsgCycleTime" BO_ 2566857787 100;
+BA_ "VFrameFormat" BO_ 2566857787 1;
+VAL_ 2550173648 VCU_DCDC1_En 0 "预留" 1 "启动" 2 "停止" 3 "预留" ;
+VAL_ 2550178053 EDrv1_PowOnCmd 0 "断开" 1 "闭合" ;
+VAL_ 2550178053 EDrv2_PowOnCmd 0 "断开" 1 "闭合" ;
+VAL_ 2550178053 PaxAC_PowOnCmd 0 "断开" 1 "闭合" ;
+VAL_ 2550178053 PTC_PowOnCmd 0 "断开" 1 "闭合" ;
+VAL_ 2550255759 DCDC1_FaultLevel 0 "无故障" 1 "1级故障（关机保护）" 2 "2级故障（降额运行）" 3 "3级故障（告警）" ;
+VAL_ 2550255759 DCDC1_WorkSt 0 "预留" 1 "自检" 2 "待机" 3 "启动" 4 "运行" 5 "正常关机" 6 "保护关机" ;
+VAL_ 2550255759 DCDC1_FaultSt 0 "无故障" 1 "输入过压" 2 "输入欠压" 4 "输出过压" 8 "输出短路" 16 "输出欠压" 32 "过温" 64 "输出过流" 128 "内部通信故障" 256 "硬件故障" 512 "通信故障" 1024 "母线故障" ;
+VAL_ 2550400417 KM01_MotDrv1MainSt 0 "断开" 1 "闭合" 2 "异常" 3 "保留" ;
+VAL_ 2550400417 KM04_MotDrv1PreSt 0 "断开" 1 "闭合" 2 "异常" 3 "保留" ;
+VAL_ 2550400417 KM02_MotDrv2MainSt 0 "断开" 1 "闭合" 2 "异常" 3 "保留" ;
+VAL_ 2550400417 KM05_MotDrv2PreSt 0 "断开" 1 "闭合" 2 "异常" 3 "保留" ;
+VAL_ 2550400417 KM03_PaxACSt 0 "断开" 1 "闭合" 2 "异常" 3 "保留" ;
+VAL_ 2550400417 KM06_PTCSt 0 "断开" 1 "闭合" 2 "异常" 3 "保留" ;
+VAL_ 2550400417 MotDrv1_PowOnSt 0 "未上电" 1 "上电完成" ;
+VAL_ 2550400417 MotDrv2_PowOnSt 0 "未上电" 1 "上电完成" ;
+VAL_ 2550400417 PaxAC_PowOnSt 0 "未上电" 1 "上电完成" ;
+VAL_ 2550400417 PTC_PowOnSt 0 "未上电" 1 "上电完成" ;
+VAL_ 2349308583 DcdcCmd 85 "启动" 170 "关闭" ;
+VAL_ 2349308583 DcacEpsCmd 85 "启动" 170 "关闭" ;
+VAL_ 2349308583 DcacEpsMode 85 "正常运行" 170 "待机" ;
+VAL_ 2349308583 DcacAcCmd 85 "启动" 170 "关闭" ;
+VAL_ 2364690491 VCU_ShrRlyCtl 0 "断开" 1 "接通" 2 "异常" 3 "无效" ;
+VAL_ 2364690491 VCU_HVACRlyCtl 0 "断开" 1 "接通" 2 "异常" 3 "无效" ;
+VAL_ 2364690491 VCU_PTCRlyCtl 0 "断开" 1 "接通" 2 "异常" 3 "无效" ;
+VAL_ 2364690491 VCU_HghVtgCnt 0 "下电指令" 1 "上电指令" 2 "异常" 3 "无效" ;
+VAL_ 2364690491 VCU_DCCpstRlyCtl 0 "断开" 1 "接通" 2 "异常" 3 "无效" ;
+VAL_ 2566859720 PDU_ShrRlySts 0 "断开" 1 "接通" 2 "异常" 3 "无效" ;
+VAL_ 2566859720 PDU_PosRlySts 0 "断开" 1 "接通" 2 "异常" 3 "无效" ;
+VAL_ 2566859720 PDU_PosRlyPcgRlySts 0 "断开" 1 "接通" 2 "异常" 3 "无效" ;
+VAL_ 2566859720 PDU_HVACRlySts 0 "断开" 1 "接通" 2 "异常" 3 "无效" ;
+VAL_ 2566859720 PDU_PTCRlySts 0 "断开" 1 "接通" 2 "异常" 3 "无效" ;
+VAL_ 2566859720 MultiOne_HVACPcgRlySts 0 "断开" 1 "接通" 2 "异常" 3 "无效" ;
+VAL_ 2365523439 MCU_Enable 0 "disable" 1 "enable" ;
+VAL_ 2365523439 Fault_Reset 0 "disable" 1 "enable" ;
+VAL_ 2365523439 Control_Mode 0 "Reserved" 1 "Speed Control" 2 "Torque Control" 3 "Active Discharge" ;
+VAL_ 2365523439 Gear 0 "Neutral" 1 "Drive" 2 "Reverse" ;
+VAL_ 2365523439 FootBrake 0 "No FootBrake" 1 "FootBrake" ;
+VAL_ 2365523439 HandBrake 0 "No HandBrake" 1 "HandBrake" ;
+VAL_ 2365521925 Precharge_Allow 0 "disable" 1 "enable" ;
+VAL_ 2365521925 Active_Discharge_Enable_Feedback 0 "disable" 1 "enable" ;
+VAL_ 2365521925 IGBT_Enable_Feedback 0 "disable" 1 "enable" ;
+VAL_ 2365522181 Fail_Grade 0 "No Fault" 1 "Warning (degraded)" 2 "Fault (zero torque output)" 3 "Fault (shut down MCU)" ;
+VAL_ 2365523695 MCU_Enable 0 "disable" 1 "enable" ;
+VAL_ 2365523695 Fault_Reset 0 "disable" 1 "enable" ;
+VAL_ 2365523695 Control_Mode 0 "Reserved" 1 "Speed Control" 2 "Torque Control" 3 "Active Discharge" ;
+VAL_ 2365523695 Gear 0 "Neutral" 1 "Drive" 2 "Reverse" ;
+VAL_ 2365523695 FootBrake 0 "No FootBrake" 1 "FootBrake" ;
+VAL_ 2365523695 HandBrake 0 "No HandBrake" 1 "HandBrake" ;
+VAL_ 2365521926 Precharge_Allow 0 "disable" 1 "enable" ;
+VAL_ 2365521926 Active_Discharge_Enable_Feedback 0 "disable" 1 "enable" ;
+VAL_ 2365521926 IGBT_Enable_Feedback 0 "disable" 1 "enable" ;
+VAL_ 2365522182 Fail_Grade 0 "No Fault" 1 "Warning (degraded)" 2 "Fault (zero torque output)" 3 "Fault (shut down MCU)" ;
+VAL_ 2566858223 VCU_TWV1_P_PosSet 250 "50%-100%; 0xFA -" 255 "100%" ;
+VAL_ 2566858223 VCU_TWV1_P_MoveEnable 0 "Disable" 1 "Enable" ;
+VAL_ 2566857787 TWV1_P_RESP_ERROR 0 "正常" 1 "错误" ;
+VAL_ 2566857787 TWV1_P_OverVoltageFlt 0 "normal 正常" 1 "fail 故障" ;
+VAL_ 2566857787 TWV1_P_OverCurrent 0 "normal 正常" 1 "fail 故障" ;
+VAL_ 2566857787 TWV1_P_OverTempFlt 0 "normal 正常" 1 "fail 故障" ;
+VAL_ 2566857787 TWV1_P_UnderVoltageFlt 0 "normal 正常" 1 "fail 故障" ;
+VAL_ 2566857787 TWV1_P_StallFlt 0 "normal 正常" 1 "fail 故障" ;
+VAL_ 2566857787 TWV1_P_MotorOpenCircuitFlt 0 "normal 正常" 1 "fail 故障" ;
+VAL_ 2566857787 TWV1_P_MotorSta 0 "Motor Running" 1 "Motor Stop" ;
+VAL_ 2566857787 TWV1_P_RealSta 250 "50%-100%; 0xFA -" 255 "100%" ;

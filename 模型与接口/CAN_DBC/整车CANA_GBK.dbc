@@ -1,0 +1,889 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: BMS BRS ICU OBC TMS VCU Vector__XXX
+
+
+BO_ 352 VCU_BMS: 8 VCU
+ SG_ VCU_PowerOnReq : 0|1@0+ (1,0) [0|1] ""  BMS
+ SG_ VCU_UrgencyCutOffPowerReq : 1|1@0+ (1,0) [0|1] ""  BMS
+
+BO_ 481 BMS_Information_1: 8 BMS
+ SG_ Vol_Bat : 7|16@0+ (0.1,0) [0|800] "V"  Vector__XXX
+ SG_ Cur_Bat : 23|16@0+ (0.1,-1000) [-1000|1000] "A"  Vector__XXX
+ SG_ SOC : 39|16@0+ (0.1,0) [0|100] "%"  VCU
+ SG_ Display_SOC : 55|16@0+ (0.1,0) [0|100] "%"  ICU
+
+BO_ 484 BMS_Information_2: 8 BMS
+ SG_ BMS_ChargeMode : 5|2@0+ (1,0) [0|3] ""  Vector__XXX
+ SG_ BMS_ChargeStatus : 7|2@0+ (1,0) [0|3] ""  Vector__XXX
+ SG_ BMS_PrechargeStatus : 9|2@0+ (1,0) [0|3] ""  Vector__XXX
+ SG_ BMS_SelfCheckStatus : 11|2@0+ (1,0) [0|3] ""  Vector__XXX
+ SG_ BMS_BalanceStatus : 12|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ BMS_HeatingStatus : 13|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ BMS_RefrigerationStatus : 14|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ HighVoltLoopLockStatus : 15|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ PositiveInsulationResistance : 23|16@0+ (1,0) [0|60] "kohm"  Vector__XXX
+ SG_ NegativeInsulationResistance : 39|16@0+ (1,0) [0|60] "kohm"  Vector__XXX
+ SG_ BMS_AlarmLevel : 55|8@0+ (1,0) [0|15] ""  Vector__XXX
+ SG_ BMS_ReadySt : 57|2@0+ (1,0) [0|3] ""  Vector__XXX
+ SG_ BmsMode : 58|1@0+ (1,0) [0|1] ""  Vector__XXX
+
+BO_ 501 BMSWarning_Status: 8 BMS
+ SG_ Alarm_Code : 7|8@0+ (1,0) [0|254] ""  Vector__XXX
+ SG_ Alarm_Level : 15|8@0+ (1,0) [0|255] ""  Vector__XXX
+
+BO_ 499 BMS_Power_Control: 8 BMS
+ SG_ Power_DischargePeak : 7|16@0+ (0.1,0) [0|1000] "A"  Vector__XXX
+ SG_ Power_DischargeContinue : 23|16@0+ (0.1,0) [0|1000] "A"  Vector__XXX
+ SG_ Power_ChargePeak : 39|16@0+ (0.1,0) [0|1000] "A"  Vector__XXX
+ SG_ Power_ChargeContinue : 55|16@0+ (0.1,0) [0|1000] "A"  Vector__XXX
+
+BO_ 529 BMS_Power_Infor: 8 BMS
+ SG_ BMS_InsulationResistance : 7|16@0+ (1,0) [0|60] "kΩ"  Vector__XXX
+ SG_ BMS_RemainingChargingTime : 23|16@0+ (1,0) [0|1800] "min"  Vector__XXX
+ SG_ BMS_BatteryPower : 39|16@0+ (0.01,-100) [-100|100] "kw"  Vector__XXX
+
+BO_ 849 BMS_Relay_Status: 8 BMS
+ SG_ Relay_PositiveStatus : 0|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ Relay_NegativeStatus : 1|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ Relay_PrechargeStatus : 2|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ Relay_DischargeStatus : 3|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ Relay_ACChargeStatus : 4|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ Relay_DCChargeStatus : 5|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ Relay_HeatingStatus : 6|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ Relay_RefrigerationStatus : 7|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ Relay_PositiveFaultStatus : 9|2@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ Relay_NegativeFaultStatus : 11|2@0+ (1,0) [0|3] ""  Vector__XXX
+ SG_ Relay_PrechargeFaultStatus : 13|2@0+ (1,0) [0|3] ""  Vector__XXX
+ SG_ Relay_DischargeFaultStatus : 15|2@0+ (1,0) [0|3] ""  Vector__XXX
+ SG_ Relay_ACChargeFaultStatus : 17|2@0+ (1,0) [0|3] ""  Vector__XXX
+ SG_ Relay_DCChargeFaultStatus : 19|2@0+ (1,0) [0|3] ""  Vector__XXX
+ SG_ Relay_HeatingFaultStatus : 21|2@0+ (1,0) [0|3] ""  Vector__XXX
+ SG_ Relay_RefrigerationFaultStatus : 23|2@0+ (1,0) [0|3] ""  Vector__XXX
+
+BO_ 850 BMS_Statistic_Cell_Voltage_Infor: 8 BMS
+ SG_ Statistic_CellHVMax : 7|16@0+ (0.001,0) [0|10] ""  Vector__XXX
+ SG_ Statistic_CellHVMaxNum : 23|16@0+ (1,0) [0|1000] ""  Vector__XXX
+ SG_ Statistic_CellLVMax : 39|16@0+ (0.001,0) [0|10] ""  Vector__XXX
+ SG_ Statistic_CellLVMaxNum : 55|16@0+ (1,0) [0|1000] ""  Vector__XXX
+
+BO_ 851 BMS_Statistic_Temperature_of_Bat: 8 BMS
+ SG_ Statistic_TemperatureHTMax : 7|8@0+ (1,-50) [-50|125] "℃"  Vector__XXX
+ SG_ Statistic_TemperatureHTMaxNum : 15|16@0+ (1,0) [1|1000] ""  Vector__XXX
+ SG_ Statistic_TemperatureLTMax : 31|8@0+ (1,-50) [-50|125] "℃"  Vector__XXX
+ SG_ Statistic_TemperatureLTMaxNum : 39|16@0+ (1,0) [1|1000] ""  Vector__XXX
+
+BO_ 852 BMS_Statistic_HeatingTemperature: 8 BMS
+ SG_ Statistic_HeatingTemperatureHTMa : 7|8@0+ (1,-50) [-50|125] "℃"  Vector__XXX
+ SG_ Statistic_HeatingTemperatureHT_2 : 15|16@0+ (1,0) [0|1000] ""  Vector__XXX
+ SG_ Statistic_HeatingTemperatureLTMa : 31|8@0+ (1,-50) [-50|125] "℃"  Vector__XXX
+ SG_ Statistic_HeatingTemperatureLT_2 : 39|16@0+ (1,0) [0|1000] ""  Vector__XXX
+
+BO_ 853 BMS_Statistic_PoleTemperature: 8 BMS
+ SG_ Statistic_PoleTemperatureHTMax : 7|8@0+ (1,-50) [-50|125] "℃"  Vector__XXX
+ SG_ Statistic_PoleTemperatureHTMaxNu : 15|16@0+ (1,0) [0|1000] ""  Vector__XXX
+ SG_ Statistic_PoleTemperatureLTMax : 31|8@0+ (1,-50) [-50|125] "℃"  Vector__XXX
+ SG_ Statistic_PoleTemperatureLTMaxNu : 39|16@0+ (1,0) [0|1000] ""  Vector__XXX
+
+BO_ 854 BMS_Cell_Voltage_Infor: 8 BMS
+ SG_ CellVoltage_StartNum : 7|16@0+ (1,0) [0|1000] ""  Vector__XXX
+ SG_ CellVoltage_V1 : 23|16@0+ (0.001,0) [0|10] "V"  Vector__XXX
+ SG_ CellVoltage_V2 : 39|16@0+ (0.001,0) [0|10] "V"  Vector__XXX
+ SG_ CellVoltage_V3 : 55|16@0+ (0.001,0) [0|10] "V"  Vector__XXX
+
+BO_ 855 BMS_Cell_Battery_Temperature: 8 BMS
+ SG_ CellTemperature_StartNum : 7|16@0+ (1,0) [0|1000] ""  Vector__XXX
+ SG_ CellTempearture_T1 : 23|8@0+ (1,-50) [-50|125] "℃"  Vector__XXX
+ SG_ CellTempearture_T2 : 31|8@0+ (1,-50) [-50|125] "℃"  Vector__XXX
+ SG_ CellTempearture_T3 : 39|8@0+ (1,-50) [-50|125] "℃"  Vector__XXX
+ SG_ CellTempearture_T4 : 47|8@0+ (1,-50) [-50|125] "℃"  Vector__XXX
+ SG_ CellTempearture_T5 : 55|8@0+ (1,-50) [-50|125] "℃"  Vector__XXX
+ SG_ CellTempearture_T6 : 63|8@0+ (1,-50) [-50|125] "℃"  Vector__XXX
+
+BO_ 1011 BMS_Cell_HeatingTemperature: 8 BMS
+ SG_ CellHeatingTemperature_StartNum : 7|16@0+ (1,0) [0|1000] ""  Vector__XXX
+ SG_ CellHeatingTempearture_T1 : 23|8@0+ (1,-50) [-50|125] "℃"  Vector__XXX
+ SG_ CellHeatingTempearture_T2 : 31|8@0+ (1,-50) [-50|125] "℃"  Vector__XXX
+ SG_ CellHeatingTempearture_T3 : 39|8@0+ (1,-50) [-50|125] "℃"  Vector__XXX
+ SG_ CellHeatingTempearture_T4 : 47|8@0+ (1,-50) [-50|125] "℃"  Vector__XXX
+ SG_ CellHeatingTempearture_T5 : 55|8@0+ (1,-50) [-50|125] "℃"  Vector__XXX
+ SG_ CellHeatingTempearture_T6 : 63|8@0+ (1,-50) [-50|125] "℃"  Vector__XXX
+
+BO_ 1012 BMS_Cell_Pole_Temperature: 8 BMS
+ SG_ CellPoleTemperature_StartNum : 7|16@0+ (1,0) [0|1000] ""  Vector__XXX
+ SG_ CellPoleTempearture_T1 : 23|8@0+ (1,-50) [-50|125] "℃"  Vector__XXX
+ SG_ CellPoleTempearture_T2 : 31|8@0+ (1,-50) [-50|125] "℃"  Vector__XXX
+ SG_ CellPoleTempearture_T3 : 39|8@0+ (1,-50) [-50|125] "℃"  Vector__XXX
+ SG_ CellPoleTempearture_T4 : 47|8@0+ (1,-50) [-50|125] "℃"  Vector__XXX
+ SG_ CellPoleTempearture_T5 : 55|8@0+ (1,-50) [-50|125] "℃"  Vector__XXX
+ SG_ CellPoleTempearture_T6 : 63|8@0+ (1,-50) [-50|125] "℃"  Vector__XXX
+
+BO_ 1013 BMS_CumuCap_Infor: 8 BMS
+ SG_ CumuCap_Discharge : 7|32@0+ (1,0) [0|4294967295] "AH"  Vector__XXX
+ SG_ CumuCap_Charge : 39|32@0+ (1,0) [0|4294967295] "AH"  Vector__XXX
+
+BO_ 1014 BMS_other_Information1: 8 BMS
+ SG_ Statistic_AverageVoltage : 7|16@0+ (0.001,0) [0|10] ""  Vector__XXX
+ SG_ Statistic_AverageTemperature : 23|8@0+ (1,-50) [-50|125] "℃"  Vector__XXX
+ SG_ Statistic_DeltaVoltage : 31|16@0+ (0.001,0) [0|10] ""  Vector__XXX
+ SG_ Statistic_DeltaTemperature : 47|8@0+ (1,-50) [-50|125] ""  Vector__XXX
+ SG_ Statistic_ChargeTimes : 55|16@0+ (1,0) [0|0] ""  Vector__XXX
+
+BO_ 1023 BMS_other_Information2: 8 BMS
+ SG_ Cell_Number : 7|16@0+ (1,0) [0|1000] ""  Vector__XXX
+ SG_ CellTemp_Number : 23|16@0+ (1,0) [0|255] ""  Vector__XXX
+ SG_ PoleTemp_Number : 39|16@0+ (1,0) [0|255] ""  Vector__XXX
+ SG_ HeatTemp_Numer : 55|16@0+ (1,1) [0|255] ""  Vector__XXX
+
+BO_ 864 BMS_Relay_Status_2: 8 BMS
+ SG_ RelayNum : 7|8@0+ (1,0) [0|15] ""  Vector__XXX
+ SG_ NO1_RelayStatus : 8|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ NO1_RelayFaultStatus : 10|2@0+ (1,0) [0|3] ""  Vector__XXX
+ SG_ NO1_RelayIndex : 15|5@0+ (1,0) [0|31] ""  Vector__XXX
+ SG_ NO2_RelayStatus : 16|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ NO2_RelayFaultStatus : 18|2@0+ (1,0) [0|3] ""  Vector__XXX
+ SG_ NO2_RelayIndex : 23|5@0+ (1,0) [0|31] ""  Vector__XXX
+ SG_ NO3_RelayStatus : 24|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ NO3_RelayFaultStatus : 26|2@0+ (1,0) [0|3] ""  Vector__XXX
+ SG_ NO3_RelayIndex : 31|5@0+ (1,0) [0|31] ""  Vector__XXX
+ SG_ NO4_RelayStatus : 32|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ NO4_RelayFaultStatus : 34|2@0+ (1,0) [0|3] ""  Vector__XXX
+ SG_ NO4_RelayIndex : 39|5@0+ (1,0) [0|31] ""  Vector__XXX
+ SG_ NO5_RelayStatus : 40|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ NO5_RelayFaultStatus : 42|2@0+ (1,0) [0|3] ""  Vector__XXX
+ SG_ NO5_RelayIndex : 47|5@0+ (1,0) [0|31] ""  Vector__XXX
+ SG_ NO6_RelayStatus : 48|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ NO6_RelayFaultStatus : 50|2@0+ (1,0) [0|3] ""  Vector__XXX
+ SG_ NO6_RelayIndex : 55|5@0+ (1,0) [0|31] ""  Vector__XXX
+ SG_ NO7_RelayStatus : 56|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ NO7_RelayFaultStatus : 58|2@0+ (1,0) [0|3] ""  Vector__XXX
+ SG_ NO7_RelayIndex : 63|5@0+ (1,0) [0|31] ""  Vector__XXX
+
+BO_ 865 BMS_Relay_Status_3: 8 BMS
+ SG_ NO8_RelayStatus : 0|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ NO8_RelayFaultStatus : 2|2@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ NO8_RelayIndex : 7|5@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ NO9_RelayStatus : 8|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ NO9_RelayFaultStatus : 10|2@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ NO9_RelayIndex : 15|5@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ NO10_RelayStatus : 16|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ NO10_RelayFaultStatus : 18|2@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ NO10_RelayIndex : 23|5@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ NO11_RelayStatus : 24|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ NO11_RelayFaultStatus : 26|2@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ NO11_RelayIndex : 31|5@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ NO12_RelayStatus : 32|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ NO12_RelayFaultStatus : 34|2@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ NO12_RelayIndex : 39|5@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ NO13_RelayStatus : 40|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ NO13_RelayFaultStatus : 42|2@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ NO13_RelayIndex : 47|5@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ NO14_RelayStatus : 48|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ NO14_RelayFaultStatus : 50|2@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ NO14_RelayIndex : 55|5@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ NO15_RelayStatus : 56|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ NO15_RelayFaultStatus : 58|2@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ NO15_RelayIndex : 63|5@0+ (1,0) [0|1] ""  Vector__XXX
+
+BO_ 856 BMS_Statistic_Cell_ExtremumIndex: 8 BMS
+ SG_ Statistic_CellHVMaxBmsIndex : 7|8@0+ (1,0) [0|255] ""  Vector__XXX
+ SG_ Statistic_CellHVMaxBatIndex : 15|8@0+ (1,0) [0|255] ""  Vector__XXX
+ SG_ Statistic_CellLVMaxBmsIndex : 23|8@0+ (1,0) [0|255] ""  Vector__XXX
+ SG_ Statistic_CellLVMaxBatIndex : 31|8@0+ (1,0) [0|255] ""  Vector__XXX
+ SG_ Statistic_CellHtMaxBmsIndex : 39|8@0+ (1,0) [0|255] ""  Vector__XXX
+ SG_ Statistic_CellHtMaxBatIndex : 47|8@0+ (1,0) [0|255] ""  Vector__XXX
+ SG_ Statistic_CellLtMaxBmsIndex : 55|8@0+ (1,0) [0|255] ""  Vector__XXX
+ SG_ Statistic_CellLtMaxBatIndex : 63|8@0+ (1,0) [0|255] ""  Vector__XXX
+
+BO_ 514 BMS_SystemTime: 8 BMS
+ SG_ System_Year : 7|16@0+ (1,0) [0|65535] ""  Vector__XXX
+ SG_ System_Month : 23|8@0+ (1,0) [0|12] ""  Vector__XXX
+ SG_ System_Day : 31|8@0+ (1,0) [0|31] ""  Vector__XXX
+ SG_ System_Hour : 39|8@0+ (1,0) [0|23] ""  Vector__XXX
+ SG_ System_Minute : 47|8@0+ (1,0) [0|59] ""  Vector__XXX
+ SG_ System_Seconds : 55|8@0+ (1,0) [0|59] ""  Vector__XXX
+
+BO_ 515 BMS_CumuTimeInfor1: 8 BMS
+ SG_ CumuTime_Discharge : 7|32@0+ (0.1,0) [0|4294967295] "hour"  Vector__XXX
+ SG_ CumuTime_Charge : 39|32@0+ (0.1,0) [0|4294967295] "hour"  Vector__XXX
+
+BO_ 516 BMS_CumuTimeInfor2: 8 BMS
+ SG_ CumuTime_All : 7|32@0+ (0.1,0) [0|4294967295] "hour"  Vector__XXX
+
+BO_ 517 BMS_other_Information3: 8 BMS
+ SG_ Pack_TotalCap : 7|16@0+ (0.1,0) [0|0] "AH"  Vector__XXX
+ SG_ Pack_LeftCap : 23|16@0+ (0.1,0) [0|0] "AH"  Vector__XXX
+ SG_ Charge_Time : 39|16@0+ (1,0) [0|6553.5] "min"  Vector__XXX
+ SG_ SOH : 55|16@0+ (0.1,0) [0|100] "%"  Vector__XXX
+
+BO_ 518 BMS_StartDia_Infor1: 8 BMS
+ SG_ SocStartDia_FullCalib : 7|8@0+ (1,0) [0|255] ""  Vector__XXX
+ SG_ SocStartDia_EmptyCalib : 15|8@0+ (1,0) [0|255] ""  Vector__XXX
+ SG_ Dchg_StartDiaFault : 23|8@0+ (1,0) [0|255] ""  Vector__XXX
+ SG_ Dchg_DiaFaultFlag : 31|8@0+ (1,0) [0|255] ""  Vector__XXX
+ SG_ Dchg_DiaFaultAction : 39|8@0+ (1,0) [0|255] ""  Vector__XXX
+ SG_ Dchg_DiaOtherFault : 47|8@0+ (1,0) [0|255] ""  Vector__XXX
+
+BO_ 519 BMS_StartDia_Infor2: 8 BMS
+ SG_ Chg_StartDiaFault : 7|8@0+ (1,0) [0|255] ""  Vector__XXX
+ SG_ Chg_DiaFaultFlag : 15|8@0+ (1,0) [0|255] ""  Vector__XXX
+ SG_ Chg_DiaFaultAction : 23|8@0+ (1,0) [0|255] ""  Vector__XXX
+ SG_ Chg_DiaOtherFault : 31|8@0+ (1,0) [0|255] ""  Vector__XXX
+ SG_ OBC_FaultCode : 39|16@0+ (1,0) [0|255] ""  Vector__XXX
+
+BO_ 520 BMS_HeatInfor: 8 BMS
+ SG_ HeatCur : 7|16@0+ (0.1,0) [0|1000] "A"  Vector__XXX
+ SG_ HeatCur_2 : 23|16@0+ (0.1,-1000) [-1000|1000] "A"  Vector__XXX
+ SG_ BuzzerControl : 39|16@0+ (1,0) [0|1] ""  Vector__XXX
+
+BO_ 500 BMS_OBC: 8 BMS
+ SG_ VolChargeMaxLimit : 7|16@0+ (0.1,0) [0|1000] "V"  Vector__XXX
+ SG_ CurChargeMaxLimit : 23|16@0+ (0.1,0) [0|1000] "A"  Vector__XXX
+ SG_ Charge_Control : 32|1@0+ (1,0) [0|1] ""  Vector__XXX
+
+BO_ 513 BMS_Charger_Status: 8 BMS
+ SG_ OBC_Voltage : 7|16@0+ (0.1,0) [0|1000] "V"  Vector__XXX
+ SG_ OBC_Current : 23|16@0+ (0.1,0) [0|1000] "A"  Vector__XXX
+ SG_ OBC_HwFault : 32|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ OBC_Temp : 33|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ OBC_InputVoltage : 34|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ OBC_StartSt : 35|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ OBC_ComSt : 36|1@0+ (1,0) [0|1] ""  Vector__XXX
+
+BO_ 544 OBC_Charger_Status: 8 OBC
+ SG_ OBC_Voltage : 7|16@0+ (0.1,0) [0|1000] "V"  Vector__XXX
+ SG_ OBC_Current : 23|16@0+ (0.1,0) [0|1000] "A"  Vector__XXX
+ SG_ OBC_HwFault : 32|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ OBC_Temp : 33|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ OBC_InputVoltage : 34|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ OBC_StartSt : 35|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ OBC_ComSt : 36|1@0+ (1,0) [0|1] ""  Vector__XXX
+ SG_ OBC_OutputShortCircuit : 37|1@0+ (1,0) [0|1] ""  Vector__XXX
+
+BO_ 2566866419 BMS2TMS: 8 BMS
+ SG_ BMS_BattCellTempMax_deg : 7|8@0- (1,-40) [-40|210] ""  Vector__XXX
+ SG_ BMS_BattCellTempMin_deg : 15|8@0- (1,-40) [-40|210] ""  Vector__XXX
+ SG_ BMS_BattVoltRt_v : 23|16@0+ (0.1,0) [0|1000] ""  Vector__XXX
+ SG_ BMS_TempMagStrt_b : 39|8@0+ (1,0) [0|255] ""  Vector__XXX
+ SG_ BMS_SetTarTemp_deg : 47|8@0- (1,-40) [-40|210] ""  Vector__XXX
+ SG_ BMS_CellTempAvg_deg : 55|8@0- (1,-40) [-40|210] ""  Vector__XXX
+ SG_ BMS_Life_num : 63|8@0+ (1,0) [0|255] ""  Vector__XXX
+
+BO_ 2566910789 TMS2BMS: 8 Vector__XXX
+ SG_ TMS_InWaterTemp_deg : 7|8@0- (1,-40) [-40|210] ""  Vector__XXX
+ SG_ TMS_OutWaterTemp_deg : 15|8@0- (1,-40) [-40|210] ""  Vector__XXX
+ SG_ TMS_TempMagStRct_enum : 23|8@0+ (1,0) [0|255] ""  Vector__XXX
+ SG_ TMS_PmpLoadSt_pct : 31|8@0+ (1,0) [0|255] ""  Vector__XXX
+ SG_ TMS_Fault_num : 39|8@0+ (1,0) [0|255] ""  Vector__XXX
+ SG_ TMS_WorkVolt_v : 47|16@0+ (0.1,0) [0|1000] ""  Vector__XXX
+ SG_ TMS_Life_num : 63|8@0+ (1,0) [0|255] ""  Vector__XXX
+
+BO_ 2566910790 TMS2VCU: 8 Vector__XXX
+ SG_ TMS_FanSpeedLvl_num : 7|8@0+ (1,0) [0|255] ""  Vector__XXX
+ SG_ TMS_Life1_num : 63|8@0+ (1,0) [0|255] ""  Vector__XXX
+
+BO_ 2566910791 VCU2TMS: 8 VCU
+ SG_ VCU_FanSpeedLvl_num : 7|8@0+ (1,0) [0|255] ""  Vector__XXX
+ SG_ VCU_Life1_num : 63|8@0+ (1,0) [0|255] ""  Vector__XXX
+
+BO_ 2550212816 VCU2ICUInfor1: 8 VCU
+ SG_ VCU_Pst_b : 0|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ VCU_SOCLoFlt_b : 1|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ VCU_RShift_b : 2|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ VCU_LShift_b : 3|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ VCU_EmrPumpSt_enum : 5|2@1+ (1,0) [0|3] ""  Vector__XXX
+ SG_ VCU_FltSt_enum : 6|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ VCU_WrkSt_enum : 7|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ VCU_VehSpd_kmh : 8|8@1+ (1,0) [0|255] ""  Vector__XXX
+ SG_ VCU_BattSOC_pct : 16|8@1+ (1,0) [0|100] ""  Vector__XXX
+ SG_ VCU_GearSt_enum : 24|8@1+ (1,0) [0|5] ""  Vector__XXX
+ SG_ VCU_BattTempHi_b : 32|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ VCU_HydSysFlt_b : 33|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ VCU_VehACharge_b : 34|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ VCU_MCUTempHiFlt_b : 35|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ VCU_MtTempHiFlt_b : 36|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ VCU_VehDCharge_b : 37|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ VCU_TopWrkSt_b : 38|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ VCU_BrakeFlt_b : 39|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ VCU_CoolSysFltIdc_b : 43|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ VCU_CoolFanWrkIdc_b : 44|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ VCU_RearLight_b : 45|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ VCU_HeadLight_b : 46|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ VCU_WatPumpOpenSt_b : 47|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ VCU_SysWorkStCode_num : 48|8@1+ (1,0) [0|255] ""  Vector__XXX
+ SG_ VCU_CoolSysFanPWM : 56|8@1+ (1,0) [0|100] ""  Vector__XXX
+
+BO_ 2550278352 VCU2ICUInfor2: 8 VCU
+ SG_ VCU_SwVersion_num : 0|8@1+ (0.1,0) [0|255] ""  Vector__XXX
+ SG_ VCU_BattBusCurr_A : 8|16@1- (0.1,-1000) [-1000|-1000] ""  Vector__XXX
+ SG_ VCU_AccPedSt_pct : 24|8@1+ (1,0) [0|100] ""  Vector__XXX
+ SG_ VCU_BrakePedSt_pct : 32|8@1+ (1,0) [0|100] ""  Vector__XXX
+ SG_ VCU_WrkTimeAll_h : 40|16@1+ (1,0) [0|65535] ""  Vector__XXX
+ SG_ VCU_WrkTimeAll_min : 56|8@1+ (1,0) [0|255] ""  Vector__XXX
+
+BO_ 2550343888 VCU2ICUInfor3: 8 VCU
+ SG_ VCU_HistFltCode1_num : 0|8@1+ (1,0) [0|255] ""  Vector__XXX
+ SG_ VCU_HistFltCode2_num : 8|8@1+ (1,0) [0|255] ""  Vector__XXX
+ SG_ VCU_HistFltCode3_num : 16|8@1+ (1,0) [0|255] ""  Vector__XXX
+ SG_ VCU_EVFltCode1_num : 24|8@1+ (1,0) [0|255] ""  Vector__XXX
+ SG_ VCU_EVFltCode2_num : 32|8@1+ (1,0) [0|255] ""  Vector__XXX
+ SG_ VCU_EVFltLvlMax_num : 40|8@1+ (1,0) [0|3] ""  Vector__XXX
+ SG_ VCU_BattBusVolt_V : 48|16@1+ (0.1,0) [0|6553.5] ""  Vector__XXX
+
+BO_ 2551261392 VCU2ICUInfor4: 8 VCU
+ SG_ VCU_OilMtTemp_deg : 0|8@1- (1,-40) [-40|215] ""  Vector__XXX
+ SG_ VCU_OilMtCtlUnitTemp_deg : 8|8@1- (1,-40) [-40|215] ""  Vector__XXX
+ SG_ VCU_CoolWaterTemp_deg : 16|8@1- (1,-40) [-40|215] ""  Vector__XXX
+ SG_ VCU_DrvMtTemp_deg : 24|8@1- (1,-40) [-40|215] ""  Vector__XXX
+ SG_ VCU_DrvMtCtlUnitTemp_deg : 32|8@1- (1,-40) [-40|215] ""  Vector__XXX
+ SG_ VCU_BattTempMin_deg : 40|8@1- (1,-40) [-40|215] ""  Vector__XXX
+ SG_ VCU_BattTempMax_deg : 48|8@1- (1,-40) [-40|215] ""  Vector__XXX
+ SG_ VCU_RemindInfor_num : 56|8@1+ (1,0) [0|0] ""  Vector__XXX
+
+BO_ 2551326928 VCU2ICUInfor5: 8 VCU
+ SG_ VCU_DrvMtSpd_rpm : 0|16@1- (1,-30000) [-30000|35535] ""  Vector__XXX
+ SG_ VCU_DrvMtTrq_Nm : 16|16@1+ (1,0) [0|65535] ""  Vector__XXX
+ SG_ VCU_DrvMCUBusVolt_V : 32|16@1+ (1,0) [0|65535] ""  Vector__XXX
+ SG_ VCU_DrvMCUBusCurr_A : 48|16@1- (1,-1000) [-1000|35535] ""  Vector__XXX
+
+BO_ 2551392464 VCU2ICUInfor6: 8 VCU
+ SG_ VCU_OilMtSpd_rpm : 0|16@1+ (1,0) [0|65535] ""  Vector__XXX
+ SG_ VCU_OilMtTrq_Nm : 16|16@1+ (1,0) [0|65535] ""  Vector__XXX
+ SG_ VCU_OilMCUBusVolt_V : 32|16@1+ (1,0) [0|65535] ""  Vector__XXX
+ SG_ VCU_OilMCUBusCurr_A : 48|16@1- (1,-1000) [-1000|35535] ""  Vector__XXX
+
+BO_ 2551458000 VCU2ICUInfor7: 8 VCU
+ SG_ VCU_DisChargePwr_kw : 0|16@1+ (0.1,0) [0|10000] ""  Vector__XXX
+ SG_ VCU_RegenPwr_kw : 16|16@1+ (0.1,0) [0|10000] ""  Vector__XXX
+ SG_ VCU_RunAllMile_km : 32|16@1+ (1,0) [0|65535] ""  Vector__XXX
+ SG_ VCU_RangeRemain_km : 48|16@1+ (1,0) [0|65535] ""  Vector__XXX
+
+BO_ 2364606887 VCU2BRS: 8 VCU
+ SG_ PowerReq : 0|16@1+ (1,0) [0|500] "kW"  Vector__XXX
+ SG_ MaxChargePowerLimit : 16|16@1+ (1,0) [0|500] "kW"  Vector__XXX
+ SG_ OnOffCmd : 46|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ LiveCounter : 56|8@1+ (1,0) [0|255] ""  Vector__XXX
+
+BO_ 2566792676 BRS2VCU1: 8 Vector__XXX
+ SG_ OperationMode : 4|4@1+ (1,0) [0|15] ""  Vector__XXX
+ SG_ FaultLevel : 14|2@1+ (1,0) [0|3] ""  Vector__XXX
+ SG_ ActualPower : 16|16@1+ (1,0) [0|500] "kW"  Vector__XXX
+ SG_ BrakeResistorTemp : 32|16@1+ (1,-40) [-40|470] "℃"  Vector__XXX
+ SG_ ControllerTemp : 48|8@1+ (1,-40) [-40|470] "℃"  Vector__XXX
+
+BO_ 2566792932 BRS2VCU2: 8 Vector__XXX
+ SG_ BusVoltageReceived : 0|16@1+ (1,0) [0|1000] "V"  Vector__XXX
+ SG_ OperatingCurrent : 16|16@1+ (1,0) [0|1000] "A"  Vector__XXX
+ SG_ AvailableMaxPower : 32|16@1+ (1,0) [0|500] "kW"  Vector__XXX
+ SG_ BusVoltageMeasured : 48|16@1+ (0.1,0) [0|1000] "V"  Vector__XXX
+
+BO_ 2566793188 BRS2VCU3: 8 Vector__XXX
+ SG_ DutyCycle : 0|8@1+ (1,0) [0|100] "%"  Vector__XXX
+ SG_ EnvironmentTemp : 16|16@1+ (1,-40) [-40|470] "℃"  Vector__XXX
+ SG_ FanTemp : 32|16@1+ (1,-40) [-40|470] "℃"  Vector__XXX
+
+
+
+CM_ SG_ 352 VCU_PowerOnReq "VCU高压上电命令; 0：请求下高压；; 1：请求上高压；";
+CM_ SG_ 352 VCU_UrgencyCutOffPowerReq "VCU紧急下电命令; 0：未请求；; 1：请求下高压；";
+CM_ SG_ 481 Vol_Bat "电池组总电压";
+CM_ SG_ 481 Cur_Bat "电池组总电流";
+CM_ SG_ 481 SOC "SOC";
+CM_ SG_ 481 Display_SOC "SOC仪表显示; 总线数据≤0x32(50h)时，BMS一律处理为0（电量≤5%时，显示为0）";
+CM_ SG_ 484 BMS_ChargeMode "BMS当前充电模式; 0：未充电; 1：直流模式; 2：交流模式; 3：保留";
+CM_ SG_ 484 BMS_ChargeStatus "BMS当前充电状态; 0：未充电; 1：充电中; 2：充电完成; 3：保留";
+CM_ SG_ 484 BMS_PrechargeStatus "BMS预充状态; 0：未预充; 1：预充中; 2：预充完成; 3：预充失败";
+CM_ SG_ 484 BMS_SelfCheckStatus "BMS自检状态; 0：自检中; 1：自检完成; 2：自检失败; 3：保留";
+CM_ SG_ 484 BMS_BalanceStatus "BMS均衡状态; 0：未均衡; 1：均衡中";
+CM_ SG_ 484 BMS_HeatingStatus "BMS加热状态; 0：未加热; 1：加热中";
+CM_ SG_ 484 BMS_RefrigerationStatus "BMS制冷状态; 0：未制冷; 1：制冷中";
+CM_ SG_ 484 HighVoltLoopLockStatus "高压互锁状态; 0：未互锁; 1：互锁中";
+CM_ SG_ 484 PositiveInsulationResistance "正极绝缘阻值";
+CM_ SG_ 484 NegativeInsulationResistance "负极绝缘阻值";
+CM_ SG_ 484 BMS_AlarmLevel "BMS最高报警等级; 0x00:无故障; 0x01:1级故障，不影响车辆正常行驶; 0x02:2级故障，影像车辆性能，需要驾驶员限制行驶; 0x03:3级故障，应立即停车处理或请求救援; 0x04:4级故障，最高级别，应立即停车处理或请求救援; 0xFE:异常; 0xFF:无效";
+CM_ SG_ 484 BMS_ReadySt "BMS上电Ready信号; 0：Not Ready; 1：Ready; 2：Error; 3：Reserve";
+CM_ SG_ 484 BmsMode "BMS主从模式; 0：一体机模式; 1：主从模式";
+CM_ SG_ 501 Alarm_Code "报警码; 见故障码定义";
+CM_ SG_ 501 Alarm_Level "报警等级; 0x00:无故障; 0x01:1级故障; 0x02:2级故障; 0x03:3级故障; 0x04:4级故障; 0xFE:异常; 0xFF:无效";
+CM_ SG_ 499 Power_DischargePeak "峰值放电电流";
+CM_ SG_ 499 Power_DischargeContinue "持续放电电流";
+CM_ SG_ 499 Power_ChargePeak "峰值充电电流";
+CM_ SG_ 499 Power_ChargeContinue "持续充电电流";
+CM_ SG_ 529 BMS_InsulationResistance "绝缘电阻";
+CM_ SG_ 529 BMS_RemainingChargingTime "剩余充电时间";
+CM_ SG_ 529 BMS_BatteryPower "电池功率,正功率表示对电池充电，负功率表示电池放电。";
+CM_ SG_ 849 Relay_PositiveStatus "主正继电器状态; 0：断开; 1：闭合";
+CM_ SG_ 849 Relay_NegativeStatus "主负继电器状态; 0：断开; 1：闭合";
+CM_ SG_ 849 Relay_PrechargeStatus "预充继电器状态; 0：断开; 1：闭合";
+CM_ SG_ 849 Relay_DischargeStatus "放电继电器状态; 0：断开; 1：闭合";
+CM_ SG_ 849 Relay_ACChargeStatus "慢充继电器状态; 0：断开; 1：闭合";
+CM_ SG_ 849 Relay_DCChargeStatus "快充继电器状态; 0：断开; 1：闭合";
+CM_ SG_ 849 Relay_HeatingStatus "加热继电器状态; 0：断开; 1：闭合";
+CM_ SG_ 849 Relay_RefrigerationStatus "制冷继电器状态; 0：断开; 1：闭合";
+CM_ SG_ 849 Relay_PositiveFaultStatus "主正继电器故障状态; 0：正常; 1：粘连故障; 2：开路故障; 3：驱动电路故障";
+CM_ SG_ 849 Relay_NegativeFaultStatus "主负继电器故障状态; 0：正常; 1：粘连故障; 2：开路故障; 3：驱动电路故障";
+CM_ SG_ 849 Relay_PrechargeFaultStatus "预充继电器故障状态; 0：正常; 1：粘连故障; 2：开路故障; 3：驱动电路故障";
+CM_ SG_ 849 Relay_DischargeFaultStatus "放电继电器故障状态; 0：正常; 1：粘连故障; 2：开路故障; 3：驱动电路故障";
+CM_ SG_ 849 Relay_ACChargeFaultStatus "慢充继电器故障状态; 0：正常; 1：粘连故障; 2：开路故障; 3：驱动电路故障";
+CM_ SG_ 849 Relay_DCChargeFaultStatus "快充继电器故障状态; 0：正常; 1：粘连故障; 2：开路故障; 3：驱动电路故障";
+CM_ SG_ 849 Relay_HeatingFaultStatus "加热继电器故障状态; 0：正常; 1：粘连故障; 2：开路故障; 3：驱动电路故障";
+CM_ SG_ 849 Relay_RefrigerationFaultStatus "制冷继电器故障状态; 0：正常; 1：粘连故障; 2：开路故障; 3：驱动电路故障";
+CM_ SG_ 850 Statistic_CellHVMax "电池最高单体电压";
+CM_ SG_ 850 Statistic_CellHVMaxNum "电池最高单体电压串号";
+CM_ SG_ 850 Statistic_CellLVMax "电池最低单体电压";
+CM_ SG_ 850 Statistic_CellLVMaxNum "电池最低单体电压串号";
+CM_ SG_ 851 Statistic_TemperatureHTMax "电池最高温度";
+CM_ SG_ 851 Statistic_TemperatureHTMaxNum "电池最高温度编号";
+CM_ SG_ 851 Statistic_TemperatureLTMax "电池最低温度";
+CM_ SG_ 851 Statistic_TemperatureLTMaxNum "电池最低温度编号";
+CM_ SG_ 852 Statistic_HeatingTemperatureHTMa "加热温感最高温度";
+CM_ SG_ 852 Statistic_HeatingTemperatureHT_2 "加热温感最高温度编号";
+CM_ SG_ 852 Statistic_HeatingTemperatureLTMa "加热温感最低温度";
+CM_ SG_ 852 Statistic_HeatingTemperatureLT_2 "加热温感最低温度编号";
+CM_ SG_ 853 Statistic_PoleTemperatureHTMax "极柱温感最高温度";
+CM_ SG_ 853 Statistic_PoleTemperatureHTMaxNu "极柱温感最高温度编号";
+CM_ SG_ 853 Statistic_PoleTemperatureLTMax "极柱温感最低温度";
+CM_ SG_ 853 Statistic_PoleTemperatureLTMaxNu "极柱温感最低温度编号";
+CM_ SG_ 854 CellVoltage_StartNum "起始单体电压串号";
+CM_ SG_ 854 CellVoltage_V1 "起始串号单体电压值";
+CM_ SG_ 854 CellVoltage_V2 "起始串号+1单体电压值";
+CM_ SG_ 854 CellVoltage_V3 "起始串号+2单体电压值";
+CM_ SG_ 855 CellTemperature_StartNum "起始电池温度串号";
+CM_ SG_ 855 CellTempearture_T1 "起始温度串号温度值";
+CM_ SG_ 855 CellTempearture_T2 "起始温度串号+1温度值";
+CM_ SG_ 855 CellTempearture_T3 "起始温度串号+2温度值";
+CM_ SG_ 855 CellTempearture_T4 "起始温度串号+3温度值";
+CM_ SG_ 855 CellTempearture_T5 "起始温度串号+4温度值";
+CM_ SG_ 855 CellTempearture_T6 "起始温度串号+5温度值";
+CM_ SG_ 1011 CellHeatingTemperature_StartNum "起始加热温度串号";
+CM_ SG_ 1011 CellHeatingTempearture_T1 "起始温度串号温度值";
+CM_ SG_ 1011 CellHeatingTempearture_T2 "起始温度串号+1温度值";
+CM_ SG_ 1011 CellHeatingTempearture_T3 "起始温度串号+2温度值";
+CM_ SG_ 1011 CellHeatingTempearture_T4 "起始温度串号+3温度值";
+CM_ SG_ 1011 CellHeatingTempearture_T5 "起始温度串号+4温度值";
+CM_ SG_ 1011 CellHeatingTempearture_T6 "起始温度串号+5温度值";
+CM_ SG_ 1012 CellPoleTemperature_StartNum "起始极柱温度串号";
+CM_ SG_ 1012 CellPoleTempearture_T1 "起始温度串号温度值";
+CM_ SG_ 1012 CellPoleTempearture_T2 "起始温度串号+1温度值";
+CM_ SG_ 1012 CellPoleTempearture_T3 "起始温度串号+2温度值";
+CM_ SG_ 1012 CellPoleTempearture_T4 "起始温度串号+3温度值";
+CM_ SG_ 1012 CellPoleTempearture_T5 "起始温度串号+4温度值";
+CM_ SG_ 1012 CellPoleTempearture_T6 "起始温度串号+5温度值";
+CM_ SG_ 1013 CumuCap_Discharge "累计总放电 容量";
+CM_ SG_ 1013 CumuCap_Charge "累计总充电 容量";
+CM_ SG_ 1014 Statistic_AverageVoltage "电池组平均电压";
+CM_ SG_ 1014 Statistic_AverageTemperature "电池组平均温度";
+CM_ SG_ 1014 Statistic_DeltaVoltage "电池组最大压差";
+CM_ SG_ 1014 Statistic_DeltaTemperature "电池组最大温差";
+CM_ SG_ 1014 Statistic_ChargeTimes "电池组充放电次数";
+CM_ SG_ 1023 Cell_Number "单体电池串数";
+CM_ SG_ 1023 CellTemp_Number "单体温感个数";
+CM_ SG_ 1023 PoleTemp_Number "极柱温感个数";
+CM_ SG_ 1023 HeatTemp_Numer "加热温感个数";
+CM_ SG_ 864 RelayNum "继电器总数";
+CM_ SG_ 864 NO1_RelayStatus "1号继电器状态; 0：断开; 1：闭合";
+CM_ SG_ 864 NO1_RelayFaultStatus "1号继电器故障状态; 0：正常; 1：粘连故障; 2：开路故障; 3：驱动电路故障";
+CM_ SG_ 864 NO1_RelayIndex "1号继电器索引号; 详见继电器定义表";
+CM_ SG_ 864 NO2_RelayStatus "2号继电器状态; 0：断开; 1：闭合";
+CM_ SG_ 864 NO2_RelayFaultStatus "2号继电器故障状态; 0：正常; 1：粘连故障; 2：开路故障; 3：驱动电路故障";
+CM_ SG_ 864 NO2_RelayIndex "2号继电器索引号; 详见继电器定义表";
+CM_ SG_ 864 NO3_RelayStatus "3号继电器状态; 0：断开; 1：闭合";
+CM_ SG_ 864 NO3_RelayFaultStatus "3号继电器故障状态; 0：正常; 1：粘连故障; 2：开路故障; 3：驱动电路故障";
+CM_ SG_ 864 NO3_RelayIndex "3号继电器索引号; 详见继电器定义表";
+CM_ SG_ 864 NO4_RelayStatus "4号继电器状态; 0：断开; 1：闭合";
+CM_ SG_ 864 NO4_RelayFaultStatus "4号继电器故障状态; 0：正常; 1：粘连故障; 2：开路故障; 3：驱动电路故障";
+CM_ SG_ 864 NO4_RelayIndex "4号继电器索引号; 详见继电器定义表";
+CM_ SG_ 864 NO5_RelayStatus "5号继电器状态; 0：断开; 1：闭合";
+CM_ SG_ 864 NO5_RelayFaultStatus "5号继电器故障状态; 0：正常; 1：粘连故障; 2：开路故障; 3：驱动电路故障";
+CM_ SG_ 864 NO5_RelayIndex "5号继电器索引号; 详见继电器定义表";
+CM_ SG_ 864 NO6_RelayStatus "6号继电器状态; 0：断开; 1：闭合";
+CM_ SG_ 864 NO6_RelayFaultStatus "6号继电器故障状态; 0：正常; 1：粘连故障; 2：开路故障; 3：驱动电路故障";
+CM_ SG_ 864 NO6_RelayIndex "6号继电器索引号; 详见继电器定义表";
+CM_ SG_ 864 NO7_RelayStatus "7号继电器状态; 0：断开; 1：闭合";
+CM_ SG_ 864 NO7_RelayFaultStatus "7号继电器故障状态; 0：正常; 1：粘连故障; 2：开路故障; 3：驱动电路故障";
+CM_ SG_ 864 NO7_RelayIndex "7号继电器索引号; 详见继电器定义表";
+CM_ SG_ 865 NO8_RelayStatus "8号继电器状态; 0：断开; 1：闭合";
+CM_ SG_ 865 NO8_RelayFaultStatus "8号继电器故障状态; 0：正常; 1：粘连故障; 2：开路故障; 3：驱动电路故障";
+CM_ SG_ 865 NO8_RelayIndex "8号继电器索引号; 详见继电器定义表";
+CM_ SG_ 865 NO9_RelayStatus "9号继电器状态; 0：断开; 1：闭合";
+CM_ SG_ 865 NO9_RelayFaultStatus "9号继电器故障状态; 0：正常; 1：粘连故障; 2：开路故障; 3：驱动电路故障";
+CM_ SG_ 865 NO9_RelayIndex "9号继电器索引号; 详见继电器定义表";
+CM_ SG_ 865 NO10_RelayStatus "10号继电器状态; 0：断开; 1：闭合";
+CM_ SG_ 865 NO10_RelayFaultStatus "10号继电器故障状态; 0：正常; 1：粘连故障; 2：开路故障; 3：驱动电路故障";
+CM_ SG_ 865 NO10_RelayIndex "10号继电器索引号; 详见继电器定义表";
+CM_ SG_ 865 NO11_RelayStatus "11号继电器状态; 0：断开; 1：闭合";
+CM_ SG_ 865 NO11_RelayFaultStatus "11号继电器故障状态; 0：正常; 1：粘连故障; 2：开路故障; 3：驱动电路故障";
+CM_ SG_ 865 NO11_RelayIndex "11号继电器索引号; 详见继电器定义表";
+CM_ SG_ 865 NO12_RelayStatus "12号继电器状态; 0：断开; 1：闭合";
+CM_ SG_ 865 NO12_RelayFaultStatus "12号继电器故障状态; 0：正常; 1：粘连故障; 2：开路故障; 3：驱动电路故障";
+CM_ SG_ 865 NO12_RelayIndex "12号继电器索引号; 详见继电器定义表";
+CM_ SG_ 865 NO13_RelayStatus "13号继电器状态; 0：断开; 1：闭合";
+CM_ SG_ 865 NO13_RelayFaultStatus "13号继电器故障状态; 0：正常; 1：粘连故障; 2：开路故障; 3：驱动电路故障";
+CM_ SG_ 865 NO13_RelayIndex "13号继电器索引号; 详见继电器定义表";
+CM_ SG_ 865 NO14_RelayStatus "14号继电器状态; 0：断开; 1：闭合";
+CM_ SG_ 865 NO14_RelayFaultStatus "14号继电器故障状态; 0：正常; 1：粘连故障; 2：开路故障; 3：驱动电路故障";
+CM_ SG_ 865 NO14_RelayIndex "14号继电器索引号; 详见继电器定义表";
+CM_ SG_ 865 NO15_RelayStatus "15号继电器状态; 0：断开; 1：闭合";
+CM_ SG_ 865 NO15_RelayFaultStatus "15号继电器故障状态; 0：正常; 1：粘连故障; 2：开路故障; 3：驱动电路故障";
+CM_ SG_ 865 NO15_RelayIndex "15号继电器索引号; 详见继电器定义表";
+CM_ SG_ 856 Statistic_CellHVMaxBmsIndex "电池最高单体电压从机号";
+CM_ SG_ 856 Statistic_CellHVMaxBatIndex "电池最高单体电压从机串号";
+CM_ SG_ 856 Statistic_CellLVMaxBmsIndex "电池最低单体电压从机号";
+CM_ SG_ 856 Statistic_CellLVMaxBatIndex "电池最低单体电压从机串号";
+CM_ SG_ 856 Statistic_CellHtMaxBmsIndex "电池最高温度从机号";
+CM_ SG_ 856 Statistic_CellHtMaxBatIndex "电池最高温度从机串号";
+CM_ SG_ 856 Statistic_CellLtMaxBmsIndex "电池最低温度从机号";
+CM_ SG_ 856 Statistic_CellLtMaxBatIndex "电池最低温度从机串号";
+CM_ SG_ 514 System_Year "年";
+CM_ SG_ 514 System_Month "月";
+CM_ SG_ 514 System_Day "日";
+CM_ SG_ 514 System_Hour "时";
+CM_ SG_ 514 System_Minute "分";
+CM_ SG_ 514 System_Seconds "秒";
+CM_ SG_ 515 CumuTime_Discharge "累计总放电 时间";
+CM_ SG_ 515 CumuTime_Charge "累计总充电 时间";
+CM_ SG_ 516 CumuTime_All "累计总使用 时间";
+CM_ SG_ 517 Pack_TotalCap "电池总容量";
+CM_ SG_ 517 Pack_LeftCap "电池组剩余容量";
+CM_ SG_ 517 Charge_Time "已充电时间";
+CM_ SG_ 517 SOH "SOH";
+CM_ SG_ 518 SocStartDia_FullCalib "SOC满诊断校准自诊断; 00：未触发; 01：校准正常; 02：校准未释放; 03：SOC过高; 04：SOC过低; 05：平均电压过高; 06：平均电压过低; 07：校准延时中; 08：参数读取失败";
+CM_ SG_ 518 SocStartDia_EmptyCalib "SOC空诊断校准自诊断; 00：未触发; 01：校准正常; 02：校准未释放; 03：SOC过高; 04：SOC过低; 05：平均电压过高; 06：平均电压过低; 07：校准延时中; 08：参数读取失败";
+CM_ SG_ 518 Dchg_StartDiaFault "放电自检故障; 见“报警码”定义";
+CM_ SG_ 518 Dchg_DiaFaultFlag "放电诊断故障标志; 见“报警码”定义";
+CM_ SG_ 518 Dchg_DiaFaultAction "放电诊断故障动作; 见“报警码”定义";
+CM_ SG_ 518 Dchg_DiaOtherFault "放电其他故障; 0xFF表示无故障";
+CM_ SG_ 519 Chg_StartDiaFault "充电自检故障; 见“报警码”定义";
+CM_ SG_ 519 Chg_DiaFaultFlag "充电诊断故障标志; 见“报警码”定义";
+CM_ SG_ 519 Chg_DiaFaultAction "充电诊断故障动作; 见“报警码”定义";
+CM_ SG_ 519 Chg_DiaOtherFault "充电其他故障; 0xFF表示无故障";
+CM_ SG_ 519 OBC_FaultCode "国标通信故障代码; 0表示无故障代码";
+CM_ SG_ 520 HeatCur "加热电流（采集）";
+CM_ SG_ 520 HeatCur_2 "加热电流（采集）";
+CM_ SG_ 520 BuzzerControl "蜂鸣控制; 0：不蜂鸣; 1：蜂鸣";
+CM_ SG_ 500 VolChargeMaxLimit "最大允许充电电压";
+CM_ SG_ 500 CurChargeMaxLimit "最大允许充电电流";
+CM_ SG_ 500 Charge_Control "充电控制; 0：允许充电; 1：禁止充电";
+CM_ SG_ 513 OBC_Voltage "当前充电电压";
+CM_ SG_ 513 OBC_Current "当前充电电流";
+CM_ SG_ 513 OBC_HwFault "硬件故障; 0：正常；; 1：硬件故障；";
+CM_ SG_ 513 OBC_Temp "充电机温度; 0：正常；; 1：充电机温度过高保护；";
+CM_ SG_ 513 OBC_InputVoltage "输入电压; 0：正常；; 1：输入电压错误，充电机停止工作；";
+CM_ SG_ 513 OBC_StartSt "启动状态; 0：电池电压正常，可以启动；; 1：电池电压异常，不允许启动；";
+CM_ SG_ 513 OBC_ComSt "通信状态; 0：通讯正常；; 1：通讯指令超时或者是收到指令异常；";
+CM_ SG_ 544 OBC_Voltage "当前充电电压";
+CM_ SG_ 544 OBC_Current "当前充电电流";
+CM_ SG_ 544 OBC_HwFault "硬件故障; 0：正常；; 1：硬件故障；";
+CM_ SG_ 544 OBC_Temp "充电机温度; 0：正常；; 1：充电机温度过高保护；";
+CM_ SG_ 544 OBC_InputVoltage "输入电压; 0：正常；; 1：输入电压错误，充电机停止工作；";
+CM_ SG_ 544 OBC_StartSt "启动状态; 0：电池电压正常，可以启动；; 1：电池电压异常，不允许启动；";
+CM_ SG_ 544 OBC_ComSt "通信状态; 0：通讯正常；; 1：通讯指令超时或者是收到指令异常；";
+CM_ SG_ 544 OBC_OutputShortCircuit "输出短路; 0：正常；; 1：输出过流、短路，充电机停止工作；";
+CM_ SG_ 2566866419 BMS_BattCellTempMax_deg "单体电池最高温度";
+CM_ SG_ 2566866419 BMS_BattCellTempMin_deg "单体电池最低温度";
+CM_ SG_ 2566866419 BMS_BattVoltRt_v "BMS当前电压";
+CM_ SG_ 2566866419 BMS_TempMagStrt_b "热管理启动信号";
+CM_ SG_ 2566866419 BMS_SetTarTemp_deg "设定目标温度";
+CM_ SG_ 2566866419 BMS_CellTempAvg_deg "电池平均温度";
+CM_ SG_ 2566866419 BMS_Life_num "Life";
+CM_ SG_ 2566910789 TMS_InWaterTemp_deg "进水温度";
+CM_ SG_ 2566910789 TMS_OutWaterTemp_deg "出水温度";
+CM_ SG_ 2566910789 TMS_TempMagStRct_enum "热管理反馈信号";
+CM_ SG_ 2566910789 TMS_PmpLoadSt_pct "压缩机负载比率";
+CM_ SG_ 2566910789 TMS_Fault_num "水冷机组故障";
+CM_ SG_ 2566910789 TMS_WorkVolt_v "TMS检测当前电压";
+CM_ SG_ 2566910789 TMS_Life_num "Life";
+CM_ SG_ 2566910790 TMS_FanSpeedLvl_num "风机档位";
+CM_ SG_ 2566910790 TMS_Life1_num "Life";
+CM_ SG_ 2566910791 VCU_FanSpeedLvl_num "风机档位";
+CM_ SG_ 2566910791 VCU_Life1_num "Life";
+CM_ SG_ 2550212816 VCU_Pst_b "驻车制动";
+CM_ SG_ 2550212816 VCU_SOCLoFlt_b "SOC低报警";
+CM_ SG_ 2550212816 VCU_RShift_b "右转向";
+CM_ SG_ 2550212816 VCU_LShift_b "左转向";
+CM_ SG_ 2550212816 VCU_EmrPumpSt_enum "紧急泵送状态";
+CM_ SG_ 2550212816 VCU_FltSt_enum "底盘故障状态";
+CM_ SG_ 2550212816 VCU_WrkSt_enum "底盘运行状态";
+CM_ SG_ 2550212816 VCU_VehSpd_kmh "车辆速度";
+CM_ SG_ 2550212816 VCU_BattSOC_pct "电池SOC";
+CM_ SG_ 2550212816 VCU_GearSt_enum "档位状态";
+CM_ SG_ 2550212816 VCU_BattTempHi_b "动力电池过温";
+CM_ SG_ 2550212816 VCU_HydSysFlt_b "液压系统故障";
+CM_ SG_ 2550212816 VCU_VehACharge_b "整机慢充";
+CM_ SG_ 2550212816 VCU_MCUTempHiFlt_b "电控过温报警";
+CM_ SG_ 2550212816 VCU_MtTempHiFlt_b "电机过温报警";
+CM_ SG_ 2550212816 VCU_VehDCharge_b "整机快充";
+CM_ SG_ 2550212816 VCU_TopWrkSt_b "上装工作状态";
+CM_ SG_ 2550212816 VCU_BrakeFlt_b "制动故障";
+CM_ SG_ 2550212816 VCU_CoolSysFltIdc_b "散热系统故障指示";
+CM_ SG_ 2550212816 VCU_CoolFanWrkIdc_b "散热风扇工作指示";
+CM_ SG_ 2550212816 VCU_RearLight_b "后照灯";
+CM_ SG_ 2550212816 VCU_HeadLight_b "前照灯";
+CM_ SG_ 2550212816 VCU_WatPumpOpenSt_b "水泵开启状态";
+CM_ SG_ 2550212816 VCU_SysWorkStCode_num "VCU运行状态码";
+CM_ SG_ 2550212816 VCU_CoolSysFanPWM "散热风扇控制PWM";
+CM_ SG_ 2550278352 VCU_SwVersion_num "VCU版本信息";
+CM_ SG_ 2550278352 VCU_BattBusCurr_A "电池母线电流";
+CM_ SG_ 2550278352 VCU_AccPedSt_pct "油门踏板状态";
+CM_ SG_ 2550278352 VCU_BrakePedSt_pct "制动踏板状态";
+CM_ SG_ 2550278352 VCU_WrkTimeAll_h "运行总时间（h）";
+CM_ SG_ 2550278352 VCU_WrkTimeAll_min "运行总时间（min）";
+CM_ SG_ 2550343888 VCU_HistFltCode1_num "历史故障代码1";
+CM_ SG_ 2550343888 VCU_HistFltCode2_num "历史故障代码2";
+CM_ SG_ 2550343888 VCU_HistFltCode3_num "历史故障代码3";
+CM_ SG_ 2550343888 VCU_EVFltCode1_num "整车当前故障代码1";
+CM_ SG_ 2550343888 VCU_EVFltCode2_num "整车当前故障代码2";
+CM_ SG_ 2550343888 VCU_EVFltLvlMax_num "整车当前最高故障等级";
+CM_ SG_ 2550343888 VCU_BattBusVolt_V "电池母线电压";
+CM_ SG_ 2551261392 VCU_OilMtTemp_deg "油泵电机温度";
+CM_ SG_ 2551261392 VCU_OilMtCtlUnitTemp_deg "油泵电机控制器温度";
+CM_ SG_ 2551261392 VCU_CoolWaterTemp_deg "散热水温度";
+CM_ SG_ 2551261392 VCU_DrvMtTemp_deg "驱动电机温度";
+CM_ SG_ 2551261392 VCU_DrvMtCtlUnitTemp_deg "驱动电机控制器温度";
+CM_ SG_ 2551261392 VCU_BattTempMin_deg "电池最低温度";
+CM_ SG_ 2551261392 VCU_BattTempMax_deg "电池最高温度";
+CM_ SG_ 2551261392 VCU_RemindInfor_num "提示信息";
+CM_ SG_ 2551326928 VCU_DrvMtSpd_rpm "驱动电机转速";
+CM_ SG_ 2551326928 VCU_DrvMtTrq_Nm "驱动电机转矩";
+CM_ SG_ 2551326928 VCU_DrvMCUBusVolt_V "驱动电机控制器母线电压";
+CM_ SG_ 2551326928 VCU_DrvMCUBusCurr_A "驱动电机控制器母线电流";
+CM_ SG_ 2551392464 VCU_OilMtSpd_rpm "油泵电机转速";
+CM_ SG_ 2551392464 VCU_OilMtTrq_Nm "油泵电机转矩";
+CM_ SG_ 2551392464 VCU_OilMCUBusVolt_V "油泵电机控制器母线电压";
+CM_ SG_ 2551392464 VCU_OilMCUBusCurr_A "油泵电机控制器母线电流";
+CM_ SG_ 2551458000 VCU_DisChargePwr_kw "电池放电功率";
+CM_ SG_ 2551458000 VCU_RegenPwr_kw "能量回收功率";
+CM_ SG_ 2551458000 VCU_RunAllMile_km "行驶总里程";
+CM_ SG_ 2551458000 VCU_RangeRemain_km "剩余续航里程";
+CM_ SG_ 2364606887 PowerReq "请求制动电阻器消耗的功率";
+CM_ SG_ 2364606887 MaxChargePowerLimit "动力电池最大允许充电功率";
+CM_ SG_ 2364606887 OnOffCmd "制动电阻器上下电指令; 0 = 请求下高压; 1 =请求上高压";
+CM_ SG_ 2364606887 LiveCounter "整车控制器life";
+CM_ SG_ 2566792676 OperationMode "工作模式; 0x1：工作 ; 0x2：全直通工作; 0x3：待机(制动电阻控制器接触器吸合）; 0x6：停机(制动电阻控制器接触器断开）";
+CM_ SG_ 2566792676 FaultLevel "故障等级; 0x0：无故障; 0x1：一级故障; 0x2：二级故障; 0x3：无效";
+CM_ SG_ 2566792676 ActualPower "实际功率";
+CM_ SG_ 2566792676 BrakeResistorTemp "制动电阻温度";
+CM_ SG_ 2566792676 ControllerTemp "控制器温度";
+CM_ SG_ 2566792932 BusVoltageReceived "接收到的母线电压";
+CM_ SG_ 2566792932 OperatingCurrent "工作电流";
+CM_ SG_ 2566792932 AvailableMaxPower "当前可执行最大功率";
+CM_ SG_ 2566792932 BusVoltageMeasured "采集到的母线电压";
+CM_ SG_ 2566793188 DutyCycle "工作占空比";
+CM_ SG_ 2566793188 EnvironmentTemp "环境温度";
+CM_ SG_ 2566793188 FanTemp "风扇端温度值";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 60000;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_ SG_  "SystemSignalLongSymbol" STRING ;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "VFrameFormat" "ExtendedCAN";
+BA_DEF_DEF_  "SystemSignalLongSymbol" "";
+BA_ "GenMsgCycleTime" BO_ 352 100;
+BA_ "VFrameFormat" BO_ 352 0;
+BA_ "GenMsgCycleTime" BO_ 481 100;
+BA_ "VFrameFormat" BO_ 481 0;
+BA_ "GenMsgCycleTime" BO_ 484 100;
+BA_ "VFrameFormat" BO_ 484 0;
+BA_ "GenMsgCycleTime" BO_ 501 100;
+BA_ "VFrameFormat" BO_ 501 0;
+BA_ "GenMsgCycleTime" BO_ 499 100;
+BA_ "VFrameFormat" BO_ 499 0;
+BA_ "GenMsgCycleTime" BO_ 529 500;
+BA_ "VFrameFormat" BO_ 529 0;
+BA_ "GenMsgCycleTime" BO_ 849 100;
+BA_ "VFrameFormat" BO_ 849 0;
+BA_ "GenMsgCycleTime" BO_ 850 200;
+BA_ "VFrameFormat" BO_ 850 0;
+BA_ "GenMsgCycleTime" BO_ 851 200;
+BA_ "VFrameFormat" BO_ 851 0;
+BA_ "GenMsgCycleTime" BO_ 852 200;
+BA_ "VFrameFormat" BO_ 852 0;
+BA_ "GenMsgCycleTime" BO_ 853 200;
+BA_ "VFrameFormat" BO_ 853 0;
+BA_ "GenMsgCycleTime" BO_ 854 1000;
+BA_ "VFrameFormat" BO_ 854 0;
+BA_ "GenMsgCycleTime" BO_ 855 1000;
+BA_ "VFrameFormat" BO_ 855 0;
+BA_ "GenMsgCycleTime" BO_ 1011 1000;
+BA_ "VFrameFormat" BO_ 1011 0;
+BA_ "GenMsgCycleTime" BO_ 1012 1000;
+BA_ "VFrameFormat" BO_ 1012 0;
+BA_ "GenMsgCycleTime" BO_ 1013 1000;
+BA_ "VFrameFormat" BO_ 1013 0;
+BA_ "GenMsgCycleTime" BO_ 1014 200;
+BA_ "VFrameFormat" BO_ 1014 0;
+BA_ "GenMsgCycleTime" BO_ 1023 1000;
+BA_ "VFrameFormat" BO_ 1023 0;
+BA_ "GenMsgCycleTime" BO_ 864 100;
+BA_ "VFrameFormat" BO_ 864 0;
+BA_ "GenMsgCycleTime" BO_ 865 100;
+BA_ "VFrameFormat" BO_ 865 0;
+BA_ "GenMsgCycleTime" BO_ 856 200;
+BA_ "VFrameFormat" BO_ 856 0;
+BA_ "GenMsgCycleTime" BO_ 514 1000;
+BA_ "VFrameFormat" BO_ 514 0;
+BA_ "GenMsgCycleTime" BO_ 515 2000;
+BA_ "VFrameFormat" BO_ 515 0;
+BA_ "GenMsgCycleTime" BO_ 516 2000;
+BA_ "VFrameFormat" BO_ 516 0;
+BA_ "GenMsgCycleTime" BO_ 517 1000;
+BA_ "VFrameFormat" BO_ 517 0;
+BA_ "GenMsgCycleTime" BO_ 518 1000;
+BA_ "VFrameFormat" BO_ 518 0;
+BA_ "GenMsgCycleTime" BO_ 519 1000;
+BA_ "VFrameFormat" BO_ 519 0;
+BA_ "GenMsgCycleTime" BO_ 520 100;
+BA_ "VFrameFormat" BO_ 520 0;
+BA_ "GenMsgCycleTime" BO_ 500 500;
+BA_ "VFrameFormat" BO_ 500 0;
+BA_ "GenMsgCycleTime" BO_ 513 1000;
+BA_ "VFrameFormat" BO_ 513 0;
+BA_ "GenMsgCycleTime" BO_ 544 500;
+BA_ "VFrameFormat" BO_ 544 0;
+BA_ "GenMsgCycleTime" BO_ 2566866419 500;
+BA_ "VFrameFormat" BO_ 2566866419 1;
+BA_ "GenMsgCycleTime" BO_ 2566910789 500;
+BA_ "VFrameFormat" BO_ 2566910789 1;
+BA_ "GenMsgCycleTime" BO_ 2566910790 500;
+BA_ "VFrameFormat" BO_ 2566910790 1;
+BA_ "GenMsgCycleTime" BO_ 2566910791 500;
+BA_ "VFrameFormat" BO_ 2566910791 1;
+BA_ "GenMsgCycleTime" BO_ 2550212816 100;
+BA_ "VFrameFormat" BO_ 2550212816 1;
+BA_ "GenMsgCycleTime" BO_ 2550278352 200;
+BA_ "VFrameFormat" BO_ 2550278352 1;
+BA_ "GenMsgCycleTime" BO_ 2550343888 100;
+BA_ "VFrameFormat" BO_ 2550343888 1;
+BA_ "GenMsgCycleTime" BO_ 2551261392 100;
+BA_ "VFrameFormat" BO_ 2551261392 1;
+BA_ "GenMsgCycleTime" BO_ 2551326928 100;
+BA_ "VFrameFormat" BO_ 2551326928 1;
+BA_ "GenMsgCycleTime" BO_ 2551392464 100;
+BA_ "VFrameFormat" BO_ 2551392464 1;
+BA_ "GenMsgCycleTime" BO_ 2551458000 100;
+BA_ "VFrameFormat" BO_ 2551458000 1;
+BA_ "GenMsgCycleTime" BO_ 2364606887 100;
+BA_ "VFrameFormat" BO_ 2364606887 1;
+BA_ "GenMsgCycleTime" BO_ 2566792676 500;
+BA_ "VFrameFormat" BO_ 2566792676 1;
+BA_ "GenMsgCycleTime" BO_ 2566792932 500;
+BA_ "VFrameFormat" BO_ 2566792932 1;
+BA_ "GenMsgCycleTime" BO_ 2566793188 500;
+BA_ "VFrameFormat" BO_ 2566793188 1;
+BA_ "SystemSignalLongSymbol" SG_ 852 Statistic_HeatingTemperatureHTMa "Statistic_HeatingTemperatureHTMax";
+BA_ "SystemSignalLongSymbol" SG_ 852 Statistic_HeatingTemperatureHT_2 "Statistic_HeatingTemperatureHTMaxNum";
+BA_ "SystemSignalLongSymbol" SG_ 852 Statistic_HeatingTemperatureLTMa "Statistic_HeatingTemperatureLTMax";
+BA_ "SystemSignalLongSymbol" SG_ 852 Statistic_HeatingTemperatureLT_2 "Statistic_HeatingTemperatureLTMaxNum";
+BA_ "SystemSignalLongSymbol" SG_ 853 Statistic_PoleTemperatureHTMaxNu "Statistic_PoleTemperatureHTMaxNum";
+BA_ "SystemSignalLongSymbol" SG_ 853 Statistic_PoleTemperatureLTMaxNu "Statistic_PoleTemperatureLTMaxNum";
+BA_ "SystemSignalLongSymbol" SG_ 520 HeatCur_2 "HeatCur";
+VAL_ 352 VCU_PowerOnReq 0 "请求下高压" 1 "请求上高压" ;
+VAL_ 352 VCU_UrgencyCutOffPowerReq 0 "未请求" 1 "请求下高压" ;
+VAL_ 484 BMS_ChargeMode 0 "未充电" 1 "直流模式" 2 "交流模式" 3 "保留" ;
+VAL_ 484 BMS_ChargeStatus 0 "未充电" 1 "充电中" 2 "充电完成" 3 "保留" ;
+VAL_ 484 BMS_PrechargeStatus 0 "未预充" 1 "预充中" 2 "预充完成" 3 "预充失败" ;
+VAL_ 484 BMS_SelfCheckStatus 0 "自检中" 1 "自检完成" 2 "自检失败" 3 "保留" ;
+VAL_ 484 BMS_BalanceStatus 0 "未均衡" 1 "均衡中" ;
+VAL_ 484 BMS_HeatingStatus 0 "未加热" 1 "加热中" ;
+VAL_ 484 BMS_RefrigerationStatus 0 "未制冷" 1 "制冷中" ;
+VAL_ 484 HighVoltLoopLockStatus 0 "未互锁" 1 "互锁中" ;
+VAL_ 484 BMS_AlarmLevel 0 "无故障" 1 "1级故障，不影响车辆正常行驶" 2 "2级故障，影像车辆性能，需要驾驶员限制行驶" 3 "3级故障，应立即停车处理或请求救援" 4 "4级故障，最高级别，应立即停车处理或请求救援" 254 "异常" 255 "无效" ;
+VAL_ 484 BMS_ReadySt 0 "Not Ready" 1 "Ready" 2 "Error" 3 "Reserve" ;
+VAL_ 484 BmsMode 0 "一体机模式" 1 "主从模式" ;
+VAL_ 501 Alarm_Level 0 "无故障" 1 "1级故障" 2 "2级故障" 3 "3级故障" 4 "4级故障" 254 "异常" 255 "无效" ;
+VAL_ 849 Relay_PositiveStatus 0 "断开" 1 "闭合" ;
+VAL_ 849 Relay_NegativeStatus 0 "断开" 1 "闭合" ;
+VAL_ 849 Relay_PrechargeStatus 0 "断开" 1 "闭合" ;
+VAL_ 849 Relay_DischargeStatus 0 "断开" 1 "闭合" ;
+VAL_ 849 Relay_ACChargeStatus 0 "断开" 1 "闭合" ;
+VAL_ 849 Relay_DCChargeStatus 0 "断开" 1 "闭合" ;
+VAL_ 849 Relay_HeatingStatus 0 "断开" 1 "闭合" ;
+VAL_ 849 Relay_RefrigerationStatus 0 "断开" 1 "闭合" ;
+VAL_ 849 Relay_PositiveFaultStatus 0 "正常" 1 "粘连故障" 2 "开路故障" 3 "驱动电路故障" ;
+VAL_ 849 Relay_NegativeFaultStatus 0 "正常" 1 "粘连故障" 2 "开路故障" 3 "驱动电路故障" ;
+VAL_ 849 Relay_PrechargeFaultStatus 0 "正常" 1 "粘连故障" 2 "开路故障" 3 "驱动电路故障" ;
+VAL_ 849 Relay_DischargeFaultStatus 0 "正常" 1 "粘连故障" 2 "开路故障" 3 "驱动电路故障" ;
+VAL_ 849 Relay_ACChargeFaultStatus 0 "正常" 1 "粘连故障" 2 "开路故障" 3 "驱动电路故障" ;
+VAL_ 849 Relay_DCChargeFaultStatus 0 "正常" 1 "粘连故障" 2 "开路故障" 3 "驱动电路故障" ;
+VAL_ 849 Relay_HeatingFaultStatus 0 "正常" 1 "粘连故障" 2 "开路故障" 3 "驱动电路故障" ;
+VAL_ 849 Relay_RefrigerationFaultStatus 0 "正常" 1 "粘连故障" 2 "开路故障" 3 "驱动电路故障" ;
+VAL_ 864 NO1_RelayStatus 0 "断开" 1 "闭合" ;
+VAL_ 864 NO1_RelayFaultStatus 0 "正常" 1 "粘连故障" 2 "开路故障" 3 "驱动电路故障" ;
+VAL_ 864 NO2_RelayStatus 0 "断开" 1 "闭合" ;
+VAL_ 864 NO2_RelayFaultStatus 0 "正常" 1 "粘连故障" 2 "开路故障" 3 "驱动电路故障" ;
+VAL_ 864 NO3_RelayStatus 0 "断开" 1 "闭合" ;
+VAL_ 864 NO3_RelayFaultStatus 0 "正常" 1 "粘连故障" 2 "开路故障" 3 "驱动电路故障" ;
+VAL_ 864 NO4_RelayStatus 0 "断开" 1 "闭合" ;
+VAL_ 864 NO4_RelayFaultStatus 0 "正常" 1 "粘连故障" 2 "开路故障" 3 "驱动电路故障" ;
+VAL_ 864 NO5_RelayStatus 0 "断开" 1 "闭合" ;
+VAL_ 864 NO5_RelayFaultStatus 0 "正常" 1 "粘连故障" 2 "开路故障" 3 "驱动电路故障" ;
+VAL_ 864 NO6_RelayStatus 0 "断开" 1 "闭合" ;
+VAL_ 864 NO6_RelayFaultStatus 0 "正常" 1 "粘连故障" 2 "开路故障" 3 "驱动电路故障" ;
+VAL_ 864 NO7_RelayStatus 0 "断开" 1 "闭合" ;
+VAL_ 864 NO7_RelayFaultStatus 0 "正常" 1 "粘连故障" 2 "开路故障" 3 "驱动电路故障" ;
+VAL_ 865 NO8_RelayStatus 0 "断开" 1 "闭合" ;
+VAL_ 865 NO8_RelayFaultStatus 0 "正常" 1 "粘连故障" 2 "开路故障" 3 "驱动电路故障" ;
+VAL_ 865 NO9_RelayStatus 0 "断开" 1 "闭合" ;
+VAL_ 865 NO9_RelayFaultStatus 0 "正常" 1 "粘连故障" 2 "开路故障" 3 "驱动电路故障" ;
+VAL_ 865 NO10_RelayStatus 0 "断开" 1 "闭合" ;
+VAL_ 865 NO10_RelayFaultStatus 0 "正常" 1 "粘连故障" 2 "开路故障" 3 "驱动电路故障" ;
+VAL_ 865 NO11_RelayStatus 0 "断开" 1 "闭合" ;
+VAL_ 865 NO11_RelayFaultStatus 0 "正常" 1 "粘连故障" 2 "开路故障" 3 "驱动电路故障" ;
+VAL_ 865 NO12_RelayStatus 0 "断开" 1 "闭合" ;
+VAL_ 865 NO12_RelayFaultStatus 0 "正常" 1 "粘连故障" 2 "开路故障" 3 "驱动电路故障" ;
+VAL_ 865 NO13_RelayStatus 0 "断开" 1 "闭合" ;
+VAL_ 865 NO13_RelayFaultStatus 0 "正常" 1 "粘连故障" 2 "开路故障" 3 "驱动电路故障" ;
+VAL_ 865 NO14_RelayStatus 0 "断开" 1 "闭合" ;
+VAL_ 865 NO14_RelayFaultStatus 0 "正常" 1 "粘连故障" 2 "开路故障" 3 "驱动电路故障" ;
+VAL_ 865 NO15_RelayStatus 0 "断开" 1 "闭合" ;
+VAL_ 865 NO15_RelayFaultStatus 0 "正常" 1 "粘连故障" 2 "开路故障" 3 "驱动电路故障" ;
+VAL_ 518 SocStartDia_FullCalib 0 "未触发" 1 "校准正常" 2 "校准未释放" 3 "SOC过高" 4 "SOC过低" 5 "平均电压过高" 6 "平均电压过低" 7 "校准延时中" 8 "参数读取失败" ;
+VAL_ 518 SocStartDia_EmptyCalib 0 "未触发" 1 "校准正常" 2 "校准未释放" 3 "SOC过高" 4 "SOC过低" 5 "平均电压过高" 6 "平均电压过低" 7 "校准延时中" 8 "参数读取失败" ;
+VAL_ 520 BuzzerControl 0 "不蜂鸣" 1 "蜂鸣" ;
+VAL_ 500 Charge_Control 0 "允许充电" 1 "禁止充电" ;
+VAL_ 513 OBC_HwFault 0 "正常" 1 "硬件故障" ;
+VAL_ 513 OBC_Temp 0 "正常" 1 "充电机温度过高保护" ;
+VAL_ 513 OBC_InputVoltage 0 "正常" 1 "输入电压错误，充电机停止工作" ;
+VAL_ 513 OBC_StartSt 0 "电池电压正常，可以启动" 1 "电池电压异常，不允许启动" ;
+VAL_ 513 OBC_ComSt 0 "通讯正常" 1 "通讯指令超时或者是收到指令异常" ;
+VAL_ 544 OBC_HwFault 0 "正常" 1 "硬件故障" ;
+VAL_ 544 OBC_Temp 0 "正常" 1 "充电机温度过高保护" ;
+VAL_ 544 OBC_InputVoltage 0 "正常" 1 "输入电压错误，充电机停止工作" ;
+VAL_ 544 OBC_StartSt 0 "电池电压正常，可以启动" 1 "电池电压异常，不允许启动" ;
+VAL_ 544 OBC_ComSt 0 "通讯正常" 1 "通讯指令超时或者是收到指令异常" ;
+VAL_ 544 OBC_OutputShortCircuit 0 "正常" 1 "输出过流、短路，充电机停止工作" ;
+VAL_ 2364606887 OnOffCmd 0 "请求下高压" 1 "请求上高压" ;
+VAL_ 2566792676 OperationMode 1 "工作" 2 "全直通工作" 3 "待机(制动电阻控制器接触器吸合）" 6 "停机(制动电阻控制器接触器断开）" ;
+VAL_ 2566792676 FaultLevel 0 "无故障" 1 "一级故障" 2 "二级故障" 3 "无效" ;
