@@ -33,272 +33,272 @@ NS_ :
 
 BS_:
 
-BU_: PDU PMSM SRM TWV VCU Vector__XXX
+BU_: PDU PMSM SRM TWV VCU
 
 
 BO_ 2550173648 VCU_DCDC1: 8 VCU
- SG_ VCU_DCDC1_En : 0|2@1+ (1,0) [0|3] ""  Vector__XXX
+ SG_ VCU_DCDC1_En : 0|2@1+ (1,0) [0|3] "" Vector__XXX
 
 BO_ 2550178053 Ctrl_HVC: 8 VCU
- SG_ EDrv1_PowOnCmd : 0|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ EDrv2_PowOnCmd : 2|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ PaxAC_PowOnCmd : 4|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ PTC_PowOnCmd : 6|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ HvcCmd_Life : 60|4@1+ (1,0) [0|15] ""  Vector__XXX
+ SG_ EDrv1_PowOnCmd : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ EDrv2_PowOnCmd : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PaxAC_PowOnCmd : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PTC_PowOnCmd : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HvcCmd_Life : 60|4@1+ (1,0) [0|15] "" Vector__XXX
 
 BO_ 2550190223 DCDC1_1: 8 Vector__XXX
- SG_ DCDC1_OutVolt : 0|16@1+ (0.1,0) [0|1000] "V"  Vector__XXX
- SG_ DCDC1_OutCurr : 16|16@1+ (0.1,0) [0|1000] "A"  Vector__XXX
- SG_ DCDC1_InputVolt : 32|16@1+ (0.1,0) [0|1000] "V"  Vector__XXX
- SG_ DCDC1_ModuleTemp : 48|8@1+ (1,-40) [-40|215] "C"  Vector__XXX
+ SG_ DCDC1_OutVolt : 0|16@1+ (0.1,0) [0|1000] "V" Vector__XXX
+ SG_ DCDC1_OutCurr : 16|16@1+ (0.1,0) [0|1000] "A" Vector__XXX
+ SG_ DCDC1_InputVolt : 32|16@1+ (0.1,0) [0|1000] "V" Vector__XXX
+ SG_ DCDC1_ModuleTemp : 48|8@1+ (1,-40) [-40|215] "C" Vector__XXX
 
 BO_ 2550203809 HVC1_LV: 8 Vector__XXX
- SG_ Batt_Vol : 0|8@1+ (0.2,0) [0|51] "V"  Vector__XXX
- SG_ DCDC_OutVol : 8|8@1+ (0.2,0) [0|51] "V"  Vector__XXX
- SG_ HVC_KL15Vol : 24|8@1+ (0.2,0) [0|51] "V"  Vector__XXX
- SG_ HVC_ChgWakeUpVol : 32|8@1+ (0.2,0) [0|51] "V"  Vector__XXX
- SG_ HVC1_Life : 60|4@1+ (1,0) [0|15] ""  Vector__XXX
+ SG_ Batt_Vol : 0|8@1+ (0.2,0) [0|51] "V" Vector__XXX
+ SG_ DCDC_OutVol : 8|8@1+ (0.2,0) [0|51] "V" Vector__XXX
+ SG_ HVC_KL15Vol : 24|8@1+ (0.2,0) [0|51] "V" Vector__XXX
+ SG_ HVC_ChgWakeUpVol : 32|8@1+ (0.2,0) [0|51] "V" Vector__XXX
+ SG_ HVC1_Life : 60|4@1+ (1,0) [0|15] "" Vector__XXX
 
 BO_ 2550255759 DCDC1_2: 8 Vector__XXX
- SG_ DCDC1_FaultLevel : 0|2@1+ (1,0) [0|3] ""  Vector__XXX
- SG_ DCDC1_WorkSt : 2|4@1+ (1,0) [0|15] ""  Vector__XXX
- SG_ DCDC1_FaultSt : 8|16@1+ (1,0) [0|65535] ""  Vector__XXX
- SG_ DCDC1_HWVersion : 48|8@1+ (1,0) [0|255] ""  Vector__XXX
- SG_ DCDC1_SWVersion : 56|8@1+ (1,0) [0|255] ""  Vector__XXX
+ SG_ DCDC1_FaultLevel : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DCDC1_WorkSt : 2|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ DCDC1_FaultSt : 8|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ DCDC1_HWVersion : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ DCDC1_SWVersion : 56|8@1+ (1,0) [0|255] "" Vector__XXX
 
 BO_ 2550334881 HVC3_Temp: 8 Vector__XXX
- SG_ PDU_Temp : 0|8@1+ (1,-40) [-40|210] "℃"  Vector__XXX
- SG_ Out_Temp : 40|8@1+ (1,-40) [-40|210] "℃"  Vector__XXX
- SG_ In_Temp : 48|8@1+ (1,-40) [-40|210] "℃"  Vector__XXX
- SG_ HVC3_Life : 60|4@1+ (1,0) [0|15] ""  Vector__XXX
+ SG_ PDU_Temp : 0|8@1+ (1,-40) [-40|210] "℃" Vector__XXX
+ SG_ Out_Temp : 40|8@1+ (1,-40) [-40|210] "℃" Vector__XXX
+ SG_ In_Temp : 48|8@1+ (1,-40) [-40|210] "℃" Vector__XXX
+ SG_ HVC3_Life : 60|4@1+ (1,0) [0|15] "" Vector__XXX
 
 BO_ 2550400417 HVC4_RlySt: 8 Vector__XXX
- SG_ KM01_MotDrv1MainSt : 0|2@1+ (1,0) [0|3] ""  Vector__XXX
- SG_ KM04_MotDrv1PreSt : 2|2@1+ (1,0) [0|3] ""  Vector__XXX
- SG_ KM02_MotDrv2MainSt : 4|2@1+ (1,0) [0|3] ""  Vector__XXX
- SG_ KM05_MotDrv2PreSt : 6|2@1+ (1,0) [0|3] ""  Vector__XXX
- SG_ KM03_PaxACSt : 8|2@1+ (1,0) [0|3] ""  Vector__XXX
- SG_ KM06_PTCSt : 10|2@1+ (1,0) [0|3] ""  Vector__XXX
- SG_ MotDrv1_PowOnSt : 16|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ MotDrv2_PowOnSt : 17|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ PaxAC_PowOnSt : 18|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ PTC_PowOnSt : 19|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ HVC_FaultCode : 24|32@1+ (1,0) [0|4294967295] ""  Vector__XXX
- SG_ HVC_FaultLevel : 56|2@1+ (1,0) [0|3] ""  Vector__XXX
- SG_ HVC4_Life : 60|4@1+ (1,0) [0|15] ""  Vector__XXX
+ SG_ KM01_MotDrv1MainSt : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ KM04_MotDrv1PreSt : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ KM02_MotDrv2MainSt : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ KM05_MotDrv2PreSt : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ KM03_PaxACSt : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ KM06_PTCSt : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ MotDrv1_PowOnSt : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MotDrv2_PowOnSt : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PaxAC_PowOnSt : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PTC_PowOnSt : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HVC_FaultCode : 24|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ HVC_FaultLevel : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVC4_Life : 60|4@1+ (1,0) [0|15] "" Vector__XXX
 
 BO_ 2550597025 HVC7_HV1: 8 Vector__XXX
- SG_ PwrPos_Vol : 0|12@1+ (0.5,-1024) [-1024|1023.5] "V"  Vector__XXX
- SG_ PTC_Vol : 12|12@1+ (0.5,-1024) [-1024|1023.5] "V"  Vector__XXX
- SG_ MotDrv1_Vol : 24|12@1+ (0.5,-1024) [-1024|1023.5] "V"  Vector__XXX
- SG_ MotDrv2_Vol : 36|12@1+ (0.5,-1024) [-1024|1023.5] "V"  Vector__XXX
- SG_ PaxAC_Vol : 48|12@1+ (0.5,-1024) [-1024|1023.5] "V"  Vector__XXX
- SG_ HVC5_Life : 60|4@1+ (1,0) [0|15] ""  Vector__XXX
+ SG_ PwrPos_Vol : 0|12@1+ (0.5,-1024) [-1024|1023.5] "V" Vector__XXX
+ SG_ PTC_Vol : 12|12@1+ (0.5,-1024) [-1024|1023.5] "V" Vector__XXX
+ SG_ MotDrv1_Vol : 24|12@1+ (0.5,-1024) [-1024|1023.5] "V" Vector__XXX
+ SG_ MotDrv2_Vol : 36|12@1+ (0.5,-1024) [-1024|1023.5] "V" Vector__XXX
+ SG_ PaxAC_Vol : 48|12@1+ (0.5,-1024) [-1024|1023.5] "V" Vector__XXX
+ SG_ HVC5_Life : 60|4@1+ (1,0) [0|15] "" Vector__XXX
 
 BO_ 2352082896 VCU2MCU1: 8 VCU
- SG_ VCU2OilMotor_En : 0|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ VCU2OilMotor_WorkMode : 1|2@1+ (1,0) [0|3] ""  Vector__XXX
- SG_ VCU2OilMotor_CtrlMode : 3|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ VCU2OilMotor_AntiSlipEn : 4|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ VCU2OilMotor_ActiveDisCharge : 5|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ VCU2OilMotor_BusCurLimit : 8|8@1+ (4,0) [0|1000] ""  Vector__XXX
- SG_ VCU2OilMotor_TarSpd : 16|16@1+ (0.25,0) [0|16383.75] ""  Vector__XXX
- SG_ VCU2OilMotor_TarTrq : 32|16@1+ (0.1,0) [0|6553.5] ""  Vector__XXX
- SG_ VCU2OilMotor_RegenVoltLimit : 48|8@1+ (4,0) [0|255] ""  Vector__XXX
- SG_ VCU2OilMotor_CtrlBusCounter : 56|8@1+ (1,0) [0|255] ""  Vector__XXX
+ SG_ VCU2OilMotor_En : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU2OilMotor_WorkMode : 1|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU2OilMotor_CtrlMode : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU2OilMotor_AntiSlipEn : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU2OilMotor_ActiveDisCharge : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU2OilMotor_BusCurLimit : 8|8@1+ (4,0) [0|1000] "" Vector__XXX
+ SG_ VCU2OilMotor_TarSpd : 16|16@1+ (0.25,0) [0|16383.75] "" Vector__XXX
+ SG_ VCU2OilMotor_TarTrq : 32|16@1+ (0.1,0) [0|6553.5] "" Vector__XXX
+ SG_ VCU2OilMotor_RegenVoltLimit : 48|8@1+ (4,0) [0|255] "" Vector__XXX
+ SG_ VCU2OilMotor_CtrlBusCounter : 56|8@1+ (1,0) [0|255] "" Vector__XXX
 
 BO_ 2352083408 VCU2MCU2: 8 VCU
- SG_ VCU2DrvMotor_En : 0|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ VCU2DrvMotor_WorkMode : 1|2@1+ (1,0) [0|3] ""  Vector__XXX
- SG_ VCU2DrvMotor_CtrlMode : 3|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ VCU2DrvMotor_AntiSlipEn : 4|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ VCU2DrvMotor_ActiveDisCharge : 5|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ VCU2DrvMotor_BusCurLimit : 8|8@1+ (4,0) [0|1000] ""  Vector__XXX
- SG_ VCU2DrvMotor_TarSpd : 16|16@1+ (0.25,0) [0|16383.75] ""  Vector__XXX
- SG_ VCU2DrvMotor_TarTrq : 32|16@1+ (0.1,0) [0|6553.5] ""  Vector__XXX
- SG_ VCU2DrvMotor_RegenVoltLimit : 48|8@1+ (4,0) [0|255] ""  Vector__XXX
- SG_ VCU2DrvMotor_CtrlBusCounter : 56|8@1+ (1,0) [0|255] ""  Vector__XXX
+ SG_ VCU2DrvMotor_En : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU2DrvMotor_WorkMode : 1|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU2DrvMotor_CtrlMode : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU2DrvMotor_AntiSlipEn : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU2DrvMotor_ActiveDisCharge : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU2DrvMotor_BusCurLimit : 8|8@1+ (4,0) [0|1000] "" Vector__XXX
+ SG_ VCU2DrvMotor_TarSpd : 16|16@1+ (0.25,0) [0|16383.75] "" Vector__XXX
+ SG_ VCU2DrvMotor_TarTrq : 32|16@1+ (0.1,0) [0|6553.5] "" Vector__XXX
+ SG_ VCU2DrvMotor_RegenVoltLimit : 48|8@1+ (4,0) [0|255] "" Vector__XXX
+ SG_ VCU2DrvMotor_CtrlBusCounter : 56|8@1+ (1,0) [0|255] "" Vector__XXX
 
 BO_ 2553729263 MCU1Msg1: 8 Vector__XXX
- SG_ OilMotorBusCur : 0|16@1- (0.1,-600) [-600|5953.5] ""  Vector__XXX
- SG_ OilMotorBusVolt : 16|16@1+ (1,0) [0|65535] ""  Vector__XXX
- SG_ OilMotorSpd : 32|16@1- (1,-30000) [-30000|35535] ""  Vector__XXX
- SG_ OilMotorTrq : 48|16@1+ (0.1,0) [0|6553.5] ""  Vector__XXX
+ SG_ OilMotorBusCur : 0|16@1- (0.1,-600) [-600|5953.5] "" Vector__XXX
+ SG_ OilMotorBusVolt : 16|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ OilMotorSpd : 32|16@1- (1,-30000) [-30000|35535] "" Vector__XXX
+ SG_ OilMotorTrq : 48|16@1+ (0.1,0) [0|6553.5] "" Vector__XXX
 
 BO_ 2553794799 MCU1Msg2: 8 Vector__XXX
- SG_ OilMotorSt : 0|4@1+ (1,0) [0|15] ""  Vector__XXX
- SG_ OilMotorWorkModeSt : 4|3@1+ (1,0) [0|15] ""  Vector__XXX
- SG_ OilMotorAntiSlipSt : 7|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ OilMotorFaultLevel : 8|2@1+ (1,0) [0|3] ""  Vector__XXX
- SG_ OilMotorPwrLimitpct : 16|8@1+ (1,0) [0|100] ""  Vector__XXX
- SG_ OilMotorFaultCode : 24|8@1+ (1,0) [0|100] ""  Vector__XXX
- SG_ OilMotorMCUID : 32|16@1+ (1,0) [0|65535] ""  Vector__XXX
- SG_ Reserved : 48|8@1+ (1,0) [0|255] ""  Vector__XXX
- SG_ OilMotorBusCounter : 56|8@1+ (1,0) [0|255] ""  Vector__XXX
+ SG_ OilMotorSt : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ OilMotorWorkModeSt : 4|3@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ OilMotorAntiSlipSt : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OilMotorFaultLevel : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ OilMotorPwrLimitpct : 16|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ OilMotorFaultCode : 24|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ OilMotorMCUID : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Reserved : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ OilMotorBusCounter : 56|8@1+ (1,0) [0|255] "" Vector__XXX
 
 BO_ 2553860335 MCU1Msg3: 8 Vector__XXX
- SG_ OilMotorTemp1 : 0|8@1- (1,-50) [-50|205] ""  Vector__XXX
- SG_ OilMotorTemp2 : 8|8@1- (1,-50) [-50|205] ""  Vector__XXX
- SG_ OilMotorTemp3 : 16|8@1- (1,-50) [-50|205] ""  Vector__XXX
- SG_ OilMotorMCUTemp1 : 24|8@1- (1,-50) [-50|205] ""  Vector__XXX
- SG_ OilMotorMCUTemp2 : 32|8@1- (1,-50) [-50|205] ""  Vector__XXX
- SG_ OilMotorMCUTemp3 : 40|8@1- (1,-50) [-50|205] ""  Vector__XXX
+ SG_ OilMotorTemp1 : 0|8@1- (1,-50) [-50|205] "" Vector__XXX
+ SG_ OilMotorTemp2 : 8|8@1- (1,-50) [-50|205] "" Vector__XXX
+ SG_ OilMotorTemp3 : 16|8@1- (1,-50) [-50|205] "" Vector__XXX
+ SG_ OilMotorMCUTemp1 : 24|8@1- (1,-50) [-50|205] "" Vector__XXX
+ SG_ OilMotorMCUTemp2 : 32|8@1- (1,-50) [-50|205] "" Vector__XXX
+ SG_ OilMotorMCUTemp3 : 40|8@1- (1,-50) [-50|205] "" Vector__XXX
 
 BO_ 2553729265 MCU2Msg1: 8 Vector__XXX
- SG_ DrvMotorBusCur : 0|16@1- (0.1,-600) [-600|5953.5] ""  Vector__XXX
- SG_ DrvMotorBusVolt : 16|16@1+ (1,0) [0|65535] ""  Vector__XXX
- SG_ DrvMotorSpd : 32|16@1- (1,-30000) [-30000|35535] ""  Vector__XXX
- SG_ DrvMotorTrq : 48|16@1+ (0.1,0) [0|6553.5] ""  Vector__XXX
+ SG_ DrvMotorBusCur : 0|16@1- (0.1,-600) [-600|5953.5] "" Vector__XXX
+ SG_ DrvMotorBusVolt : 16|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ DrvMotorSpd : 32|16@1- (1,-30000) [-30000|35535] "" Vector__XXX
+ SG_ DrvMotorTrq : 48|16@1+ (0.1,0) [0|6553.5] "" Vector__XXX
 
 BO_ 2553794801 MCU2Msg2: 8 Vector__XXX
- SG_ DrvMotorSt : 0|4@1+ (1,0) [0|15] ""  Vector__XXX
- SG_ DrvMotorWorkModeSt : 4|3@1+ (1,0) [0|15] ""  Vector__XXX
- SG_ DrvMotorAntiSlipSt : 7|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ DrvMotorFaultLevel : 8|2@1+ (1,0) [0|3] ""  Vector__XXX
- SG_ DrvMotorPwrLimitpct : 16|8@1+ (1,0) [0|100] ""  Vector__XXX
- SG_ DrvMotorFaultCode : 24|8@1+ (1,0) [0|100] ""  Vector__XXX
- SG_ DrvMotorMCUID : 32|16@1+ (1,0) [0|65535] ""  Vector__XXX
- SG_ Reserved : 48|8@1+ (1,0) [0|255] ""  Vector__XXX
- SG_ DrvMotorBusCounter : 56|8@1+ (1,0) [0|255] ""  Vector__XXX
+ SG_ DrvMotorSt : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ DrvMotorWorkModeSt : 4|3@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ DrvMotorAntiSlipSt : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DrvMotorFaultLevel : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DrvMotorPwrLimitpct : 16|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ DrvMotorFaultCode : 24|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ DrvMotorMCUID : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Reserved : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ DrvMotorBusCounter : 56|8@1+ (1,0) [0|255] "" Vector__XXX
 
 BO_ 2553860337 MCU2Msg3: 8 Vector__XXX
- SG_ DrvMotorTemp1 : 0|8@1- (1,-50) [-50|205] ""  Vector__XXX
- SG_ DrvMotorTemp2 : 8|8@1- (1,-50) [-50|205] ""  Vector__XXX
- SG_ DrvMotorTemp3 : 16|8@1- (1,-50) [-50|205] ""  Vector__XXX
- SG_ DrvMotorMCUTemp1 : 24|8@1- (1,-50) [-50|205] ""  Vector__XXX
- SG_ DrvMotorMCUTemp2 : 32|8@1- (1,-50) [-50|205] ""  Vector__XXX
- SG_ DrvMotorMCUTemp3 : 40|8@1- (1,-50) [-50|205] ""  Vector__XXX
+ SG_ DrvMotorTemp1 : 0|8@1- (1,-50) [-50|205] "" Vector__XXX
+ SG_ DrvMotorTemp2 : 8|8@1- (1,-50) [-50|205] "" Vector__XXX
+ SG_ DrvMotorTemp3 : 16|8@1- (1,-50) [-50|205] "" Vector__XXX
+ SG_ DrvMotorMCUTemp1 : 24|8@1- (1,-50) [-50|205] "" Vector__XXX
+ SG_ DrvMotorMCUTemp2 : 32|8@1- (1,-50) [-50|205] "" Vector__XXX
+ SG_ DrvMotorMCUTemp3 : 40|8@1- (1,-50) [-50|205] "" Vector__XXX
 
 BO_ 2349308583 VCU_ACU1: 8 VCU
- SG_ DcdcCmd : 0|8@1+ (1,0) [0|0] ""  Vector__XXX
- SG_ DcacEpsCmd : 16|8@1+ (1,0) [0|0] ""  Vector__XXX
- SG_ DcacEpsMode : 24|8@1+ (1,0) [0|0] ""  Vector__XXX
- SG_ DcacAcCmd : 32|8@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ DcdcCmd : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DcacEpsCmd : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DcacEpsMode : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DcacAcCmd : 32|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 2349377434 ACU1: 8 Vector__XXX
- SG_ OutputVoltage : 0|16@1- (0.1,-1000) [-1000|1000] "V"  Vector__XXX
- SG_ OutputCurrent : 16|16@1- (0.1,-1000) [-1000|1000] "A"  Vector__XXX
- SG_ InputVoltage : 32|16@1- (0.1,-1000) [-1000|1000] "V"  Vector__XXX
- SG_ Temp : 48|8@1- (1,-50) [-50|200] "℃"  Vector__XXX
- SG_ FaultCode : 56|8@1+ (1,0) [0|255] ""  Vector__XXX
+ SG_ OutputVoltage : 0|16@1- (0.1,-1000) [-1000|1000] "V" Vector__XXX
+ SG_ OutputCurrent : 16|16@1- (0.1,-1000) [-1000|1000] "A" Vector__XXX
+ SG_ InputVoltage : 32|16@1- (0.1,-1000) [-1000|1000] "V" Vector__XXX
+ SG_ Temp : 48|8@1- (1,-50) [-50|200] "℃" Vector__XXX
+ SG_ FaultCode : 56|8@1+ (1,0) [0|255] "" Vector__XXX
 
 BO_ 2349442971 ACU2: 8 Vector__XXX
- SG_ CurrentW : 0|16@1- (0.1,-1000) [-1000|1000] "A"  Vector__XXX
- SG_ CurrentV : 16|16@1- (0.1,-1000) [-1000|1000] "A"  Vector__XXX
- SG_ CurrentU : 32|16@1- (0.1,-1000) [-1000|1000] "A"  Vector__XXX
- SG_ Temp : 48|8@1- (1,-50) [-50|200] "℃"  Vector__XXX
- SG_ FaultCode : 56|8@1+ (1,0) [0|255] ""  Vector__XXX
+ SG_ CurrentW : 0|16@1- (0.1,-1000) [-1000|1000] "A" Vector__XXX
+ SG_ CurrentV : 16|16@1- (0.1,-1000) [-1000|1000] "A" Vector__XXX
+ SG_ CurrentU : 32|16@1- (0.1,-1000) [-1000|1000] "A" Vector__XXX
+ SG_ Temp : 48|8@1- (1,-50) [-50|200] "℃" Vector__XXX
+ SG_ FaultCode : 56|8@1+ (1,0) [0|255] "" Vector__XXX
 
 BO_ 2349508509 ACU3: 8 Vector__XXX
- SG_ CurrentW : 0|16@1- (0.1,-1000) [-1000|1000] "A"  Vector__XXX
- SG_ CurrentV : 16|16@1- (0.1,-1000) [-1000|1000] "A"  Vector__XXX
- SG_ CurrentU : 32|16@1- (0.1,-1000) [-1000|1000] "A"  Vector__XXX
- SG_ Temp : 48|8@1- (1,-50) [-50|200] "℃"  Vector__XXX
- SG_ FaultCode : 56|8@1+ (1,0) [0|255] ""  Vector__XXX
+ SG_ CurrentW : 0|16@1- (0.1,-1000) [-1000|1000] "A" Vector__XXX
+ SG_ CurrentV : 16|16@1- (0.1,-1000) [-1000|1000] "A" Vector__XXX
+ SG_ CurrentU : 32|16@1- (0.1,-1000) [-1000|1000] "A" Vector__XXX
+ SG_ Temp : 48|8@1- (1,-50) [-50|200] "℃" Vector__XXX
+ SG_ FaultCode : 56|8@1+ (1,0) [0|255] "" Vector__XXX
 
 BO_ 2364690491 VCU_PDU: 8 VCU
- SG_ VCU_ShrRlyCtl : 0|2@1+ (1,0) [0|0] ""  Vector__XXX
- SG_ VCU_HVACRlyCtl : 6|2@1+ (1,0) [0|0] ""  Vector__XXX
- SG_ VCU_PTCRlyCtl : 8|2@1+ (1,0) [0|0] ""  Vector__XXX
- SG_ VCU_HghVtgCnt : 16|2@1+ (1,0) [0|0] ""  Vector__XXX
- SG_ VCU_DCCpstRlyCtl : 40|2@1+ (1,0) [0|0] ""  Vector__XXX
- SG_ VCU_HrtBt : 56|8@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ VCU_ShrRlyCtl : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_HVACRlyCtl : 6|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_PTCRlyCtl : 8|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_HghVtgCnt : 16|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_DCCpstRlyCtl : 40|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_HrtBt : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 2566859720 PDU_RelaySts: 8 PDU
- SG_ PDU_ShrRlySts : 0|2@1+ (1,0) [0|0] ""  Vector__XXX
- SG_ PDU_PosRlySts : 2|2@1+ (1,0) [0|0] ""  Vector__XXX
- SG_ PDU_PosRlyPcgRlySts : 4|2@1+ (1,0) [0|0] ""  Vector__XXX
- SG_ PDU_HVACRlySts : 6|2@1+ (1,0) [0|0] ""  Vector__XXX
- SG_ PDU_PTCRlySts : 8|2@1+ (1,0) [0|0] ""  Vector__XXX
- SG_ MultiOne_HVACPcgRlySts : 10|2@1+ (1,0) [0|0] ""  Vector__XXX
- SG_ PDU_HrtBt : 56|8@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ PDU_ShrRlySts : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PDU_PosRlySts : 2|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PDU_PosRlyPcgRlySts : 4|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PDU_HVACRlySts : 6|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PDU_PTCRlySts : 8|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MultiOne_HVACPcgRlySts : 10|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PDU_HrtBt : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 2365523439 TM_HCU_Command: 8 VCU
- SG_ MCU_Enable : 0|1@1+ (1,0) [0|0] ""  Vector__XXX
- SG_ Fault_Reset : 1|1@1+ (1,0) [0|0] ""  Vector__XXX
- SG_ Control_Mode : 2|2@1+ (1,0) [0|0] ""  Vector__XXX
- SG_ Gear : 4|2@1+ (1,0) [0|0] ""  Vector__XXX
- SG_ FootBrake : 6|1@1+ (1,0) [0|0] ""  Vector__XXX
- SG_ HandBrake : 7|1@1+ (1,0) [0|0] ""  Vector__XXX
- SG_ Demand_Limit_High_Positive_Value : 8|12@1+ (4,0) [0|16384] "rpm"  Vector__XXX
- SG_ Demand_Limit_Low_Negative_Value : 20|12@1+ (4,0) [0|16384] "rpm"  Vector__XXX
- SG_ Demand_Torque : 32|16@1+ (1,-5000) [-5000|5000] "Nm"  Vector__XXX
- SG_ Demand_Speed : 48|16@1+ (1,-15000) [-15000|15000] "rpm"  Vector__XXX
+ SG_ MCU_Enable : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Fault_Reset : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Control_Mode : 2|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Gear : 4|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ FootBrake : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HandBrake : 7|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Demand_Limit_High_Positive_Value : 8|12@1+ (4,0) [0|16384] "rpm" Vector__XXX
+ SG_ Demand_Limit_Low_Negative_Value : 20|12@1+ (4,0) [0|16384] "rpm" Vector__XXX
+ SG_ Demand_Torque : 32|16@1+ (1,-5000) [-5000|5000] "Nm" Vector__XXX
+ SG_ Demand_Speed : 48|16@1+ (1,-15000) [-15000|15000] "rpm" Vector__XXX
 
-BO_ 2365521925 TM_MCU_STATUS_1: 8 PMSM
- SG_ Motor_Speed : 0|16@1+ (1,-15000) [-15000|15000] "rpm"  Vector__XXX
- SG_ Motor_Torque : 16|16@1+ (1,-5000) [-5000|5000] "Nm"  Vector__XXX
- SG_ Motor_AC_Current : 32|16@1+ (0.1,0) [0|1000] "A"  Vector__XXX
- SG_ Precharge_Allow : 52|1@1+ (1,0) [0|0] ""  Vector__XXX
- SG_ Active_Discharge_Enable_Feedback : 53|1@1+ (1,0) [0|0] ""  Vector__XXX
- SG_ IGBT_Enable_Feedback : 54|1@1+ (1,0) [0|0] ""  Vector__XXX
- SG_ Life_counter : 60|4@1+ (1,0) [0|0] ""  Vector__XXX
+BO_ 2365521925 TM_MCU_STATUS1: 8 PMSM
+ SG_ Motor_Speed : 0|16@1+ (1,-15000) [-15000|15000] "rpm" Vector__XXX
+ SG_ Motor_Torque : 16|16@1+ (1,-5000) [-5000|5000] "Nm" Vector__XXX
+ SG_ Motor_AC_Current : 32|16@1+ (0.1,0) [0|1000] "A" Vector__XXX
+ SG_ Precharge_Allow : 52|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Active_Discharge_Enable_Feedback : 53|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ IGBT_Enable_Feedback : 54|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Life_counter : 60|4@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 2365522181 TM_MCU_STATUS2: 8 PMSM
- SG_ Motor_Temperature : 0|8@1+ (1,-40) [-40|215] "℃"  Vector__XXX
- SG_ MCU_temperature : 8|8@1+ (1,-40) [-40|215] "℃"  Vector__XXX
- SG_ Torque_Limit_High : 16|16@1+ (1,0) [0|5000] "Nm"  Vector__XXX
- SG_ Torque_Limit_Low : 32|16@1+ (1,-5000) [-5000|0] "Nm"  Vector__XXX
- SG_ Fail_Grade : 48|4@1+ (1,0) [0|0] ""  Vector__XXX
- SG_ Life_counter : 60|4@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ Motor_Temperature : 0|8@1+ (1,-40) [-40|215] "℃" Vector__XXX
+ SG_ MCU_temperature : 8|8@1+ (1,-40) [-40|215] "℃" Vector__XXX
+ SG_ Torque_Limit_High : 16|16@1+ (1,0) [0|5000] "Nm" Vector__XXX
+ SG_ Torque_Limit_Low : 32|16@1+ (1,-5000) [-5000|0] "Nm" Vector__XXX
+ SG_ Fail_Grade : 48|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Life_counter : 60|4@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 2365522437 TM_MCU_STATUS3: 8 PMSM
- SG_ Fault_Code : 0|8@1+ (1,0) [0|255] ""  Vector__XXX
- SG_ Alarm_Code : 8|8@1+ (1,0) [0|255] ""  Vector__XXX
- SG_ DC_Current_A : 16|16@1+ (1,-1000) [-1000|1000] "A"  Vector__XXX
- SG_ DC_Voltage_V : 32|16@1+ (0.1,0) [0|1000] "V"  Vector__XXX
- SG_ Life_counter : 48|4@1+ (1,0) [0|15] ""  Vector__XXX
+ SG_ Fault_Code : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Alarm_Code : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ DC_Current_A : 16|16@1+ (1,-1000) [-1000|1000] "A" Vector__XXX
+ SG_ DC_Voltage_V : 32|16@1+ (0.1,0) [0|1000] "V" Vector__XXX
+ SG_ Life_counter : 48|4@1+ (1,0) [0|15] "" Vector__XXX
 
 BO_ 2365523695 ISG_HCU_Command: 8 VCU
- SG_ MCU_Enable : 0|1@1+ (1,0) [0|0] ""  Vector__XXX
- SG_ Fault_Reset : 1|1@1+ (1,0) [0|0] ""  Vector__XXX
- SG_ Control_Mode : 2|2@1+ (1,0) [0|0] ""  Vector__XXX
- SG_ Gear : 4|2@1+ (1,0) [0|0] ""  Vector__XXX
- SG_ FootBrake : 6|1@1+ (1,0) [0|0] ""  Vector__XXX
- SG_ HandBrake : 7|1@1+ (1,0) [0|0] ""  Vector__XXX
- SG_ Demand_Limit_High_Positive_Value : 8|12@1+ (4,0) [0|16384] "rpm"  Vector__XXX
- SG_ Demand_Limit_Low_Negative_Value : 20|12@1+ (4,0) [0|16384] "rpm"  Vector__XXX
- SG_ Demand_Torque : 32|16@1+ (1,-5000) [-5000|5000] "Nm"  Vector__XXX
- SG_ Demand_Speed : 48|16@1+ (1,-15000) [-15000|15000] "rpm"  Vector__XXX
+ SG_ MCU_Enable : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Fault_Reset : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Control_Mode : 2|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Gear : 4|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ FootBrake : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HandBrake : 7|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Demand_Limit_High_Positive_Value : 8|12@1+ (4,0) [0|16384] "rpm" Vector__XXX
+ SG_ Demand_Limit_Low_Negative_Value : 20|12@1+ (4,0) [0|16384] "rpm" Vector__XXX
+ SG_ Demand_Torque : 32|16@1+ (1,-5000) [-5000|5000] "Nm" Vector__XXX
+ SG_ Demand_Speed : 48|16@1+ (1,-15000) [-15000|15000] "rpm" Vector__XXX
 
-BO_ 2365521926 ISG_MCU_STATUS_1: 8 PMSM
- SG_ Motor_Speed : 0|16@1+ (1,-15000) [-15000|15000] "rpm"  Vector__XXX
- SG_ Motor_Torque : 16|16@1+ (1,-5000) [-5000|5000] "Nm"  Vector__XXX
- SG_ Motor_AC_Current : 32|16@1+ (0.1,0) [0|1000] "A"  Vector__XXX
- SG_ Precharge_Allow : 52|1@1+ (1,0) [0|0] ""  Vector__XXX
- SG_ Active_Discharge_Enable_Feedback : 53|1@1+ (1,0) [0|0] ""  Vector__XXX
- SG_ IGBT_Enable_Feedback : 54|1@1+ (1,0) [0|0] ""  Vector__XXX
- SG_ Life_counter : 60|4@1+ (1,0) [0|0] ""  Vector__XXX
+BO_ 2365521926 ISG_MCU_STATUS1: 8 PMSM
+ SG_ Motor_Speed : 0|16@1+ (1,-15000) [-15000|15000] "rpm" Vector__XXX
+ SG_ Motor_Torque : 16|16@1+ (1,-5000) [-5000|5000] "Nm" Vector__XXX
+ SG_ Motor_AC_Current : 32|16@1+ (0.1,0) [0|1000] "A" Vector__XXX
+ SG_ Precharge_Allow : 52|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Active_Discharge_Enable_Feedback : 53|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ IGBT_Enable_Feedback : 54|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Life_counter : 60|4@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 2365522182 ISG_MCU_STATUS2: 8 PMSM
- SG_ Motor_Temperature : 0|8@1+ (1,-40) [-40|215] "℃"  Vector__XXX
- SG_ MCU_temperature : 8|8@1+ (1,-40) [-40|215] "℃"  Vector__XXX
- SG_ Torque_Limit_High : 16|16@1+ (1,0) [0|5000] "Nm"  Vector__XXX
- SG_ Torque_Limit_Low : 32|16@1+ (1,-5000) [-5000|0] "Nm"  Vector__XXX
- SG_ Fail_Grade : 48|4@1+ (1,0) [0|0] ""  Vector__XXX
- SG_ Life_counter : 60|4@1+ (1,0) [0|0] ""  Vector__XXX
+ SG_ Motor_Temperature : 0|8@1+ (1,-40) [-40|215] "℃" Vector__XXX
+ SG_ MCU_temperature : 8|8@1+ (1,-40) [-40|215] "℃" Vector__XXX
+ SG_ Torque_Limit_High : 16|16@1+ (1,0) [0|5000] "Nm" Vector__XXX
+ SG_ Torque_Limit_Low : 32|16@1+ (1,-5000) [-5000|0] "Nm" Vector__XXX
+ SG_ Fail_Grade : 48|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Life_counter : 60|4@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 2365522438 ISG_MCU_STATUS3: 8 PMSM
- SG_ Fault_Code : 0|8@1+ (1,0) [0|255] ""  Vector__XXX
- SG_ Alarm_Code : 8|8@1+ (1,0) [0|255] ""  Vector__XXX
- SG_ DC_Current_A : 16|16@1+ (1,-1000) [-1000|1000] "A"  Vector__XXX
- SG_ DC_Voltage_V : 32|16@1+ (0.1,0) [0|1000] "V"  Vector__XXX
- SG_ Life_counter : 48|4@1+ (1,0) [0|15] ""  Vector__XXX
+ SG_ Fault_Code : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Alarm_Code : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ DC_Current_A : 16|16@1+ (1,-1000) [-1000|1000] "A" Vector__XXX
+ SG_ DC_Voltage_V : 32|16@1+ (0.1,0) [0|1000] "V" Vector__XXX
+ SG_ Life_counter : 48|4@1+ (1,0) [0|15] "" Vector__XXX
 
 BO_ 2566858223 VCU_TWV: 8 VCU
- SG_ VCU_TWV1_P_PosSet : 24|8@1+ (0.4,0) [0|100] "%"  Vector__XXX
- SG_ VCU_TWV1_P_MoveEnable : 33|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ VCU_TWV1_P_PosSet : 24|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+ SG_ VCU_TWV1_P_MoveEnable : 33|1@1+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 2566857787 TWV: 8 TWV
- SG_ TWV1_P_RESP_ERROR : 0|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ TWV1_P_OverVoltageFlt : 1|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ TWV1_P_OverCurrent : 2|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ TWV1_P_OverTempFlt : 3|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ TWV1_P_UnderVoltageFlt : 4|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ TWV1_P_StallFlt : 5|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ TWV1_P_MotorOpenCircuitFlt : 6|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ TWV1_P_MotorSta : 7|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ TWV1_P_RealSta : 8|8@1+ (0.4,0) [0|100] "%"  Vector__XXX
+ SG_ TWV1_P_RESP_ERROR : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ TWV1_P_OverVoltageFlt : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ TWV1_P_OverCurrent : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ TWV1_P_OverTempFlt : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ TWV1_P_UnderVoltageFlt : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ TWV1_P_StallFlt : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ TWV1_P_MotorOpenCircuitFlt : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ TWV1_P_MotorSta : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ TWV1_P_RealSta : 8|8@1+ (0.4,0) [0|100] "%" Vector__XXX
 
 
 
@@ -488,74 +488,72 @@ CM_ SG_ 2566857787 TWV1_P_MotorSta "三通阀1电机状态; 0x0:Motor Running; 0x1:Moto
 CM_ SG_ 2566857787 TWV1_P_RealSta "三通阀1当前状态; 0x0(0%):V1→V2→V3全通 ; 0x7D(50%):V2→V3全通，V1关闭; 0xFA(100%):V1→V3全通，V2关闭; 0x7D - 0xFA:50%-100%; 0xFA - 0xFF:100%";
 BA_DEF_ BO_  "GenMsgCycleTime" INT 0 60000;
 BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
-BA_DEF_ SG_  "SystemSignalLongSymbol" STRING ;
 BA_DEF_DEF_  "GenMsgCycleTime" 0;
 BA_DEF_DEF_  "VFrameFormat" "ExtendedCAN";
-BA_DEF_DEF_  "SystemSignalLongSymbol" "";
-BA_ "GenMsgCycleTime" BO_ 2550173648 100;
 BA_ "VFrameFormat" BO_ 2550173648 1;
-BA_ "GenMsgCycleTime" BO_ 2550178053 100;
+BA_ "GenMsgCycleTime" BO_ 2550173648 100;
 BA_ "VFrameFormat" BO_ 2550178053 1;
-BA_ "GenMsgCycleTime" BO_ 2550190223 100;
+BA_ "GenMsgCycleTime" BO_ 2550178053 100;
 BA_ "VFrameFormat" BO_ 2550190223 1;
-BA_ "GenMsgCycleTime" BO_ 2550203809 100;
+BA_ "GenMsgCycleTime" BO_ 2550190223 100;
 BA_ "VFrameFormat" BO_ 2550203809 1;
-BA_ "GenMsgCycleTime" BO_ 2550255759 100;
+BA_ "GenMsgCycleTime" BO_ 2550203809 100;
 BA_ "VFrameFormat" BO_ 2550255759 1;
-BA_ "GenMsgCycleTime" BO_ 2550334881 100;
+BA_ "GenMsgCycleTime" BO_ 2550255759 100;
 BA_ "VFrameFormat" BO_ 2550334881 1;
-BA_ "GenMsgCycleTime" BO_ 2550400417 100;
+BA_ "GenMsgCycleTime" BO_ 2550334881 100;
 BA_ "VFrameFormat" BO_ 2550400417 1;
-BA_ "GenMsgCycleTime" BO_ 2550597025 100;
+BA_ "GenMsgCycleTime" BO_ 2550400417 100;
 BA_ "VFrameFormat" BO_ 2550597025 1;
-BA_ "GenMsgCycleTime" BO_ 2352082896 10;
+BA_ "GenMsgCycleTime" BO_ 2550597025 100;
 BA_ "VFrameFormat" BO_ 2352082896 1;
-BA_ "GenMsgCycleTime" BO_ 2352083408 10;
+BA_ "GenMsgCycleTime" BO_ 2352082896 10;
 BA_ "VFrameFormat" BO_ 2352083408 1;
-BA_ "GenMsgCycleTime" BO_ 2553729263 10;
+BA_ "GenMsgCycleTime" BO_ 2352083408 10;
 BA_ "VFrameFormat" BO_ 2553729263 1;
-BA_ "GenMsgCycleTime" BO_ 2553794799 100;
+BA_ "GenMsgCycleTime" BO_ 2553729263 10;
 BA_ "VFrameFormat" BO_ 2553794799 1;
-BA_ "GenMsgCycleTime" BO_ 2553860335 1000;
+BA_ "GenMsgCycleTime" BO_ 2553794799 100;
 BA_ "VFrameFormat" BO_ 2553860335 1;
-BA_ "GenMsgCycleTime" BO_ 2553729265 10;
+BA_ "GenMsgCycleTime" BO_ 2553860335 1000;
 BA_ "VFrameFormat" BO_ 2553729265 1;
-BA_ "GenMsgCycleTime" BO_ 2553794801 100;
+BA_ "GenMsgCycleTime" BO_ 2553729265 10;
 BA_ "VFrameFormat" BO_ 2553794801 1;
-BA_ "GenMsgCycleTime" BO_ 2553860337 1000;
+BA_ "GenMsgCycleTime" BO_ 2553794801 100;
 BA_ "VFrameFormat" BO_ 2553860337 1;
-BA_ "GenMsgCycleTime" BO_ 2349308583 100;
+BA_ "GenMsgCycleTime" BO_ 2553860337 1000;
 BA_ "VFrameFormat" BO_ 2349308583 1;
-BA_ "GenMsgCycleTime" BO_ 2349377434 100;
+BA_ "GenMsgCycleTime" BO_ 2349308583 100;
 BA_ "VFrameFormat" BO_ 2349377434 1;
-BA_ "GenMsgCycleTime" BO_ 2349442971 100;
+BA_ "GenMsgCycleTime" BO_ 2349377434 100;
 BA_ "VFrameFormat" BO_ 2349442971 1;
-BA_ "GenMsgCycleTime" BO_ 2349508509 100;
+BA_ "GenMsgCycleTime" BO_ 2349442971 100;
 BA_ "VFrameFormat" BO_ 2349508509 1;
-BA_ "GenMsgCycleTime" BO_ 2364690491 100;
+BA_ "GenMsgCycleTime" BO_ 2349508509 100;
 BA_ "VFrameFormat" BO_ 2364690491 1;
-BA_ "GenMsgCycleTime" BO_ 2566859720 300;
+BA_ "GenMsgCycleTime" BO_ 2364690491 100;
 BA_ "VFrameFormat" BO_ 2566859720 1;
-BA_ "GenMsgCycleTime" BO_ 2365523439 10;
+BA_ "GenMsgCycleTime" BO_ 2566859720 300;
 BA_ "VFrameFormat" BO_ 2365523439 1;
-BA_ "GenMsgCycleTime" BO_ 2365521925 10;
+BA_ "GenMsgCycleTime" BO_ 2365523439 10;
 BA_ "VFrameFormat" BO_ 2365521925 1;
-BA_ "GenMsgCycleTime" BO_ 2365522181 50;
+BA_ "GenMsgCycleTime" BO_ 2365521925 10;
 BA_ "VFrameFormat" BO_ 2365522181 1;
-BA_ "GenMsgCycleTime" BO_ 2365522437 100;
+BA_ "GenMsgCycleTime" BO_ 2365522181 50;
 BA_ "VFrameFormat" BO_ 2365522437 1;
-BA_ "GenMsgCycleTime" BO_ 2365523695 10;
+BA_ "GenMsgCycleTime" BO_ 2365522437 100;
 BA_ "VFrameFormat" BO_ 2365523695 1;
-BA_ "GenMsgCycleTime" BO_ 2365521926 10;
+BA_ "GenMsgCycleTime" BO_ 2365523695 10;
 BA_ "VFrameFormat" BO_ 2365521926 1;
-BA_ "GenMsgCycleTime" BO_ 2365522182 50;
+BA_ "GenMsgCycleTime" BO_ 2365521926 10;
 BA_ "VFrameFormat" BO_ 2365522182 1;
-BA_ "GenMsgCycleTime" BO_ 2365522438 100;
+BA_ "GenMsgCycleTime" BO_ 2365522182 50;
 BA_ "VFrameFormat" BO_ 2365522438 1;
-BA_ "GenMsgCycleTime" BO_ 2566858223 100;
+BA_ "GenMsgCycleTime" BO_ 2365522438 100;
 BA_ "VFrameFormat" BO_ 2566858223 1;
-BA_ "GenMsgCycleTime" BO_ 2566857787 100;
+BA_ "GenMsgCycleTime" BO_ 2566858223 100;
 BA_ "VFrameFormat" BO_ 2566857787 1;
+BA_ "GenMsgCycleTime" BO_ 2566857787 100;
 VAL_ 2550173648 VCU_DCDC1_En 0 "预留" 1 "启动" 2 "停止" 3 "预留" ;
 VAL_ 2550178053 EDrv1_PowOnCmd 0 "断开" 1 "闭合" ;
 VAL_ 2550178053 EDrv2_PowOnCmd 0 "断开" 1 "闭合" ;
@@ -620,3 +618,4 @@ VAL_ 2566857787 TWV1_P_StallFlt 0 "normal 正常" 1 "fail 故障" ;
 VAL_ 2566857787 TWV1_P_MotorOpenCircuitFlt 0 "normal 正常" 1 "fail 故障" ;
 VAL_ 2566857787 TWV1_P_MotorSta 0 "Motor Running" 1 "Motor Stop" ;
 VAL_ 2566857787 TWV1_P_RealSta 250 "50%-100%; 0xFA -" 255 "100%" ;
+
