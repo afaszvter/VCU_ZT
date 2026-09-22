@@ -1,0 +1,2112 @@
+%implements s63_b0_fluon_TLCInterface "C"
+
+%function getSystemOutputFcnCallInfo_63_24_2_0_27_0(opaqueBlk) void
+%assign _modelSS = ""
+%createrecord fcnInfo { Name "/*@>2632a*/ZT_VehCtrl_18B_CAN0"; Args [] }
+%return fcnInfo
+%endfunction
+%function getSystemOutputFcnCallInfo_63_26_2_0_48_0(opaqueBlk) void
+%assign _modelSS = ""
+%createrecord fcnInfo { Name "/*@>2634c*/ZT_VehCtrl_18B_CAN1"; Args [] }
+%return fcnInfo
+%endfunction
+%function getOutputAddr_63_3_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<276a3*//*@>2769c*/ZT_VehCtrl_18B_B./*@>276a8*/ADC_Start" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getOutput_63_3_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>276b5*/ZT_VehCtrl_18B_B./*@>276c2*/ADC_Start" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getOutputAddr_63_4_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<276e8*//*@>276e1*/ZT_VehCtrl_18B_B./*@>276ed*/ADC_Start1" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getOutput_63_4_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>276fa*/ZT_VehCtrl_18B_B./*@>27707*/ADC_Start1" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getOutputAddr_63_5_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2772d*//*@>27726*/ZT_VehCtrl_18B_B./*@>27732*/DI01_h"
+%endfunction
+
+%function getOutput_63_5_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2773f*/ZT_VehCtrl_18B_B./*@>2774c*/DI01_h"
+%endfunction
+
+%function getOutputAddr_63_6_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<27772*//*@>2776b*/ZT_VehCtrl_18B_B./*@>27777*/DI02_c"
+%endfunction
+
+%function getOutput_63_6_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>27784*/ZT_VehCtrl_18B_B./*@>27791*/DI02_c"
+%endfunction
+
+%function getOutputAddr_63_7_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<277b7*//*@>277b0*/ZT_VehCtrl_18B_B./*@>277bc*/DI03_h"
+%endfunction
+
+%function getOutput_63_7_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>277c9*/ZT_VehCtrl_18B_B./*@>277d6*/DI03_h"
+%endfunction
+
+%function getOutputAddr_63_8_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<277fc*//*@>277f5*/ZT_VehCtrl_18B_B./*@>27801*/DI04_o"
+%endfunction
+
+%function getOutput_63_8_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2780e*/ZT_VehCtrl_18B_B./*@>2781b*/DI04_o"
+%endfunction
+
+%function getOutputAddr_63_9_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<27841*//*@>2783a*/ZT_VehCtrl_18B_B./*@>27846*/DI07_f"
+%endfunction
+
+%function getOutput_63_9_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>27853*/ZT_VehCtrl_18B_B./*@>27860*/DI07_f"
+%endfunction
+
+%function getOutputAddr_63_10_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<27886*//*@>2787f*/ZT_VehCtrl_18B_B./*@>2788b*/DI08_e"
+%endfunction
+
+%function getOutput_63_10_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>27898*/ZT_VehCtrl_18B_B./*@>278a5*/DI08_e"
+%endfunction
+
+%function getOutputAddr_63_11_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<278cb*//*@>278c4*/ZT_VehCtrl_18B_B./*@>278d0*/DI09_a"
+%endfunction
+
+%function getOutput_63_11_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>278dd*/ZT_VehCtrl_18B_B./*@>278ea*/DI09_a"
+%endfunction
+
+%function getOutputAddr_63_12_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<27910*//*@>27909*/ZT_VehCtrl_18B_B./*@>27915*/DI10_g"
+%endfunction
+
+%function getOutput_63_12_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>27922*/ZT_VehCtrl_18B_B./*@>2792f*/DI10_g"
+%endfunction
+
+%function getOutputAddr_63_13_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<27955*//*@>2794e*/ZT_VehCtrl_18B_B./*@>2795a*/DI12_h"
+%endfunction
+
+%function getOutput_63_13_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>27967*/ZT_VehCtrl_18B_B./*@>27974*/DI12_h"
+%endfunction
+
+%function getOutputAddr_63_14_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2799a*//*@>27993*/ZT_VehCtrl_18B_B./*@>2799f*/DI13_m"
+%endfunction
+
+%function getOutput_63_14_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>279ac*/ZT_VehCtrl_18B_B./*@>279b9*/DI13_m"
+%endfunction
+
+%function getOutputAddr_63_15_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<279df*//*@>279d8*/ZT_VehCtrl_18B_B./*@>279e4*/DI15_b"
+%endfunction
+
+%function getOutput_63_15_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>279f1*/ZT_VehCtrl_18B_B./*@>279fe*/DI15_b"
+%endfunction
+
+%function getOutputAddr_63_16_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<27a24*//*@>27a1d*/ZT_VehCtrl_18B_B./*@>27a29*/DI16_k"
+%endfunction
+
+%function getOutput_63_16_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>27a36*/ZT_VehCtrl_18B_B./*@>27a43*/DI16_k"
+%endfunction
+
+%function getOutputAddr_63_17_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<27a69*//*@>27a62*/ZT_VehCtrl_18B_B./*@>27a6e*/DI17_c"
+%endfunction
+
+%function getOutput_63_17_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>27a7b*/ZT_VehCtrl_18B_B./*@>27a88*/DI17_c"
+%endfunction
+
+%function getOutputAddr_63_18_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<27aae*//*@>27aa7*/ZT_VehCtrl_18B_B./*@>27ab3*/DI18_k"
+%endfunction
+
+%function getOutput_63_18_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>27ac0*/ZT_VehCtrl_18B_B./*@>27acd*/DI18_k"
+%endfunction
+
+%function getOutputAddr_63_19_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<27af3*//*@>27aec*/ZT_VehCtrl_18B_B./*@>27af8*/DI31_g"
+%endfunction
+
+%function getOutput_63_19_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>27b05*/ZT_VehCtrl_18B_B./*@>27b12*/DI31_g"
+%endfunction
+
+%function getOutputAddr_63_20_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<27b38*//*@>27b31*/ZT_VehCtrl_18B_B./*@>27b3d*/DI32_l"
+%endfunction
+
+%function getOutput_63_20_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>27b4a*/ZT_VehCtrl_18B_B./*@>27b57*/DI32_l"
+%endfunction
+
+%function getOutputAddr_63_21_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<27b7d*//*@>27b76*/ZT_VehCtrl_18B_B./*@>27b82*/DI33_b"
+%endfunction
+
+%function getOutput_63_21_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>27b8f*/ZT_VehCtrl_18B_B./*@>27b9c*/DI33_b"
+%endfunction
+
+%function getOutputAddr_63_22_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<27bc2*//*@>27bbb*/ZT_VehCtrl_18B_B./*@>27bc7*/DI34_p"
+%endfunction
+
+%function getOutput_63_22_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>27bd4*/ZT_VehCtrl_18B_B./*@>27be1*/DI34_p"
+%endfunction
+
+%function getOutputAddr_63_24_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<27c07*//*@>27c00*/ZT_VehCtrl_18B_B./*@>27c0c*/CAN0_Rx_500_o2"
+%endfunction
+
+%function getOutput_63_24_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>27c19*/ZT_VehCtrl_18B_B./*@>27c26*/CAN0_Rx_500_o2"
+%endfunction
+
+%function getOutputAddr_63_24_2_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<27c38*//*@>27c31*/ZT_VehCtrl_18B_B./*@>27c3d*/CAN0_Rx_500_o3"
+%endfunction
+
+%function getOutput_63_24_2_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>27c4a*/ZT_VehCtrl_18B_B./*@>27c57*/CAN0_Rx_500_o3"
+%endfunction
+
+%function getOutputAddr_63_24_2_1_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<27c69*//*@>27c62*/ZT_VehCtrl_18B_B./*@>27c6e*/CAN0_Rx_500_o4" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getOutput_63_24_2_1_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>27c7b*/ZT_VehCtrl_18B_B./*@>27c88*/CAN0_Rx_500_o4" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getOutputAddr_63_24_2_1_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<27c9a*//*@>27c93*/ZT_VehCtrl_18B_B./*@>27c9f*/CAN0_Rx_500_o5"
+%endfunction
+
+%function getOutput_63_24_2_1_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>27cac*/ZT_VehCtrl_18B_B./*@>27cb9*/CAN0_Rx_500_o5"
+%endfunction
+
+%function getOutputAddr_63_24_2_1_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<27ccb*//*@>27cc4*/ZT_VehCtrl_18B_B./*@>27cd0*/CAN0_Rx_500_o6"
+%endfunction
+
+%function getOutput_63_24_2_1_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>27cdd*/ZT_VehCtrl_18B_B./*@>27cea*/CAN0_Rx_500_o6"
+%endfunction
+
+%function getOutputAddr_63_26_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<27d10*//*@>27d09*/ZT_VehCtrl_18B_B./*@>27d15*/CAN1_Rx_500_o2"
+%endfunction
+
+%function getOutput_63_26_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>27d22*/ZT_VehCtrl_18B_B./*@>27d2f*/CAN1_Rx_500_o2"
+%endfunction
+
+%function getOutputAddr_63_26_2_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<27d41*//*@>27d3a*/ZT_VehCtrl_18B_B./*@>27d46*/CAN1_Rx_500_o3"
+%endfunction
+
+%function getOutput_63_26_2_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>27d53*/ZT_VehCtrl_18B_B./*@>27d60*/CAN1_Rx_500_o3"
+%endfunction
+
+%function getOutputAddr_63_26_2_1_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<27d72*//*@>27d6b*/ZT_VehCtrl_18B_B./*@>27d77*/CAN1_Rx_500_o4" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getOutput_63_26_2_1_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>27d84*/ZT_VehCtrl_18B_B./*@>27d91*/CAN1_Rx_500_o4" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getOutputAddr_63_26_2_1_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<27da3*//*@>27d9c*/ZT_VehCtrl_18B_B./*@>27da8*/CAN1_Rx_500_o5"
+%endfunction
+
+%function getOutput_63_26_2_1_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>27db5*/ZT_VehCtrl_18B_B./*@>27dc2*/CAN1_Rx_500_o5"
+%endfunction
+
+%function getOutputAddr_63_26_2_1_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<27dd4*//*@>27dcd*/ZT_VehCtrl_18B_B./*@>27dd9*/CAN1_Rx_500_o6"
+%endfunction
+
+%function getOutput_63_26_2_1_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>27de6*/ZT_VehCtrl_18B_B./*@>27df3*/CAN1_Rx_500_o6"
+%endfunction
+
+%function getInputAddr_49_8_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<27e19*//*@>27e12*/ZT_VehCtrl_18B_B./*@>27e1e*/Switch"
+%endfunction
+
+%function getInput_49_8_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>27e2b*/ZT_VehCtrl_18B_B./*@>27e38*/Switch"
+%endfunction
+
+%function getInputAddr_49_8_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<27e4a*//*@>27e43*/ZT_VehCtrl_18B_B./*@>27e4f*/Switch_f"
+%endfunction
+
+%function getInput_49_8_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>27e5c*/ZT_VehCtrl_18B_B./*@>27e69*/Switch_f"
+%endfunction
+
+%function getInputAddr_49_8_2_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<27e7b*//*@>27e74*/ZT_VehCtrl_18B_B./*@>27e80*/Switch_e"
+%endfunction
+
+%function getInput_49_8_2_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>27e8d*/ZT_VehCtrl_18B_B./*@>27e9a*/Switch_e"
+%endfunction
+
+%function getInputAddr_49_8_2_1_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<27eac*//*@>27ea5*/ZT_VehCtrl_18B_B./*@>27eb1*/Switch_ef"
+%endfunction
+
+%function getInput_49_8_2_1_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>27ebe*/ZT_VehCtrl_18B_B./*@>27ecb*/Switch_ef"
+%endfunction
+
+%function getOutputAddr_49_8_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<27edd*//*@>27ed6*/ZT_VehCtrl_18B_B./*@>27ee2*/VCU_ACU1"
+%endfunction
+
+%function getOutput_49_8_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>27eef*/ZT_VehCtrl_18B_B./*@>27efc*/VCU_ACU1"
+%endfunction
+
+%function getDWorkAddr_49_8_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<27f0e*//*@>27f07*/ZT_VehCtrl_18B_DW./*@>27f13*/VCU_ACU1_ModeSignalID"
+%endfunction
+
+%function getDWork_49_8_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>27f20*/ZT_VehCtrl_18B_DW./*@>27f2d*/VCU_ACU1_ModeSignalID"
+%endfunction
+
+%function getInputAddr_49_9_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<27f55*//*@>27f4d*/ZT_VehCtrl_18B_B./*@>27f5f*/VCU_ACU1./*@>27f5c*/Data" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getInput_49_9_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>27f6d*/ZT_VehCtrl_18B_B./*@>27f80*/VCU_ACU1./*@>27f7d*/Data" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getInputAddr_49_9_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<27f94*//*@>27f8c*/ZT_VehCtrl_18B_B./*@>27f9e*/VCU_ACU1./*@>27f9b*/Length"
+%endfunction
+
+%function getInput_49_9_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>27fac*/ZT_VehCtrl_18B_B./*@>27fbf*/VCU_ACU1./*@>27fbc*/Length"
+%endfunction
+
+%function getInputAddr_50_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<27fe5*//*@>27fde*/ZT_VehCtrl_18B_B./*@>27fea*/DataStoreRead1_e"
+%endfunction
+
+%function getInput_50_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>27ff7*/ZT_VehCtrl_18B_B./*@>28004*/DataStoreRead1_e"
+%endfunction
+
+%function getInputAddr_50_0_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28016*//*@>2800f*/ZT_VehCtrl_18B_B./*@>2801b*/DataStoreRead2_l"
+%endfunction
+
+%function getInput_50_0_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28028*/ZT_VehCtrl_18B_B./*@>28035*/DataStoreRead2_l"
+%endfunction
+
+%function getOutputAddr_50_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28047*//*@>28040*/ZT_VehCtrl_18B_B./*@>2804c*/VCU_BMS"
+%endfunction
+
+%function getOutput_50_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28059*/ZT_VehCtrl_18B_B./*@>28066*/VCU_BMS"
+%endfunction
+
+%function getDWorkAddr_50_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28078*//*@>28071*/ZT_VehCtrl_18B_DW./*@>2807d*/VCU_BMS_ModeSignalID"
+%endfunction
+
+%function getDWork_50_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2808a*/ZT_VehCtrl_18B_DW./*@>28097*/VCU_BMS_ModeSignalID"
+%endfunction
+
+%function getInputAddr_50_1_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<280bf*//*@>280b7*/ZT_VehCtrl_18B_B./*@>280c9*/VCU_BMS./*@>280c6*/Data" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getInput_50_1_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>280d7*/ZT_VehCtrl_18B_B./*@>280ea*/VCU_BMS./*@>280e7*/Data" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getInputAddr_50_1_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<280fe*//*@>280f6*/ZT_VehCtrl_18B_B./*@>28108*/VCU_BMS./*@>28105*/Length"
+%endfunction
+
+%function getInput_50_1_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28116*/ZT_VehCtrl_18B_B./*@>28129*/VCU_BMS./*@>28126*/Length"
+%endfunction
+
+%function getInputAddr_51_2_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2814f*//*@>28148*/ZT_VehCtrl_18B_B./*@>28154*/DataTypeConversion3"
+%endfunction
+
+%function getInput_51_2_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28161*/ZT_VehCtrl_18B_B./*@>2816e*/DataTypeConversion3"
+%endfunction
+
+%function getInputAddr_51_2_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28180*//*@>28179*/ZT_VehCtrl_18B_ConstB./*@>28185*/DataTypeConversion"
+%endfunction
+
+%function getInput_51_2_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28192*/ZT_VehCtrl_18B_ConstB./*@>2819f*/DataTypeConversion"
+%endfunction
+
+%function getInputAddr_51_2_2_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<281b1*//*@>281aa*/ZT_VehCtrl_18B_B./*@>281b6*/DataStoreRead4_n"
+%endfunction
+
+%function getInput_51_2_2_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>281c3*/ZT_VehCtrl_18B_B./*@>281d0*/DataStoreRead4_n"
+%endfunction
+
+%function getInputAddr_51_2_2_1_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<281e2*//*@>281db*/ZT_VehCtrl_18B_ConstB./*@>281e7*/DataTypeConversion1"
+%endfunction
+
+%function getInput_51_2_2_1_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>281f4*/ZT_VehCtrl_18B_ConstB./*@>28201*/DataTypeConversion1"
+%endfunction
+
+%function getOutputAddr_51_2_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28213*//*@>2820c*/ZT_VehCtrl_18B_B./*@>28218*/VCU2BRS"
+%endfunction
+
+%function getOutput_51_2_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28225*/ZT_VehCtrl_18B_B./*@>28232*/VCU2BRS"
+%endfunction
+
+%function getDWorkAddr_51_2_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28244*//*@>2823d*/ZT_VehCtrl_18B_DW./*@>28249*/VCU2BRS_ModeSignalID"
+%endfunction
+
+%function getDWork_51_2_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28256*/ZT_VehCtrl_18B_DW./*@>28263*/VCU2BRS_ModeSignalID"
+%endfunction
+
+%function getInputAddr_51_3_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2828b*//*@>28283*/ZT_VehCtrl_18B_B./*@>28295*/VCU2BRS./*@>28292*/Data" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getInput_51_3_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>282a3*/ZT_VehCtrl_18B_B./*@>282b6*/VCU2BRS./*@>282b3*/Data" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getInputAddr_51_3_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<282ca*//*@>282c2*/ZT_VehCtrl_18B_B./*@>282d4*/VCU2BRS./*@>282d1*/Length"
+%endfunction
+
+%function getInput_51_3_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>282e2*/ZT_VehCtrl_18B_B./*@>282f5*/VCU2BRS./*@>282f2*/Length"
+%endfunction
+
+%function getInputAddr_52_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2831b*//*@>28314*/ZT_VehCtrl_18B_B./*@>28320*/DataStoreRead5_j"
+%endfunction
+
+%function getInput_52_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2832d*/ZT_VehCtrl_18B_B./*@>2833a*/DataStoreRead5_j"
+%endfunction
+
+%function getOutputAddr_52_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2834c*//*@>28345*/ZT_VehCtrl_18B_B./*@>28351*/VCU_DCDC1"
+%endfunction
+
+%function getOutput_52_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2835e*/ZT_VehCtrl_18B_B./*@>2836b*/VCU_DCDC1"
+%endfunction
+
+%function getDWorkAddr_52_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2837d*//*@>28376*/ZT_VehCtrl_18B_DW./*@>28382*/VCU_DCDC1_ModeSignalID"
+%endfunction
+
+%function getDWork_52_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2838f*/ZT_VehCtrl_18B_DW./*@>2839c*/VCU_DCDC1_ModeSignalID"
+%endfunction
+
+%function getInputAddr_52_1_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<283c4*//*@>283bc*/ZT_VehCtrl_18B_B./*@>283ce*/VCU_DCDC1./*@>283cb*/Data" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getInput_52_1_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>283dc*/ZT_VehCtrl_18B_B./*@>283ef*/VCU_DCDC1./*@>283ec*/Data" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getInputAddr_52_1_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28403*//*@>283fb*/ZT_VehCtrl_18B_B./*@>2840d*/VCU_DCDC1./*@>2840a*/Length"
+%endfunction
+
+%function getInput_52_1_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2841b*/ZT_VehCtrl_18B_B./*@>2842e*/VCU_DCDC1./*@>2842b*/Length"
+%endfunction
+
+%function getInputAddr_59_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28454*//*@>2844d*/ZT_VehCtrl_18B_B./*@>28459*/DataStoreRead6_b"
+%endfunction
+
+%function getInput_59_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28466*/ZT_VehCtrl_18B_B./*@>28473*/DataStoreRead6_b"
+%endfunction
+
+%function getInputAddr_59_0_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28485*//*@>2847e*/ZT_VehCtrl_18B_B./*@>2848a*/DataStoreRead7_d"
+%endfunction
+
+%function getInput_59_0_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28497*/ZT_VehCtrl_18B_B./*@>284a4*/DataStoreRead7_d"
+%endfunction
+
+%function getInputAddr_59_0_2_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<284b6*//*@>284af*/ZT_VehCtrl_18B_B./*@>284bb*/DataTypeConversion15"
+%endfunction
+
+%function getInput_59_0_2_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>284c8*/ZT_VehCtrl_18B_B./*@>284d5*/DataTypeConversion15"
+%endfunction
+
+%function getInputAddr_59_0_2_1_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<284e7*//*@>284e0*/ZT_VehCtrl_18B_B./*@>284ec*/DataStoreRead9_h"
+%endfunction
+
+%function getInput_59_0_2_1_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>284f9*/ZT_VehCtrl_18B_B./*@>28506*/DataStoreRead9_h"
+%endfunction
+
+%function getInputAddr_59_0_2_1_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28518*//*@>28511*/ZT_VehCtrl_18B_B./*@>2851d*/DataStoreRead8_c"
+%endfunction
+
+%function getInput_59_0_2_1_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2852a*/ZT_VehCtrl_18B_B./*@>28537*/DataStoreRead8_c"
+%endfunction
+
+%function getOutputAddr_59_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28549*//*@>28542*/ZT_VehCtrl_18B_B./*@>2854e*/Ctrl_HVC"
+%endfunction
+
+%function getOutput_59_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2855b*/ZT_VehCtrl_18B_B./*@>28568*/Ctrl_HVC"
+%endfunction
+
+%function getDWorkAddr_59_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2857a*//*@>28573*/ZT_VehCtrl_18B_DW./*@>2857f*/Ctrl_HVC_ModeSignalID"
+%endfunction
+
+%function getDWork_59_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2858c*/ZT_VehCtrl_18B_DW./*@>28599*/Ctrl_HVC_ModeSignalID"
+%endfunction
+
+%function getInputAddr_59_1_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<285c1*//*@>285b9*/ZT_VehCtrl_18B_B./*@>285cb*/Ctrl_HVC./*@>285c8*/Data" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getInput_59_1_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>285d9*/ZT_VehCtrl_18B_B./*@>285ec*/Ctrl_HVC./*@>285e9*/Data" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getInputAddr_59_1_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28600*//*@>285f8*/ZT_VehCtrl_18B_B./*@>2860a*/Ctrl_HVC./*@>28607*/Length"
+%endfunction
+
+%function getInput_59_1_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28618*/ZT_VehCtrl_18B_B./*@>2862b*/Ctrl_HVC./*@>28628*/Length"
+%endfunction
+
+%function getInputAddr_60_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28651*//*@>2864a*/ZT_VehCtrl_18B_B./*@>28656*/DataStoreRead9"
+%endfunction
+
+%function getInput_60_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28663*/ZT_VehCtrl_18B_B./*@>28670*/DataStoreRead9"
+%endfunction
+
+%function getInputAddr_60_0_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28682*//*@>2867b*/ZT_VehCtrl_18B_B./*@>28687*/DataStoreRead6"
+%endfunction
+
+%function getInput_60_0_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28694*/ZT_VehCtrl_18B_B./*@>286a1*/DataStoreRead6"
+%endfunction
+
+%function getInputAddr_60_0_2_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<286b3*//*@>286ac*/ZT_VehCtrl_18B_B./*@>286b8*/DataStoreRead8"
+%endfunction
+
+%function getInput_60_0_2_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>286c5*/ZT_VehCtrl_18B_B./*@>286d2*/DataStoreRead8"
+%endfunction
+
+%function getInputAddr_60_0_2_1_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<286e4*//*@>286dd*/ZT_VehCtrl_18B_B./*@>286e9*/DataTypeConversion_m"
+%endfunction
+
+%function getInput_60_0_2_1_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>286f6*/ZT_VehCtrl_18B_B./*@>28703*/DataTypeConversion_m"
+%endfunction
+
+%function getInputAddr_60_0_2_1_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28715*//*@>2870e*/ZT_VehCtrl_18B_B./*@>2871a*/DataStoreRead7"
+%endfunction
+
+%function getInput_60_0_2_1_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28727*/ZT_VehCtrl_18B_B./*@>28734*/DataStoreRead7"
+%endfunction
+
+%function getInputAddr_60_0_2_1_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28746*//*@>2873f*/ZT_VehCtrl_18B_B./*@>2874b*/DataStoreRead5"
+%endfunction
+
+%function getInput_60_0_2_1_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28758*/ZT_VehCtrl_18B_B./*@>28765*/DataStoreRead5"
+%endfunction
+
+%function getOutputAddr_60_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28777*//*@>28770*/ZT_VehCtrl_18B_B./*@>2877c*/VCU_PDU"
+%endfunction
+
+%function getOutput_60_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28789*/ZT_VehCtrl_18B_B./*@>28796*/VCU_PDU"
+%endfunction
+
+%function getDWorkAddr_60_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<287a8*//*@>287a1*/ZT_VehCtrl_18B_DW./*@>287ad*/VCU_PDU_ModeSignalID"
+%endfunction
+
+%function getDWork_60_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>287ba*/ZT_VehCtrl_18B_DW./*@>287c7*/VCU_PDU_ModeSignalID"
+%endfunction
+
+%function getInputAddr_60_1_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<287ef*//*@>287e7*/ZT_VehCtrl_18B_B./*@>287f9*/VCU_PDU./*@>287f6*/Data" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getInput_60_1_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28807*/ZT_VehCtrl_18B_B./*@>2881a*/VCU_PDU./*@>28817*/Data" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getInputAddr_60_1_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2882e*//*@>28826*/ZT_VehCtrl_18B_B./*@>28838*/VCU_PDU./*@>28835*/Length"
+%endfunction
+
+%function getInput_60_1_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28846*/ZT_VehCtrl_18B_B./*@>28859*/VCU_PDU./*@>28856*/Length"
+%endfunction
+
+%function getInputAddr_62_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2887f*//*@>28878*/ZT_VehCtrl_18B_B./*@>28884*/DataStoreRead10"
+%endfunction
+
+%function getInput_62_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28891*/ZT_VehCtrl_18B_B./*@>2889e*/DataStoreRead10"
+%endfunction
+
+%function getOutputAddr_62_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<288b0*//*@>288a9*/ZT_VehCtrl_18B_B./*@>288b5*/VCU_TWV"
+%endfunction
+
+%function getOutput_62_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>288c2*/ZT_VehCtrl_18B_B./*@>288cf*/VCU_TWV"
+%endfunction
+
+%function getDWorkAddr_62_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<288e1*//*@>288da*/ZT_VehCtrl_18B_DW./*@>288e6*/VCU_TWV_ModeSignalID"
+%endfunction
+
+%function getDWork_62_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>288f3*/ZT_VehCtrl_18B_DW./*@>28900*/VCU_TWV_ModeSignalID"
+%endfunction
+
+%function getInputAddr_62_1_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28928*//*@>28920*/ZT_VehCtrl_18B_B./*@>28932*/VCU_TWV./*@>2892f*/Data" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getInput_62_1_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28940*/ZT_VehCtrl_18B_B./*@>28953*/VCU_TWV./*@>28950*/Data" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getInputAddr_62_1_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28967*//*@>2895f*/ZT_VehCtrl_18B_B./*@>28971*/VCU_TWV./*@>2896e*/Length"
+%endfunction
+
+%function getInput_62_1_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2897f*/ZT_VehCtrl_18B_B./*@>28992*/VCU_TWV./*@>2898f*/Length"
+%endfunction
+
+%function getInputAddr_61_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<289b8*//*@>289b1*/ZT_VehCtrl_18B_B./*@>289bd*/DataTypeConversion"
+%endfunction
+
+%function getInput_61_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>289ca*/ZT_VehCtrl_18B_B./*@>289d7*/DataTypeConversion"
+%endfunction
+
+%function getInputAddr_61_0_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<289e9*//*@>289e2*/ZT_VehCtrl_18B_B./*@>289ee*/DataStoreRead1"
+%endfunction
+
+%function getInput_61_0_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>289fb*/ZT_VehCtrl_18B_B./*@>28a08*/DataStoreRead1"
+%endfunction
+
+%function getOutputAddr_61_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28a1a*//*@>28a13*/ZT_VehCtrl_18B_B./*@>28a1f*/TMS"
+%endfunction
+
+%function getOutput_61_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28a2c*/ZT_VehCtrl_18B_B./*@>28a39*/TMS"
+%endfunction
+
+%function getDWorkAddr_61_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28a4b*//*@>28a44*/ZT_VehCtrl_18B_DW./*@>28a50*/TMS_ModeSignalID"
+%endfunction
+
+%function getDWork_61_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28a5d*/ZT_VehCtrl_18B_DW./*@>28a6a*/TMS_ModeSignalID"
+%endfunction
+
+%function getInputAddr_61_1_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28a92*//*@>28a8a*/ZT_VehCtrl_18B_B./*@>28a9c*/TMS./*@>28a99*/Data" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getInput_61_1_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28aaa*/ZT_VehCtrl_18B_B./*@>28abd*/TMS./*@>28aba*/Data" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getInputAddr_61_1_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28ad1*//*@>28ac9*/ZT_VehCtrl_18B_B./*@>28adb*/TMS./*@>28ad8*/Length"
+%endfunction
+
+%function getInput_61_1_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28ae9*/ZT_VehCtrl_18B_B./*@>28afc*/TMS./*@>28af9*/Length"
+%endfunction
+
+%function getInputAddr_63_36_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28b22*//*@>28b1b*/ZT_VehCtrl_18B_ConstB./*@>28b27*/DataTypeConversion_b"
+%endfunction
+
+%function getInput_63_36_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28b34*/ZT_VehCtrl_18B_ConstB./*@>28b41*/DataTypeConversion_b"
+%endfunction
+
+%function getInputAddr_63_36_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28b53*//*@>28b4c*/ZT_VehCtrl_18B_B./*@>28b58*/DataTypeConversion1"
+%endfunction
+
+%function getInput_63_36_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28b65*/ZT_VehCtrl_18B_B./*@>28b72*/DataTypeConversion1"
+%endfunction
+
+%function getInputAddr_63_36_2_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28b84*//*@>28b7d*/ZT_VehCtrl_18B_B./*@>28b89*/DataTypeConversion2"
+%endfunction
+
+%function getInput_63_36_2_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28b96*/ZT_VehCtrl_18B_B./*@>28ba3*/DataTypeConversion2"
+%endfunction
+
+%function getInputAddr_63_38_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28bdd*//*@>28bd6*/ZT_VehCtrl_18B_ConstB./*@>28be2*/DataTypeConversion_p"
+%endfunction
+
+%function getInput_63_38_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28bef*/ZT_VehCtrl_18B_ConstB./*@>28bfc*/DataTypeConversion_p"
+%endfunction
+
+%function getInputAddr_63_38_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28c0e*//*@>28c07*/ZT_VehCtrl_18B_B./*@>28c13*/DataTypeConversion1_n"
+%endfunction
+
+%function getInput_63_38_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28c20*/ZT_VehCtrl_18B_B./*@>28c2d*/DataTypeConversion1_n"
+%endfunction
+
+%function getInputAddr_63_38_2_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28c3f*//*@>28c38*/ZT_VehCtrl_18B_B./*@>28c44*/DataTypeConversion2_i"
+%endfunction
+
+%function getInput_63_38_2_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28c51*/ZT_VehCtrl_18B_B./*@>28c5e*/DataTypeConversion2_i"
+%endfunction
+
+%function getInputAddr_63_40_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28c98*//*@>28c91*/ZT_VehCtrl_18B_ConstB./*@>28c9d*/DataTypeConversion_h"
+%endfunction
+
+%function getInput_63_40_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28caa*/ZT_VehCtrl_18B_ConstB./*@>28cb7*/DataTypeConversion_h"
+%endfunction
+
+%function getInputAddr_63_40_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28cc9*//*@>28cc2*/ZT_VehCtrl_18B_B./*@>28cce*/DataTypeConversion1_p"
+%endfunction
+
+%function getInput_63_40_2_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28cdb*/ZT_VehCtrl_18B_B./*@>28ce8*/DataTypeConversion1_p"
+%endfunction
+
+%function getInputAddr_63_40_2_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28cfa*//*@>28cf3*/ZT_VehCtrl_18B_B./*@>28cff*/DataTypeConversion2_p"
+%endfunction
+
+%function getInput_63_40_2_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28d0c*/ZT_VehCtrl_18B_B./*@>28d19*/DataTypeConversion2_p"
+%endfunction
+
+%function getInputAddr_63_42_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28d53*//*@>28d4c*/ZT_VehCtrl_18B_B./*@>28d58*/DataStoreRead"
+%endfunction
+
+%function getInput_63_42_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28d65*/ZT_VehCtrl_18B_B./*@>28d72*/DataStoreRead"
+%endfunction
+
+%function getInputAddr_63_43_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28d98*//*@>28d91*/ZT_VehCtrl_18B_B./*@>28d9d*/DataStoreRead2"
+%endfunction
+
+%function getInput_63_43_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28daa*/ZT_VehCtrl_18B_B./*@>28db7*/DataStoreRead2"
+%endfunction
+
+%function getInputAddr_63_44_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28ddd*//*@>28dd6*/ZT_VehCtrl_18B_B./*@>28de2*/DataStoreRead4"
+%endfunction
+
+%function getInput_63_44_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28def*/ZT_VehCtrl_18B_B./*@>28dfc*/DataStoreRead4"
+%endfunction
+
+%function getInputAddr_63_45_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28e22*//*@>28e1b*/ZT_VehCtrl_18B_B./*@>28e27*/DataStoreRead5_i"
+%endfunction
+
+%function getInput_63_45_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28e34*/ZT_VehCtrl_18B_B./*@>28e41*/DataStoreRead5_i"
+%endfunction
+
+%function getInputAddr_63_46_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28e67*//*@>28e60*/ZT_VehCtrl_18B_B./*@>28e6c*/DataStoreRead6_n"
+%endfunction
+
+%function getInput_63_46_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28e79*/ZT_VehCtrl_18B_B./*@>28e86*/DataStoreRead6_n"
+%endfunction
+
+%function getInputAddr_63_47_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28eac*//*@>28ea5*/ZT_VehCtrl_18B_B./*@>28eb1*/DataStoreRead7_a"
+%endfunction
+
+%function getInput_63_47_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28ebe*/ZT_VehCtrl_18B_B./*@>28ecb*/DataStoreRead7_a"
+%endfunction
+
+%function getInputAddr_63_48_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28ef1*//*@>28eea*/ZT_VehCtrl_18B_B./*@>28ef6*/DataStoreRead9_g"
+%endfunction
+
+%function getInput_63_48_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28f03*/ZT_VehCtrl_18B_B./*@>28f10*/DataStoreRead9_g"
+%endfunction
+
+%function getInputAddr_63_50_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_63_50_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInputAddr_63_52_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_63_52_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInputAddr_63_54_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_63_54_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInputAddr_54_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28f72*//*@>28f6b*/ZT_VehCtrl_18B_B./*@>28f77*/VectorConcatenate1_l" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getInput_54_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28f84*/ZT_VehCtrl_18B_B./*@>28f91*/VectorConcatenate1_l" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getOutputAddr_54_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28fa3*//*@>28f9c*/ZT_VehCtrl_18B_B./*@>28fa8*/SPI_Master_Transfer_To1_j" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getOutput_54_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28fb5*/ZT_VehCtrl_18B_B./*@>28fc2*/SPI_Master_Transfer_To1_j" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getInputAddr_56_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<28fe8*//*@>28fe1*/ZT_VehCtrl_18B_B./*@>28fed*/VectorConcatenate1" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getInput_56_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>28ffa*/ZT_VehCtrl_18B_B./*@>29007*/VectorConcatenate1" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getOutputAddr_56_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<29019*//*@>29012*/ZT_VehCtrl_18B_B./*@>2901e*/SPI_Master_Transfer_To1" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getOutput_56_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2902b*/ZT_VehCtrl_18B_B./*@>29038*/SPI_Master_Transfer_To1" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getInputAddr_63_59_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_63_59_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInputAddr_63_61_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_63_61_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInputAddr_58_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<29086*//*@>2907f*/ZT_VehCtrl_18B_B./*@>2908b*/VectorConcatenate2" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getInput_58_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>29098*/ZT_VehCtrl_18B_B./*@>290a5*/VectorConcatenate2" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getOutputAddr_58_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<290b7*//*@>290b0*/ZT_VehCtrl_18B_B./*@>290bc*/SPI_Master_Transfer_To2" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getOutput_58_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>290c9*/ZT_VehCtrl_18B_B./*@>290d6*/SPI_Master_Transfer_To2" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getInputAddr_8_1_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<290fc*//*@>290f5*/ZT_VehCtrl_18B_B./*@>29101*/VectorConcatenate1_m" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getInput_8_1_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2910e*/ZT_VehCtrl_18B_B./*@>2911b*/VectorConcatenate1_m" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getOutputAddr_8_1_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2912d*//*@>29126*/ZT_VehCtrl_18B_B./*@>29132*/SPI_Master_Transfer_To1_g" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getOutput_8_1_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2913f*/ZT_VehCtrl_18B_B./*@>2914c*/SPI_Master_Transfer_To1_g" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getInputAddr_6_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<29172*//*@>2916b*/ZT_VehCtrl_18B_ConstB./*@>29177*/VectorConcatenate2" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getInput_6_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>29184*/ZT_VehCtrl_18B_ConstB./*@>29191*/VectorConcatenate2" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getOutputAddr_6_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<291a3*//*@>2919c*/ZT_VehCtrl_18B_B./*@>291a8*/SPI_Master_Transfer_To2_h" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getOutput_6_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>291b5*/ZT_VehCtrl_18B_B./*@>291c2*/SPI_Master_Transfer_To2_h" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getInputAddr_12_2_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<291e8*//*@>291e1*/ZT_VehCtrl_18B_B./*@>291ed*/VectorConcatenate1_a" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getInput_12_2_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>291fa*/ZT_VehCtrl_18B_B./*@>29207*/VectorConcatenate1_a" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getOutputAddr_12_2_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<29219*//*@>29212*/ZT_VehCtrl_18B_B./*@>2921e*/SPI_Master_Transfer_To2_a" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getOutput_12_2_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2922b*/ZT_VehCtrl_18B_B./*@>29238*/SPI_Master_Transfer_To2_a" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getInputAddr_10_1_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2925e*//*@>29257*/ZT_VehCtrl_18B_B./*@>29263*/VectorConcatenate1_n" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getInput_10_1_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>29270*/ZT_VehCtrl_18B_B./*@>2927d*/VectorConcatenate1_n" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getOutputAddr_10_1_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2928f*//*@>29288*/ZT_VehCtrl_18B_B./*@>29294*/SPI_Master_Transfer_To1_c" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getOutput_10_1_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>292a1*/ZT_VehCtrl_18B_B./*@>292ae*/SPI_Master_Transfer_To1_c" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getInputAddr_63_74_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<292d4*//*@>292cd*/ZT_VehCtrl_18B_ConstB./*@>292d9*/DataTypeConversion_cp"
+%endfunction
+
+%function getInput_63_74_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>292e6*/ZT_VehCtrl_18B_ConstB./*@>292f3*/DataTypeConversion_cp"
+%endfunction
+
+%function getInputAddr_63_75_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<29319*//*@>29312*/ZT_VehCtrl_18B_ConstB./*@>2931e*/DataTypeConversion_cp"
+%endfunction
+
+%function getInput_63_75_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2932b*/ZT_VehCtrl_18B_ConstB./*@>29338*/DataTypeConversion_cp"
+%endfunction
+
+%function getSystemOutputFcnCallInfo_63_24_2_1_27_0(opaqueBlk) void
+%assign _modelSS = ""
+%createrecord fcnInfo { Name "/*@>257f2*/ZT_VehCtrl_18B_CAN0"; Args [] }
+%return fcnInfo
+%endfunction
+%function getSystemOutputFcnCallInfo_63_26_2_1_48_0(opaqueBlk) void
+%assign _modelSS = ""
+%createrecord fcnInfo { Name "/*@>25815*/ZT_VehCtrl_18B_CAN1"; Args [] }
+%return fcnInfo
+%endfunction
+%function getOutputAddr_63_3_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2975a*//*@>29753*/ZT_VehCtrl_18B_B./*@>2975f*/ADC_Start" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getOutput_63_3_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2976c*/ZT_VehCtrl_18B_B./*@>29779*/ADC_Start" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getOutputAddr_63_4_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2979f*//*@>29798*/ZT_VehCtrl_18B_B./*@>297a4*/ADC_Start1" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getOutput_63_4_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>297b1*/ZT_VehCtrl_18B_B./*@>297be*/ADC_Start1" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getOutputAddr_63_5_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<297e4*//*@>297dd*/ZT_VehCtrl_18B_B./*@>297e9*/DI01_h"
+%endfunction
+
+%function getOutput_63_5_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>297f6*/ZT_VehCtrl_18B_B./*@>29803*/DI01_h"
+%endfunction
+
+%function getOutputAddr_63_6_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<29829*//*@>29822*/ZT_VehCtrl_18B_B./*@>2982e*/DI02_c"
+%endfunction
+
+%function getOutput_63_6_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2983b*/ZT_VehCtrl_18B_B./*@>29848*/DI02_c"
+%endfunction
+
+%function getOutputAddr_63_7_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2986e*//*@>29867*/ZT_VehCtrl_18B_B./*@>29873*/DI03_h"
+%endfunction
+
+%function getOutput_63_7_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>29880*/ZT_VehCtrl_18B_B./*@>2988d*/DI03_h"
+%endfunction
+
+%function getOutputAddr_63_8_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<298b3*//*@>298ac*/ZT_VehCtrl_18B_B./*@>298b8*/DI04_o"
+%endfunction
+
+%function getOutput_63_8_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>298c5*/ZT_VehCtrl_18B_B./*@>298d2*/DI04_o"
+%endfunction
+
+%function getOutputAddr_63_9_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<298f8*//*@>298f1*/ZT_VehCtrl_18B_B./*@>298fd*/DI07_f"
+%endfunction
+
+%function getOutput_63_9_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2990a*/ZT_VehCtrl_18B_B./*@>29917*/DI07_f"
+%endfunction
+
+%function getOutputAddr_63_10_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2993d*//*@>29936*/ZT_VehCtrl_18B_B./*@>29942*/DI08_e"
+%endfunction
+
+%function getOutput_63_10_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2994f*/ZT_VehCtrl_18B_B./*@>2995c*/DI08_e"
+%endfunction
+
+%function getOutputAddr_63_11_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<29982*//*@>2997b*/ZT_VehCtrl_18B_B./*@>29987*/DI09_a"
+%endfunction
+
+%function getOutput_63_11_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>29994*/ZT_VehCtrl_18B_B./*@>299a1*/DI09_a"
+%endfunction
+
+%function getOutputAddr_63_12_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<299c7*//*@>299c0*/ZT_VehCtrl_18B_B./*@>299cc*/DI10_g"
+%endfunction
+
+%function getOutput_63_12_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>299d9*/ZT_VehCtrl_18B_B./*@>299e6*/DI10_g"
+%endfunction
+
+%function getOutputAddr_63_13_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<29a0c*//*@>29a05*/ZT_VehCtrl_18B_B./*@>29a11*/DI12_h"
+%endfunction
+
+%function getOutput_63_13_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>29a1e*/ZT_VehCtrl_18B_B./*@>29a2b*/DI12_h"
+%endfunction
+
+%function getOutputAddr_63_14_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<29a51*//*@>29a4a*/ZT_VehCtrl_18B_B./*@>29a56*/DI13_m"
+%endfunction
+
+%function getOutput_63_14_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>29a63*/ZT_VehCtrl_18B_B./*@>29a70*/DI13_m"
+%endfunction
+
+%function getOutputAddr_63_15_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<29a96*//*@>29a8f*/ZT_VehCtrl_18B_B./*@>29a9b*/DI15_b"
+%endfunction
+
+%function getOutput_63_15_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>29aa8*/ZT_VehCtrl_18B_B./*@>29ab5*/DI15_b"
+%endfunction
+
+%function getOutputAddr_63_16_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<29adb*//*@>29ad4*/ZT_VehCtrl_18B_B./*@>29ae0*/DI16_k"
+%endfunction
+
+%function getOutput_63_16_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>29aed*/ZT_VehCtrl_18B_B./*@>29afa*/DI16_k"
+%endfunction
+
+%function getOutputAddr_63_17_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<29b20*//*@>29b19*/ZT_VehCtrl_18B_B./*@>29b25*/DI17_c"
+%endfunction
+
+%function getOutput_63_17_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>29b32*/ZT_VehCtrl_18B_B./*@>29b3f*/DI17_c"
+%endfunction
+
+%function getOutputAddr_63_18_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<29b65*//*@>29b5e*/ZT_VehCtrl_18B_B./*@>29b6a*/DI18_k"
+%endfunction
+
+%function getOutput_63_18_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>29b77*/ZT_VehCtrl_18B_B./*@>29b84*/DI18_k"
+%endfunction
+
+%function getOutputAddr_63_19_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<29baa*//*@>29ba3*/ZT_VehCtrl_18B_B./*@>29baf*/DI31_g"
+%endfunction
+
+%function getOutput_63_19_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>29bbc*/ZT_VehCtrl_18B_B./*@>29bc9*/DI31_g"
+%endfunction
+
+%function getOutputAddr_63_20_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<29bef*//*@>29be8*/ZT_VehCtrl_18B_B./*@>29bf4*/DI32_l"
+%endfunction
+
+%function getOutput_63_20_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>29c01*/ZT_VehCtrl_18B_B./*@>29c0e*/DI32_l"
+%endfunction
+
+%function getOutputAddr_63_21_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<29c34*//*@>29c2d*/ZT_VehCtrl_18B_B./*@>29c39*/DI33_b"
+%endfunction
+
+%function getOutput_63_21_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>29c46*/ZT_VehCtrl_18B_B./*@>29c53*/DI33_b"
+%endfunction
+
+%function getOutputAddr_63_22_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<29c79*//*@>29c72*/ZT_VehCtrl_18B_B./*@>29c7e*/DI34_p"
+%endfunction
+
+%function getOutput_63_22_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>29c8b*/ZT_VehCtrl_18B_B./*@>29c98*/DI34_p"
+%endfunction
+
+%function getOutputAddr_63_24_2_2_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<29cbe*//*@>29cb7*/ZT_VehCtrl_18B_B./*@>29cc3*/CAN0_Rx_500_o2"
+%endfunction
+
+%function getOutput_63_24_2_2_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>29cd0*/ZT_VehCtrl_18B_B./*@>29cdd*/CAN0_Rx_500_o2"
+%endfunction
+
+%function getOutputAddr_63_24_2_2_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<29cef*//*@>29ce8*/ZT_VehCtrl_18B_B./*@>29cf4*/CAN0_Rx_500_o3"
+%endfunction
+
+%function getOutput_63_24_2_2_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>29d01*/ZT_VehCtrl_18B_B./*@>29d0e*/CAN0_Rx_500_o3"
+%endfunction
+
+%function getOutputAddr_63_24_2_2_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<29d20*//*@>29d19*/ZT_VehCtrl_18B_B./*@>29d25*/CAN0_Rx_500_o4" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getOutput_63_24_2_2_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>29d32*/ZT_VehCtrl_18B_B./*@>29d3f*/CAN0_Rx_500_o4" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getOutputAddr_63_24_2_2_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<29d51*//*@>29d4a*/ZT_VehCtrl_18B_B./*@>29d56*/CAN0_Rx_500_o5"
+%endfunction
+
+%function getOutput_63_24_2_2_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>29d63*/ZT_VehCtrl_18B_B./*@>29d70*/CAN0_Rx_500_o5"
+%endfunction
+
+%function getOutputAddr_63_24_2_2_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<29d82*//*@>29d7b*/ZT_VehCtrl_18B_B./*@>29d87*/CAN0_Rx_500_o6"
+%endfunction
+
+%function getOutput_63_24_2_2_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>29d94*/ZT_VehCtrl_18B_B./*@>29da1*/CAN0_Rx_500_o6"
+%endfunction
+
+%function getOutputAddr_63_26_2_2_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<29dc7*//*@>29dc0*/ZT_VehCtrl_18B_B./*@>29dcc*/CAN1_Rx_500_o2"
+%endfunction
+
+%function getOutput_63_26_2_2_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>29dd9*/ZT_VehCtrl_18B_B./*@>29de6*/CAN1_Rx_500_o2"
+%endfunction
+
+%function getOutputAddr_63_26_2_2_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<29df8*//*@>29df1*/ZT_VehCtrl_18B_B./*@>29dfd*/CAN1_Rx_500_o3"
+%endfunction
+
+%function getOutput_63_26_2_2_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>29e0a*/ZT_VehCtrl_18B_B./*@>29e17*/CAN1_Rx_500_o3"
+%endfunction
+
+%function getOutputAddr_63_26_2_2_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<29e29*//*@>29e22*/ZT_VehCtrl_18B_B./*@>29e2e*/CAN1_Rx_500_o4" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getOutput_63_26_2_2_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>29e3b*/ZT_VehCtrl_18B_B./*@>29e48*/CAN1_Rx_500_o4" + SLibCG_ArrayIndexer(ucv, lcv, sigIdx)
+%endfunction
+
+%function getOutputAddr_63_26_2_2_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<29e5a*//*@>29e53*/ZT_VehCtrl_18B_B./*@>29e5f*/CAN1_Rx_500_o5"
+%endfunction
+
+%function getOutput_63_26_2_2_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>29e6c*/ZT_VehCtrl_18B_B./*@>29e79*/CAN1_Rx_500_o5"
+%endfunction
+
+%function getOutputAddr_63_26_2_2_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<29e8b*//*@>29e84*/ZT_VehCtrl_18B_B./*@>29e90*/CAN1_Rx_500_o6"
+%endfunction
+
+%function getOutput_63_26_2_2_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>29e9d*/ZT_VehCtrl_18B_B./*@>29eaa*/CAN1_Rx_500_o6"
+%endfunction
+
+%function getInputAddr_49_8_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<29ed0*//*@>29ec9*/ZT_VehCtrl_18B_B./*@>29ed5*/Switch"
+%endfunction
+
+%function getInput_49_8_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>29ee2*/ZT_VehCtrl_18B_B./*@>29eef*/Switch"
+%endfunction
+
+%function getInputAddr_49_8_2_2_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<29f01*//*@>29efa*/ZT_VehCtrl_18B_B./*@>29f06*/Switch_f"
+%endfunction
+
+%function getInput_49_8_2_2_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>29f13*/ZT_VehCtrl_18B_B./*@>29f20*/Switch_f"
+%endfunction
+
+%function getInputAddr_49_8_2_2_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<29f32*//*@>29f2b*/ZT_VehCtrl_18B_B./*@>29f37*/Switch_e"
+%endfunction
+
+%function getInput_49_8_2_2_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>29f44*/ZT_VehCtrl_18B_B./*@>29f51*/Switch_e"
+%endfunction
+
+%function getInputAddr_49_8_2_2_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<29f63*//*@>29f5c*/ZT_VehCtrl_18B_B./*@>29f68*/Switch_ef"
+%endfunction
+
+%function getInput_49_8_2_2_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>29f75*/ZT_VehCtrl_18B_B./*@>29f82*/Switch_ef"
+%endfunction
+
+%function getOutputAddr_49_8_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<29f94*//*@>29f8d*/ZT_VehCtrl_18B_B./*@>29f99*/VCU_ACU1"
+%endfunction
+
+%function getOutput_49_8_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>29fa6*/ZT_VehCtrl_18B_B./*@>29fb3*/VCU_ACU1"
+%endfunction
+
+%function getDWorkAddr_49_8_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<29fc5*//*@>29fbe*/ZT_VehCtrl_18B_DW./*@>29fca*/VCU_ACU1_ModeSignalID"
+%endfunction
+
+%function getDWork_49_8_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>29fd7*/ZT_VehCtrl_18B_DW./*@>29fe4*/VCU_ACU1_ModeSignalID"
+%endfunction
+
+%function getInputAddr_50_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a00a*//*@>2a003*/ZT_VehCtrl_18B_B./*@>2a00f*/DataStoreRead1_e"
+%endfunction
+
+%function getInput_50_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a01c*/ZT_VehCtrl_18B_B./*@>2a029*/DataStoreRead1_e"
+%endfunction
+
+%function getInputAddr_50_0_2_2_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a03b*//*@>2a034*/ZT_VehCtrl_18B_B./*@>2a040*/DataStoreRead2_l"
+%endfunction
+
+%function getInput_50_0_2_2_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a04d*/ZT_VehCtrl_18B_B./*@>2a05a*/DataStoreRead2_l"
+%endfunction
+
+%function getOutputAddr_50_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a06c*//*@>2a065*/ZT_VehCtrl_18B_B./*@>2a071*/VCU_BMS"
+%endfunction
+
+%function getOutput_50_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a07e*/ZT_VehCtrl_18B_B./*@>2a08b*/VCU_BMS"
+%endfunction
+
+%function getDWorkAddr_50_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a09d*//*@>2a096*/ZT_VehCtrl_18B_DW./*@>2a0a2*/VCU_BMS_ModeSignalID"
+%endfunction
+
+%function getDWork_50_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a0af*/ZT_VehCtrl_18B_DW./*@>2a0bc*/VCU_BMS_ModeSignalID"
+%endfunction
+
+%function getInputAddr_51_2_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a0e2*//*@>2a0db*/ZT_VehCtrl_18B_B./*@>2a0e7*/DataTypeConversion3"
+%endfunction
+
+%function getInput_51_2_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a0f4*/ZT_VehCtrl_18B_B./*@>2a101*/DataTypeConversion3"
+%endfunction
+
+%function getInputAddr_51_2_2_2_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a113*//*@>2a10c*/ZT_VehCtrl_18B_ConstB./*@>2a118*/DataTypeConversion"
+%endfunction
+
+%function getInput_51_2_2_2_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a125*/ZT_VehCtrl_18B_ConstB./*@>2a132*/DataTypeConversion"
+%endfunction
+
+%function getInputAddr_51_2_2_2_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a144*//*@>2a13d*/ZT_VehCtrl_18B_B./*@>2a149*/DataStoreRead4_n"
+%endfunction
+
+%function getInput_51_2_2_2_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a156*/ZT_VehCtrl_18B_B./*@>2a163*/DataStoreRead4_n"
+%endfunction
+
+%function getInputAddr_51_2_2_2_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a175*//*@>2a16e*/ZT_VehCtrl_18B_ConstB./*@>2a17a*/DataTypeConversion1"
+%endfunction
+
+%function getInput_51_2_2_2_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a187*/ZT_VehCtrl_18B_ConstB./*@>2a194*/DataTypeConversion1"
+%endfunction
+
+%function getOutputAddr_51_2_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a1a6*//*@>2a19f*/ZT_VehCtrl_18B_B./*@>2a1ab*/VCU2BRS"
+%endfunction
+
+%function getOutput_51_2_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a1b8*/ZT_VehCtrl_18B_B./*@>2a1c5*/VCU2BRS"
+%endfunction
+
+%function getDWorkAddr_51_2_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a1d7*//*@>2a1d0*/ZT_VehCtrl_18B_DW./*@>2a1dc*/VCU2BRS_ModeSignalID"
+%endfunction
+
+%function getDWork_51_2_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a1e9*/ZT_VehCtrl_18B_DW./*@>2a1f6*/VCU2BRS_ModeSignalID"
+%endfunction
+
+%function getInputAddr_52_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a21c*//*@>2a215*/ZT_VehCtrl_18B_B./*@>2a221*/DataStoreRead5_j"
+%endfunction
+
+%function getInput_52_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a22e*/ZT_VehCtrl_18B_B./*@>2a23b*/DataStoreRead5_j"
+%endfunction
+
+%function getOutputAddr_52_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a24d*//*@>2a246*/ZT_VehCtrl_18B_B./*@>2a252*/VCU_DCDC1"
+%endfunction
+
+%function getOutput_52_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a25f*/ZT_VehCtrl_18B_B./*@>2a26c*/VCU_DCDC1"
+%endfunction
+
+%function getDWorkAddr_52_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a27e*//*@>2a277*/ZT_VehCtrl_18B_DW./*@>2a283*/VCU_DCDC1_ModeSignalID"
+%endfunction
+
+%function getDWork_52_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a290*/ZT_VehCtrl_18B_DW./*@>2a29d*/VCU_DCDC1_ModeSignalID"
+%endfunction
+
+%function getInputAddr_59_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a2c3*//*@>2a2bc*/ZT_VehCtrl_18B_B./*@>2a2c8*/DataStoreRead6_b"
+%endfunction
+
+%function getInput_59_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a2d5*/ZT_VehCtrl_18B_B./*@>2a2e2*/DataStoreRead6_b"
+%endfunction
+
+%function getInputAddr_59_0_2_2_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a2f4*//*@>2a2ed*/ZT_VehCtrl_18B_B./*@>2a2f9*/DataStoreRead7_d"
+%endfunction
+
+%function getInput_59_0_2_2_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a306*/ZT_VehCtrl_18B_B./*@>2a313*/DataStoreRead7_d"
+%endfunction
+
+%function getInputAddr_59_0_2_2_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a325*//*@>2a31e*/ZT_VehCtrl_18B_B./*@>2a32a*/DataTypeConversion15"
+%endfunction
+
+%function getInput_59_0_2_2_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a337*/ZT_VehCtrl_18B_B./*@>2a344*/DataTypeConversion15"
+%endfunction
+
+%function getInputAddr_59_0_2_2_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a356*//*@>2a34f*/ZT_VehCtrl_18B_B./*@>2a35b*/DataStoreRead9_h"
+%endfunction
+
+%function getInput_59_0_2_2_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a368*/ZT_VehCtrl_18B_B./*@>2a375*/DataStoreRead9_h"
+%endfunction
+
+%function getInputAddr_59_0_2_2_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a387*//*@>2a380*/ZT_VehCtrl_18B_B./*@>2a38c*/DataStoreRead8_c"
+%endfunction
+
+%function getInput_59_0_2_2_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a399*/ZT_VehCtrl_18B_B./*@>2a3a6*/DataStoreRead8_c"
+%endfunction
+
+%function getOutputAddr_59_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a3b8*//*@>2a3b1*/ZT_VehCtrl_18B_B./*@>2a3bd*/Ctrl_HVC"
+%endfunction
+
+%function getOutput_59_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a3ca*/ZT_VehCtrl_18B_B./*@>2a3d7*/Ctrl_HVC"
+%endfunction
+
+%function getDWorkAddr_59_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a3e9*//*@>2a3e2*/ZT_VehCtrl_18B_DW./*@>2a3ee*/Ctrl_HVC_ModeSignalID"
+%endfunction
+
+%function getDWork_59_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a3fb*/ZT_VehCtrl_18B_DW./*@>2a408*/Ctrl_HVC_ModeSignalID"
+%endfunction
+
+%function getInputAddr_60_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a42e*//*@>2a427*/ZT_VehCtrl_18B_B./*@>2a433*/DataStoreRead9"
+%endfunction
+
+%function getInput_60_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a440*/ZT_VehCtrl_18B_B./*@>2a44d*/DataStoreRead9"
+%endfunction
+
+%function getInputAddr_60_0_2_2_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a45f*//*@>2a458*/ZT_VehCtrl_18B_B./*@>2a464*/DataStoreRead6"
+%endfunction
+
+%function getInput_60_0_2_2_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a471*/ZT_VehCtrl_18B_B./*@>2a47e*/DataStoreRead6"
+%endfunction
+
+%function getInputAddr_60_0_2_2_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a490*//*@>2a489*/ZT_VehCtrl_18B_B./*@>2a495*/DataStoreRead8"
+%endfunction
+
+%function getInput_60_0_2_2_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a4a2*/ZT_VehCtrl_18B_B./*@>2a4af*/DataStoreRead8"
+%endfunction
+
+%function getInputAddr_60_0_2_2_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a4c1*//*@>2a4ba*/ZT_VehCtrl_18B_B./*@>2a4c6*/DataTypeConversion_m"
+%endfunction
+
+%function getInput_60_0_2_2_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a4d3*/ZT_VehCtrl_18B_B./*@>2a4e0*/DataTypeConversion_m"
+%endfunction
+
+%function getInputAddr_60_0_2_2_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a4f2*//*@>2a4eb*/ZT_VehCtrl_18B_B./*@>2a4f7*/DataStoreRead7"
+%endfunction
+
+%function getInput_60_0_2_2_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a504*/ZT_VehCtrl_18B_B./*@>2a511*/DataStoreRead7"
+%endfunction
+
+%function getInputAddr_60_0_2_2_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a523*//*@>2a51c*/ZT_VehCtrl_18B_B./*@>2a528*/DataStoreRead5"
+%endfunction
+
+%function getInput_60_0_2_2_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a535*/ZT_VehCtrl_18B_B./*@>2a542*/DataStoreRead5"
+%endfunction
+
+%function getOutputAddr_60_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a554*//*@>2a54d*/ZT_VehCtrl_18B_B./*@>2a559*/VCU_PDU"
+%endfunction
+
+%function getOutput_60_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a566*/ZT_VehCtrl_18B_B./*@>2a573*/VCU_PDU"
+%endfunction
+
+%function getDWorkAddr_60_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a585*//*@>2a57e*/ZT_VehCtrl_18B_DW./*@>2a58a*/VCU_PDU_ModeSignalID"
+%endfunction
+
+%function getDWork_60_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a597*/ZT_VehCtrl_18B_DW./*@>2a5a4*/VCU_PDU_ModeSignalID"
+%endfunction
+
+%function getInputAddr_62_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a5ca*//*@>2a5c3*/ZT_VehCtrl_18B_B./*@>2a5cf*/DataStoreRead10"
+%endfunction
+
+%function getInput_62_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a5dc*/ZT_VehCtrl_18B_B./*@>2a5e9*/DataStoreRead10"
+%endfunction
+
+%function getOutputAddr_62_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a5fb*//*@>2a5f4*/ZT_VehCtrl_18B_B./*@>2a600*/VCU_TWV"
+%endfunction
+
+%function getOutput_62_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a60d*/ZT_VehCtrl_18B_B./*@>2a61a*/VCU_TWV"
+%endfunction
+
+%function getDWorkAddr_62_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a62c*//*@>2a625*/ZT_VehCtrl_18B_DW./*@>2a631*/VCU_TWV_ModeSignalID"
+%endfunction
+
+%function getDWork_62_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a63e*/ZT_VehCtrl_18B_DW./*@>2a64b*/VCU_TWV_ModeSignalID"
+%endfunction
+
+%function getInputAddr_61_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a671*//*@>2a66a*/ZT_VehCtrl_18B_B./*@>2a676*/DataTypeConversion"
+%endfunction
+
+%function getInput_61_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a683*/ZT_VehCtrl_18B_B./*@>2a690*/DataTypeConversion"
+%endfunction
+
+%function getInputAddr_61_0_2_2_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a6a2*//*@>2a69b*/ZT_VehCtrl_18B_B./*@>2a6a7*/DataStoreRead1"
+%endfunction
+
+%function getInput_61_0_2_2_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a6b4*/ZT_VehCtrl_18B_B./*@>2a6c1*/DataStoreRead1"
+%endfunction
+
+%function getOutputAddr_61_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a6d3*//*@>2a6cc*/ZT_VehCtrl_18B_B./*@>2a6d8*/TMS"
+%endfunction
+
+%function getOutput_61_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a6e5*/ZT_VehCtrl_18B_B./*@>2a6f2*/TMS"
+%endfunction
+
+%function getDWorkAddr_61_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a704*//*@>2a6fd*/ZT_VehCtrl_18B_DW./*@>2a709*/TMS_ModeSignalID"
+%endfunction
+
+%function getDWork_61_0_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a716*/ZT_VehCtrl_18B_DW./*@>2a723*/TMS_ModeSignalID"
+%endfunction
+
+%function getInputAddr_63_42_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a749*//*@>2a742*/ZT_VehCtrl_18B_B./*@>2a74e*/DataStoreRead"
+%endfunction
+
+%function getInput_63_42_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a75b*/ZT_VehCtrl_18B_B./*@>2a768*/DataStoreRead"
+%endfunction
+
+%function getInputAddr_63_43_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a78e*//*@>2a787*/ZT_VehCtrl_18B_B./*@>2a793*/DataStoreRead2"
+%endfunction
+
+%function getInput_63_43_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a7a0*/ZT_VehCtrl_18B_B./*@>2a7ad*/DataStoreRead2"
+%endfunction
+
+%function getInputAddr_63_44_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a7d3*//*@>2a7cc*/ZT_VehCtrl_18B_B./*@>2a7d8*/DataStoreRead4"
+%endfunction
+
+%function getInput_63_44_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a7e5*/ZT_VehCtrl_18B_B./*@>2a7f2*/DataStoreRead4"
+%endfunction
+
+%function getInputAddr_63_45_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a818*//*@>2a811*/ZT_VehCtrl_18B_B./*@>2a81d*/DataStoreRead5_i"
+%endfunction
+
+%function getInput_63_45_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a82a*/ZT_VehCtrl_18B_B./*@>2a837*/DataStoreRead5_i"
+%endfunction
+
+%function getInputAddr_63_46_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a85d*//*@>2a856*/ZT_VehCtrl_18B_B./*@>2a862*/DataStoreRead6_n"
+%endfunction
+
+%function getInput_63_46_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a86f*/ZT_VehCtrl_18B_B./*@>2a87c*/DataStoreRead6_n"
+%endfunction
+
+%function getInputAddr_63_47_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a8a2*//*@>2a89b*/ZT_VehCtrl_18B_B./*@>2a8a7*/DataStoreRead7_a"
+%endfunction
+
+%function getInput_63_47_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a8b4*/ZT_VehCtrl_18B_B./*@>2a8c1*/DataStoreRead7_a"
+%endfunction
+
+%function getInputAddr_63_48_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a8e7*//*@>2a8e0*/ZT_VehCtrl_18B_B./*@>2a8ec*/DataStoreRead9_g"
+%endfunction
+
+%function getInput_63_48_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a8f9*/ZT_VehCtrl_18B_B./*@>2a906*/DataStoreRead9_g"
+%endfunction
+
+%function getInputAddr_63_50_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_63_50_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInputAddr_63_52_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_63_52_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInputAddr_63_54_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_63_54_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInputAddr_63_59_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_63_59_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInputAddr_63_61_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_63_61_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInputAddr_63_74_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a990*//*@>2a989*/ZT_VehCtrl_18B_ConstB./*@>2a995*/DataTypeConversion_cp"
+%endfunction
+
+%function getInput_63_74_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a9a2*/ZT_VehCtrl_18B_ConstB./*@>2a9af*/DataTypeConversion_cp"
+%endfunction
+
+%function getInputAddr_63_75_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<2a9d5*//*@>2a9ce*/ZT_VehCtrl_18B_ConstB./*@>2a9da*/DataTypeConversion_cp"
+%endfunction
+
+%function getInput_63_75_2_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>2a9e7*/ZT_VehCtrl_18B_ConstB./*@>2a9f4*/DataTypeConversion_cp"
+%endfunction
+

@@ -1,200 +1,178 @@
-#include "adc1_params.h"
+    #include "adc1_params.h"
 
-pin_settings_config_t adc1_PinsCfg[5U] = {
-  {
-    .base = SIUL2,
-    .pinPortIdx = 32U,
-    .mux = PORT_MUX_AS_GPIO,
-    .outputBuffer = PORT_OUTPUT_BUFFER_DISABLED,
-    .openDrain = PORT_OPEN_DRAIN_DISABLED,
-    .slewRateCtrlSel = HALF_STRENGTH_WITH_SLEWRATE_CONTROL,
-    .hysteresisSelect = PORT_HYSTERESYS_DISABLED,
-    .safeMode = PORT_SAFE_MODE_DISABLED,
-    .analogPadCtrlSel = PORT_ANALOG_PAD_CONTROL_ENABLED,
-    .inputBuffer = PORT_INPUT_BUFFER_ENABLED,
-    .pullConfig = PORT_INTERNAL_PULL_NOT_ENABLED,
+        pin_settings_config_t adc1_PinsCfg[5U] = {
+            {
+                .base              = SIUL2,
+                .pinPortIdx        = 32U,
+                .mux               = PORT_MUX_AS_GPIO,
+                .outputBuffer      = PORT_OUTPUT_BUFFER_DISABLED,
+                .openDrain         = PORT_OPEN_DRAIN_DISABLED,
+                .slewRateCtrlSel   = HALF_STRENGTH_WITH_SLEWRATE_CONTROL,
+                .hysteresisSelect  = PORT_HYSTERESYS_DISABLED,
+                .safeMode          = PORT_SAFE_MODE_DISABLED,
+                .analogPadCtrlSel  = PORT_ANALOG_PAD_CONTROL_ENABLED,
+                .inputBuffer       = PORT_INPUT_BUFFER_ENABLED,
+                .pullConfig        = PORT_INTERNAL_PULL_NOT_ENABLED,
+                #ifdef FEATURE_SIUL2_HAS_INVERT_DATA_OUTPUT
+                    .invertOutput = PORT_INVERT_OUTPUT_DISABLED,
+                #endif
+                .gpioBase          = PTC,
+                .intConfig         =
+                {
+                    .intEdgeSel    = SIUL2_INT_DISABLE
+                },
+                .inputMuxReg[0]    = 0U,
+                .inputMux[0]       = PORT_MUX_AS_GPIO,
+                .inputMux[1]       = PORT_INPUT_MUX_NO_INIT,
+                .inputMux[2]       = PORT_INPUT_MUX_NO_INIT,
+                .inputMux[3]       = PORT_INPUT_MUX_NO_INIT,
+                .inputMux[4]       = PORT_INPUT_MUX_NO_INIT,
+                .inputMux[5]       = PORT_INPUT_MUX_NO_INIT,
+                .inputMux[6]       = PORT_INPUT_MUX_NO_INIT,
+                .inputMux[7]       = PORT_INPUT_MUX_NO_INIT,
+            },
+            {
+                .base              = SIUL2,
+                .pinPortIdx        = 75U,
+                .mux               = PORT_MUX_AS_GPIO,
+                .outputBuffer      = PORT_OUTPUT_BUFFER_DISABLED,
+                .openDrain         = PORT_OPEN_DRAIN_DISABLED,
+                .slewRateCtrlSel   = HALF_STRENGTH_WITH_SLEWRATE_CONTROL,
+                .hysteresisSelect  = PORT_HYSTERESYS_DISABLED,
+                .safeMode          = PORT_SAFE_MODE_DISABLED,
+                .analogPadCtrlSel  = PORT_ANALOG_PAD_CONTROL_ENABLED,
+                .inputBuffer       = PORT_INPUT_BUFFER_ENABLED,
+                .pullConfig        = PORT_INTERNAL_PULL_NOT_ENABLED,
+                #ifdef FEATURE_SIUL2_HAS_INVERT_DATA_OUTPUT
+                    .invertOutput = PORT_INVERT_OUTPUT_DISABLED,
+                #endif
+                .gpioBase          = PTE,
+                .intConfig         =
+                {
+                    .intEdgeSel    = SIUL2_INT_DISABLE
+                },
+                .inputMuxReg[0]    = 0U,
+                .inputMux[0]       = PORT_MUX_AS_GPIO,
+                .inputMux[1]       = PORT_INPUT_MUX_NO_INIT,
+                .inputMux[2]       = PORT_INPUT_MUX_NO_INIT,
+                .inputMux[3]       = PORT_INPUT_MUX_NO_INIT,
+                .inputMux[4]       = PORT_INPUT_MUX_NO_INIT,
+                .inputMux[5]       = PORT_INPUT_MUX_NO_INIT,
+                .inputMux[6]       = PORT_INPUT_MUX_NO_INIT,
+                .inputMux[7]       = PORT_INPUT_MUX_NO_INIT,
+            },
+            {
+                .base              = SIUL2,
+                .pinPortIdx        = 31U,
+                .mux               = PORT_MUX_AS_GPIO,
+                .outputBuffer      = PORT_OUTPUT_BUFFER_DISABLED,
+                .openDrain         = PORT_OPEN_DRAIN_DISABLED,
+                .slewRateCtrlSel   = HALF_STRENGTH_WITH_SLEWRATE_CONTROL,
+                .hysteresisSelect  = PORT_HYSTERESYS_DISABLED,
+                .safeMode          = PORT_SAFE_MODE_DISABLED,
+                .analogPadCtrlSel  = PORT_ANALOG_PAD_CONTROL_ENABLED,
+                .inputBuffer       = PORT_INPUT_BUFFER_ENABLED,
+                .pullConfig        = PORT_INTERNAL_PULL_NOT_ENABLED,
+                #ifdef FEATURE_SIUL2_HAS_INVERT_DATA_OUTPUT
+                    .invertOutput = PORT_INVERT_OUTPUT_DISABLED,
+                #endif
+                .gpioBase          = PTB,
+                .intConfig         =
+                {
+                    .intEdgeSel    = SIUL2_INT_DISABLE
+                },
+                .inputMuxReg[0]    = 0U,
+                .inputMux[0]       = PORT_MUX_AS_GPIO,
+                .inputMux[1]       = PORT_INPUT_MUX_NO_INIT,
+                .inputMux[2]       = PORT_INPUT_MUX_NO_INIT,
+                .inputMux[3]       = PORT_INPUT_MUX_NO_INIT,
+                .inputMux[4]       = PORT_INPUT_MUX_NO_INIT,
+                .inputMux[5]       = PORT_INPUT_MUX_NO_INIT,
+                .inputMux[6]       = PORT_INPUT_MUX_NO_INIT,
+                .inputMux[7]       = PORT_INPUT_MUX_NO_INIT,
+            },
+            {
+                .base              = SIUL2,
+                .pinPortIdx        = 64U,
+                .mux               = PORT_MUX_AS_GPIO,
+                .outputBuffer      = PORT_OUTPUT_BUFFER_DISABLED,
+                .openDrain         = PORT_OPEN_DRAIN_DISABLED,
+                .slewRateCtrlSel   = HALF_STRENGTH_WITH_SLEWRATE_CONTROL,
+                .hysteresisSelect  = PORT_HYSTERESYS_DISABLED,
+                .safeMode          = PORT_SAFE_MODE_DISABLED,
+                .analogPadCtrlSel  = PORT_ANALOG_PAD_CONTROL_ENABLED,
+                .inputBuffer       = PORT_INPUT_BUFFER_ENABLED,
+                .pullConfig        = PORT_INTERNAL_PULL_NOT_ENABLED,
+                #ifdef FEATURE_SIUL2_HAS_INVERT_DATA_OUTPUT
+                    .invertOutput = PORT_INVERT_OUTPUT_DISABLED,
+                #endif
+                .gpioBase          = PTE,
+                .intConfig         =
+                {
+                    .intEdgeSel    = SIUL2_INT_DISABLE
+                },
+                .inputMuxReg[0]    = 0U,
+                .inputMux[0]       = PORT_MUX_AS_GPIO,
+                .inputMux[1]       = PORT_INPUT_MUX_NO_INIT,
+                .inputMux[2]       = PORT_INPUT_MUX_NO_INIT,
+                .inputMux[3]       = PORT_INPUT_MUX_NO_INIT,
+                .inputMux[4]       = PORT_INPUT_MUX_NO_INIT,
+                .inputMux[5]       = PORT_INPUT_MUX_NO_INIT,
+                .inputMux[6]       = PORT_INPUT_MUX_NO_INIT,
+                .inputMux[7]       = PORT_INPUT_MUX_NO_INIT,
+            },
+            {
+                .base              = SIUL2,
+                .pinPortIdx        = 30U,
+                .mux               = PORT_MUX_AS_GPIO,
+                .outputBuffer      = PORT_OUTPUT_BUFFER_DISABLED,
+                .openDrain         = PORT_OPEN_DRAIN_DISABLED,
+                .slewRateCtrlSel   = HALF_STRENGTH_WITH_SLEWRATE_CONTROL,
+                .hysteresisSelect  = PORT_HYSTERESYS_DISABLED,
+                .safeMode          = PORT_SAFE_MODE_DISABLED,
+                .analogPadCtrlSel  = PORT_ANALOG_PAD_CONTROL_ENABLED,
+                .inputBuffer       = PORT_INPUT_BUFFER_ENABLED,
+                .pullConfig        = PORT_INTERNAL_PULL_NOT_ENABLED,
+                #ifdef FEATURE_SIUL2_HAS_INVERT_DATA_OUTPUT
+                    .invertOutput = PORT_INVERT_OUTPUT_DISABLED,
+                #endif
+                .gpioBase          = PTB,
+                .intConfig         =
+                {
+                    .intEdgeSel    = SIUL2_INT_DISABLE
+                },
+                .inputMuxReg[0]    = 0U,
+                .inputMux[0]       = PORT_MUX_AS_GPIO,
+                .inputMux[1]       = PORT_INPUT_MUX_NO_INIT,
+                .inputMux[2]       = PORT_INPUT_MUX_NO_INIT,
+                .inputMux[3]       = PORT_INPUT_MUX_NO_INIT,
+                .inputMux[4]       = PORT_INPUT_MUX_NO_INIT,
+                .inputMux[5]       = PORT_INPUT_MUX_NO_INIT,
+                .inputMux[6]       = PORT_INPUT_MUX_NO_INIT,
+                .inputMux[7]       = PORT_INPUT_MUX_NO_INIT,
+            },
+        };
 
-#ifdef FEATURE_SIUL2_HAS_INVERT_DATA_OUTPUT
+    adc_chain_config_t adc1_chain_config = {
+        .chanMaskNormal = {62U, 0U, 0U },
+        .chanMaskInjected = {0u, 0u, 0u},
+        .interruptMask = {0u, 0u, 0u},
+    };
 
-    .invertOutput = PORT_INVERT_OUTPUT_DISABLED,
+    adc_conv_config_t adc1_config = {
+        .convMode = ADC_CONV_MODE_ONESHOT,
+        .clkSelect = ADC_CLK_FULL_BUS,
+        .refSelect = ADC_REF_VREFH,
+        .ctuMode = ADC_CTU_MODE_DISABLED,
+        .injectedEdge = ADC_INJECTED_EDGE_DISABLED,
+        .sampleTime0 = 100U,
+        .sampleTime1 = 100U,
+        .sampleTime2 = 100U,
+        .autoClockOff = false,
+        .overwriteEnable = false,
+        .dataAlign = ADC_DATA_ALIGNED_RIGHT,
+        .decodeDelay = 0U,
+        .powerDownDelay = 0U,
+    };
 
-#endif
 
-    .gpioBase = PTC,
-    .intConfig =
-    {
-      .intEdgeSel = SIUL2_INT_DISABLE
-    },
-    .inputMuxReg[0] = 0U,
-    .inputMux[0] = PORT_MUX_AS_GPIO,
-    .inputMux[1] = PORT_INPUT_MUX_NO_INIT,
-    .inputMux[2] = PORT_INPUT_MUX_NO_INIT,
-    .inputMux[3] = PORT_INPUT_MUX_NO_INIT,
-    .inputMux[4] = PORT_INPUT_MUX_NO_INIT,
-    .inputMux[5] = PORT_INPUT_MUX_NO_INIT,
-    .inputMux[6] = PORT_INPUT_MUX_NO_INIT,
-    .inputMux[7] = PORT_INPUT_MUX_NO_INIT,
-  },
-
-  {
-    .base = SIUL2,
-    .pinPortIdx = 75U,
-    .mux = PORT_MUX_AS_GPIO,
-    .outputBuffer = PORT_OUTPUT_BUFFER_DISABLED,
-    .openDrain = PORT_OPEN_DRAIN_DISABLED,
-    .slewRateCtrlSel = HALF_STRENGTH_WITH_SLEWRATE_CONTROL,
-    .hysteresisSelect = PORT_HYSTERESYS_DISABLED,
-    .safeMode = PORT_SAFE_MODE_DISABLED,
-    .analogPadCtrlSel = PORT_ANALOG_PAD_CONTROL_ENABLED,
-    .inputBuffer = PORT_INPUT_BUFFER_ENABLED,
-    .pullConfig = PORT_INTERNAL_PULL_NOT_ENABLED,
-
-#ifdef FEATURE_SIUL2_HAS_INVERT_DATA_OUTPUT
-
-    .invertOutput = PORT_INVERT_OUTPUT_DISABLED,
-
-#endif
-
-    .gpioBase = PTE,
-    .intConfig =
-    {
-      .intEdgeSel = SIUL2_INT_DISABLE
-    },
-    .inputMuxReg[0] = 0U,
-    .inputMux[0] = PORT_MUX_AS_GPIO,
-    .inputMux[1] = PORT_INPUT_MUX_NO_INIT,
-    .inputMux[2] = PORT_INPUT_MUX_NO_INIT,
-    .inputMux[3] = PORT_INPUT_MUX_NO_INIT,
-    .inputMux[4] = PORT_INPUT_MUX_NO_INIT,
-    .inputMux[5] = PORT_INPUT_MUX_NO_INIT,
-    .inputMux[6] = PORT_INPUT_MUX_NO_INIT,
-    .inputMux[7] = PORT_INPUT_MUX_NO_INIT,
-  },
-
-  {
-    .base = SIUL2,
-    .pinPortIdx = 31U,
-    .mux = PORT_MUX_AS_GPIO,
-    .outputBuffer = PORT_OUTPUT_BUFFER_DISABLED,
-    .openDrain = PORT_OPEN_DRAIN_DISABLED,
-    .slewRateCtrlSel = HALF_STRENGTH_WITH_SLEWRATE_CONTROL,
-    .hysteresisSelect = PORT_HYSTERESYS_DISABLED,
-    .safeMode = PORT_SAFE_MODE_DISABLED,
-    .analogPadCtrlSel = PORT_ANALOG_PAD_CONTROL_ENABLED,
-    .inputBuffer = PORT_INPUT_BUFFER_ENABLED,
-    .pullConfig = PORT_INTERNAL_PULL_NOT_ENABLED,
-
-#ifdef FEATURE_SIUL2_HAS_INVERT_DATA_OUTPUT
-
-    .invertOutput = PORT_INVERT_OUTPUT_DISABLED,
-
-#endif
-
-    .gpioBase = PTB,
-    .intConfig =
-    {
-      .intEdgeSel = SIUL2_INT_DISABLE
-    },
-    .inputMuxReg[0] = 0U,
-    .inputMux[0] = PORT_MUX_AS_GPIO,
-    .inputMux[1] = PORT_INPUT_MUX_NO_INIT,
-    .inputMux[2] = PORT_INPUT_MUX_NO_INIT,
-    .inputMux[3] = PORT_INPUT_MUX_NO_INIT,
-    .inputMux[4] = PORT_INPUT_MUX_NO_INIT,
-    .inputMux[5] = PORT_INPUT_MUX_NO_INIT,
-    .inputMux[6] = PORT_INPUT_MUX_NO_INIT,
-    .inputMux[7] = PORT_INPUT_MUX_NO_INIT,
-  },
-
-  {
-    .base = SIUL2,
-    .pinPortIdx = 64U,
-    .mux = PORT_MUX_AS_GPIO,
-    .outputBuffer = PORT_OUTPUT_BUFFER_DISABLED,
-    .openDrain = PORT_OPEN_DRAIN_DISABLED,
-    .slewRateCtrlSel = HALF_STRENGTH_WITH_SLEWRATE_CONTROL,
-    .hysteresisSelect = PORT_HYSTERESYS_DISABLED,
-    .safeMode = PORT_SAFE_MODE_DISABLED,
-    .analogPadCtrlSel = PORT_ANALOG_PAD_CONTROL_ENABLED,
-    .inputBuffer = PORT_INPUT_BUFFER_ENABLED,
-    .pullConfig = PORT_INTERNAL_PULL_NOT_ENABLED,
-
-#ifdef FEATURE_SIUL2_HAS_INVERT_DATA_OUTPUT
-
-    .invertOutput = PORT_INVERT_OUTPUT_DISABLED,
-
-#endif
-
-    .gpioBase = PTE,
-    .intConfig =
-    {
-      .intEdgeSel = SIUL2_INT_DISABLE
-    },
-    .inputMuxReg[0] = 0U,
-    .inputMux[0] = PORT_MUX_AS_GPIO,
-    .inputMux[1] = PORT_INPUT_MUX_NO_INIT,
-    .inputMux[2] = PORT_INPUT_MUX_NO_INIT,
-    .inputMux[3] = PORT_INPUT_MUX_NO_INIT,
-    .inputMux[4] = PORT_INPUT_MUX_NO_INIT,
-    .inputMux[5] = PORT_INPUT_MUX_NO_INIT,
-    .inputMux[6] = PORT_INPUT_MUX_NO_INIT,
-    .inputMux[7] = PORT_INPUT_MUX_NO_INIT,
-  },
-
-  {
-    .base = SIUL2,
-    .pinPortIdx = 30U,
-    .mux = PORT_MUX_AS_GPIO,
-    .outputBuffer = PORT_OUTPUT_BUFFER_DISABLED,
-    .openDrain = PORT_OPEN_DRAIN_DISABLED,
-    .slewRateCtrlSel = HALF_STRENGTH_WITH_SLEWRATE_CONTROL,
-    .hysteresisSelect = PORT_HYSTERESYS_DISABLED,
-    .safeMode = PORT_SAFE_MODE_DISABLED,
-    .analogPadCtrlSel = PORT_ANALOG_PAD_CONTROL_ENABLED,
-    .inputBuffer = PORT_INPUT_BUFFER_ENABLED,
-    .pullConfig = PORT_INTERNAL_PULL_NOT_ENABLED,
-
-#ifdef FEATURE_SIUL2_HAS_INVERT_DATA_OUTPUT
-
-    .invertOutput = PORT_INVERT_OUTPUT_DISABLED,
-
-#endif
-
-    .gpioBase = PTB,
-    .intConfig =
-    {
-      .intEdgeSel = SIUL2_INT_DISABLE
-    },
-    .inputMuxReg[0] = 0U,
-    .inputMux[0] = PORT_MUX_AS_GPIO,
-    .inputMux[1] = PORT_INPUT_MUX_NO_INIT,
-    .inputMux[2] = PORT_INPUT_MUX_NO_INIT,
-    .inputMux[3] = PORT_INPUT_MUX_NO_INIT,
-    .inputMux[4] = PORT_INPUT_MUX_NO_INIT,
-    .inputMux[5] = PORT_INPUT_MUX_NO_INIT,
-    .inputMux[6] = PORT_INPUT_MUX_NO_INIT,
-    .inputMux[7] = PORT_INPUT_MUX_NO_INIT,
-  },
-};
-
-adc_chain_config_t adc1_chain_config = {
-  .chanMaskNormal = { 62U, 0U, 0U },
-  .chanMaskInjected = { 0u, 0u, 0u },
-  .interruptMask = { 0u, 0u, 0u },
-};
-
-adc_conv_config_t adc1_config = {
-  .convMode = ADC_CONV_MODE_ONESHOT,
-  .clkSelect = ADC_CLK_FULL_BUS,
-  .refSelect = ADC_REF_VREFH,
-  .ctuMode = ADC_CTU_MODE_DISABLED,
-  .injectedEdge = ADC_INJECTED_EDGE_DISABLED,
-  .sampleTime0 = 100U,
-  .sampleTime1 = 100U,
-  .sampleTime2 = 100U,
-  .autoClockOff = false,
-  .overwriteEnable = false,
-  .dataAlign = ADC_DATA_ALIGNED_RIGHT,
-  .decodeDelay = 0U,
-  .powerDownDelay = 0U,
-};

@@ -1,0 +1,600 @@
+%implements s63_b0_fluon_ModelInitialize "C"
+
+%function ModelInitialize(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign tlcStartFcnOfS63B1 = OpaqueTLCBlockFcn("Start", 63, 1, 2, 2)
+%assign tlcStartFcnOfS63B2 = OpaqueTLCBlockFcn("Start", 63, 2, 2, 2)
+%assign tlcStartFcnOfS63B3 = OpaqueTLCBlockFcn("Start", 63, 3, 2, 2)
+%assign tlcStartFcnOfS63B4 = OpaqueTLCBlockFcn("Start", 63, 4, 2, 2)
+%assign tlcStartFcnOfS63B5 = OpaqueTLCBlockFcn("Start", 63, 5, 2, 2)
+%assign tlcStartFcnOfS63B6 = OpaqueTLCBlockFcn("Start", 63, 6, 2, 2)
+%assign tlcStartFcnOfS63B7 = OpaqueTLCBlockFcn("Start", 63, 7, 2, 2)
+%assign tlcStartFcnOfS63B8 = OpaqueTLCBlockFcn("Start", 63, 8, 2, 2)
+%assign tlcStartFcnOfS63B9 = OpaqueTLCBlockFcn("Start", 63, 9, 2, 2)
+%assign tlcStartFcnOfS63B10 = OpaqueTLCBlockFcn("Start", 63, 10, 2, 2)
+%assign tlcStartFcnOfS63B11 = OpaqueTLCBlockFcn("Start", 63, 11, 2, 2)
+%assign tlcStartFcnOfS63B12 = OpaqueTLCBlockFcn("Start", 63, 12, 2, 2)
+%assign tlcStartFcnOfS63B13 = OpaqueTLCBlockFcn("Start", 63, 13, 2, 2)
+%assign tlcStartFcnOfS63B14 = OpaqueTLCBlockFcn("Start", 63, 14, 2, 2)
+%assign tlcStartFcnOfS63B15 = OpaqueTLCBlockFcn("Start", 63, 15, 2, 2)
+%assign tlcStartFcnOfS63B16 = OpaqueTLCBlockFcn("Start", 63, 16, 2, 2)
+%assign tlcStartFcnOfS63B17 = OpaqueTLCBlockFcn("Start", 63, 17, 2, 2)
+%assign tlcStartFcnOfS63B18 = OpaqueTLCBlockFcn("Start", 63, 18, 2, 2)
+%assign tlcStartFcnOfS63B19 = OpaqueTLCBlockFcn("Start", 63, 19, 2, 2)
+%assign tlcStartFcnOfS63B20 = OpaqueTLCBlockFcn("Start", 63, 20, 2, 2)
+%assign tlcStartFcnOfS63B21 = OpaqueTLCBlockFcn("Start", 63, 21, 2, 2)
+%assign tlcStartFcnOfS63B22 = OpaqueTLCBlockFcn("Start", 63, 22, 2, 2)
+%assign tlcStartFcnOfS63B24 = OpaqueTLCBlockFcn("Start", 63, 24, 2, 2)
+%assign tlcStartFcnOfS63B26 = OpaqueTLCBlockFcn("Start", 63, 26, 2, 2)
+%assign tlcStartFcnOfS49B8 = OpaqueTLCBlockFcn("Start", 49, 8, 2, 2)
+%assign tlcStartFcnOfS50B0 = OpaqueTLCBlockFcn("Start", 50, 0, 2, 2)
+%assign tlcStartFcnOfS51B2 = OpaqueTLCBlockFcn("Start", 51, 2, 2, 2)
+%assign tlcStartFcnOfS52B0 = OpaqueTLCBlockFcn("Start", 52, 0, 2, 2)
+%assign tlcStartFcnOfS59B0 = OpaqueTLCBlockFcn("Start", 59, 0, 2, 2)
+%assign tlcStartFcnOfS60B0 = OpaqueTLCBlockFcn("Start", 60, 0, 2, 2)
+%assign tlcStartFcnOfS62B0 = OpaqueTLCBlockFcn("Start", 62, 0, 2, 2)
+%assign tlcStartFcnOfS61B0 = OpaqueTLCBlockFcn("Start", 61, 0, 2, 2)
+%assign tlcStartFcnOfS63B42 = OpaqueTLCBlockFcn("Start", 63, 42, 2, 2)
+%assign tlcStartFcnOfS63B43 = OpaqueTLCBlockFcn("Start", 63, 43, 2, 2)
+%assign tlcStartFcnOfS63B44 = OpaqueTLCBlockFcn("Start", 63, 44, 2, 2)
+%assign tlcStartFcnOfS63B45 = OpaqueTLCBlockFcn("Start", 63, 45, 2, 2)
+%assign tlcStartFcnOfS63B46 = OpaqueTLCBlockFcn("Start", 63, 46, 2, 2)
+%assign tlcStartFcnOfS63B47 = OpaqueTLCBlockFcn("Start", 63, 47, 2, 2)
+%assign tlcStartFcnOfS63B48 = OpaqueTLCBlockFcn("Start", 63, 48, 2, 2)
+%assign tlcStartFcnOfS63B50 = OpaqueTLCBlockFcn("Start", 63, 50, 2, 2)
+%assign tlcStartFcnOfS63B52 = OpaqueTLCBlockFcn("Start", 63, 52, 2, 2)
+%assign tlcStartFcnOfS63B54 = OpaqueTLCBlockFcn("Start", 63, 54, 2, 2)
+%assign tlcStartFcnOfS63B59 = OpaqueTLCBlockFcn("Start", 63, 59, 2, 2)
+%assign tlcStartFcnOfS63B61 = OpaqueTLCBlockFcn("Start", 63, 61, 2, 2)
+%assign tlcStartFcnOfS63B74 = OpaqueTLCBlockFcn("Start", 63, 74, 2, 2)
+%assign tlcStartFcnOfS63B75 = OpaqueTLCBlockFcn("Start", 63, 75, 2, 2)
+%assign tlcStartFcnOfS0B0 = OpaqueTLCBlockFcn("Start", 0, 0, 2, 2)
+%assign tlcStartFcnOfS0B1 = OpaqueTLCBlockFcn("Start", 0, 1, 2, 2)
+%assign tlcStartFcnOfS0B2 = OpaqueTLCBlockFcn("Start", 0, 2, 2, 2)
+%assign tlcStartFcnOfS0B3 = OpaqueTLCBlockFcn("Start", 0, 3, 2, 2)
+%assign tlcStartFcnOfS0B4 = OpaqueTLCBlockFcn("Start", 0, 4, 2, 2)
+%assign tlcStartFcnOfS0B5 = OpaqueTLCBlockFcn("Start", 0, 5, 2, 2)
+%assign tlcStartFcnOfS0B6 = OpaqueTLCBlockFcn("Start", 0, 6, 2, 2)
+%assign tlcStartFcnOfS0B7 = OpaqueTLCBlockFcn("Start", 0, 7, 2, 2)
+%assign tlcStartFcnOfS0B8 = OpaqueTLCBlockFcn("Start", 0, 8, 2, 2)
+%assign tlcStartFcnOfS0B9 = OpaqueTLCBlockFcn("Start", 0, 9, 2, 2)
+%assign tlcStartFcnOfS0B10 = OpaqueTLCBlockFcn("Start", 0, 10, 2, 2)
+%assign tlcStartFcnOfS0B11 = OpaqueTLCBlockFcn("Start", 0, 11, 2, 2)
+%assign tlcStartFcnOfS0B12 = OpaqueTLCBlockFcn("Start", 0, 12, 2, 2)
+%assign tlcStartFcnOfS0B13 = OpaqueTLCBlockFcn("Start", 0, 13, 2, 2)
+%assign tlcStartFcnOfS0B14 = OpaqueTLCBlockFcn("Start", 0, 14, 2, 2)
+%assign tlcStartFcnOfS0B15 = OpaqueTLCBlockFcn("Start", 0, 15, 2, 2)
+%assign tlcStartFcnOfS0B16 = OpaqueTLCBlockFcn("Start", 0, 16, 2, 2)
+%assign tlcStartFcnOfS0B17 = OpaqueTLCBlockFcn("Start", 0, 17, 2, 2)
+%assign tlcStartFcnOfS0B18 = OpaqueTLCBlockFcn("Start", 0, 18, 2, 2)
+%assign tlcStartFcnOfS0B19 = OpaqueTLCBlockFcn("Start", 0, 19, 2, 2)
+%assign tlcStartFcnOfS0B20 = OpaqueTLCBlockFcn("Start", 0, 20, 2, 2)
+%assign tlcStartFcnOfS0B21 = OpaqueTLCBlockFcn("Start", 0, 21, 2, 2)
+%assign tlcStartFcnOfS0B22 = OpaqueTLCBlockFcn("Start", 0, 22, 2, 2)
+%assign tlcStartFcnOfS0B23 = OpaqueTLCBlockFcn("Start", 0, 23, 2, 2)
+%assign tlcStartFcnOfS0B24 = OpaqueTLCBlockFcn("Start", 0, 24, 2, 2)
+%assign tlcStartFcnOfS0B25 = OpaqueTLCBlockFcn("Start", 0, 25, 2, 2)
+%assign tlcStartFcnOfS0B26 = OpaqueTLCBlockFcn("Start", 0, 26, 2, 2)
+%assign tlcStartFcnOfS0B27 = OpaqueTLCBlockFcn("Start", 0, 27, 2, 2)
+%assign tlcStartFcnOfS0B28 = OpaqueTLCBlockFcn("Start", 0, 28, 2, 2)
+%assign tlcStartFcnOfS0B29 = OpaqueTLCBlockFcn("Start", 0, 29, 2, 2)
+%assign tlcStartFcnOfS0B30 = OpaqueTLCBlockFcn("Start", 0, 30, 2, 2)
+%assign tlcStartFcnOfS0B31 = OpaqueTLCBlockFcn("Start", 0, 31, 2, 2)
+%assign tlcStartFcnOfS0B32 = OpaqueTLCBlockFcn("Start", 0, 32, 2, 2)
+%assign tlcStartFcnOfS0B33 = OpaqueTLCBlockFcn("Start", 0, 33, 2, 2)
+%assign tlcStartFcnOfS63B78 = OpaqueTLCBlockFcn("Start", 63, 78, 2, 2)
+%assign tlcStartFcnOfS63B79 = OpaqueTLCBlockFcn("Start", 63, 79, 2, 2)
+%assign tlcStartFcnOfS63B80 = OpaqueTLCBlockFcn("Start", 63, 80, 2, 2)
+%assign tlcStartFcnOfS63B81 = OpaqueTLCBlockFcn("Start", 63, 81, 2, 2)
+%assign tlcStartFcnOfS63B82 = OpaqueTLCBlockFcn("Start", 63, 82, 2, 2)
+%assign tlcStartFcnOfS63B83 = OpaqueTLCBlockFcn("Start", 63, 83, 2, 2)
+%assign tlcStartFcnOfS63B84 = OpaqueTLCBlockFcn("Start", 63, 84, 2, 2)
+%assign tlcStartFcnOfS63B85 = OpaqueTLCBlockFcn("Start", 63, 85, 2, 2)
+%assign tlcStartFcnOfS63B86 = OpaqueTLCBlockFcn("Start", 63, 86, 2, 2)
+%assign tlcStartFcnOfS63B87 = OpaqueTLCBlockFcn("Start", 63, 87, 2, 2)
+%assign tlcStartFcnOfS63B88 = OpaqueTLCBlockFcn("Start", 63, 88, 2, 2)
+%assign tlcStartFcnOfS63B89 = OpaqueTLCBlockFcn("Start", 63, 89, 2, 2)
+%<SLibInsertAsyncTaskInitializeCode(system)>
+%<SLibWriteMachineInitialize()>
+%<SLibCGIRDumpSystemUserCode(63, "Start", "Header")>\
+%<SLibCGIRDumpSystemUserCode(63, "Start", "Body")>\
+%if !WHITE_SPACE(tlcStartFcnOfS63B1)
+/* {S!d3762}Start for S-Function (fcan_mpc_config): '<Root>/FCAN_Config4' */
+%<SLibCG_DumpSSCode("/*@[26097*/",tlcStartFcnOfS63B1,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B2)
+/* {S!d3764}Start for S-Function (fcan_mpc_config): '<Root>/FCAN_Config6' */
+%<SLibCG_DumpSSCode("/*@[26098*/",tlcStartFcnOfS63B2,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B3)
+/* {S!d3766}Start for S-Function (adc_mpc_start): '<S37>/ADC_Start' */
+%<SLibCG_DumpSSCode("/*@[2609a*/",tlcStartFcnOfS63B3,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B4)
+/* {S!d3768}Start for S-Function (adc_mpc_start): '<S37>/ADC_Start1' */
+%<SLibCG_DumpSSCode("/*@[2609c*/",tlcStartFcnOfS63B4,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B5)
+/* {S!d3770}Start for S-Function (gpio_mpc_input): '<S40>/DI01' */
+%<SLibCG_DumpSSCode("/*@[2609e*/",tlcStartFcnOfS63B5,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B6)
+/* {S!d3772}Start for S-Function (gpio_mpc_input): '<S40>/DI02' */
+%<SLibCG_DumpSSCode("/*@[260a0*/",tlcStartFcnOfS63B6,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B7)
+/* {S!d3774}Start for S-Function (gpio_mpc_input): '<S40>/DI03' */
+%<SLibCG_DumpSSCode("/*@[260a2*/",tlcStartFcnOfS63B7,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B8)
+/* {S!d3776}Start for S-Function (gpio_mpc_input): '<S40>/DI04' */
+%<SLibCG_DumpSSCode("/*@[260a4*/",tlcStartFcnOfS63B8,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B9)
+/* {S!d3778}Start for S-Function (gpio_mpc_input): '<S40>/DI07' */
+%<SLibCG_DumpSSCode("/*@[260a6*/",tlcStartFcnOfS63B9,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B10)
+/* {S!d3780}Start for S-Function (gpio_mpc_input): '<S40>/DI08' */
+%<SLibCG_DumpSSCode("/*@[260a8*/",tlcStartFcnOfS63B10,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B11)
+/* {S!d3782}Start for S-Function (gpio_mpc_input): '<S40>/DI09' */
+%<SLibCG_DumpSSCode("/*@[260aa*/",tlcStartFcnOfS63B11,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B12)
+/* {S!d3784}Start for S-Function (gpio_mpc_input): '<S40>/DI10' */
+%<SLibCG_DumpSSCode("/*@[260ac*/",tlcStartFcnOfS63B12,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B13)
+/* {S!d3786}Start for S-Function (gpio_mpc_input): '<S40>/DI12' */
+%<SLibCG_DumpSSCode("/*@[260ae*/",tlcStartFcnOfS63B13,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B14)
+/* {S!d3788}Start for S-Function (gpio_mpc_input): '<S40>/DI13' */
+%<SLibCG_DumpSSCode("/*@[260b0*/",tlcStartFcnOfS63B14,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B15)
+/* {S!d3790}Start for S-Function (gpio_mpc_input): '<S40>/DI15' */
+%<SLibCG_DumpSSCode("/*@[260b2*/",tlcStartFcnOfS63B15,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B16)
+/* {S!d3792}Start for S-Function (gpio_mpc_input): '<S40>/DI16' */
+%<SLibCG_DumpSSCode("/*@[260b4*/",tlcStartFcnOfS63B16,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B17)
+/* {S!d3794}Start for S-Function (gpio_mpc_input): '<S40>/DI17' */
+%<SLibCG_DumpSSCode("/*@[260b6*/",tlcStartFcnOfS63B17,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B18)
+/* {S!d3796}Start for S-Function (gpio_mpc_input): '<S40>/DI18' */
+%<SLibCG_DumpSSCode("/*@[260b8*/",tlcStartFcnOfS63B18,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B19)
+/* {S!d3798}Start for S-Function (gpio_mpc_input): '<S153>/DI31' */
+%<SLibCG_DumpSSCode("/*@[260ba*/",tlcStartFcnOfS63B19,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B20)
+/* {S!d3800}Start for S-Function (gpio_mpc_input): '<S153>/DI32' */
+%<SLibCG_DumpSSCode("/*@[260bc*/",tlcStartFcnOfS63B20,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B21)
+/* {S!d3802}Start for S-Function (gpio_mpc_input): '<S153>/DI33' */
+%<SLibCG_DumpSSCode("/*@[260be*/",tlcStartFcnOfS63B21,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B22)
+/* {S!d3804}Start for S-Function (gpio_mpc_input): '<S153>/DI34' */
+%<SLibCG_DumpSSCode("/*@[260c0*/",tlcStartFcnOfS63B22,"/*@]*/")>\
+%endif
+/* {S!d3806}Start for DiscretePulseGenerator: '<S6>/Pulse Generator2' */
+/*@>23702*/ZT_VehCtrl_18B_DW./*@>2c927*/clockTickCounter/*@>e09f*/ = /*@>2c780*/0;
+/* {S!d3808}Start for DiscretePulseGenerator: '<S6>/Pulse Generator' */
+/*@>23708*/ZT_VehCtrl_18B_DW./*@>2c92a*/clockTickCounter_e/*@>e0b0*/ = /*@>2c783*/0;
+%if !WHITE_SPACE(tlcStartFcnOfS63B24)
+/* {S!d3731}Start for S-Function (fcan_mpc_isr): '<S5>/CAN0_Rx_500' */
+%<SLibCG_DumpSSCode("/*@[260c7*/",tlcStartFcnOfS63B24,"/*@]*/")>\
+/* {E!d3731}End of Start for S-Function (fcan_mpc_isr): '<S5>/CAN0_Rx_500' */
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B26)
+
+/* {S!d3733}Start for S-Function (fcan_mpc_isr): '<S5>/CAN1_Rx_500' */
+%<SLibCG_DumpSSCode("/*@[260ce*/",tlcStartFcnOfS63B26,"/*@]*/")>\
+/* {E!d3733}End of Start for S-Function (fcan_mpc_isr): '<S5>/CAN1_Rx_500' */
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS49B8)
+
+/* {S!d3735}Start for Triggered SubSystem: '<S6>/ACU' */
+/* {S!d3810}Start for S-Function (scanpack): '<S171>/VCU_ACU1' */
+%<SLibCG_DumpSSCode("/*@[260d5*/",tlcStartFcnOfS49B8,"/*@]*/")>\
+/* {E!d3735}End of Start for SubSystem: '<S6>/ACU' */
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS50B0)
+
+/* {S!d3737}Start for Triggered SubSystem: '<S6>/BMS' */
+/* {S!d3812}Start for S-Function (scanpack): '<S172>/VCU_BMS' */
+%<SLibCG_DumpSSCode("/*@[260da*/",tlcStartFcnOfS50B0,"/*@]*/")>\
+/* {E!d3737}End of Start for SubSystem: '<S6>/BMS' */
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS51B2)
+
+/* {S!d3739}Start for Triggered SubSystem: '<S6>/BRS' */
+/* {S!d3814}Start for S-Function (scanpack): '<S173>/VCU2BRS' */
+%<SLibCG_DumpSSCode("/*@[260e1*/",tlcStartFcnOfS51B2,"/*@]*/")>\
+/* {E!d3739}End of Start for SubSystem: '<S6>/BRS' */
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS52B0)
+
+/* {S!d3741}Start for Triggered SubSystem: '<S6>/DCDC' */
+/* {S!d3816}Start for S-Function (scanpack): '<S174>/VCU_DCDC1' */
+%<SLibCG_DumpSSCode("/*@[260e5*/",tlcStartFcnOfS52B0,"/*@]*/")>\
+/* {E!d3741}End of Start for SubSystem: '<S6>/DCDC' */
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS59B0)
+
+/* {S!d3743}Start for Triggered SubSystem: '<S6>/HVC' */
+/* {S!d3818}Start for S-Function (scanpack): '<S176>/Ctrl_HVC' */
+%<SLibCG_DumpSSCode("/*@[260ed*/",tlcStartFcnOfS59B0,"/*@]*/")>\
+/* {E!d3743}End of Start for SubSystem: '<S6>/HVC' */
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS60B0)
+
+/* {S!d3745}Start for Triggered SubSystem: '<S6>/PDU' */
+/* {S!d3820}Start for S-Function (scanpack): '<S182>/VCU_PDU' */
+%<SLibCG_DumpSSCode("/*@[260f6*/",tlcStartFcnOfS60B0,"/*@]*/")>\
+/* {E!d3745}End of Start for SubSystem: '<S6>/PDU' */
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS62B0)
+
+/* {S!d3747}Start for Triggered SubSystem: '<S6>/TWV' */
+/* {S!d3822}Start for S-Function (scanpack): '<S185>/VCU_TWV' */
+%<SLibCG_DumpSSCode("/*@[260fa*/",tlcStartFcnOfS62B0,"/*@]*/")>\
+/* {E!d3747}End of Start for SubSystem: '<S6>/TWV' */
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS61B0)
+
+/* {S!d3749}Start for Triggered SubSystem: '<S6>/TMS' */
+/* {S!d3824}Start for S-Function (scanpack): '<S184>/TMS' */
+%<SLibCG_DumpSSCode("/*@[260ff*/",tlcStartFcnOfS61B0,"/*@]*/")>\
+/* {E!d3749}End of Start for SubSystem: '<S6>/TMS' */
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B42)
+
+/* {S!d3826}Start for S-Function (gpio_mpc_output): '<S191>/HS001' */
+%<SLibCG_DumpSSCode("/*@[26101*/",tlcStartFcnOfS63B42,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B43)
+/* {S!d3828}Start for S-Function (gpio_mpc_output): '<S191>/HS007' */
+%<SLibCG_DumpSSCode("/*@[26103*/",tlcStartFcnOfS63B43,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B44)
+/* {S!d3830}Start for S-Function (gpio_mpc_output): '<S191>/HS002 ' */
+%<SLibCG_DumpSSCode("/*@[26105*/",tlcStartFcnOfS63B44,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B45)
+/* {S!d3832}Start for S-Function (gpio_mpc_output): '<S191>/HS003' */
+%<SLibCG_DumpSSCode("/*@[26107*/",tlcStartFcnOfS63B45,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B46)
+/* {S!d3834}Start for S-Function (gpio_mpc_output): '<S191>/HS004' */
+%<SLibCG_DumpSSCode("/*@[26109*/",tlcStartFcnOfS63B46,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B47)
+/* {S!d3836}Start for S-Function (gpio_mpc_output): '<S191>/HS005' */
+%<SLibCG_DumpSSCode("/*@[2610b*/",tlcStartFcnOfS63B47,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B48)
+/* {S!d3838}Start for S-Function (gpio_mpc_output): '<S191>/HS010' */
+%<SLibCG_DumpSSCode("/*@[2610d*/",tlcStartFcnOfS63B48,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B50)
+/* {S!d3840}Start for S-Function (gpio_mpc_output): '<S193>/LS_EN' incorporates:
+ *  Constant: '<S193>/Constant'
+ */
+%<SLibCG_DumpSSCode("/*@[2610f*/",tlcStartFcnOfS63B50,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B52)
+/* {S!d3842}Start for S-Function (gpio_mpc_output): '<S193>/LS_rst2' incorporates:
+ *  Constant: '<S193>/Constant1'
+ */
+%<SLibCG_DumpSSCode("/*@[26111*/",tlcStartFcnOfS63B52,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B54)
+/* {S!d3844}Start for S-Function (gpio_mpc_output): '<S193>/LS_rst1' incorporates:
+ *  Constant: '<S193>/Constant2'
+ */
+%<SLibCG_DumpSSCode("/*@[26113*/",tlcStartFcnOfS63B54,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B59)
+/* {S!d3846}Start for S-Function (gpio_mpc_output): '<S194>/LS_EN1' incorporates:
+ *  Constant: '<S194>/Constant1'
+ */
+%<SLibCG_DumpSSCode("/*@[26115*/",tlcStartFcnOfS63B59,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B61)
+/* {S!d3848}Start for S-Function (gpio_mpc_output): '<S194>/LS_rst' incorporates:
+ *  Constant: '<S194>/Constant3'
+ */
+%<SLibCG_DumpSSCode("/*@[26117*/",tlcStartFcnOfS63B61,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B74)
+/* {S!d3850}Start for S-Function (gpio_mpc_output): '<S3>/HS1' */
+%<SLibCG_DumpSSCode("/*@[26119*/",tlcStartFcnOfS63B74,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B75)
+/* {S!d3852}Start for S-Function (gpio_mpc_output): '<S3>/HS4' */
+%<SLibCG_DumpSSCode("/*@[2611b*/",tlcStartFcnOfS63B75,"/*@]*/")>\
+%endif
+/* {S!d3854}Start for DiscretePulseGenerator: '<S2>/Pulse Generator' */
+/*@>2373e*/ZT_VehCtrl_18B_DW./*@>2c92d*/clockTickCounter_p/*@>e0d9*/ = /*@>2c786*/0;
+%if !WHITE_SPACE(tlcStartFcnOfS0B0)
+/* {S!d3751}Start for Atomic SubSystem: '<Root>/Init' */
+/* {S!d3752}Start for IfAction SubSystem: '<S1>/CAN_init' */
+/* {S!d3856}Start for S-Function (fcan_mpc_receive): '<S8>/ACU1' */
+%<SLibCG_DumpSSCode("/*@[2611c*/",tlcStartFcnOfS0B0,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B1)
+/* {S!d3858}Start for S-Function (fcan_mpc_receive): '<S8>/ACU2' */
+%<SLibCG_DumpSSCode("/*@[2611d*/",tlcStartFcnOfS0B1,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B2)
+/* {S!d3860}Start for S-Function (fcan_mpc_receive): '<S8>/ACU3' */
+%<SLibCG_DumpSSCode("/*@[2611e*/",tlcStartFcnOfS0B2,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B3)
+/* {S!d3862}Start for S-Function (fcan_mpc_receive): '<S8>/BMS Power Infor' */
+%<SLibCG_DumpSSCode("/*@[2611f*/",tlcStartFcnOfS0B3,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B4)
+/* {S!d3864}Start for S-Function (fcan_mpc_receive): '<S8>/BMS Statistic_Temperature of Battery' */
+%<SLibCG_DumpSSCode("/*@[26120*/",tlcStartFcnOfS0B4,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B5)
+/* {S!d3866}Start for S-Function (fcan_mpc_receive): '<S8>/BMS other Information3' */
+%<SLibCG_DumpSSCode("/*@[26121*/",tlcStartFcnOfS0B5,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B6)
+/* {S!d3868}Start for S-Function (fcan_mpc_receive): '<S8>/BMSWarning Status' */
+%<SLibCG_DumpSSCode("/*@[26122*/",tlcStartFcnOfS0B6,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B7)
+/* {S!d3870}Start for S-Function (fcan_mpc_receive): '<S8>/BMS_Information 1' */
+%<SLibCG_DumpSSCode("/*@[26123*/",tlcStartFcnOfS0B7,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B8)
+/* {S!d3872}Start for S-Function (fcan_mpc_receive): '<S8>/BMS_Information 2' */
+%<SLibCG_DumpSSCode("/*@[26124*/",tlcStartFcnOfS0B8,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B9)
+/* {S!d3874}Start for S-Function (fcan_mpc_receive): '<S8>/BRS2VCU1' */
+%<SLibCG_DumpSSCode("/*@[26125*/",tlcStartFcnOfS0B9,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B10)
+/* {S!d3876}Start for S-Function (fcan_mpc_receive): '<S8>/BRS2VCU2' */
+%<SLibCG_DumpSSCode("/*@[26126*/",tlcStartFcnOfS0B10,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B11)
+/* {S!d3878}Start for S-Function (fcan_mpc_receive): '<S8>/BRS2VCU3' */
+%<SLibCG_DumpSSCode("/*@[26127*/",tlcStartFcnOfS0B11,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B12)
+/* {S!d3880}Start for S-Function (fcan_mpc_receive): '<S8>/DCDC1_1' */
+%<SLibCG_DumpSSCode("/*@[26128*/",tlcStartFcnOfS0B12,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B13)
+/* {S!d3882}Start for S-Function (fcan_mpc_receive): '<S8>/DCDC1_2' */
+%<SLibCG_DumpSSCode("/*@[26129*/",tlcStartFcnOfS0B13,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B14)
+/* {S!d3884}Start for S-Function (fcan_mpc_receive): '<S8>/HVC1_LV' */
+%<SLibCG_DumpSSCode("/*@[2612a*/",tlcStartFcnOfS0B14,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B15)
+/* {S!d3886}Start for S-Function (fcan_mpc_receive): '<S8>/HVC3_Temp' */
+%<SLibCG_DumpSSCode("/*@[2612b*/",tlcStartFcnOfS0B15,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B16)
+/* {S!d3888}Start for S-Function (fcan_mpc_receive): '<S8>/HVC4_RlySt' */
+%<SLibCG_DumpSSCode("/*@[2612c*/",tlcStartFcnOfS0B16,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B17)
+/* {S!d3890}Start for S-Function (fcan_mpc_receive): '<S8>/HVC7_HV1' */
+%<SLibCG_DumpSSCode("/*@[2612d*/",tlcStartFcnOfS0B17,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B18)
+/* {S!d3892}Start for S-Function (fcan_mpc_receive): '<S8>/ISG MCU STATUS1' */
+%<SLibCG_DumpSSCode("/*@[2612e*/",tlcStartFcnOfS0B18,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B19)
+/* {S!d3894}Start for S-Function (fcan_mpc_receive): '<S8>/ISG MCU STATUS2' */
+%<SLibCG_DumpSSCode("/*@[2612f*/",tlcStartFcnOfS0B19,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B20)
+/* {S!d3896}Start for S-Function (fcan_mpc_receive): '<S8>/ISG MCU STATUS3' */
+%<SLibCG_DumpSSCode("/*@[26130*/",tlcStartFcnOfS0B20,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B21)
+/* {S!d3898}Start for S-Function (fcan_mpc_receive): '<S8>/MCU1Msg1' */
+%<SLibCG_DumpSSCode("/*@[26131*/",tlcStartFcnOfS0B21,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B22)
+/* {S!d3900}Start for S-Function (fcan_mpc_receive): '<S8>/MCU1Msg2' */
+%<SLibCG_DumpSSCode("/*@[26132*/",tlcStartFcnOfS0B22,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B23)
+/* {S!d3902}Start for S-Function (fcan_mpc_receive): '<S8>/MCU1Msg3' */
+%<SLibCG_DumpSSCode("/*@[26133*/",tlcStartFcnOfS0B23,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B24)
+/* {S!d3904}Start for S-Function (fcan_mpc_receive): '<S8>/MCU2Msg1' */
+%<SLibCG_DumpSSCode("/*@[26134*/",tlcStartFcnOfS0B24,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B25)
+/* {S!d3906}Start for S-Function (fcan_mpc_receive): '<S8>/MCU2Msg2' */
+%<SLibCG_DumpSSCode("/*@[26135*/",tlcStartFcnOfS0B25,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B26)
+/* {S!d3908}Start for S-Function (fcan_mpc_receive): '<S8>/MCU2Msg3' */
+%<SLibCG_DumpSSCode("/*@[26136*/",tlcStartFcnOfS0B26,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B27)
+/* {S!d3910}Start for S-Function (fcan_mpc_receive): '<S8>/OBC_Charger Status' */
+%<SLibCG_DumpSSCode("/*@[26137*/",tlcStartFcnOfS0B27,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B28)
+/* {S!d3912}Start for S-Function (fcan_mpc_receive): '<S8>/PDU_RelaySts' */
+%<SLibCG_DumpSSCode("/*@[26138*/",tlcStartFcnOfS0B28,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B29)
+/* {S!d3914}Start for S-Function (fcan_mpc_receive): '<S8>/TM MCU STATUS1' */
+%<SLibCG_DumpSSCode("/*@[26139*/",tlcStartFcnOfS0B29,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B30)
+/* {S!d3916}Start for S-Function (fcan_mpc_receive): '<S8>/TM MCU STATUS2' */
+%<SLibCG_DumpSSCode("/*@[2613a*/",tlcStartFcnOfS0B30,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B31)
+/* {S!d3918}Start for S-Function (fcan_mpc_receive): '<S8>/TM MCU STATUS3' */
+%<SLibCG_DumpSSCode("/*@[2613b*/",tlcStartFcnOfS0B31,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B32)
+/* {S!d3920}Start for S-Function (fcan_mpc_receive): '<S8>/TMS2VCU' */
+%<SLibCG_DumpSSCode("/*@[2613c*/",tlcStartFcnOfS0B32,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B33)
+/* {S!d3922}Start for S-Function (fcan_mpc_receive): '<S8>/TWV' */
+%<SLibCG_DumpSSCode("/*@[2613d*/",tlcStartFcnOfS0B33,"/*@]*/")>\
+/* {E!d3752}End of Start for SubSystem: '<S1>/CAN_init' */
+/* {E!d3751}End of Start for SubSystem: '<Root>/Init' */
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B78)
+
+/* {S!d3924}Start for S-Function (adc_mpc_config): '<Root>/ADC_Config' */
+%<SLibCG_DumpSSCode("/*@[2613e*/",tlcStartFcnOfS63B78,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B79)
+/* {S!d3926}Start for S-Function (adc_mpc_config): '<Root>/ADC_Config1' */
+%<SLibCG_DumpSSCode("/*@[2613f*/",tlcStartFcnOfS63B79,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B80)
+/* {S!d3928}Start for S-Function (fm_mpc_config): '<Root>/FreeMaster_Config' */
+%<SLibCG_DumpSSCode("/*@[26140*/",tlcStartFcnOfS63B80,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B81)
+/* {S!d3930}Start for S-Function (spi_mpc_config): '<Root>/SPI_Config_CANB&LS' */
+%<SLibCG_DumpSSCode("/*@[26141*/",tlcStartFcnOfS63B81,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B82)
+/* {S!d3932}Start for S-Function (spi_mpc_config): '<Root>/SPI_Config_EEPROM&LS' */
+%<SLibCG_DumpSSCode("/*@[26142*/",tlcStartFcnOfS63B82,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B83)
+/* {S!d3934}Start for S-Function (etimer_mpc_config): '<Root>/eTimer_Config' */
+%<SLibCG_DumpSSCode("/*@[26143*/",tlcStartFcnOfS63B83,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B84)
+/* {S!d3936}Start for S-Function (etimer_mpc_config): '<Root>/eTimer_Config1' */
+%<SLibCG_DumpSSCode("/*@[26144*/",tlcStartFcnOfS63B84,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B85)
+/* {S!d3938}Start for S-Function (etimer_mpc_config): '<Root>/eTimer_Config10' */
+%<SLibCG_DumpSSCode("/*@[26145*/",tlcStartFcnOfS63B85,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B86)
+/* {S!d3940}Start for S-Function (etimer_mpc_config): '<Root>/eTimer_Config11' */
+%<SLibCG_DumpSSCode("/*@[26146*/",tlcStartFcnOfS63B86,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B87)
+/* {S!d3942}Start for S-Function (etimer_mpc_config): '<Root>/eTimer_Config12' */
+%<SLibCG_DumpSSCode("/*@[26147*/",tlcStartFcnOfS63B87,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B88)
+/* {S!d3944}Start for S-Function (etimer_mpc_config): '<Root>/eTimer_Config2' */
+%<SLibCG_DumpSSCode("/*@[26148*/",tlcStartFcnOfS63B88,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS63B89)
+/* {S!d3946}Start for S-Function (etimer_mpc_config): '<Root>/eTimer_Config3' */
+%<SLibCG_DumpSSCode("/*@[26149*/",tlcStartFcnOfS63B89,"/*@]*/")>\
+%endif
+/* {S!d3948}Start for DataStoreMemory: '<Root>/Data Store Memory106' */
+%<SLibCG_DumpSSCode("/*@[26327*/",SLibCG_SetCSCDW(6, 1, "", -1, "", 0, "/*@>2d223*/200.0F"),"/*@]*/")>\
+/* {S!d3950}Start for DataStoreMemory: '<Root>/Data Store Memory108' */
+%<SLibCG_DumpSSCode("/*@[2630b*/",SLibCG_SetCSCDW(8, 1, "", -1, "", 0, "/*@>2d235*/200.0F"),"/*@]*/")>\
+/* {S!d3952}Start for DataStoreMemory: '<Root>/Data Store Memory110' */
+%<SLibCG_DumpSSCode("/*@[262ef*/",SLibCG_SetCSCDW(10, 1, "", -1, "", 0, "/*@>2d247*/200.0F"),"/*@]*/")>\
+/* {S!d3954}Start for DataStoreMemory: '<Root>/Data Store Memory112' */
+%<SLibCG_DumpSSCode("/*@[262d3*/",SLibCG_SetCSCDW(12, 1, "", -1, "", 0, "/*@>2d259*/200.0F"),"/*@]*/")>\
+/* {S!d3956}Start for DataStoreMemory: '<Root>/Data Store Memory113' */
+%<SLibCG_DumpSSCode("/*@[262b7*/",SLibCG_SetCSCDW(13, 1, "", -1, "", 0, "/*@>2d26b*/0.5F"),"/*@]*/")>\
+/* {S!d3958}Start for DataStoreMemory: '<Root>/Data Store Memory114' */
+%<SLibCG_DumpSSCode("/*@[2629b*/",SLibCG_SetCSCDW(14, 1, "", -1, "", 0, "/*@>2d27d*/200.0F"),"/*@]*/")>\
+/* {S!d3960}Start for DataStoreMemory: '<Root>/Data Store Memory115' */
+%<SLibCG_DumpSSCode("/*@[2627f*/",SLibCG_SetCSCDW(15, 1, "", -1, "", 0, "/*@>2d28f*/0.5F"),"/*@]*/")>\
+/* {S!d3962}Start for DataStoreMemory: '<Root>/Data Store Memory117' */
+%<SLibCG_DumpSSCode("/*@[26263*/",SLibCG_SetCSCDW(16, 1, "", -1, "", 0, "/*@>2d2a1*/200.0F"),"/*@]*/")>\
+/* {S!d3964}Start for DataStoreMemory: '<Root>/Data Store Memory118' */
+%<SLibCG_DumpSSCode("/*@[26247*/",SLibCG_SetCSCDW(17, 1, "", -1, "", 0, "/*@>2d2b3*/0.5F"),"/*@]*/")>\
+/* {S!d3966}Start for DataStoreMemory: '<Root>/Data Store Memory119' */
+%<SLibCG_DumpSSCode("/*@[2622b*/",SLibCG_SetCSCDW(18, 1, "", -1, "", 0, "/*@>2d2c5*/200.0F"),"/*@]*/")>\
+/* {S!d3968}Start for DataStoreMemory: '<Root>/Data Store Memory120' */
+%<SLibCG_DumpSSCode("/*@[2620f*/",SLibCG_SetCSCDW(19, 1, "", -1, "", 0, "/*@>2d2d7*/0.5F"),"/*@]*/")>\
+/* {S!d3970}Start for DataStoreMemory: '<Root>/Data Store Memory121' */
+%<SLibCG_DumpSSCode("/*@[261f3*/",SLibCG_SetCSCDW(20, 1, "", -1, "", 0, "/*@>2d2e9*/200.0F"),"/*@]*/")>\
+/* {S!d3972}Start for DataStoreMemory: '<Root>/Data Store Memory122' */
+%<SLibCG_DumpSSCode("/*@[261d7*/",SLibCG_SetCSCDW(21, 1, "", -1, "", 0, "/*@>2d2fb*/200.0F"),"/*@]*/")>\
+/* {S!d3974}Start for DataStoreMemory: '<Root>/Data Store Memory124' */
+%<SLibCG_DumpSSCode("/*@[261bb*/",SLibCG_SetCSCDW(23, 1, "", -1, "", 0, "/*@>2d30d*/200.0F"),"/*@]*/")>\
+/* {S!d3976}Start for DataStoreMemory: '<Root>/Data Store Memory129' */
+%<SLibCG_DumpSSCode("/*@[2619f*/",SLibCG_SetCSCDW(24, 1, "", -1, "", 0, "/*@>2d31f*/200.0F"),"/*@]*/")>\
+/* {S!d3978}Start for DataStoreMemory: '<Root>/Data Store Memory130' */
+%<SLibCG_DumpSSCode("/*@[26183*/",SLibCG_SetCSCDW(25, 1, "", -1, "", 0, "/*@>2d331*/200.0F"),"/*@]*/")>\
+/* {S!d3980}Start for DataStoreMemory: '<Root>/Data Store Memory132' */
+%<SLibCG_DumpSSCode("/*@[26167*/",SLibCG_SetCSCDW(27, 1, "", -1, "", 0, "/*@>2d343*/200.0F"),"/*@]*/")>\
+%<SLibCGIRDumpSystemUserCode(63, "Start", "Trailer")>\
+ZT_VehCtrl_18B_PrevZCX.ACU_Trig_ZCE = UNINITIALIZED_ZCSIG;
+ZT_VehCtrl_18B_PrevZCX.BMS_Trig_ZCE = UNINITIALIZED_ZCSIG;
+ZT_VehCtrl_18B_PrevZCX.BRS_Trig_ZCE = UNINITIALIZED_ZCSIG;
+ZT_VehCtrl_18B_PrevZCX.DCDC_Trig_ZCE = UNINITIALIZED_ZCSIG;
+ZT_VehCtrl_18B_PrevZCX.HVC_Trig_ZCE = UNINITIALIZED_ZCSIG;
+ZT_VehCtrl_18B_PrevZCX.PDU_Trig_ZCE = UNINITIALIZED_ZCSIG;
+ZT_VehCtrl_18B_PrevZCX.TMS_Trig_ZCE = UNINITIALIZED_ZCSIG;
+ZT_VehCtrl_18B_PrevZCX.TWV_Trig_ZCE = UNINITIALIZED_ZCSIG;
+/* {S!d3982}SystemInitialize for Chart: '<S2>/Chart1' */
+/*@>23744*/ZT_VehCtrl_18B_DW./*@>2c930*/is_active_c23_ZT_VehCtrl_18B/*@>e6f4*/ = /*@>2c789*/0U;
+/*@>2374a*/ZT_VehCtrl_18B_DW./*@>2c933*/is_c23_ZT_VehCtrl_18B/*@>e6f5*/ = /*@>1dd60*/ZT_VehCtrl_18B_IN_NO_ACTIVE_CHILD;
+/* {S!d3984}SystemInitialize for Chart: '<S2>/Chart2' */
+/*@>23750*/ZT_VehCtrl_18B_DW./*@>2c936*/is_active_c24_ZT_VehCtrl_18B/*@>e703*/ = /*@>2c78c*/0U;
+/*@>23756*/ZT_VehCtrl_18B_DW./*@>2c939*/is_c24_ZT_VehCtrl_18B/*@>e704*/ = /*@>1dd5a*/ZT_VehCtrl_18B_IN_NO_ACTIVE_CHILD;
+/* {S!d3986}SystemInitialize for Chart: '<S2>/Chart' */
+/*@>2375c*/ZT_VehCtrl_18B_DW./*@>2c93c*/is_active_c22_ZT_VehCtrl_18B/*@>e712*/ = /*@>2c78f*/0U;
+/*@>23762*/ZT_VehCtrl_18B_DW./*@>2c93f*/is_c22_ZT_VehCtrl_18B/*@>e713*/ = /*@>1dd54*/ZT_VehCtrl_18B_IN_NO_ACTIVE_CHILD;
+/* {S!d3755}SystemInitialize for IfAction SubSystem: '<S2>/CS1 LS' */
+/* {S!d3988}SystemInitialize for Chart: '<S10>/Chart' */
+/*@>23768*/ZT_VehCtrl_18B_DW./*@>2c942*/is_active_c11_ZT_VehCtrl_18B/*@>e73f*/ = /*@>2c792*/0U;
+/*@>2376e*/ZT_VehCtrl_18B_DW./*@>2c945*/is_c11_ZT_VehCtrl_18B/*@>e740*/ = /*@>1dd4e*/ZT_VehCtrl_18B_IN_NO_ACTIVE_CHILD;
+/* {E!d3755}End of SystemInitialize for SubSystem: '<S2>/CS1 LS' */
+
+/* {S!d3757}SystemInitialize for IfAction SubSystem: '<S2>/CS3 LS' */
+/* {S!d3990}SystemInitialize for Chart: '<S12>/Chart' */
+/*@>23774*/ZT_VehCtrl_18B_DW./*@>2c948*/is_active_c14_ZT_VehCtrl_18B/*@>e74e*/ = /*@>2c795*/0U;
+/*@>2377a*/ZT_VehCtrl_18B_DW./*@>2c94b*/is_c14_ZT_VehCtrl_18B/*@>e74f*/ = /*@>1dd48*/ZT_VehCtrl_18B_IN_NO_ACTIVE_CHILD;
+/* {E!d3757}End of SystemInitialize for SubSystem: '<S2>/CS3 LS' */
+
+/* {S!d3759}SystemInitialize for IfAction SubSystem: '<S2>/CS5 LS' */
+/* {S!d3992}SystemInitialize for Chart: '<S13>/Chart' */
+/*@>23780*/ZT_VehCtrl_18B_DW./*@>2c94e*/is_active_c21_ZT_VehCtrl_18B/*@>e75d*/ = /*@>2c798*/0U;
+/*@>23786*/ZT_VehCtrl_18B_DW./*@>2c951*/is_c21_ZT_VehCtrl_18B/*@>e75e*/ = /*@>1dd42*/ZT_VehCtrl_18B_IN_NO_ACTIVE_CHILD;
+/* {E!d3759}End of SystemInitialize for SubSystem: '<S2>/CS5 LS' */
+%<SLibInsertInitPeriodicCStatesFcn(system)>
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function ModelInitializeFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ModelInitialize(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(2, 2, fcnProtoType)>
+%endfunction

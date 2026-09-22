@@ -26,12 +26,13 @@ Delay_charge = single(60);
 BRS_PwrValid = single(5);
 BRSEnSpdTh1 = single(10);
 BRSEnSpdTh2 = single(20);
+ChargeVehTh = single(1);
 
 %%驱动控制
 MtrPwrFac = single(1/9550);
 MtrTrqMax = single(200);  % 车轮电机最大扭矩，Nm
 MtrPwrMax = single(30000);  % 车轮电机最大功率，W
-VehTrqMax = single(MtrTrqMax * Ratio *4); % 轮端最大驱动扭矩，Nm
+VehTrqMax = single(MtrTrqMax * Ratio *4); % 轮端最大驱动扭矩，Nm`
 VehPwrMax = single(MtrPwrMax * 4); % 最大驱动功率，W
 VehTrqBackwardMax = VehTrqMax * single(0.3); % 倒车工况轮端最大驱动扭矩，Nm
 VehPwrBackwardMax = VehPwrMax * single(0.3); % 倒车工况最大驱动功率，W

@@ -1,0 +1,317 @@
+%implements s63_b0_fluon_1_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+/* {S!d3122}SwitchCase: '<S113>/Switch Case' */
+/*@>11fa3*/if (/*@>12365*/(int32_T)/*@>128c1*/ZT_VehCtrl_18B_B./*@>12d90*/CAN1_Rx_500_o3/*@>11fa2*/ == /*@>121d8*/402706575) {
+    /* {S!d3079}Outputs for IfAction SubSystem: '<S113>/UNPACK' incorporates:
+ *  ActionPort: '<S133>/Action Port'
+ */
+    /* {S!d3120}DataStoreWrite: '<S133>/Data Store Write' incorporates:
+ *  Constant: '<S133>/Constant'
+ *  DataStoreRead: '<S133>/Data Store Read'
+ *  Sum: '<S133>/Add'
+ */
+    /*@>12172*/Cnt_DCDC1_1/*@>12d00*/++;
+    /* {E!d3079}End of Outputs for SubSystem: '<S113>/UNPACK' */
+}
+/* {E!d3122}End of SwitchCase: '<S113>/Switch Case' */
+
+/* {S!d3126}SwitchCase: '<S114>/Switch Case' */
+/*@>11fa9*/if (/*@>12354*/(int32_T)/*@>128c7*/ZT_VehCtrl_18B_B./*@>12d93*/CAN1_Rx_500_o3/*@>11fa8*/ == /*@>121db*/402772111) {
+    /* {S!d3081}Outputs for IfAction SubSystem: '<S114>/UNPACK' incorporates:
+ *  ActionPort: '<S134>/Action Port'
+ */
+    /* {S!d3124}DataStoreWrite: '<S134>/Data Store Write' incorporates:
+ *  Constant: '<S134>/Constant'
+ *  DataStoreRead: '<S134>/Data Store Read'
+ *  Sum: '<S134>/Add'
+ */
+    /*@>12174*/Cnt_DCDC1_2/*@>12d01*/++;
+    /* {E!d3081}End of Outputs for SubSystem: '<S114>/UNPACK' */
+}
+/* {E!d3126}End of SwitchCase: '<S114>/Switch Case' */
+
+/* {S!d3130}SwitchCase: '<S115>/Switch Case' */
+/*@>11faf*/if (/*@>12343*/(int32_T)/*@>128cd*/ZT_VehCtrl_18B_B./*@>12d96*/CAN1_Rx_500_o3/*@>11fae*/ == /*@>121de*/402720161) {
+    /* {S!d3083}Outputs for IfAction SubSystem: '<S115>/UNPACK' incorporates:
+ *  ActionPort: '<S135>/Action Port'
+ */
+    /* {S!d3128}DataStoreWrite: '<S135>/Data Store Write' incorporates:
+ *  Constant: '<S135>/Constant'
+ *  DataStoreRead: '<S135>/Data Store Read'
+ *  Sum: '<S135>/Add'
+ */
+    /*@>12176*/Cnt_HVC1/*@>12d02*/++;
+    /* {E!d3083}End of Outputs for SubSystem: '<S115>/UNPACK' */
+}
+/* {E!d3130}End of SwitchCase: '<S115>/Switch Case' */
+
+/* {S!d3134}SwitchCase: '<S116>/Switch Case' */
+/*@>11fb5*/if (/*@>12332*/(int32_T)/*@>128d3*/ZT_VehCtrl_18B_B./*@>12d99*/CAN1_Rx_500_o3/*@>11fb4*/ == /*@>121e1*/402851233) {
+    /* {S!d3085}Outputs for IfAction SubSystem: '<S116>/UNPACK' incorporates:
+ *  ActionPort: '<S136>/Action Port'
+ */
+    /* {S!d3132}DataStoreWrite: '<S136>/Data Store Write' incorporates:
+ *  Constant: '<S136>/Constant'
+ *  DataStoreRead: '<S136>/Data Store Read'
+ *  Sum: '<S136>/Add'
+ */
+    /*@>12178*/Cnt_HVC3/*@>12d03*/++;
+    /* {E!d3085}End of Outputs for SubSystem: '<S116>/UNPACK' */
+}
+/* {E!d3134}End of SwitchCase: '<S116>/Switch Case' */
+
+/* {S!d3138}SwitchCase: '<S117>/Switch Case' */
+/*@>11fbb*/if (/*@>12321*/(int32_T)/*@>128d9*/ZT_VehCtrl_18B_B./*@>12d9c*/CAN1_Rx_500_o3/*@>11fba*/ == /*@>121e4*/402916769) {
+    /* {S!d3087}Outputs for IfAction SubSystem: '<S117>/UNPACK' incorporates:
+ *  ActionPort: '<S137>/Action Port'
+ */
+    /* {S!d3136}DataStoreWrite: '<S137>/Data Store Write' incorporates:
+ *  Constant: '<S137>/Constant'
+ *  DataStoreRead: '<S137>/Data Store Read'
+ *  Sum: '<S137>/Add'
+ */
+    /*@>1217a*/Cnt_HVC4/*@>12d04*/++;
+    /* {E!d3087}End of Outputs for SubSystem: '<S117>/UNPACK' */
+}
+/* {E!d3138}End of SwitchCase: '<S117>/Switch Case' */
+
+/* {S!d3142}SwitchCase: '<S118>/Switch Case' */
+/*@>11fc1*/if (/*@>12310*/(int32_T)/*@>128df*/ZT_VehCtrl_18B_B./*@>12d9f*/CAN1_Rx_500_o3/*@>11fc0*/ == /*@>121e7*/403113377) {
+    /* {S!d3089}Outputs for IfAction SubSystem: '<S118>/UNPACK' incorporates:
+ *  ActionPort: '<S138>/Action Port'
+ */
+    /* {S!d3140}DataStoreWrite: '<S138>/Data Store Write' incorporates:
+ *  Constant: '<S138>/Constant'
+ *  DataStoreRead: '<S138>/Data Store Read'
+ *  Sum: '<S138>/Add'
+ */
+    /*@>1217c*/Cnt_HVC7/*@>12d05*/++;
+    /* {E!d3089}End of Outputs for SubSystem: '<S118>/UNPACK' */
+}
+/* {E!d3142}End of SwitchCase: '<S118>/Switch Case' */
+
+/* {S!d3146}SwitchCase: '<S119>/Switch Case' */
+/*@>11fc7*/if (/*@>122ff*/(int32_T)/*@>128e5*/ZT_VehCtrl_18B_B./*@>12da2*/CAN1_Rx_500_o3/*@>11fc6*/ == /*@>121ea*/218038278) {
+    /* {S!d3091}Outputs for IfAction SubSystem: '<S119>/UNPACK' incorporates:
+ *  ActionPort: '<S139>/Action Port'
+ */
+    /* {S!d3144}DataStoreWrite: '<S139>/Data Store Write' incorporates:
+ *  Constant: '<S139>/Constant'
+ *  DataStoreRead: '<S139>/Data Store Read'
+ *  Sum: '<S139>/Add'
+ */
+    /*@>1217e*/Cnt_ISG1/*@>12d06*/++;
+    /* {E!d3091}End of Outputs for SubSystem: '<S119>/UNPACK' */
+}
+/* {E!d3146}End of SwitchCase: '<S119>/Switch Case' */
+
+/* {S!d3150}SwitchCase: '<S120>/Switch Case' */
+/*@>11fcd*/if (/*@>122ee*/(int32_T)/*@>128eb*/ZT_VehCtrl_18B_B./*@>12da5*/CAN1_Rx_500_o3/*@>11fcc*/ == /*@>121ed*/218038534) {
+    /* {S!d3093}Outputs for IfAction SubSystem: '<S120>/UNPACK' incorporates:
+ *  ActionPort: '<S140>/Action Port'
+ */
+    /* {S!d3148}DataStoreWrite: '<S140>/Data Store Write' incorporates:
+ *  Constant: '<S140>/Constant'
+ *  DataStoreRead: '<S140>/Data Store Read'
+ *  Sum: '<S140>/Add'
+ */
+    /*@>12180*/Cnt_ISG2/*@>12d07*/++;
+    /* {E!d3093}End of Outputs for SubSystem: '<S120>/UNPACK' */
+}
+/* {E!d3150}End of SwitchCase: '<S120>/Switch Case' */
+
+/* {S!d3154}SwitchCase: '<S121>/Switch Case' */
+/*@>11fd3*/if (/*@>122dd*/(int32_T)/*@>128f1*/ZT_VehCtrl_18B_B./*@>12da8*/CAN1_Rx_500_o3/*@>11fd2*/ == /*@>121f0*/218038790) {
+    /* {S!d3095}Outputs for IfAction SubSystem: '<S121>/UNPACK' incorporates:
+ *  ActionPort: '<S141>/Action Port'
+ */
+    /* {S!d3152}DataStoreWrite: '<S141>/Data Store Write' incorporates:
+ *  Constant: '<S141>/Constant'
+ *  DataStoreRead: '<S141>/Data Store Read'
+ *  Sum: '<S141>/Add'
+ */
+    /*@>12182*/Cnt_ISG3/*@>12d08*/++;
+    /* {E!d3095}End of Outputs for SubSystem: '<S121>/UNPACK' */
+}
+/* {E!d3154}End of SwitchCase: '<S121>/Switch Case' */
+
+/* {S!d3158}SwitchCase: '<S122>/Switch Case' */
+/*@>11fd9*/if (/*@>122cc*/(int32_T)/*@>128f7*/ZT_VehCtrl_18B_B./*@>12dab*/CAN1_Rx_500_o3/*@>11fd8*/ == /*@>121f3*/406245615) {
+    /* {S!d3097}Outputs for IfAction SubSystem: '<S122>/UNPACK' incorporates:
+ *  ActionPort: '<S142>/Action Port'
+ */
+    /* {S!d3156}DataStoreWrite: '<S142>/Data Store Write' incorporates:
+ *  Constant: '<S142>/Constant'
+ *  DataStoreRead: '<S142>/Data Store Read'
+ *  Sum: '<S142>/Add'
+ */
+    /*@>12184*/Cnt_MCU1_1/*@>12d09*/++;
+    /* {E!d3097}End of Outputs for SubSystem: '<S122>/UNPACK' */
+}
+/* {E!d3158}End of SwitchCase: '<S122>/Switch Case' */
+
+/* {S!d3162}SwitchCase: '<S123>/Switch Case' */
+/*@>11fdf*/if (/*@>122bb*/(int32_T)/*@>128fd*/ZT_VehCtrl_18B_B./*@>12dae*/CAN1_Rx_500_o3/*@>11fde*/ == /*@>121f6*/406311151) {
+    /* {S!d3099}Outputs for IfAction SubSystem: '<S123>/UNPACK' incorporates:
+ *  ActionPort: '<S143>/Action Port'
+ */
+    /* {S!d3160}DataStoreWrite: '<S143>/Data Store Write' incorporates:
+ *  Constant: '<S143>/Constant'
+ *  DataStoreRead: '<S143>/Data Store Read'
+ *  Sum: '<S143>/Add'
+ */
+    /*@>12186*/Cnt_MCU1_2/*@>12d0a*/++;
+    /* {E!d3099}End of Outputs for SubSystem: '<S123>/UNPACK' */
+}
+/* {E!d3162}End of SwitchCase: '<S123>/Switch Case' */
+
+/* {S!d3166}SwitchCase: '<S124>/Switch Case' */
+/*@>11fe5*/if (/*@>122aa*/(int32_T)/*@>12903*/ZT_VehCtrl_18B_B./*@>12db1*/CAN1_Rx_500_o3/*@>11fe4*/ == /*@>121f9*/406376687) {
+    /* {S!d3101}Outputs for IfAction SubSystem: '<S124>/UNPACK' incorporates:
+ *  ActionPort: '<S144>/Action Port'
+ */
+    /* {S!d3164}DataStoreWrite: '<S144>/Data Store Write' incorporates:
+ *  Constant: '<S144>/Constant'
+ *  DataStoreRead: '<S144>/Data Store Read'
+ *  Sum: '<S144>/Add'
+ */
+    /*@>12188*/Cnt_MCU1_3/*@>12d0b*/++;
+    /* {E!d3101}End of Outputs for SubSystem: '<S124>/UNPACK' */
+}
+/* {E!d3166}End of SwitchCase: '<S124>/Switch Case' */
+
+/* {S!d3170}SwitchCase: '<S125>/Switch Case' */
+/*@>11feb*/if (/*@>12299*/(int32_T)/*@>12909*/ZT_VehCtrl_18B_B./*@>12db4*/CAN1_Rx_500_o3/*@>11fea*/ == /*@>121fc*/406245617) {
+    /* {S!d3103}Outputs for IfAction SubSystem: '<S125>/UNPACK' incorporates:
+ *  ActionPort: '<S145>/Action Port'
+ */
+    /* {S!d3168}DataStoreWrite: '<S145>/Data Store Write' incorporates:
+ *  Constant: '<S145>/Constant'
+ *  DataStoreRead: '<S145>/Data Store Read'
+ *  Sum: '<S145>/Add'
+ */
+    /*@>1218a*/Cnt_MCU2_1/*@>12d0c*/++;
+    /* {E!d3103}End of Outputs for SubSystem: '<S125>/UNPACK' */
+}
+/* {E!d3170}End of SwitchCase: '<S125>/Switch Case' */
+
+/* {S!d3174}SwitchCase: '<S126>/Switch Case' */
+/*@>11ff1*/if (/*@>12288*/(int32_T)/*@>1290f*/ZT_VehCtrl_18B_B./*@>12db7*/CAN1_Rx_500_o3/*@>11ff0*/ == /*@>121ff*/406311153) {
+    /* {S!d3105}Outputs for IfAction SubSystem: '<S126>/UNPACK' incorporates:
+ *  ActionPort: '<S146>/Action Port'
+ */
+    /* {S!d3172}DataStoreWrite: '<S146>/Data Store Write' incorporates:
+ *  Constant: '<S146>/Constant'
+ *  DataStoreRead: '<S146>/Data Store Read'
+ *  Sum: '<S146>/Add'
+ */
+    /*@>1218c*/Cnt_MCU2_2/*@>12d0d*/++;
+    /* {E!d3105}End of Outputs for SubSystem: '<S126>/UNPACK' */
+}
+/* {E!d3174}End of SwitchCase: '<S126>/Switch Case' */
+
+/* {S!d3178}SwitchCase: '<S127>/Switch Case' */
+/*@>11ff7*/if (/*@>12277*/(int32_T)/*@>12915*/ZT_VehCtrl_18B_B./*@>12dba*/CAN1_Rx_500_o3/*@>11ff6*/ == /*@>12202*/406376689) {
+    /* {S!d3107}Outputs for IfAction SubSystem: '<S127>/UNPACK' incorporates:
+ *  ActionPort: '<S147>/Action Port'
+ */
+    /* {S!d3176}DataStoreWrite: '<S147>/Data Store Write' incorporates:
+ *  Constant: '<S147>/Constant'
+ *  DataStoreRead: '<S147>/Data Store Read'
+ *  Sum: '<S147>/Add'
+ */
+    /*@>1218e*/Cnt_MCU2_3/*@>12d0e*/++;
+    /* {E!d3107}End of Outputs for SubSystem: '<S127>/UNPACK' */
+}
+/* {E!d3178}End of SwitchCase: '<S127>/Switch Case' */
+
+/* {S!d3182}SwitchCase: '<S128>/Switch Case' */
+/*@>11ffd*/if (/*@>12266*/(int32_T)/*@>1291b*/ZT_VehCtrl_18B_B./*@>12dbd*/CAN1_Rx_500_o3/*@>11ffc*/ == /*@>12205*/419376072) {
+    /* {S!d3109}Outputs for IfAction SubSystem: '<S128>/UNPACK' incorporates:
+ *  ActionPort: '<S148>/Action Port'
+ */
+    /* {S!d3180}DataStoreWrite: '<S148>/Data Store Write' incorporates:
+ *  Constant: '<S148>/Constant'
+ *  DataStoreRead: '<S148>/Data Store Read'
+ *  Sum: '<S148>/Add'
+ */
+    /*@>12190*/Cnt_PDU/*@>12d0f*/++;
+    /* {E!d3109}End of Outputs for SubSystem: '<S128>/UNPACK' */
+}
+/* {E!d3182}End of SwitchCase: '<S128>/Switch Case' */
+
+/* {S!d3186}SwitchCase: '<S129>/Switch Case' */
+/*@>12003*/if (/*@>12255*/(int32_T)/*@>12921*/ZT_VehCtrl_18B_B./*@>12dc0*/CAN1_Rx_500_o3/*@>12002*/ == /*@>12208*/218038277) {
+    /* {S!d3111}Outputs for IfAction SubSystem: '<S129>/UNPACK' incorporates:
+ *  ActionPort: '<S149>/Action Port'
+ */
+    /* {S!d3184}DataStoreWrite: '<S149>/Data Store Write' incorporates:
+ *  Constant: '<S149>/Constant'
+ *  DataStoreRead: '<S149>/Data Store Read'
+ *  Sum: '<S149>/Add'
+ */
+    /*@>12192*/Cnt_TW1/*@>12d10*/++;
+    /* {E!d3111}End of Outputs for SubSystem: '<S129>/UNPACK' */
+}
+/* {E!d3186}End of SwitchCase: '<S129>/Switch Case' */
+
+/* {S!d3190}SwitchCase: '<S130>/Switch Case' */
+/*@>12009*/if (/*@>12244*/(int32_T)/*@>12927*/ZT_VehCtrl_18B_B./*@>12dc3*/CAN1_Rx_500_o3/*@>12008*/ == /*@>1220b*/218038533) {
+    /* {S!d3113}Outputs for IfAction SubSystem: '<S130>/UNPACK' incorporates:
+ *  ActionPort: '<S150>/Action Port'
+ */
+    /* {S!d3188}DataStoreWrite: '<S150>/Data Store Write' incorporates:
+ *  Constant: '<S150>/Constant'
+ *  DataStoreRead: '<S150>/Data Store Read'
+ *  Sum: '<S150>/Add'
+ */
+    /*@>12194*/Cnt_TW2/*@>12d11*/++;
+    /* {E!d3113}End of Outputs for SubSystem: '<S130>/UNPACK' */
+}
+/* {E!d3190}End of SwitchCase: '<S130>/Switch Case' */
+
+/* {S!d3194}SwitchCase: '<S131>/Switch Case' */
+/*@>1200f*/if (/*@>12233*/(int32_T)/*@>1292d*/ZT_VehCtrl_18B_B./*@>12dc6*/CAN1_Rx_500_o3/*@>1200e*/ == /*@>1220e*/218038789) {
+    /* {S!d3115}Outputs for IfAction SubSystem: '<S131>/UNPACK' incorporates:
+ *  ActionPort: '<S151>/Action Port'
+ */
+    /* {S!d3192}DataStoreWrite: '<S151>/Data Store Write' incorporates:
+ *  Constant: '<S151>/Constant'
+ *  DataStoreRead: '<S151>/Data Store Read'
+ *  Sum: '<S151>/Add'
+ */
+    /*@>12196*/Cnt_TW3/*@>12d12*/++;
+    /* {E!d3115}End of Outputs for SubSystem: '<S131>/UNPACK' */
+}
+/* {E!d3194}End of SwitchCase: '<S131>/Switch Case' */
+
+/* {S!d3198}SwitchCase: '<S132>/Switch Case' */
+/*@>12015*/if (/*@>12222*/(int32_T)/*@>12933*/ZT_VehCtrl_18B_B./*@>12dc9*/CAN1_Rx_500_o3/*@>12014*/ == /*@>12211*/419374139) {
+    /* {S!d3117}Outputs for IfAction SubSystem: '<S132>/UNPACK' incorporates:
+ *  ActionPort: '<S152>/Action Port'
+ */
+    /* {S!d3196}DataStoreWrite: '<S152>/Data Store Write' incorporates:
+ *  Constant: '<S152>/Constant'
+ *  DataStoreRead: '<S152>/Data Store Read'
+ *  Sum: '<S152>/Add'
+ */
+    /*@>12198*/Cnt_TWV/*@>12d13*/++;
+    /* {E!d3117}End of Outputs for SubSystem: '<S132>/UNPACK' */
+}
+/* {E!d3198}End of SwitchCase: '<S132>/Switch Case' */
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ZT_VehCtrl_18B_CAN1(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(1, 0, fcnProtoType)>
+%endfunction

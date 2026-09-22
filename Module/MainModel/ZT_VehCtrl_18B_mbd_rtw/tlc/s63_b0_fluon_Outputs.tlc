@@ -1,0 +1,1607 @@
+%implements s63_b0_fluon_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+int32_T rtb_PulseGenerator2;
+int32_T rtb_PulseGenerator;
+ZCEventType zcEvent;
+boolean_T rtb_LogicalOperator;
+int32_T rtb_Flg_b;
+real_T rtb_Add3;
+real_T rtb_Divide2;
+int32_T rtb_low_b;
+real_T tmp;
+uint8_T tmp_0;
+uint8_T tmp_1;
+uint8_T tmp_2;
+uint8_T tmp_3;
+%closefile localVarDecl
+%assign tlcOutputsFcnOfS63B0 = OpaqueTLCBlockFcn("Outputs", 63, 0, 2, 1)
+%assign tlcOutputsFcnOfS63B1 = OpaqueTLCBlockFcn("Outputs", 63, 1, 2, 1)
+%assign tlcOutputsFcnOfS63B2 = OpaqueTLCBlockFcn("Outputs", 63, 2, 2, 1)
+%assign tlcOutputsFcnOfS63B3 = OpaqueTLCBlockFcn("Outputs", 63, 3, 2, 1)
+%assign tlcOutputsFcnOfS63B4 = OpaqueTLCBlockFcn("Outputs", 63, 4, 2, 1)
+%assign tlcOutputsFcnOfS63B5 = OpaqueTLCBlockFcn("Outputs", 63, 5, 2, 1)
+%assign tlcOutputsFcnOfS63B6 = OpaqueTLCBlockFcn("Outputs", 63, 6, 2, 1)
+%assign tlcOutputsFcnOfS63B7 = OpaqueTLCBlockFcn("Outputs", 63, 7, 2, 1)
+%assign tlcOutputsFcnOfS63B8 = OpaqueTLCBlockFcn("Outputs", 63, 8, 2, 1)
+%assign tlcOutputsFcnOfS63B9 = OpaqueTLCBlockFcn("Outputs", 63, 9, 2, 1)
+%assign tlcOutputsFcnOfS63B10 = OpaqueTLCBlockFcn("Outputs", 63, 10, 2, 1)
+%assign tlcOutputsFcnOfS63B11 = OpaqueTLCBlockFcn("Outputs", 63, 11, 2, 1)
+%assign tlcOutputsFcnOfS63B12 = OpaqueTLCBlockFcn("Outputs", 63, 12, 2, 1)
+%assign tlcOutputsFcnOfS63B13 = OpaqueTLCBlockFcn("Outputs", 63, 13, 2, 1)
+%assign tlcOutputsFcnOfS63B14 = OpaqueTLCBlockFcn("Outputs", 63, 14, 2, 1)
+%assign tlcOutputsFcnOfS63B15 = OpaqueTLCBlockFcn("Outputs", 63, 15, 2, 1)
+%assign tlcOutputsFcnOfS63B16 = OpaqueTLCBlockFcn("Outputs", 63, 16, 2, 1)
+%assign tlcOutputsFcnOfS63B17 = OpaqueTLCBlockFcn("Outputs", 63, 17, 2, 1)
+%assign tlcOutputsFcnOfS63B18 = OpaqueTLCBlockFcn("Outputs", 63, 18, 2, 1)
+%assign tlcOutputsFcnOfS63B19 = OpaqueTLCBlockFcn("Outputs", 63, 19, 2, 1)
+%assign tlcOutputsFcnOfS63B20 = OpaqueTLCBlockFcn("Outputs", 63, 20, 2, 1)
+%assign tlcOutputsFcnOfS63B21 = OpaqueTLCBlockFcn("Outputs", 63, 21, 2, 1)
+%assign tlcOutputsFcnOfS63B22 = OpaqueTLCBlockFcn("Outputs", 63, 22, 2, 1)
+%assign tlcOutputsFcnOfS63B24 = OpaqueTLCBlockFcn("Outputs", 63, 24, 2, 1)
+%assign tlcOutputsFcnOfS63B26 = OpaqueTLCBlockFcn("Outputs", 63, 26, 2, 1)
+%assign tlcOutputsFcnOfS49B8 = OpaqueTLCBlockFcn("Outputs", 49, 8, 2, 1)
+%assign tlcOutputsFcnOfS49B9 = OpaqueTLCBlockFcn("Outputs", 49, 9, 2, 1)
+%assign tlcOutputsFcnOfS50B0 = OpaqueTLCBlockFcn("Outputs", 50, 0, 2, 1)
+%assign tlcOutputsFcnOfS50B1 = OpaqueTLCBlockFcn("Outputs", 50, 1, 2, 1)
+%assign tlcOutputsFcnOfS51B2 = OpaqueTLCBlockFcn("Outputs", 51, 2, 2, 1)
+%assign tlcOutputsFcnOfS51B3 = OpaqueTLCBlockFcn("Outputs", 51, 3, 2, 1)
+%assign tlcOutputsFcnOfS52B0 = OpaqueTLCBlockFcn("Outputs", 52, 0, 2, 1)
+%assign tlcOutputsFcnOfS52B1 = OpaqueTLCBlockFcn("Outputs", 52, 1, 2, 1)
+%assign tlcOutputsFcnOfS59B0 = OpaqueTLCBlockFcn("Outputs", 59, 0, 2, 1)
+%assign tlcOutputsFcnOfS59B1 = OpaqueTLCBlockFcn("Outputs", 59, 1, 2, 1)
+%assign tlcOutputsFcnOfS60B0 = OpaqueTLCBlockFcn("Outputs", 60, 0, 2, 1)
+%assign tlcOutputsFcnOfS60B1 = OpaqueTLCBlockFcn("Outputs", 60, 1, 2, 1)
+%assign tlcOutputsFcnOfS62B0 = OpaqueTLCBlockFcn("Outputs", 62, 0, 2, 1)
+%assign tlcOutputsFcnOfS62B1 = OpaqueTLCBlockFcn("Outputs", 62, 1, 2, 1)
+%assign tlcOutputsFcnOfS61B0 = OpaqueTLCBlockFcn("Outputs", 61, 0, 2, 1)
+%assign tlcOutputsFcnOfS61B1 = OpaqueTLCBlockFcn("Outputs", 61, 1, 2, 1)
+%assign tlcOutputsFcnOfS63B36 = OpaqueTLCBlockFcn("Outputs", 63, 36, 2, 1)
+%assign tlcOutputsFcnOfS63B37 = OpaqueTLCBlockFcn("Outputs", 63, 37, 2, 1)
+%assign tlcOutputsFcnOfS63B38 = OpaqueTLCBlockFcn("Outputs", 63, 38, 2, 1)
+%assign tlcOutputsFcnOfS63B39 = OpaqueTLCBlockFcn("Outputs", 63, 39, 2, 1)
+%assign tlcOutputsFcnOfS63B40 = OpaqueTLCBlockFcn("Outputs", 63, 40, 2, 1)
+%assign tlcOutputsFcnOfS63B41 = OpaqueTLCBlockFcn("Outputs", 63, 41, 2, 1)
+%assign tlcOutputsFcnOfS63B42 = OpaqueTLCBlockFcn("Outputs", 63, 42, 2, 1)
+%assign tlcOutputsFcnOfS63B43 = OpaqueTLCBlockFcn("Outputs", 63, 43, 2, 1)
+%assign tlcOutputsFcnOfS63B44 = OpaqueTLCBlockFcn("Outputs", 63, 44, 2, 1)
+%assign tlcOutputsFcnOfS63B45 = OpaqueTLCBlockFcn("Outputs", 63, 45, 2, 1)
+%assign tlcOutputsFcnOfS63B46 = OpaqueTLCBlockFcn("Outputs", 63, 46, 2, 1)
+%assign tlcOutputsFcnOfS63B47 = OpaqueTLCBlockFcn("Outputs", 63, 47, 2, 1)
+%assign tlcOutputsFcnOfS63B48 = OpaqueTLCBlockFcn("Outputs", 63, 48, 2, 1)
+%assign tlcOutputsFcnOfS63B50 = OpaqueTLCBlockFcn("Outputs", 63, 50, 2, 1)
+%assign tlcOutputsFcnOfS63B52 = OpaqueTLCBlockFcn("Outputs", 63, 52, 2, 1)
+%assign tlcOutputsFcnOfS63B54 = OpaqueTLCBlockFcn("Outputs", 63, 54, 2, 1)
+%assign tlcOutputsFcnOfS54B0 = OpaqueTLCBlockFcn("Outputs", 54, 0, 2, 1)
+%assign tlcOutputsFcnOfS56B0 = OpaqueTLCBlockFcn("Outputs", 56, 0, 2, 1)
+%assign tlcOutputsFcnOfS63B59 = OpaqueTLCBlockFcn("Outputs", 63, 59, 2, 1)
+%assign tlcOutputsFcnOfS63B61 = OpaqueTLCBlockFcn("Outputs", 63, 61, 2, 1)
+%assign tlcOutputsFcnOfS58B0 = OpaqueTLCBlockFcn("Outputs", 58, 0, 2, 1)
+%assign tlcOutputsFcnOfS8B1 = OpaqueTLCBlockFcn("Outputs", 8, 1, 2, 1)
+%assign tlcOutputsFcnOfS6B0 = OpaqueTLCBlockFcn("Outputs", 6, 0, 2, 1)
+%assign tlcOutputsFcnOfS12B2 = OpaqueTLCBlockFcn("Outputs", 12, 2, 2, 1)
+%assign tlcOutputsFcnOfS10B1 = OpaqueTLCBlockFcn("Outputs", 10, 1, 2, 1)
+%assign tlcOutputsFcnOfS63B74 = OpaqueTLCBlockFcn("Outputs", 63, 74, 2, 1)
+%assign tlcOutputsFcnOfS63B75 = OpaqueTLCBlockFcn("Outputs", 63, 75, 2, 1)
+%assign tlcOutputsFcnOfS0B0 = OpaqueTLCBlockFcn("Outputs", 0, 0, 2, 1)
+%assign tlcOutputsFcnOfS0B1 = OpaqueTLCBlockFcn("Outputs", 0, 1, 2, 1)
+%assign tlcOutputsFcnOfS0B2 = OpaqueTLCBlockFcn("Outputs", 0, 2, 2, 1)
+%assign tlcOutputsFcnOfS0B3 = OpaqueTLCBlockFcn("Outputs", 0, 3, 2, 1)
+%assign tlcOutputsFcnOfS0B4 = OpaqueTLCBlockFcn("Outputs", 0, 4, 2, 1)
+%assign tlcOutputsFcnOfS0B5 = OpaqueTLCBlockFcn("Outputs", 0, 5, 2, 1)
+%assign tlcOutputsFcnOfS0B6 = OpaqueTLCBlockFcn("Outputs", 0, 6, 2, 1)
+%assign tlcOutputsFcnOfS0B7 = OpaqueTLCBlockFcn("Outputs", 0, 7, 2, 1)
+%assign tlcOutputsFcnOfS0B8 = OpaqueTLCBlockFcn("Outputs", 0, 8, 2, 1)
+%assign tlcOutputsFcnOfS0B9 = OpaqueTLCBlockFcn("Outputs", 0, 9, 2, 1)
+%assign tlcOutputsFcnOfS0B10 = OpaqueTLCBlockFcn("Outputs", 0, 10, 2, 1)
+%assign tlcOutputsFcnOfS0B11 = OpaqueTLCBlockFcn("Outputs", 0, 11, 2, 1)
+%assign tlcOutputsFcnOfS0B12 = OpaqueTLCBlockFcn("Outputs", 0, 12, 2, 1)
+%assign tlcOutputsFcnOfS0B13 = OpaqueTLCBlockFcn("Outputs", 0, 13, 2, 1)
+%assign tlcOutputsFcnOfS0B14 = OpaqueTLCBlockFcn("Outputs", 0, 14, 2, 1)
+%assign tlcOutputsFcnOfS0B15 = OpaqueTLCBlockFcn("Outputs", 0, 15, 2, 1)
+%assign tlcOutputsFcnOfS0B16 = OpaqueTLCBlockFcn("Outputs", 0, 16, 2, 1)
+%assign tlcOutputsFcnOfS0B17 = OpaqueTLCBlockFcn("Outputs", 0, 17, 2, 1)
+%assign tlcOutputsFcnOfS0B18 = OpaqueTLCBlockFcn("Outputs", 0, 18, 2, 1)
+%assign tlcOutputsFcnOfS0B19 = OpaqueTLCBlockFcn("Outputs", 0, 19, 2, 1)
+%assign tlcOutputsFcnOfS0B20 = OpaqueTLCBlockFcn("Outputs", 0, 20, 2, 1)
+%assign tlcOutputsFcnOfS0B21 = OpaqueTLCBlockFcn("Outputs", 0, 21, 2, 1)
+%assign tlcOutputsFcnOfS0B22 = OpaqueTLCBlockFcn("Outputs", 0, 22, 2, 1)
+%assign tlcOutputsFcnOfS0B23 = OpaqueTLCBlockFcn("Outputs", 0, 23, 2, 1)
+%assign tlcOutputsFcnOfS0B24 = OpaqueTLCBlockFcn("Outputs", 0, 24, 2, 1)
+%assign tlcOutputsFcnOfS0B25 = OpaqueTLCBlockFcn("Outputs", 0, 25, 2, 1)
+%assign tlcOutputsFcnOfS0B26 = OpaqueTLCBlockFcn("Outputs", 0, 26, 2, 1)
+%assign tlcOutputsFcnOfS0B27 = OpaqueTLCBlockFcn("Outputs", 0, 27, 2, 1)
+%assign tlcOutputsFcnOfS0B28 = OpaqueTLCBlockFcn("Outputs", 0, 28, 2, 1)
+%assign tlcOutputsFcnOfS0B29 = OpaqueTLCBlockFcn("Outputs", 0, 29, 2, 1)
+%assign tlcOutputsFcnOfS0B30 = OpaqueTLCBlockFcn("Outputs", 0, 30, 2, 1)
+%assign tlcOutputsFcnOfS0B31 = OpaqueTLCBlockFcn("Outputs", 0, 31, 2, 1)
+%assign tlcOutputsFcnOfS0B32 = OpaqueTLCBlockFcn("Outputs", 0, 32, 2, 1)
+%assign tlcOutputsFcnOfS0B33 = OpaqueTLCBlockFcn("Outputs", 0, 33, 2, 1)
+%assign tlcOutputsFcnOfS63B78 = OpaqueTLCBlockFcn("Outputs", 63, 78, 2, 1)
+%assign tlcOutputsFcnOfS63B79 = OpaqueTLCBlockFcn("Outputs", 63, 79, 2, 1)
+%assign tlcOutputsFcnOfS63B80 = OpaqueTLCBlockFcn("Outputs", 63, 80, 2, 1)
+%assign tlcOutputsFcnOfS63B81 = OpaqueTLCBlockFcn("Outputs", 63, 81, 2, 1)
+%assign tlcOutputsFcnOfS63B82 = OpaqueTLCBlockFcn("Outputs", 63, 82, 2, 1)
+%assign tlcOutputsFcnOfS63B83 = OpaqueTLCBlockFcn("Outputs", 63, 83, 2, 1)
+%assign tlcOutputsFcnOfS63B84 = OpaqueTLCBlockFcn("Outputs", 63, 84, 2, 1)
+%assign tlcOutputsFcnOfS63B85 = OpaqueTLCBlockFcn("Outputs", 63, 85, 2, 1)
+%assign tlcOutputsFcnOfS63B86 = OpaqueTLCBlockFcn("Outputs", 63, 86, 2, 1)
+%assign tlcOutputsFcnOfS63B87 = OpaqueTLCBlockFcn("Outputs", 63, 87, 2, 1)
+%assign tlcOutputsFcnOfS63B88 = OpaqueTLCBlockFcn("Outputs", 63, 88, 2, 1)
+%assign tlcOutputsFcnOfS63B89 = OpaqueTLCBlockFcn("Outputs", 63, 89, 2, 1)
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B0)
+/* {S!d3246}S-Function (main_mpc_config): '<Root>/MBD_MPC574x_Config_Information1' */
+%<SLibCG_DumpSSCode("/*@[259c4*/",tlcOutputsFcnOfS63B0,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B1)
+/* {S!d3248}S-Function (fcan_mpc_config): '<Root>/FCAN_Config4' */
+%<SLibCG_DumpSSCode("/*@[259c5*/",tlcOutputsFcnOfS63B1,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B2)
+/* {S!d3250}S-Function (fcan_mpc_config): '<Root>/FCAN_Config6' */
+%<SLibCG_DumpSSCode("/*@[259c6*/",tlcOutputsFcnOfS63B2,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B3)
+/* {S!d3252}S-Function (adc_mpc_start): '<S37>/ADC_Start' */
+%<SLibCG_DumpSSCode("/*@[259c8*/",tlcOutputsFcnOfS63B3,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B4)
+/* {S!d3254}S-Function (adc_mpc_start): '<S37>/ADC_Start1' */
+%<SLibCG_DumpSSCode("/*@[259ca*/",tlcOutputsFcnOfS63B4,"/*@]*/")>\
+%endif
+/* {S!d3256}Gain: '<S37>/Gain2' incorporates:
+ *  DataStoreWrite: '<S37>/Data Store Write'
+ *  DataTypeConversion: '<S37>/Data Type Conversion3'
+ */
+%<SLibCG_DumpSSCode("/*@[25b02*/",SLibCG_SetCSCDW(42, 1, "", -1, "", 0, "/*@>2c052*/0.00893772859F/*@>2c051*/ * /*@>2c053*/(real32_T)/*@>2c056*/ZT_VehCtrl_18B_B./*@>2c055*/ADC_Start1/*@>2c054*/[/*@>2c058*/3]"),"/*@]*/")>\
+/* {S!d3258}Gain: '<S37>/Gain3' incorporates:
+ *  DataStoreWrite: '<S37>/Data Store Write1'
+ *  DataTypeConversion: '<S37>/Data Type Conversion5'
+ */
+%<SLibCG_DumpSSCode("/*@[25b1e*/",SLibCG_SetCSCDW(43, 1, "", -1, "", 0, "/*@>2c06b*/0.00893772859F/*@>2c06a*/ * /*@>2c06c*/(real32_T)/*@>2c06f*/ZT_VehCtrl_18B_B./*@>2c06e*/ADC_Start1/*@>2c06d*/[/*@>2c071*/5]"),"/*@]*/")>\
+/* {S!d3260}Gain: '<S37>/Gain7' incorporates:
+ *  DataStoreWrite: '<S37>/Data Store Write2'
+ *  DataTypeConversion: '<S37>/Data Type Conversion1'
+ */
+%<SLibCG_DumpSSCode("/*@[25b3a*/",SLibCG_SetCSCDW(44, 1, "", -1, "", 0, "/*@>2c084*/0.00893772859F/*@>2c083*/ * /*@>2c085*/(real32_T)/*@>2c088*/ZT_VehCtrl_18B_B./*@>2c087*/ADC_Start1/*@>2c086*/[/*@>2c08a*/1]"),"/*@]*/")>\
+/* {S!d3262}Gain: '<S37>/Gain10' incorporates:
+ *  DataStoreWrite: '<S37>/Data Store Write3'
+ *  DataTypeConversion: '<S37>/Data Type Conversion6'
+ */
+%<SLibCG_DumpSSCode("/*@[25b56*/",SLibCG_SetCSCDW(45, 1, "", -1, "", 0, "/*@>2c09d*/0.00122100126F/*@>2c09c*/ * /*@>2c09e*/(real32_T)/*@>2c0a1*/ZT_VehCtrl_18B_B./*@>2c0a0*/ADC_Start1/*@>2c09f*/[/*@>2c0a3*/6]"),"/*@]*/")>\
+/* {S!d3264}Gain: '<S37>/Gain14' incorporates:
+ *  DataStoreWrite: '<S37>/Data Store Write4'
+ *  DataTypeConversion: '<S37>/Data Type Conversion9'
+ */
+%<SLibCG_DumpSSCode("/*@[25b72*/",SLibCG_SetCSCDW(46, 1, "", -1, "", 0, "/*@>2c0b6*/0.00122100126F/*@>2c0b5*/ * /*@>2c0b7*/(real32_T)/*@>2c0ba*/ZT_VehCtrl_18B_B./*@>2c0b9*/ADC_Start1/*@>2c0b8*/[/*@>2c0bc*/9]"),"/*@]*/")>\
+/* {S!d3266}Gain: '<S37>/Gain1' incorporates:
+ *  DataStoreWrite: '<S37>/Data Store Write5'
+ *  DataTypeConversion: '<S37>/Data Type Conversion2'
+ */
+%<SLibCG_DumpSSCode("/*@[25b8e*/",SLibCG_SetCSCDW(47, 1, "", -1, "", 0, "/*@>2c0cf*/0.00122100126F/*@>2c0ce*/ * /*@>2c0d0*/(real32_T)/*@>2c0d3*/ZT_VehCtrl_18B_B./*@>2c0d2*/ADC_Start1/*@>2c0d1*/[/*@>2c0d5*/2]"),"/*@]*/")>\
+/* {S!d3268}Gain: '<S37>/Gain12' incorporates:
+ *  DataStoreWrite: '<S37>/Data Store Write6'
+ *  DataTypeConversion: '<S37>/Data Type Conversion7'
+ */
+%<SLibCG_DumpSSCode("/*@[25baa*/",SLibCG_SetCSCDW(48, 1, "", -1, "", 0, "/*@>2c0e8*/0.00122100126F/*@>2c0e7*/ * /*@>2c0e9*/(real32_T)/*@>2c0ec*/ZT_VehCtrl_18B_B./*@>2c0eb*/ADC_Start1/*@>2c0ea*/[/*@>2c0ee*/7]"),"/*@]*/")>\
+/* {S!d3270}Gain: '<S37>/Gain6' incorporates:
+ *  DataStoreWrite: '<S37>/Data Store Write7'
+ *  DataTypeConversion: '<S37>/Data Type Conversion'
+ */
+%<SLibCG_DumpSSCode("/*@[25bc6*/",SLibCG_SetCSCDW(49, 1, "", -1, "", 0, "/*@>2c101*/0.00122100126F/*@>2c100*/ * /*@>2c102*/(real32_T)/*@>2c105*/ZT_VehCtrl_18B_B./*@>2c104*/ADC_Start1/*@>2c103*/[/*@>2c107*/0]"),"/*@]*/")>\
+/* {S!d3272}Gain: '<S37>/Gain8' incorporates:
+ *  DataStoreWrite: '<S37>/Data Store Write8'
+ *  DataTypeConversion: '<S37>/Data Type Conversion4'
+ */
+%<SLibCG_DumpSSCode("/*@[25be2*/",SLibCG_SetCSCDW(50, 1, "", -1, "", 0, "/*@>2c11a*/0.00122100126F/*@>2c119*/ * /*@>2c11b*/(real32_T)/*@>2c11e*/ZT_VehCtrl_18B_B./*@>2c11d*/ADC_Start1/*@>2c11c*/[/*@>2c120*/4]"),"/*@]*/")>\
+/* {S!d3274}Gain: '<S37>/Gain13' incorporates:
+ *  DataStoreWrite: '<S37>/Data Store Write9'
+ *  DataTypeConversion: '<S37>/Data Type Conversion8'
+ */
+%<SLibCG_DumpSSCode("/*@[25bfe*/",SLibCG_SetCSCDW(41, 1, "", -1, "", 0, "/*@>2c133*/0.00122100126F/*@>2c132*/ * /*@>2c134*/(real32_T)/*@>2c137*/ZT_VehCtrl_18B_B./*@>2c136*/ADC_Start1/*@>2c135*/[/*@>2c139*/8]"),"/*@]*/")>\
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B5)
+/* {S!d3276}S-Function (gpio_mpc_input): '<S40>/DI01' */
+%<SLibCG_DumpSSCode("/*@[259cc*/",tlcOutputsFcnOfS63B5,"/*@]*/")>\
+%endif
+/* {S!d3278}DataStoreWrite: '<S40>/Data Store Write1' */
+%<SLibCG_DumpSSCode("/*@[25c1a*/",SLibCG_SetCSCDW(163, 1, "", -1, "", 0, "/*@>2c155*/ZT_VehCtrl_18B_B./*@>2c154*/DI01_h"),"/*@]*/")>\
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B6)
+/* {S!d3280}S-Function (gpio_mpc_input): '<S40>/DI02' */
+%<SLibCG_DumpSSCode("/*@[259ce*/",tlcOutputsFcnOfS63B6,"/*@]*/")>\
+%endif
+/* {S!d3282}DataStoreWrite: '<S40>/Data Store Write8' */
+%<SLibCG_DumpSSCode("/*@[25c36*/",SLibCG_SetCSCDW(170, 1, "", -1, "", 0, "/*@>2c172*/ZT_VehCtrl_18B_B./*@>2c171*/DI02_c"),"/*@]*/")>\
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B7)
+/* {S!d3284}S-Function (gpio_mpc_input): '<S40>/DI03' */
+%<SLibCG_DumpSSCode("/*@[259d0*/",tlcOutputsFcnOfS63B7,"/*@]*/")>\
+%endif
+/* {S!d3286}DataStoreWrite: '<S40>/Data Store Write9' */
+%<SLibCG_DumpSSCode("/*@[25c52*/",SLibCG_SetCSCDW(171, 1, "", -1, "", 0, "/*@>2c18f*/ZT_VehCtrl_18B_B./*@>2c18e*/DI03_h"),"/*@]*/")>\
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B8)
+/* {S!d3288}S-Function (gpio_mpc_input): '<S40>/DI04' */
+%<SLibCG_DumpSSCode("/*@[259d2*/",tlcOutputsFcnOfS63B8,"/*@]*/")>\
+%endif
+/* {S!d3290}DataStoreWrite: '<S40>/Data Store Write10' */
+%<SLibCG_DumpSSCode("/*@[25c6e*/",SLibCG_SetCSCDW(173, 1, "", -1, "", 0, "/*@>2c1ac*/ZT_VehCtrl_18B_B./*@>2c1ab*/DI04_o"),"/*@]*/")>\
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B9)
+/* {S!d3292}S-Function (gpio_mpc_input): '<S40>/DI07' */
+%<SLibCG_DumpSSCode("/*@[259d4*/",tlcOutputsFcnOfS63B9,"/*@]*/")>\
+%endif
+/* {S!d3294}DataStoreWrite: '<S40>/Data Store Write' */
+%<SLibCG_DumpSSCode("/*@[25c8a*/",SLibCG_SetCSCDW(162, 1, "", -1, "", 0, "/*@>2c1c9*/ZT_VehCtrl_18B_B./*@>2c1c8*/DI07_f"),"/*@]*/")>\
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B10)
+/* {S!d3296}S-Function (gpio_mpc_input): '<S40>/DI08' */
+%<SLibCG_DumpSSCode("/*@[259d6*/",tlcOutputsFcnOfS63B10,"/*@]*/")>\
+%endif
+/* {S!d3298}DataStoreWrite: '<S40>/Data Store Write12' */
+%<SLibCG_DumpSSCode("/*@[25ca6*/",SLibCG_SetCSCDW(175, 1, "", -1, "", 0, "/*@>2c1e6*/ZT_VehCtrl_18B_B./*@>2c1e5*/DI08_e"),"/*@]*/")>\
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B11)
+/* {S!d3300}S-Function (gpio_mpc_input): '<S40>/DI09' */
+%<SLibCG_DumpSSCode("/*@[259d8*/",tlcOutputsFcnOfS63B11,"/*@]*/")>\
+%endif
+/* {S!d3302}DataStoreWrite: '<S40>/Data Store Write13' */
+%<SLibCG_DumpSSCode("/*@[25cc2*/",SLibCG_SetCSCDW(176, 1, "", -1, "", 0, "/*@>2c203*/ZT_VehCtrl_18B_B./*@>2c202*/DI09_a"),"/*@]*/")>\
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B12)
+/* {S!d3304}S-Function (gpio_mpc_input): '<S40>/DI10' */
+%<SLibCG_DumpSSCode("/*@[259da*/",tlcOutputsFcnOfS63B12,"/*@]*/")>\
+%endif
+/* {S!d3306}DataStoreWrite: '<S40>/Data Store Write2' */
+%<SLibCG_DumpSSCode("/*@[25cde*/",SLibCG_SetCSCDW(164, 1, "", -1, "", 0, "/*@>2c220*/ZT_VehCtrl_18B_B./*@>2c21f*/DI10_g"),"/*@]*/")>\
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B13)
+/* {S!d3308}S-Function (gpio_mpc_input): '<S40>/DI12' */
+%<SLibCG_DumpSSCode("/*@[259dc*/",tlcOutputsFcnOfS63B13,"/*@]*/")>\
+%endif
+/* {S!d3310}DataStoreWrite: '<S40>/Data Store Write11' */
+%<SLibCG_DumpSSCode("/*@[25cfa*/",SLibCG_SetCSCDW(174, 1, "", -1, "", 0, "/*@>2c23d*/ZT_VehCtrl_18B_B./*@>2c23c*/DI12_h"),"/*@]*/")>\
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B14)
+/* {S!d3312}S-Function (gpio_mpc_input): '<S40>/DI13' */
+%<SLibCG_DumpSSCode("/*@[259de*/",tlcOutputsFcnOfS63B14,"/*@]*/")>\
+%endif
+/* {S!d3314}DataStoreWrite: '<S40>/Data Store Write3' */
+%<SLibCG_DumpSSCode("/*@[25d16*/",SLibCG_SetCSCDW(165, 1, "", -1, "", 0, "/*@>2c25a*/ZT_VehCtrl_18B_B./*@>2c259*/DI13_m"),"/*@]*/")>\
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B15)
+/* {S!d3316}S-Function (gpio_mpc_input): '<S40>/DI15' */
+%<SLibCG_DumpSSCode("/*@[259e0*/",tlcOutputsFcnOfS63B15,"/*@]*/")>\
+%endif
+/* {S!d3318}DataStoreWrite: '<S40>/Data Store Write4' */
+%<SLibCG_DumpSSCode("/*@[25d32*/",SLibCG_SetCSCDW(166, 1, "", -1, "", 0, "/*@>2c277*/ZT_VehCtrl_18B_B./*@>2c276*/DI15_b"),"/*@]*/")>\
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B16)
+/* {S!d3320}S-Function (gpio_mpc_input): '<S40>/DI16' */
+%<SLibCG_DumpSSCode("/*@[259e2*/",tlcOutputsFcnOfS63B16,"/*@]*/")>\
+%endif
+/* {S!d3322}DataStoreWrite: '<S40>/Data Store Write5' */
+%<SLibCG_DumpSSCode("/*@[25d4e*/",SLibCG_SetCSCDW(167, 1, "", -1, "", 0, "/*@>2c294*/ZT_VehCtrl_18B_B./*@>2c293*/DI16_k"),"/*@]*/")>\
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B17)
+/* {S!d3324}S-Function (gpio_mpc_input): '<S40>/DI17' */
+%<SLibCG_DumpSSCode("/*@[259e4*/",tlcOutputsFcnOfS63B17,"/*@]*/")>\
+%endif
+/* {S!d3326}DataStoreWrite: '<S40>/Data Store Write6' */
+%<SLibCG_DumpSSCode("/*@[25d6a*/",SLibCG_SetCSCDW(168, 1, "", -1, "", 0, "/*@>2c2b1*/ZT_VehCtrl_18B_B./*@>2c2b0*/DI17_c"),"/*@]*/")>\
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B18)
+/* {S!d3328}S-Function (gpio_mpc_input): '<S40>/DI18' */
+%<SLibCG_DumpSSCode("/*@[259e6*/",tlcOutputsFcnOfS63B18,"/*@]*/")>\
+%endif
+/* {S!d3330}DataStoreWrite: '<S40>/Data Store Write7' */
+%<SLibCG_DumpSSCode("/*@[25d86*/",SLibCG_SetCSCDW(169, 1, "", -1, "", 0, "/*@>2c2ce*/ZT_VehCtrl_18B_B./*@>2c2cd*/DI18_k"),"/*@]*/")>\
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B19)
+/* {S!d3332}S-Function (gpio_mpc_input): '<S153>/DI31' */
+%<SLibCG_DumpSSCode("/*@[259e8*/",tlcOutputsFcnOfS63B19,"/*@]*/")>\
+%endif
+/* {S!d3334}DataStoreWrite: '<S153>/Data Store Write14' */
+%<SLibCG_DumpSSCode("/*@[25da2*/",SLibCG_SetCSCDW(159, 1, "", -1, "", 0, "/*@>2c2eb*/ZT_VehCtrl_18B_B./*@>2c2ea*/DI31_g"),"/*@]*/")>\
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B20)
+/* {S!d3336}S-Function (gpio_mpc_input): '<S153>/DI32' */
+%<SLibCG_DumpSSCode("/*@[259ea*/",tlcOutputsFcnOfS63B20,"/*@]*/")>\
+%endif
+/* {S!d3338}DataStoreWrite: '<S153>/Data Store Write15' */
+%<SLibCG_DumpSSCode("/*@[25dbe*/",SLibCG_SetCSCDW(160, 1, "", -1, "", 0, "/*@>2c308*/ZT_VehCtrl_18B_B./*@>2c307*/DI32_l"),"/*@]*/")>\
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B21)
+/* {S!d3340}S-Function (gpio_mpc_input): '<S153>/DI33' */
+%<SLibCG_DumpSSCode("/*@[259ec*/",tlcOutputsFcnOfS63B21,"/*@]*/")>\
+%endif
+/* {S!d3342}DataStoreWrite: '<S153>/Data Store Write16' */
+%<SLibCG_DumpSSCode("/*@[25dda*/",SLibCG_SetCSCDW(161, 1, "", -1, "", 0, "/*@>2c325*/ZT_VehCtrl_18B_B./*@>2c324*/DI33_b"),"/*@]*/")>\
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B22)
+/* {S!d3344}S-Function (gpio_mpc_input): '<S153>/DI34' */
+%<SLibCG_DumpSSCode("/*@[259ee*/",tlcOutputsFcnOfS63B22,"/*@]*/")>\
+%endif
+/* {S!d3346}DataStoreWrite: '<S153>/Data Store Write17' */
+%<SLibCG_DumpSSCode("/*@[25df6*/",SLibCG_SetCSCDW(172, 1, "", -1, "", 0, "/*@>2c342*/ZT_VehCtrl_18B_B./*@>2c341*/DI34_p"),"/*@]*/")>\
+/* {S!d3348}Gain: '<S37>/Gain9' incorporates:
+ *  DataStoreWrite: '<S37>/Data Store Write10'
+ *  DataTypeConversion: '<S37>/Data Type Conversion12'
+ */
+%<SLibCG_DumpSSCode("/*@[25e12*/",SLibCG_SetCSCDW(40, 1, "", -1, "", 0, "/*@>2c356*/0.00893772859F/*@>2c355*/ * /*@>2c357*/(real32_T)/*@>2c35a*/ZT_VehCtrl_18B_B./*@>2c359*/ADC_Start/*@>2c358*/[/*@>2c35c*/2]"),"/*@]*/")>\
+/* {S!d3350}Gain: '<S37>/Gain11' incorporates:
+ *  DataStoreWrite: '<S37>/Data Store Write11'
+ *  DataTypeConversion: '<S37>/Data Type Conversion13'
+ */
+%<SLibCG_DumpSSCode("/*@[25e2e*/",SLibCG_SetCSCDW(51, 1, "", -1, "", 0, "/*@>2c36f*/0.00893772859F/*@>2c36e*/ * /*@>2c370*/(real32_T)/*@>2c373*/ZT_VehCtrl_18B_B./*@>2c372*/ADC_Start/*@>2c371*/[/*@>2c375*/3]"),"/*@]*/")>\
+/* {S!d3352}Gain: '<S37>/Gain5' incorporates:
+ *  DataStoreWrite: '<S37>/Data Store Write12'
+ *  DataTypeConversion: '<S37>/Data Type Conversion11'
+ */
+%<SLibCG_DumpSSCode("/*@[25e4a*/",SLibCG_SetCSCDW(52, 1, "", -1, "", 0, "/*@>2c388*/0.00893772859F/*@>2c387*/ * /*@>2c389*/(real32_T)/*@>2c38c*/ZT_VehCtrl_18B_B./*@>2c38b*/ADC_Start/*@>2c38a*/[/*@>2c38e*/1]"),"/*@]*/")>\
+/* {S!d3354}Gain: '<S37>/Gain15' incorporates:
+ *  DataStoreWrite: '<S37>/Data Store Write13'
+ *  DataTypeConversion: '<S37>/Data Type Conversion14'
+ */
+%<SLibCG_DumpSSCode("/*@[25e66*/",SLibCG_SetCSCDW(53, 1, "", -1, "", 0, "/*@>2c3a1*/0.00893772859F/*@>2c3a0*/ * /*@>2c3a2*/(real32_T)/*@>2c3a5*/ZT_VehCtrl_18B_B./*@>2c3a4*/ADC_Start/*@>2c3a3*/[/*@>2c3a7*/4]"),"/*@]*/")>\
+/* {S!d3356}Gain: '<S37>/Gain4' incorporates:
+ *  DataStoreWrite: '<S37>/Data Store Write14'
+ *  DataTypeConversion: '<S37>/Data Type Conversion10'
+ */
+%<SLibCG_DumpSSCode("/*@[25e82*/",SLibCG_SetCSCDW(54, 1, "", -1, "", 0, "/*@>2c3ba*/0.00893772859F/*@>2c3b9*/ * /*@>2c3bb*/(real32_T)/*@>2c3be*/ZT_VehCtrl_18B_B./*@>2c3bd*/ADC_Start/*@>2c3bc*/[/*@>2c3c0*/0]"),"/*@]*/")>\
+/* {S!d3358}DataStoreWrite: '<S6>/Data Store Write4' incorporates:
+ *  Constant: '<S6>/Constant'
+ */
+%<SLibCG_DumpSSCode("/*@[25e9e*/",SLibCG_SetCSCDW(155, 1, "", -1, "", 0, "/*@>2c3d2*/true"),"/*@]*/")>\
+/* {S!d3360}DataStoreRead: '<S191>/Data Store Read7' */
+/*@>22e20*/ZT_VehCtrl_18B_B./*@>2b72f*/DataStoreRead7_a/*@>ab77*/ = %<SLibCG_DumpSSCode("/*@[25eb8*/",(SLibCG_SE(SLibCG_CSCDW(155, 1, "", -1, "", 0))),"/*@]*/")>;
+/* {S!d3362}DataStoreRead: '<S191>/Data Store Read6' */
+/*@>22e26*/ZT_VehCtrl_18B_B./*@>2b732*/DataStoreRead6_n/*@>ab79*/ = %<SLibCG_DumpSSCode("/*@[25ed4*/",(SLibCG_SE(SLibCG_CSCDW(154, 1, "", -1, "", 0))),"/*@]*/")>;
+/* {S!d3364}DataStoreRead: '<S191>/Data Store Read5' */
+/*@>22e2c*/ZT_VehCtrl_18B_B./*@>2b735*/DataStoreRead5_i/*@>ab7b*/ = %<SLibCG_DumpSSCode("/*@[25ef0*/",(SLibCG_SE(SLibCG_CSCDW(152, 1, "", -1, "", 0))),"/*@]*/")>;
+/* {S!d3366}DataStoreRead: '<S191>/Data Store Read4' */
+/*@>22e32*/ZT_VehCtrl_18B_B./*@>2b738*/DataStoreRead4/*@>ab7d*/ = %<SLibCG_DumpSSCode("/*@[25f0c*/",(SLibCG_SE(SLibCG_CSCDW(143, 1, "", -1, "", 0))),"/*@]*/")>;
+/* {S!d3368}DataStoreRead: '<S191>/Data Store Read2' */
+/*@>22e38*/ZT_VehCtrl_18B_B./*@>2b73b*/DataStoreRead2/*@>ab7f*/ = %<SLibCG_DumpSSCode("/*@[25f28*/",(SLibCG_SE(SLibCG_CSCDW(153, 1, "", -1, "", 0))),"/*@]*/")>;
+/* {S!d3370}DataStoreRead: '<S191>/Data Store Read' */
+/*@>22e3e*/ZT_VehCtrl_18B_B./*@>2b73e*/DataStoreRead/*@>ab81*/ = %<SLibCG_DumpSSCode("/*@[25f44*/",(SLibCG_SE(SLibCG_CSCDW(135, 1, "", -1, "", 0))),"/*@]*/")>;
+/* {S!d3372}DiscretePulseGenerator: '<S6>/Pulse Generator2' */
+/*@>1d399*/rtb_PulseGenerator2/*@>aba2*/ = ((/*@>23456*/ZT_VehCtrl_18B_DW./*@>2b80d*/clockTickCounter/*@>ab9c*/ < /*@>1dc1d*/50)/*@>ab9f*/ && (/*@>2345c*/ZT_VehCtrl_18B_DW./*@>2b810*/clockTickCounter/*@>ab9e*/ >= /*@>1d398*/0));
+/*@>20194*/if (/*@>23462*/ZT_VehCtrl_18B_DW./*@>2b813*/clockTickCounter/*@>aba8*/ >= /*@>1dc49*/99) {
+    /*@>23474*/ZT_VehCtrl_18B_DW./*@>2b819*/clockTickCounter/*@>20197*/ = /*@>2aea9*/0;
+} else {
+    /*@>23468*/ZT_VehCtrl_18B_DW./*@>2b816*/clockTickCounter/*@>2afad*/++;
+}
+/* {E!d3372}End of DiscretePulseGenerator: '<S6>/Pulse Generator2' */
+
+/* {S!d3374}DiscretePulseGenerator: '<S6>/Pulse Generator' */
+/*@>1d3a8*/rtb_PulseGenerator/*@>abcf*/ = ((/*@>2347a*/ZT_VehCtrl_18B_DW./*@>2b81c*/clockTickCounter_e/*@>abc9*/ < /*@>1dc1e*/10)/*@>abcc*/ && (/*@>23480*/ZT_VehCtrl_18B_DW./*@>2b81f*/clockTickCounter_e/*@>abcb*/ >= /*@>1d3a7*/0));
+/*@>20199*/if (/*@>23486*/ZT_VehCtrl_18B_DW./*@>2b822*/clockTickCounter_e/*@>abd5*/ >= /*@>1dc4a*/19) {
+    /*@>23498*/ZT_VehCtrl_18B_DW./*@>2b828*/clockTickCounter_e/*@>2019c*/ = /*@>2aeac*/0;
+} else {
+    /*@>2348c*/ZT_VehCtrl_18B_DW./*@>2b825*/clockTickCounter_e/*@>2afae*/++;
+}
+/* {E!d3374}End of DiscretePulseGenerator: '<S6>/Pulse Generator' */
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B24)
+
+/* {S!d3199}S-Function (fcan_mpc_isr): '<S5>/CAN0_Rx_500' */
+%<SLibCG_DumpSSCode("/*@[259f5*/",tlcOutputsFcnOfS63B24,"/*@]*/")>\
+%endif
+/* {E!d3199}End of Outputs for S-Function (fcan_mpc_isr): '<S5>/CAN0_Rx_500' */
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B26)
+
+/* {S!d3201}S-Function (fcan_mpc_isr): '<S5>/CAN1_Rx_500' */
+%<SLibCG_DumpSSCode("/*@[259fc*/",tlcOutputsFcnOfS63B26,"/*@]*/")>\
+%endif
+/* {E!d3201}End of Outputs for S-Function (fcan_mpc_isr): '<S5>/CAN1_Rx_500' */
+
+/* {S!d3203}Outputs for Triggered SubSystem: '<S6>/ACU' incorporates:
+ *  TriggerPort: '<S171>/Trigger'
+ */
+/*@>1d3e5*/zcEvent/*@>ae40*/ = %<SLibCG_DumpSSCode("/*@[25a00*/",(SLibCG_SE(SLibCGIRZCFcn("/*@>1d3e3*/RISING_ZERO_CROSSING", "/*@>233d5*/ZT_VehCtrl_18B_PrevZCX./*@>2b7f5*/ACU_Trig_ZCE", "/*@>1ecc1*/(real_T)/*@>1d3de*/rtb_PulseGenerator", 0))),"/*@]*/")>;
+/*@>ae43*/if (/*@>1d3e7*/zcEvent/*@>ae42*/ != /*@>1d3e9*/NO_ZCEVENT) {
+    /* {S!d3376}Switch: '<S189>/Switch' incorporates:
+ *  Constant: '<S189>/Constant1'
+ *  Constant: '<S189>/Constant2'
+ *  DataStoreRead: '<S171>/Data Store Read4'
+ */
+    /*@>2019e*/if (/*@>1d834*/DcacAcCmd/*@>d9e0*/ > /*@>1dc1f*/0.0F) {
+        /*@>22e86*/ZT_VehCtrl_18B_B./*@>2b744*/Switch/*@>201a1*/ = /*@>1dc20*/85.0F;
+    } else {
+        /*@>22e80*/ZT_VehCtrl_18B_B./*@>2b741*/Switch/*@>1af0b*/ = /*@>1dc21*/170.0F;
+    }
+    /* {E!d3376}End of Switch: '<S189>/Switch' */
+
+    /* {S!d3378}Switch: '<S188>/Switch' incorporates:
+ *  Constant: '<S188>/Constant1'
+ *  Constant: '<S188>/Constant2'
+ *  DataStoreRead: '<S171>/Data Store Read2'
+ */
+    /*@>201a3*/if (/*@>1d838*/DcacEpsCmd/*@>d9f8*/ > /*@>1dc22*/0.0F) {
+        /*@>22e9e*/ZT_VehCtrl_18B_B./*@>2b750*/Switch_f/*@>201a6*/ = /*@>1dc23*/85.0F;
+    } else {
+        /*@>22e98*/ZT_VehCtrl_18B_B./*@>2b74d*/Switch_f/*@>1af10*/ = /*@>1dc24*/170.0F;
+    }
+    /* {E!d3378}End of Switch: '<S188>/Switch' */
+
+    /* {S!d3380}Switch: '<S187>/Switch' incorporates:
+ *  Constant: '<S187>/Constant1'
+ *  Constant: '<S187>/Constant2'
+ *  DataStoreRead: '<S171>/Data Store Read3'
+ */
+    /*@>201a8*/if (/*@>1d83c*/DcacEpsMode/*@>da10*/ > /*@>1dc25*/0.0F) {
+        /*@>22ed4*/ZT_VehCtrl_18B_B./*@>2b75c*/Switch_e/*@>201ab*/ = /*@>1dc26*/85.0F;
+    } else {
+        /*@>22ece*/ZT_VehCtrl_18B_B./*@>2b759*/Switch_e/*@>1af15*/ = /*@>1dc27*/170.0F;
+    }
+    /* {E!d3380}End of Switch: '<S187>/Switch' */
+
+    /* {S!d3382}Switch: '<S186>/Switch' incorporates:
+ *  Constant: '<S186>/Constant1'
+ *  Constant: '<S186>/Constant2'
+ *  DataStoreRead: '<S171>/Data Store Read1'
+ */
+    /*@>201ad*/if (/*@>1d840*/DcdcCmd/*@>da28*/ > /*@>1dc28*/0.0F) {
+        /*@>22f10*/ZT_VehCtrl_18B_B./*@>2b765*/Switch_ef/*@>201b0*/ = /*@>1dc29*/85.0F;
+    } else {
+        /*@>22f0a*/ZT_VehCtrl_18B_B./*@>2b762*/Switch_ef/*@>1af1a*/ = /*@>1dc2a*/170.0F;
+    }
+    /* {E!d3382}End of Switch: '<S186>/Switch' */
+%if !WHITE_SPACE(tlcOutputsFcnOfS49B8)
+
+    /* {S!d3384}S-Function (scanpack): '<S171>/VCU_ACU1' */
+%<SLibCG_DumpSSCode("/*@[25a09*/",tlcOutputsFcnOfS49B8,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS49B9)
+    /* {S!d3386}S-Function (fcan_mpc_send): '<S171>/FCAN_Send_ID_0x0C079AA7' */
+%<SLibCG_DumpSSCode("/*@[25a0c*/",tlcOutputsFcnOfS49B9,"/*@]*/")>\
+%endif
+    /* {S!d3388}DataStoreWrite: '<S171>/Data Store Write' incorporates:
+ *  Constant: '<S171>/Constant'
+ *  DataStoreRead: '<S171>/Data Store Read'
+ *  Sum: '<S171>/Add'
+ */
+    /*@>1d65e*/Cnt_ACU_OUT/*@>2afb2*/++;
+}
+/* {E!d3203}End of Outputs for SubSystem: '<S6>/ACU' */
+
+/* {S!d3205}Outputs for Triggered SubSystem: '<S6>/BMS' incorporates:
+ *  TriggerPort: '<S172>/Trigger'
+ */
+/*@>1d3f1*/zcEvent/*@>ae99*/ = %<SLibCG_DumpSSCode("/*@[25a10*/",(SLibCG_SE(SLibCGIRZCFcn("/*@>1d3ef*/RISING_ZERO_CROSSING", "/*@>233db*/ZT_VehCtrl_18B_PrevZCX./*@>2b7f8*/BMS_Trig_ZCE", "/*@>1ecc7*/(real_T)/*@>1d3ea*/rtb_PulseGenerator", 0))),"/*@]*/")>;
+/*@>ae9c*/if (/*@>1d3f3*/zcEvent/*@>ae9b*/ != /*@>1d3f5*/NO_ZCEVENT) {
+    /* {S!d3390}DataStoreRead: '<S172>/Data Store Read1' */
+    /*@>22e8c*/ZT_VehCtrl_18B_B./*@>2b747*/DataStoreRead1_e/*@>d690*/ = /*@>1d660*/VCU_PowerOnReq;
+    /* {S!d3392}DataStoreRead: '<S172>/Data Store Read2' */
+    /*@>22e92*/ZT_VehCtrl_18B_B./*@>2b74a*/DataStoreRead2_l/*@>d692*/ = /*@>1d664*/VCU_UrgencyCutOffPowerReq;
+%if !WHITE_SPACE(tlcOutputsFcnOfS50B0)
+    /* {S!d3394}S-Function (scanpack): '<S172>/VCU_BMS' */
+%<SLibCG_DumpSSCode("/*@[25a17*/",tlcOutputsFcnOfS50B0,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS50B1)
+    /* {S!d3396}S-Function (fcan_mpc_send): '<S172>/FCAN_Send_ID_0x160' */
+%<SLibCG_DumpSSCode("/*@[25a1a*/",tlcOutputsFcnOfS50B1,"/*@]*/")>\
+%endif
+    /* {S!d3398}DataStoreWrite: '<S172>/Data Store Write' incorporates:
+ *  Constant: '<S172>/Constant2'
+ *  DataStoreRead: '<S172>/Data Store Read'
+ *  Sum: '<S172>/Add'
+ */
+    /*@>1d688*/Cnt_BMS_OUT/*@>2afaf*/++;
+}
+/* {E!d3205}End of Outputs for SubSystem: '<S6>/BMS' */
+
+/* {S!d3207}Outputs for Triggered SubSystem: '<S6>/BRS' incorporates:
+ *  TriggerPort: '<S173>/Trigger'
+ */
+/*@>1d3fd*/zcEvent/*@>aef2*/ = %<SLibCG_DumpSSCode("/*@[25a1e*/",(SLibCG_SE(SLibCGIRZCFcn("/*@>1d3fb*/RISING_ZERO_CROSSING", "/*@>233e1*/ZT_VehCtrl_18B_PrevZCX./*@>2b7fb*/BRS_Trig_ZCE", "/*@>1ecd4*/(real_T)/*@>1d3f6*/rtb_PulseGenerator", 0))),"/*@]*/")>;
+/*@>aef5*/if (/*@>1d3ff*/zcEvent/*@>aef4*/ != /*@>1d401*/NO_ZCEVENT) {
+    /* {S!d3400}DataTypeConversion: '<S173>/Data Type Conversion3' incorporates:
+ *  DataStoreRead: '<S173>/Data Store Read1'
+ */
+    /*@>22eb6*/ZT_VehCtrl_18B_B./*@>2b753*/DataTypeConversion3/*@>d6d9*/ = /*@>1d68a*/Cnt_BRS_OUT;
+    /* {S!d3402}DataStoreRead: '<S173>/Data Store Read4' */
+    /*@>22ec8*/ZT_VehCtrl_18B_B./*@>2b756*/DataStoreRead4_n/*@>d6db*/ = /*@>1d68e*/OnOffCmd;
+%if !WHITE_SPACE(tlcOutputsFcnOfS51B2)
+    /* {S!d3404}S-Function (scanpack): '<S173>/VCU2BRS' */
+%<SLibCG_DumpSSCode("/*@[25a27*/",tlcOutputsFcnOfS51B2,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS51B3)
+    /* {S!d3406}S-Function (fcan_mpc_send): '<S173>/FCAN_Send_ID_0x0CF109A7' */
+%<SLibCG_DumpSSCode("/*@[25a2a*/",tlcOutputsFcnOfS51B3,"/*@]*/")>\
+%endif
+    /* {S!d3408}DataStoreWrite: '<S173>/Data Store Write' incorporates:
+ *  Constant: '<S173>/Constant4'
+ *  DataStoreRead: '<S173>/Data Store Read'
+ *  Sum: '<S173>/Add'
+ */
+    /*@>1d6b8*/Cnt_BRS_OUT/*@>2afb0*/++;
+}
+/* {E!d3207}End of Outputs for SubSystem: '<S6>/BRS' */
+
+/* {S!d3209}Outputs for Triggered SubSystem: '<S6>/DCDC' incorporates:
+ *  TriggerPort: '<S174>/Trigger'
+ */
+/*@>1d409*/zcEvent/*@>af4b*/ = %<SLibCG_DumpSSCode("/*@[25a2e*/",(SLibCG_SE(SLibCGIRZCFcn("/*@>1d407*/RISING_ZERO_CROSSING", "/*@>233e7*/ZT_VehCtrl_18B_PrevZCX./*@>2b7fe*/DCDC_Trig_ZCE", "/*@>1ece5*/(real_T)/*@>1d402*/rtb_PulseGenerator", 0))),"/*@]*/")>;
+/*@>af4e*/if (/*@>1d40b*/zcEvent/*@>af4d*/ != /*@>1d40d*/NO_ZCEVENT) {
+    /* {S!d3410}DataStoreRead: '<S174>/Data Store Read5' */
+    /*@>22eec*/ZT_VehCtrl_18B_B./*@>2b75f*/DataStoreRead5_j/*@>d726*/ = /*@>1d6ba*/VCU_DCDC1_En;
+%if !WHITE_SPACE(tlcOutputsFcnOfS52B0)
+    /* {S!d3412}S-Function (scanpack): '<S174>/VCU_DCDC1' */
+%<SLibCG_DumpSSCode("/*@[25a34*/",tlcOutputsFcnOfS52B0,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS52B1)
+    /* {S!d3414}S-Function (fcan_mpc_send): '<S174>/FCAN_Send_ID_0x18008FD0' */
+%<SLibCG_DumpSSCode("/*@[25a37*/",tlcOutputsFcnOfS52B1,"/*@]*/")>\
+%endif
+    /* {S!d3416}DataStoreWrite: '<S174>/Data Store Write' incorporates:
+ *  Constant: '<S174>/Constant'
+ *  DataStoreRead: '<S174>/Data Store Read'
+ *  Sum: '<S174>/Add'
+ */
+    /*@>1d6db*/Cnt_DCDC_OUT/*@>2afb1*/++;
+}
+/* {E!d3209}End of Outputs for SubSystem: '<S6>/DCDC' */
+
+/* {S!d3211}Outputs for Triggered SubSystem: '<S6>/HVC' incorporates:
+ *  TriggerPort: '<S176>/Trigger'
+ */
+/*@>1d415*/zcEvent/*@>afa4*/ = %<SLibCG_DumpSSCode("/*@[25a3b*/",(SLibCG_SE(SLibCGIRZCFcn("/*@>1d413*/RISING_ZERO_CROSSING", "/*@>233ed*/ZT_VehCtrl_18B_PrevZCX./*@>2b801*/HVC_Trig_ZCE", "/*@>1ecf4*/(real_T)/*@>1d40e*/rtb_PulseGenerator", 0))),"/*@]*/")>;
+/*@>afa7*/if (/*@>1d417*/zcEvent/*@>afa6*/ != /*@>1d419*/NO_ZCEVENT) {
+    /* {S!d3418}DataStoreRead: '<S176>/Data Store Read6' */
+    /*@>22f22*/ZT_VehCtrl_18B_B./*@>2b768*/DataStoreRead6_b/*@>d765*/ = /*@>1d6dd*/EDrv1_PowOnCmd;
+    /* {S!d3420}DataStoreRead: '<S176>/Data Store Read7' */
+    /*@>22f46*/ZT_VehCtrl_18B_B./*@>2b76b*/DataStoreRead7_d/*@>d767*/ = /*@>1d6e1*/EDrv2_PowOnCmd;
+    /* {S!d3422}DataTypeConversion: '<S176>/Data Type Conversion15' incorporates:
+ *  DataStoreRead: '<S176>/Data Store Read'
+ */
+    /*@>22f58*/ZT_VehCtrl_18B_B./*@>2b76e*/DataTypeConversion15/*@>d76c*/ = /*@>1d6e5*/Cnt_HVC_OUT;
+    /* {S!d3424}DataStoreRead: '<S176>/Data Store Read9' */
+    /*@>22f64*/ZT_VehCtrl_18B_B./*@>2b774*/DataStoreRead9_h/*@>d76e*/ = /*@>1d6e9*/PTC_PowOnCmd;
+    /* {S!d3426}DataStoreRead: '<S176>/Data Store Read8' */
+    /*@>22f70*/ZT_VehCtrl_18B_B./*@>2b77a*/DataStoreRead8_c/*@>d770*/ = /*@>1d6ed*/PaxAC_PowOnCmd;
+%if !WHITE_SPACE(tlcOutputsFcnOfS59B0)
+    /* {S!d3428}S-Function (scanpack): '<S176>/Ctrl_HVC' */
+%<SLibCG_DumpSSCode("/*@[25a45*/",tlcOutputsFcnOfS59B0,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS59B1)
+    /* {S!d3430}S-Function (fcan_mpc_send): '<S176>/FCAN_Send_ID_0x1800A105' */
+%<SLibCG_DumpSSCode("/*@[25a48*/",tlcOutputsFcnOfS59B1,"/*@]*/")>\
+%endif
+    /* {S!d3432}DataStoreWrite: '<S176>/Data Store Write1' incorporates:
+ *  Constant: '<S176>/Constant6'
+ *  DataStoreRead: '<S176>/Data Store Read1'
+ *  Sum: '<S176>/Add1'
+ */
+    /*@>1d71a*/Cnt_HVC_OUT/*@>2afb3*/++;
+}
+/* {E!d3211}End of Outputs for SubSystem: '<S6>/HVC' */
+
+/* {S!d3213}Outputs for Triggered SubSystem: '<S6>/PDU' incorporates:
+ *  TriggerPort: '<S182>/Trigger'
+ */
+/*@>1d421*/zcEvent/*@>affd*/ = %<SLibCG_DumpSSCode("/*@[25a4c*/",(SLibCG_SE(SLibCGIRZCFcn("/*@>1d41f*/RISING_ZERO_CROSSING", "/*@>233f3*/ZT_VehCtrl_18B_PrevZCX./*@>2b804*/PDU_Trig_ZCE", "/*@>1ed06*/(real_T)/*@>1d41a*/rtb_PulseGenerator", 0))),"/*@]*/")>;
+/*@>b000*/if (/*@>1d423*/zcEvent/*@>afff*/ != /*@>1d425*/NO_ZCEVENT) {
+    /* {S!d3434}DataStoreRead: '<S182>/Data Store Read9' */
+    /*@>22f5e*/ZT_VehCtrl_18B_B./*@>2b771*/DataStoreRead9/*@>d7c6*/ = /*@>1d71c*/VCU_DCCpstRlyCtl;
+    /* {S!d3436}DataStoreRead: '<S182>/Data Store Read6' */
+    /*@>22f6a*/ZT_VehCtrl_18B_B./*@>2b777*/DataStoreRead6/*@>d7c8*/ = /*@>1d720*/VCU_HVACRlyCtl;
+    /* {S!d3438}DataStoreRead: '<S182>/Data Store Read8' */
+    /*@>22f76*/ZT_VehCtrl_18B_B./*@>2b77d*/DataStoreRead8/*@>d7ca*/ = /*@>1d724*/VCU_HghVtgCnt;
+    /* {S!d3440}DataTypeConversion: '<S182>/Data Type Conversion' incorporates:
+ *  DataStoreRead: '<S182>/Data Store Read1'
+ */
+    /*@>22fa6*/ZT_VehCtrl_18B_B./*@>2b783*/DataTypeConversion_m/*@>d7cf*/ = /*@>1d728*/Cnt_PDU_OUT;
+    /* {S!d3442}DataStoreRead: '<S182>/Data Store Read7' */
+    /*@>22fc4*/ZT_VehCtrl_18B_B./*@>2b786*/DataStoreRead7/*@>d7d1*/ = /*@>1d72c*/VCU_PTCRlyCtl;
+    /* {S!d3444}DataStoreRead: '<S182>/Data Store Read5' */
+    /*@>22fd6*/ZT_VehCtrl_18B_B./*@>2b789*/DataStoreRead5/*@>d7d3*/ = /*@>1d730*/VCU_ShrRlyCtl;
+%if !WHITE_SPACE(tlcOutputsFcnOfS60B0)
+    /* {S!d3446}S-Function (scanpack): '<S182>/VCU_PDU' */
+%<SLibCG_DumpSSCode("/*@[25a57*/",tlcOutputsFcnOfS60B0,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS60B1)
+    /* {S!d3448}S-Function (fcan_mpc_send): '<S182>/FCAN_Send_ID_0x0CF2503B' */
+%<SLibCG_DumpSSCode("/*@[25a5a*/",tlcOutputsFcnOfS60B1,"/*@]*/")>\
+%endif
+    /* {S!d3450}DataStoreWrite: '<S182>/Data Store Write' incorporates:
+ *  Constant: '<S182>/Constant'
+ *  DataStoreRead: '<S182>/Data Store Read'
+ *  Sum: '<S182>/Add'
+ */
+    /*@>1d760*/Cnt_PDU_OUT/*@>2afb5*/++;
+}
+/* {E!d3213}End of Outputs for SubSystem: '<S6>/PDU' */
+
+/* {S!d3215}Outputs for Triggered SubSystem: '<S6>/TWV' incorporates:
+ *  TriggerPort: '<S185>/Trigger'
+ */
+/*@>1d42d*/zcEvent/*@>b056*/ = %<SLibCG_DumpSSCode("/*@[25a5e*/",(SLibCG_SE(SLibCGIRZCFcn("/*@>1d42b*/RISING_ZERO_CROSSING", "/*@>233f9*/ZT_VehCtrl_18B_PrevZCX./*@>2b807*/TWV_Trig_ZCE", "/*@>1ed16*/(real_T)/*@>1d426*/rtb_PulseGenerator", 0))),"/*@]*/")>;
+/*@>b059*/if (/*@>1d42f*/zcEvent/*@>b058*/ != /*@>1d431*/NO_ZCEVENT) {
+    /* {S!d3452}DataStoreRead: '<S185>/Data Store Read10' */
+    /*@>22fa0*/ZT_VehCtrl_18B_B./*@>2b780*/DataStoreRead10/*@>d82e*/ = /*@>1d762*/TWV_ON_Ctr;
+%if !WHITE_SPACE(tlcOutputsFcnOfS62B0)
+    /* {S!d3454}S-Function (scanpack): '<S185>/VCU_TWV' */
+%<SLibCG_DumpSSCode("/*@[25a64*/",tlcOutputsFcnOfS62B0,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS62B1)
+    /* {S!d3456}S-Function (fcan_mpc_send): '<S185>/FCAN_Send_ID_0x18FF25EF' */
+%<SLibCG_DumpSSCode("/*@[25a67*/",tlcOutputsFcnOfS62B1,"/*@]*/")>\
+%endif
+    /* {S!d3458}DataStoreWrite: '<S185>/Data Store Write' incorporates:
+ *  Constant: '<S185>/Constant'
+ *  DataStoreRead: '<S185>/Data Store Read'
+ *  Sum: '<S185>/Add'
+ */
+    /*@>1d783*/Cnt_TWV_OUT/*@>2afb4*/++;
+}
+/* {E!d3215}End of Outputs for SubSystem: '<S6>/TWV' */
+
+/* {S!d3217}Outputs for Triggered SubSystem: '<S6>/TMS' incorporates:
+ *  TriggerPort: '<S184>/Trigger'
+ */
+/*@>1d439*/zcEvent/*@>b0af*/ = %<SLibCG_DumpSSCode("/*@[25a6b*/",(SLibCG_SE(SLibCGIRZCFcn("/*@>1d437*/RISING_ZERO_CROSSING", "/*@>233ff*/ZT_VehCtrl_18B_PrevZCX./*@>2b80a*/TMS_Trig_ZCE", "/*@>1ed29*/(real_T)/*@>1d432*/rtb_PulseGenerator2", 0))),"/*@]*/")>;
+/*@>b0b2*/if (/*@>1d43b*/zcEvent/*@>b0b1*/ != /*@>1d43d*/NO_ZCEVENT) {
+    /* {S!d3460}DataTypeConversion: '<S184>/Data Type Conversion' incorporates:
+ *  DataStoreRead: '<S184>/Data Store Read3'
+ */
+    /*@>22fdc*/ZT_VehCtrl_18B_B./*@>2b78c*/DataTypeConversion/*@>d870*/ = /*@>1d785*/VCU_FanSpeedLvl_num;
+    /* {S!d3462}DataStoreRead: '<S184>/Data Store Read1' */
+    /*@>23018*/ZT_VehCtrl_18B_B./*@>2b78f*/DataStoreRead1/*@>d872*/ = /*@>1d789*/Cnt_TMS_OUT;
+%if !WHITE_SPACE(tlcOutputsFcnOfS61B0)
+    /* {S!d3464}S-Function (scanpack): '<S184>/TMS' */
+%<SLibCG_DumpSSCode("/*@[25a72*/",tlcOutputsFcnOfS61B0,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS61B1)
+    /* {S!d3466}S-Function (fcan_mpc_send): '<S184>/FCAN_Send_ID_0x18FFF347' */
+%<SLibCG_DumpSSCode("/*@[25a75*/",tlcOutputsFcnOfS61B1,"/*@]*/")>\
+%endif
+    /* {S!d3468}DataStoreWrite: '<S184>/Data Store Write' incorporates:
+ *  Constant: '<S184>/Constant'
+ *  DataStoreRead: '<S184>/Data Store Read'
+ *  Sum: '<S184>/Add'
+ */
+    /*@>1d7ad*/Cnt_TMS_OUT/*@>2afb6*/++;
+}
+/* {E!d3217}End of Outputs for SubSystem: '<S6>/TMS' */
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B36)
+
+/* {S!d3470}S-Function (etimer_mpc_preload): '<S197>/eTimer_Preload2' */
+%<SLibCG_DumpSSCode("/*@[25a79*/",tlcOutputsFcnOfS63B36,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B37)
+/* {S!d3472}S-Function (etimer_mpc_start_stop_timer): '<S197>/eTimer_Start_Stop_Timer1' */
+%<SLibCG_DumpSSCode("/*@[25a7a*/",tlcOutputsFcnOfS63B37,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B38)
+/* {S!d3474}S-Function (etimer_mpc_preload): '<S196>/eTimer_Preload2' */
+%<SLibCG_DumpSSCode("/*@[25a7e*/",tlcOutputsFcnOfS63B38,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B39)
+/* {S!d3476}S-Function (etimer_mpc_start_stop_timer): '<S196>/eTimer_Start_Stop_Timer1' */
+%<SLibCG_DumpSSCode("/*@[25a7f*/",tlcOutputsFcnOfS63B39,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B40)
+/* {S!d3478}S-Function (etimer_mpc_preload): '<S195>/eTimer_Preload2' */
+%<SLibCG_DumpSSCode("/*@[25a83*/",tlcOutputsFcnOfS63B40,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B41)
+/* {S!d3480}S-Function (etimer_mpc_start_stop_timer): '<S195>/eTimer_Start_Stop_Timer1' */
+%<SLibCG_DumpSSCode("/*@[25a84*/",tlcOutputsFcnOfS63B41,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B42)
+/* {S!d3482}S-Function (gpio_mpc_output): '<S191>/HS001' */
+%<SLibCG_DumpSSCode("/*@[25a86*/",tlcOutputsFcnOfS63B42,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B43)
+/* {S!d3484}S-Function (gpio_mpc_output): '<S191>/HS007' */
+%<SLibCG_DumpSSCode("/*@[25a88*/",tlcOutputsFcnOfS63B43,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B44)
+/* {S!d3486}S-Function (gpio_mpc_output): '<S191>/HS002 ' */
+%<SLibCG_DumpSSCode("/*@[25a8a*/",tlcOutputsFcnOfS63B44,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B45)
+/* {S!d3488}S-Function (gpio_mpc_output): '<S191>/HS003' */
+%<SLibCG_DumpSSCode("/*@[25a8c*/",tlcOutputsFcnOfS63B45,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B46)
+/* {S!d3490}S-Function (gpio_mpc_output): '<S191>/HS004' */
+%<SLibCG_DumpSSCode("/*@[25a8e*/",tlcOutputsFcnOfS63B46,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B47)
+/* {S!d3492}S-Function (gpio_mpc_output): '<S191>/HS005' */
+%<SLibCG_DumpSSCode("/*@[25a90*/",tlcOutputsFcnOfS63B47,"/*@]*/")>\
+%endif
+/* {S!d3494}DataStoreRead: '<S191>/Data Store Read9' */
+/*@>23084*/ZT_VehCtrl_18B_B./*@>2b792*/DataStoreRead9_g/*@>b2f8*/ = %<SLibCG_DumpSSCode("/*@[25f60*/",(SLibCG_SE(SLibCG_CSCDW(156, 1, "", -1, "", 0))),"/*@]*/")>;
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B48)
+/* {S!d3496}S-Function (gpio_mpc_output): '<S191>/HS010' */
+%<SLibCG_DumpSSCode("/*@[25a92*/",tlcOutputsFcnOfS63B48,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B50)
+/* {S!d3498}S-Function (gpio_mpc_output): '<S193>/LS_EN' incorporates:
+ *  Constant: '<S193>/Constant'
+ */
+%<SLibCG_DumpSSCode("/*@[25a94*/",tlcOutputsFcnOfS63B50,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B52)
+/* {S!d3500}S-Function (gpio_mpc_output): '<S193>/LS_rst2' incorporates:
+ *  Constant: '<S193>/Constant1'
+ */
+%<SLibCG_DumpSSCode("/*@[25a96*/",tlcOutputsFcnOfS63B52,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B54)
+/* {S!d3502}S-Function (gpio_mpc_output): '<S193>/LS_rst1' incorporates:
+ *  Constant: '<S193>/Constant2'
+ */
+%<SLibCG_DumpSSCode("/*@[25a98*/",tlcOutputsFcnOfS63B54,"/*@]*/")>\
+%endif
+/* {S!d3504}Logic: '<S193>/Logical Operator' incorporates:
+ *  Constant: '<S205>/Constant'
+ *  DataStoreRead: '<S193>/Data Store Read'
+ *  DataStoreRead: '<S193>/Data Store Read1'
+ *  RelationalOperator: '<S205>/Compare'
+ */
+/*@>1d51d*/rtb_LogicalOperator/*@>b3fa*/ = ((/*@>1db9a*/VCU_Mode/*@>14a0e*/ == /*@>1dc33*/2)/*@>b3f9*/ && /*@>234ce*/ZT_VehCtrl_18B_DW./*@>2b82b*/SPI0_CS);
+/* {S!d3219}Outputs for Enabled SubSystem: '<S193>/LS_CTRL' incorporates:
+ *  EnablePort: '<S206>/Enable'
+ */
+/* {S!d3520}Logic: '<S193>/Logical Operator1' */
+/*@>b41e*/if (!/*@<14a15*//*@>1db9c*/rtb_LogicalOperator) {
+%if !WHITE_SPACE(tlcOutputsFcnOfS54B0)
+    /* {S!d3506}S-Function (spi_mpc_master_transfer): '<S206>/SPI_Master_Transfer_To1' */
+%<SLibCG_DumpSSCode("/*@[25a9b*/",tlcOutputsFcnOfS54B0,"/*@]*/")>\
+%endif
+    /* {S!d3220}Outputs for Atomic SubSystem: '<S206>/If Action Subsystem1' */
+    /* {S!d3508}Switch: '<S208>/Switch' incorporates:
+ *  Constant: '<S208>/Constant1'
+ *  Constant: '<S208>/Constant2'
+ *  DataStoreRead: '<S208>/Data Store Read6'
+ */
+    /*@>20225*/if (/*@>1f5dd*/LS002) {
+        /*@>20229*/tmp_0/*@>20228*/ = /*@>2aeb2*/128U;
+    } else {
+        /*@>201e6*/tmp_0/*@>201e8*/ = /*@>2aeaf*/64U;
+    }
+    /* {E!d3508}End of Switch: '<S208>/Switch' */
+
+    /* {S!d3510}Switch: '<S208>/Switch1' incorporates:
+ *  Constant: '<S208>/Constant3'
+ *  Constant: '<S208>/Constant4'
+ *  DataStoreRead: '<S208>/Data Store Read5'
+ */
+    /*@>2022a*/if (/*@>1f5e3*/LS001) {
+        /*@>2022e*/tmp_1/*@>2022d*/ = /*@>2aebe*/32U;
+    } else {
+        /*@>201ee*/tmp_1/*@>201f0*/ = /*@>2aebb*/16U;
+    }
+    /* {E!d3510}End of Switch: '<S208>/Switch1' */
+
+    /* {S!d3512}Switch: '<S208>/Switch2' incorporates:
+ *  Constant: '<S208>/Constant5'
+ *  Constant: '<S208>/Constant6'
+ *  DataStoreRead: '<S208>/Data Store Read4'
+ */
+    /*@>20234*/if (/*@>1f5e9*/LS011) {
+        /*@>20238*/tmp_2/*@>20237*/ = /*@>2aeca*/8U;
+    } else {
+        /*@>201f6*/tmp_2/*@>201f8*/ = /*@>2aec7*/4U;
+    }
+    /* {E!d3512}End of Switch: '<S208>/Switch2' */
+
+    /* {S!d3514}Switch: '<S208>/Switch3' incorporates:
+ *  Constant: '<S208>/Constant7'
+ *  Constant: '<S208>/Constant8'
+ *  DataStoreRead: '<S208>/Data Store Read'
+ */
+    /*@>2023e*/if (/*@>1f5ef*/LS004) {
+        /*@>20242*/tmp_3/*@>20241*/ = /*@>2aed6*/2U;
+    } else {
+        /*@>201fe*/tmp_3/*@>20200*/ = /*@>2aed3*/1U;
+    }
+    /* {E!d3514}End of Switch: '<S208>/Switch3' */
+
+    /* {S!d3516}DataTypeConversion: '<S208>/Data Type Conversion1' incorporates:
+ *  Sum: '<S208>/Add'
+ */
+    /*@>230c0*/ZT_VehCtrl_18B_B./*@>2b79b*/VectorConcatenate1_l/*@>fd23*/[/*@>1db7e*/1]/*@>da51*/ = /*@>1ee3d*/(uint8_T)(((/*@>1ee34*/(uint32_T)/*@>201ea*/tmp_0/*@>1e75b*/ + /*@>201f2*/tmp_1)/*@>1e74e*/ + /*@>201fa*/tmp_2)/*@>1e741*/ + /*@>20202*/tmp_3);
+    /* {E!d3220}End of Outputs for SubSystem: '<S206>/If Action Subsystem1' */
+
+    /* {S!d3518}SignalConversion: '<S206>/ConcatBufferAtVector Concatenate1In1' */
+    /*@>230c6*/ZT_VehCtrl_18B_B./*@>2b79e*/VectorConcatenate1_l/*@>fd30*/[/*@>1db7f*/0]/*@>d8bb*/ = /*@>2335b*/ZT_VehCtrl_18B_ConstB./*@>2b7e6*/DataTypeConversion_c;
+}
+/* {E!d3520}End of Logic: '<S193>/Logical Operator1' */
+/* {E!d3219}End of Outputs for SubSystem: '<S193>/LS_CTRL' */
+
+/* {S!d3223}Outputs for Enabled SubSystem: '<S193>/LS_CTRL1' incorporates:
+ *  EnablePort: '<S207>/Enable'
+ */
+/*@>b44b*/if (/*@>1d51f*/rtb_LogicalOperator) {
+%if !WHITE_SPACE(tlcOutputsFcnOfS56B0)
+    /* {S!d3522}S-Function (spi_mpc_master_transfer): '<S207>/SPI_Master_Transfer_To1' */
+%<SLibCG_DumpSSCode("/*@[25a9e*/",tlcOutputsFcnOfS56B0,"/*@]*/")>\
+%endif
+    /* {S!d3224}Outputs for Atomic SubSystem: '<S207>/If Action Subsystem1' */
+    /* {S!d3524}Switch: '<S209>/Switch' incorporates:
+ *  Constant: '<S209>/Constant1'
+ *  Constant: '<S209>/Constant2'
+ *  DataStoreRead: '<S209>/Data Store Read6'
+ */
+    /*@>2022f*/if (/*@>1f5f7*/LS016) {
+        /*@>20233*/tmp_0/*@>20232*/ = /*@>2aeb8*/128U;
+    } else {
+        /*@>20206*/tmp_0/*@>20208*/ = /*@>2aeb5*/64U;
+    }
+    /* {E!d3524}End of Switch: '<S209>/Switch' */
+
+    /* {S!d3526}Switch: '<S209>/Switch1' incorporates:
+ *  Constant: '<S209>/Constant3'
+ *  Constant: '<S209>/Constant4'
+ *  DataStoreRead: '<S209>/Data Store Read5'
+ */
+    /*@>20239*/if (/*@>1f5fd*/LS009) {
+        /*@>2023d*/tmp_1/*@>2023c*/ = /*@>2aec4*/32U;
+    } else {
+        /*@>2020e*/tmp_1/*@>20210*/ = /*@>2aec1*/16U;
+    }
+    /* {E!d3526}End of Switch: '<S209>/Switch1' */
+
+    /* {S!d3528}Switch: '<S209>/Switch2' incorporates:
+ *  Constant: '<S209>/Constant5'
+ *  Constant: '<S209>/Constant6'
+ *  DataStoreRead: '<S209>/Data Store Read4'
+ */
+    /*@>20243*/if (/*@>1f603*/LS015) {
+        /*@>20247*/tmp_2/*@>20246*/ = /*@>2aed0*/8U;
+    } else {
+        /*@>20216*/tmp_2/*@>20218*/ = /*@>2aecd*/4U;
+    }
+    /* {E!d3528}End of Switch: '<S209>/Switch2' */
+
+    /* {S!d3530}Switch: '<S209>/Switch3' incorporates:
+ *  Constant: '<S209>/Constant7'
+ *  Constant: '<S209>/Constant8'
+ *  DataStoreRead: '<S209>/Data Store Read'
+ */
+    /*@>20248*/if (/*@>1f609*/LS014) {
+        /*@>2024c*/tmp_3/*@>2024b*/ = /*@>2aefa*/2U;
+    } else {
+        /*@>2021e*/tmp_3/*@>20220*/ = /*@>2aef7*/1U;
+    }
+    /* {E!d3530}End of Switch: '<S209>/Switch3' */
+
+    /* {S!d3532}DataTypeConversion: '<S209>/Data Type Conversion1' incorporates:
+ *  Sum: '<S209>/Add'
+ */
+    /*@>230cc*/ZT_VehCtrl_18B_B./*@>2b7a1*/VectorConcatenate1/*@>fd4d*/[/*@>1db80*/1]/*@>da8b*/ = /*@>1ee74*/(uint8_T)(((/*@>1ee6b*/(uint32_T)/*@>2020a*/tmp_0/*@>1e72e*/ + /*@>20212*/tmp_1)/*@>1e721*/ + /*@>2021a*/tmp_2)/*@>1e714*/ + /*@>20222*/tmp_3);
+    /* {E!d3224}End of Outputs for SubSystem: '<S207>/If Action Subsystem1' */
+
+    /* {S!d3534}SignalConversion: '<S207>/ConcatBufferAtVector Concatenate1In1' */
+    /*@>230d2*/ZT_VehCtrl_18B_B./*@>2b7a4*/VectorConcatenate1/*@>fd5a*/[/*@>1db81*/0]/*@>d8d9*/ = /*@>23361*/ZT_VehCtrl_18B_ConstB./*@>2b7e9*/DataTypeConversion_k;
+}
+/* {E!d3223}End of Outputs for SubSystem: '<S193>/LS_CTRL1' */
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B59)
+
+/* {S!d3536}S-Function (gpio_mpc_output): '<S194>/LS_EN1' incorporates:
+ *  Constant: '<S194>/Constant1'
+ */
+%<SLibCG_DumpSSCode("/*@[25aa0*/",tlcOutputsFcnOfS63B59,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B61)
+/* {S!d3538}S-Function (gpio_mpc_output): '<S194>/LS_rst' incorporates:
+ *  Constant: '<S194>/Constant3'
+ */
+%<SLibCG_DumpSSCode("/*@[25aa2*/",tlcOutputsFcnOfS63B61,"/*@]*/")>\
+%endif
+/* {S!d3227}Outputs for Enabled SubSystem: '<S194>/Subsystem' incorporates:
+ *  EnablePort: '<S211>/Enable'
+ */
+/* {S!d3546}Logic: '<S194>/Logical Operator' incorporates:
+ *  Constant: '<S210>/Constant'
+ *  DataStoreRead: '<S194>/Data Store Read'
+ *  DataStoreRead: '<S194>/Data Store Read3'
+ *  RelationalOperator: '<S210>/Compare'
+ */
+/*@>b502*/if ((/*@>1dbb6*/VCU_Mode/*@>14cc4*/ == /*@>1dc44*/2)/*@>14a62*/ && /*@>234d4*/ZT_VehCtrl_18B_DW./*@>2b82e*/SPI3_CS) {
+%if !WHITE_SPACE(tlcOutputsFcnOfS58B0)
+    /* {S!d3540}S-Function (spi_mpc_master_transfer): '<S211>/SPI_Master_Transfer_To2' */
+%<SLibCG_DumpSSCode("/*@[25aa5*/",tlcOutputsFcnOfS58B0,"/*@]*/")>\
+%endif
+    /* {S!d3228}Outputs for Atomic SubSystem: '<S211>/¿ØÖÆ' */
+    /* {S!d3542}DataTypeConversion: '<S212>/Data Type Conversion' incorporates:
+ *  Constant: '<S212>/Constant9'
+ *  DataStoreRead: '<S212>/Data Store Read1'
+ *  DataStoreRead: '<S212>/Data Store Read2'
+ *  Gain: '<S212>/Gain8'
+ *  Gain: '<S212>/Gain9'
+ *  Sum: '<S212>/Add1'
+ */
+    /*@>230b4*/ZT_VehCtrl_18B_B./*@>2b795*/VectorConcatenate2/*@>fd8e*/[/*@>1db82*/0]/*@>dacc*/ = /*@>1ed83*/(uint8_T)((((/*@>1ed7d*/(uint32_T)(/*@>1dbb8*/LS012/*@>1e6fe*/ << /*@>1e6fd*/7)/*@>1e6f3*/ << /*@>1e6f2*/1)/*@>1e8e8*/ + (/*@>1ed80*/(uint32_T)/*@>1dbba*/LS007/*@>1e70c*/ << /*@>1e70b*/7))/*@>1e8e9*/ + /*@>1dc4b*/5632U)/*@>1e6cd*/ >> /*@>1e6cc*/7);
+    /* {S!d3544}DataTypeConversion: '<S212>/Data Type Conversion1' incorporates:
+ *  DataStoreRead: '<S212>/Data Store Read10'
+ *  DataStoreRead: '<S212>/Data Store Read5'
+ *  DataStoreRead: '<S212>/Data Store Read6'
+ *  DataStoreRead: '<S212>/Data Store Read9'
+ *  Gain: '<S212>/Gain2'
+ *  Gain: '<S212>/Gain3'
+ *  Gain: '<S212>/Gain6'
+ *  Gain: '<S212>/Gain7'
+ *  Sum: '<S212>/Add'
+ */
+    /*@>1e642*/tmp/*@>1e644*/ = /*@>218cc*/floor((((((/*@>1ed8f*/(real_T)(/*@>1dbbe*/LS013/*@>1e6a1*/ << /*@>1e6a0*/7)/*@>1e694*/ * /*@>1e693*/0.5/*@>14aac*/ + /*@>1ed8b*/(real_T)(/*@>1dbbc*/LS006/*@>1e68e*/ << /*@>1e68d*/7))/*@>14aab*/ + /*@>23349*/ZT_VehCtrl_18B_ConstB./*@>2b7dd*/Gain5)/*@>14aaa*/ + /*@>2334f*/ZT_VehCtrl_18B_ConstB./*@>2b7e0*/Gain4)/*@>14aa9*/ + /*@>1ed95*/(real_T)(/*@>1dbc0*/LS008/*@>1e6b4*/ << /*@>1e6b3*/7)/*@>1e6a7*/ * /*@>1e6a6*/0.0625)/*@>14aa8*/ + /*@>1ed99*/(real_T)(/*@>1dbc2*/LS010/*@>1e6c7*/ << /*@>1e6c6*/7)/*@>1e6ba*/ * /*@>1e6b9*/0.03125)/*@>14aa7*/ + /*@>23355*/ZT_VehCtrl_18B_ConstB./*@>2b7e3*/Gain1);
+    /*@>201b2*/if (/*@>218ce*/rtIsNaN(/*@>1e646*/tmp)/*@>1e650*/ || /*@>218d0*/rtIsInf(/*@>1e64b*/tmp)) {
+        /*@>201b6*/tmp/*@>201b5*/ = /*@>1e652*/0.0;
+    } else {
+        /*@>1e653*/tmp/*@>1e655*/ = /*@>218d2*/fmod(/*@>1e657*/tmp, /*@>1e65b*/256.0);
+    }
+    /*@>230ba*/ZT_VehCtrl_18B_B./*@>2b798*/VectorConcatenate2/*@>fdf2*/[/*@>1db83*/1]/*@>db02*/ = /*@>1edeb*/(uint8_T)(/*@>1e669*/tmp/*@>1e66c*/ < /*@>1e668*/0.0/*@>1e66c*/ ? (int32_T)/*@>1e674*/(uint8_T)-/*@<1e67d*//*@>1e672*/(int8_T)/*@>1e680*/(uint8_T)-/*@<1e670*//*@>1e66d*/tmp : (int32_T)/*@>1e683*/(uint8_T)/*@>1e675*/tmp);
+    /* {E!d3544}End of DataTypeConversion: '<S212>/Data Type Conversion1' */
+    /* {E!d3228}End of Outputs for SubSystem: '<S211>/¿ØÖÆ' */
+}
+/* {E!d3546}End of Logic: '<S194>/Logical Operator' */
+/* {E!d3227}End of Outputs for SubSystem: '<S194>/Subsystem' */
+
+/* {S!d3548}Chart: '<S2>/Chart1' incorporates:
+ *  DataStoreRead: '<S2>/Data Store Read'
+ */
+/*@>db5f*/if (/*@>234da*/ZT_VehCtrl_18B_DW./*@>2b831*/is_active_c23_ZT_VehCtrl_18B/*@>db5e*/ == /*@>1d846*/0U) {
+    /*@>234e6*/ZT_VehCtrl_18B_DW./*@>2b837*/is_active_c23_ZT_VehCtrl_18B/*@>dbc3*/ = /*@>2aed9*/1U;
+    /*@>234ec*/ZT_VehCtrl_18B_DW./*@>2b83a*/is_c23_ZT_VehCtrl_18B/*@>dbc7*/ = /*@>1d890*/ZT_VehCtrl_18B_IN_IDLE;
+    /*@>1d891*/rtb_PulseGenerator2/*@>dbc9*/ = /*@>2aee8*/0;
+} else {
+/*@>db61*/    switch (/*@>234e0*/ZT_VehCtrl_18B_DW./*@>2b834*/is_c23_ZT_VehCtrl_18B) {
+      case /*@>1d849*/ZT_VehCtrl_18B_IN_CS1:
+        /*@>1d85e*/rtb_PulseGenerator2/*@>db82*/ = /*@>2aedf*/1;
+        /*@>db7d*/if (/*@>234f2*/ZT_VehCtrl_18B_DW./*@>2b83d*/cnt_j/*@>db86*/ > /*@>1d863*/20.0) {
+            /*@>23510*/ZT_VehCtrl_18B_DW./*@>2b849*/is_c23_ZT_VehCtrl_18B/*@>db80*/ = /*@>1d85d*/ZT_VehCtrl_18B_IN_CS5;
+            /*@>1d869*/rtb_PulseGenerator2/*@>db91*/ = /*@>2aeee*/2;
+            /*@>2353a*/ZT_VehCtrl_18B_DW./*@>2b85b*/cnt_j/*@>db92*/ = /*@>1d86e*/0.0;
+        } else {
+            /*@>23504*/ZT_VehCtrl_18B_DW./*@>2b846*/cnt_j/*@>2afb7*/++;
+        }
+        break;
+      case /*@>1d84a*/ZT_VehCtrl_18B_IN_CS5:
+        /*@>1d872*/rtb_PulseGenerator2/*@>db9e*/ = /*@>2aee2*/2;
+        /*@>db99*/if (/*@>234f8*/ZT_VehCtrl_18B_DW./*@>2b840*/cnt_j/*@>dba2*/ > /*@>1d877*/20.0) {
+            /*@>23522*/ZT_VehCtrl_18B_DW./*@>2b84f*/is_c23_ZT_VehCtrl_18B/*@>db9c*/ = /*@>1d871*/ZT_VehCtrl_18B_IN_Done;
+            /*@>1d87d*/rtb_PulseGenerator2/*@>dbad*/ = /*@>2aef1*/9;
+        } else {
+            /*@>23516*/ZT_VehCtrl_18B_DW./*@>2b84c*/cnt_j/*@>2afb8*/++;
+        }
+        break;
+      case /*@>1d84b*/ZT_VehCtrl_18B_IN_Done:
+        /*@>1d883*/rtb_PulseGenerator2/*@>dbb6*/ = /*@>2aee5*/9;
+        /*@>dbb1*/if (/*@>1d886*/VCU_Mode/*@>dbba*/ == /*@>1d888*/0) {
+            /*@>23528*/ZT_VehCtrl_18B_DW./*@>2b852*/is_c23_ZT_VehCtrl_18B/*@>dbb4*/ = /*@>1d882*/ZT_VehCtrl_18B_IN_IDLE;
+            /*@>1d889*/rtb_PulseGenerator2/*@>dbbe*/ = /*@>2aef4*/0;
+        }
+        break;
+      default:
+        /*@>1d84f*/rtb_PulseGenerator2/*@>db6d*/ = /*@>2aedc*/0;
+        /*@>db68*/if (/*@>1d852*/VCU_Mode/*@>db71*/ == /*@>1d854*/1) {
+            /*@>234fe*/ZT_VehCtrl_18B_DW./*@>2b843*/is_c23_ZT_VehCtrl_18B/*@>db6b*/ = /*@>1d84e*/ZT_VehCtrl_18B_IN_CS1;
+            /*@>1d855*/rtb_PulseGenerator2/*@>db75*/ = /*@>2aeeb*/1;
+            /*@>23534*/ZT_VehCtrl_18B_DW./*@>2b858*/cnt_j/*@>db76*/ = /*@>1d85a*/0.0;
+        }
+        break;
+    }
+}
+/* {E!d3548}End of Chart: '<S2>/Chart1' */
+
+/* {S!d3550}Chart: '<S2>/Chart2' incorporates:
+ *  DataStoreRead: '<S2>/Data Store Read'
+ */
+/*@>dbe0*/if (/*@>2352e*/ZT_VehCtrl_18B_DW./*@>2b855*/is_active_c24_ZT_VehCtrl_18B/*@>dbdf*/ == /*@>1d897*/0U) {
+    /*@>23546*/ZT_VehCtrl_18B_DW./*@>2b861*/is_active_c24_ZT_VehCtrl_18B/*@>dc44*/ = /*@>2aefd*/1U;
+    /*@>2354c*/ZT_VehCtrl_18B_DW./*@>2b864*/is_c24_ZT_VehCtrl_18B/*@>dc48*/ = /*@>1d8e1*/ZT_VehCtrl_18B_IN_IDLE;
+    /*@>1d8e2*/rtb_PulseGenerator/*@>dc4a*/ = /*@>2af0c*/0;
+} else {
+/*@>dbe2*/    switch (/*@>23540*/ZT_VehCtrl_18B_DW./*@>2b85e*/is_c24_ZT_VehCtrl_18B) {
+      case /*@>1d89a*/ZT_VehCtrl_18B_IN_CS2:
+        /*@>1d8af*/rtb_PulseGenerator/*@>dc03*/ = /*@>2af03*/1;
+        /*@>dbfe*/if (/*@>23552*/ZT_VehCtrl_18B_DW./*@>2b867*/cnt_c/*@>dc07*/ > /*@>1d8b4*/20.0) {
+            /*@>23570*/ZT_VehCtrl_18B_DW./*@>2b873*/is_c24_ZT_VehCtrl_18B/*@>dc01*/ = /*@>1d8ae*/ZT_VehCtrl_18B_IN_CS3;
+            /*@>1d8ba*/rtb_PulseGenerator/*@>dc12*/ = /*@>2af12*/2;
+            /*@>23594*/ZT_VehCtrl_18B_DW./*@>2b882*/cnt_c/*@>dc13*/ = /*@>1d8bf*/0.0;
+        } else {
+            /*@>23564*/ZT_VehCtrl_18B_DW./*@>2b870*/cnt_c/*@>2afb9*/++;
+        }
+        break;
+      case /*@>1d89b*/ZT_VehCtrl_18B_IN_CS3:
+        /*@>1d8c3*/rtb_PulseGenerator/*@>dc1f*/ = /*@>2af06*/2;
+        /*@>dc1a*/if (/*@>23558*/ZT_VehCtrl_18B_DW./*@>2b86a*/cnt_c/*@>dc23*/ > /*@>1d8c8*/20.0) {
+            /*@>23582*/ZT_VehCtrl_18B_DW./*@>2b879*/is_c24_ZT_VehCtrl_18B/*@>dc1d*/ = /*@>1d8c2*/ZT_VehCtrl_18B_IN_Done;
+            /*@>1d8ce*/rtb_PulseGenerator/*@>dc2e*/ = /*@>2af15*/9;
+        } else {
+            /*@>23576*/ZT_VehCtrl_18B_DW./*@>2b876*/cnt_c/*@>2afba*/++;
+        }
+        break;
+      case /*@>1d89c*/ZT_VehCtrl_18B_IN_Done:
+        /*@>1d8d4*/rtb_PulseGenerator/*@>dc37*/ = /*@>2af09*/9;
+        /*@>dc32*/if (/*@>1d8d7*/VCU_Mode/*@>dc3b*/ == /*@>1d8d9*/0) {
+            /*@>23588*/ZT_VehCtrl_18B_DW./*@>2b87c*/is_c24_ZT_VehCtrl_18B/*@>dc35*/ = /*@>1d8d3*/ZT_VehCtrl_18B_IN_IDLE;
+            /*@>1d8da*/rtb_PulseGenerator/*@>dc3f*/ = /*@>2af18*/0;
+        }
+        break;
+      default:
+        /*@>1d8a0*/rtb_PulseGenerator/*@>dbee*/ = /*@>2af00*/0;
+        /*@>dbe9*/if (/*@>1d8a3*/VCU_Mode/*@>dbf2*/ == /*@>1d8a5*/1) {
+            /*@>2355e*/ZT_VehCtrl_18B_DW./*@>2b86d*/is_c24_ZT_VehCtrl_18B/*@>dbec*/ = /*@>1d89f*/ZT_VehCtrl_18B_IN_CS2;
+            /*@>1d8a6*/rtb_PulseGenerator/*@>dbf6*/ = /*@>2af0f*/1;
+            /*@>2358e*/ZT_VehCtrl_18B_DW./*@>2b87f*/cnt_c/*@>dbf7*/ = /*@>1d8ab*/0.0;
+        }
+        break;
+    }
+}
+/* {E!d3550}End of Chart: '<S2>/Chart2' */
+
+/* {S!d3552}DataTypeConversion: '<S2>/Data Type Conversion2' incorporates:
+ *  Constant: '<S17>/Constant'
+ *  Constant: '<S18>/Constant'
+ *  DataStoreWrite: '<S2>/Data Store Write4'
+ *  Logic: '<S2>/Logical Operator'
+ *  RelationalOperator: '<S17>/Compare'
+ *  RelationalOperator: '<S18>/Compare'
+ */
+/*@>1d53b*/Init_flg_SPI/*@>b5b7*/ = /*@>1ee82*/(uint8_T)((/*@>1dbc4*/rtb_PulseGenerator2/*@>14cf9*/ == /*@>1dc46*/9)/*@>14ad1*/ && (/*@>1dbc6*/rtb_PulseGenerator/*@>14cff*/ == /*@>1dc47*/9));
+/* {S!d3554}Chart: '<S2>/Chart' incorporates:
+ *  DataStoreRead: '<S2>/Data Store Read1'
+ *  DataStoreRead: '<S2>/Data Store Read2'
+ */
+/*@>dc61*/if (/*@>2359a*/ZT_VehCtrl_18B_DW./*@>2b885*/is_active_c22_ZT_VehCtrl_18B/*@>dc60*/ == /*@>1d8e8*/0U) {
+    /*@>235a6*/ZT_VehCtrl_18B_DW./*@>2b88b*/is_active_c22_ZT_VehCtrl_18B/*@>dcaa*/ = /*@>2af1b*/1U;
+    /*@>235ac*/ZT_VehCtrl_18B_DW./*@>2b88e*/is_c22_ZT_VehCtrl_18B/*@>dcae*/ = /*@>1d91e*/ZT_VehCtrl_18B_IN_Idle;
+    /*@>1d91f*/rtb_Flg_b/*@>dcb0*/ = /*@>2af27*/0;
+} else {
+/*@>dc63*/    switch (/*@>235a0*/ZT_VehCtrl_18B_DW./*@>2b888*/is_c22_ZT_VehCtrl_18B) {
+      case /*@>1d8eb*/ZT_VehCtrl_18B_IN_Idle:
+        /*@>1d8fc*/rtb_Flg_b/*@>dc7f*/ = /*@>2af21*/0;
+        /*@>dc7a*/if (/*@>1d8ff*/ResetFlg/*@>dc83*/ == /*@>1d901*/0) {
+            /*@>235b8*/ZT_VehCtrl_18B_DW./*@>2b894*/is_c22_ZT_VehCtrl_18B/*@>dc7d*/ = /*@>1d8fb*/ZT_VehCtrl_18B_IN_Initialize;
+            /*@>1d902*/rtb_Flg_b/*@>dc87*/ = /*@>2af2d*/1;
+        }
+        break;
+      case /*@>1d8ec*/ZT_VehCtrl_18B_IN_Initialize:
+        /*@>1d90b*/rtb_Flg_b/*@>dc95*/ = /*@>2af24*/1;
+        /*@>dc8b*/if (/*@>1d90e*/Init_flg_SPI/*@>dc99*/ > /*@>1d910*/0) {
+            /*@>235be*/ZT_VehCtrl_18B_DW./*@>2b897*/is_c22_ZT_VehCtrl_18B/*@>dc8f*/ = /*@>1d907*/ZT_VehCtrl_18B_IN_Normal;
+            /*@>1d917*/rtb_Flg_b/*@>dca5*/ = /*@>2af30*/2;
+        } else {
+            /*@>dc8c*/if (/*@>1d911*/ResetFlg/*@>dc9d*/ == /*@>1d913*/1) {
+                /*@>235c4*/ZT_VehCtrl_18B_DW./*@>2b89a*/is_c22_ZT_VehCtrl_18B/*@>dc93*/ = /*@>1d90a*/ZT_VehCtrl_18B_IN_Idle;
+                /*@>1d914*/rtb_Flg_b/*@>dca1*/ = /*@>2af33*/0;
+            }
+        }
+        break;
+      default:
+        /*@>1d8f0*/rtb_Flg_b/*@>dc6e*/ = /*@>2af1e*/2;
+        /*@>dc69*/if (/*@>1d8f3*/ResetFlg/*@>dc72*/ == /*@>1d8f5*/1) {
+            /*@>235b2*/ZT_VehCtrl_18B_DW./*@>2b891*/is_c22_ZT_VehCtrl_18B/*@>dc6c*/ = /*@>1d8ef*/ZT_VehCtrl_18B_IN_Idle;
+            /*@>1d8f6*/rtb_Flg_b/*@>dc76*/ = /*@>2af2a*/0;
+        }
+        break;
+    }
+}
+/* {E!d3554}End of Chart: '<S2>/Chart' */
+
+/* {S!d3556}DataTypeConversion: '<S2>/Data Type Conversion3' incorporates:
+ *  DataStoreWrite: '<S2>/Data Store Write'
+ */
+/*@>1d53f*/VCU_Mode/*@>b606*/ = /*@>1eec1*/(uint8_T)/*@>1f615*/(int32_T)/*@>218d4*/fmod(/*@>1f61a*/rtb_Flg_b, /*@>1f61b*/256.0);
+/* {S!d3566}If: '<S2>/If1' */
+/*@>b60e*/if (/*@>1d541*/rtb_PulseGenerator2/*@>b60d*/ == /*@>1d543*/1) {
+    /* {S!d3231}Outputs for IfAction SubSystem: '<S2>/CS1 LS' incorporates:
+ *  ActionPort: '<S10>/Action Port'
+ */
+    /* {S!d3558}Chart: '<S10>/Chart' */
+    /*@>df3f*/if (/*@>235ca*/ZT_VehCtrl_18B_DW./*@>2b89d*/is_active_c11_ZT_VehCtrl_18B/*@>df3e*/ == /*@>1da81*/0U) {
+        /*@>235d6*/ZT_VehCtrl_18B_DW./*@>2b8a3*/is_active_c11_ZT_VehCtrl_18B/*@>df98*/ = /*@>2af36*/1U;
+        /*@>235dc*/ZT_VehCtrl_18B_DW./*@>2b8a6*/is_c11_ZT_VehCtrl_18B/*@>df9c*/ = /*@>1dac2*/ZT_VehCtrl_18B_IN_clear;
+        /*@>1dac3*/rtb_Flg_b/*@>df9e*/ = /*@>2af4b*/135;
+        /*@>1dac5*/rtb_low_b/*@>df9f*/ = /*@>2af4e*/1;
+        /*@>23630*/ZT_VehCtrl_18B_DW./*@>2b8c7*/cnt_p/*@>dfa0*/ = /*@>1daca*/0.0;
+    } else {
+/*@>df41*/        switch (/*@>235d0*/ZT_VehCtrl_18B_DW./*@>2b8a0*/is_c11_ZT_VehCtrl_18B) {
+          case /*@>1da84*/ZT_VehCtrl_18B_IN_clear:
+            /*@>1daa3*/rtb_Flg_b/*@>df71*/ = /*@>2af3c*/135;
+            /*@>1daa0*/rtb_low_b/*@>df6d*/ = /*@>2af45*/1;
+            /*@>df68*/if (/*@>235ee*/ZT_VehCtrl_18B_DW./*@>2b8af*/cnt_p/*@>df74*/ > /*@>1daa7*/5.0) {
+                /*@>2362a*/ZT_VehCtrl_18B_DW./*@>2b8c4*/is_c11_ZT_VehCtrl_18B/*@>df6b*/ = /*@>1da9f*/ZT_VehCtrl_18B_IN_en;
+                /*@>1daad*/rtb_Flg_b/*@>df7f*/ = /*@>2af54*/193;
+                /*@>1daaf*/rtb_low_b/*@>df80*/ = /*@>2af5a*/0;
+                /*@>23672*/ZT_VehCtrl_18B_DW./*@>2b8e5*/cnt_p/*@>df81*/ = /*@>1dab4*/0.0;
+            } else {
+                /*@>2361e*/ZT_VehCtrl_18B_DW./*@>2b8c1*/cnt_p/*@>2afbd*/++;
+            }
+            break;
+          case /*@>1da85*/ZT_VehCtrl_18B_IN_config:
+            /*@>1dab7*/rtb_Flg_b/*@>df8d*/ = /*@>2af3f*/199;
+            /*@>1dab5*/rtb_low_b/*@>df8a*/ = /*@>2af48*/129;
+            /*@>235f4*/ZT_VehCtrl_18B_DW./*@>2b8b2*/cnt_p/*@>2afbb*/++;
+            break;
+          default:
+            /*@>1da8c*/rtb_Flg_b/*@>df50*/ = /*@>2af39*/193;
+            /*@>1da89*/rtb_low_b/*@>df4c*/ = /*@>2af42*/0;
+            /*@>df47*/if (/*@>235e8*/ZT_VehCtrl_18B_DW./*@>2b8ac*/cnt_p/*@>df53*/ > /*@>1da90*/5.0) {
+                /*@>23618*/ZT_VehCtrl_18B_DW./*@>2b8be*/is_c11_ZT_VehCtrl_18B/*@>df4a*/ = /*@>1da88*/ZT_VehCtrl_18B_IN_config;
+                /*@>1da96*/rtb_Flg_b/*@>df5e*/ = /*@>2af51*/199;
+                /*@>1da98*/rtb_low_b/*@>df5f*/ = /*@>2af57*/129;
+                /*@>2366c*/ZT_VehCtrl_18B_DW./*@>2b8e2*/cnt_p/*@>df60*/ = /*@>1da9c*/0.0;
+            } else {
+                /*@>2360c*/ZT_VehCtrl_18B_DW./*@>2b8bb*/cnt_p/*@>2afbc*/++;
+            }
+            break;
+        }
+    }
+    /* {E!d3558}End of Chart: '<S10>/Chart' */
+%if !WHITE_SPACE(tlcOutputsFcnOfS8B1)
+
+    /* {S!d3560}S-Function (spi_mpc_master_transfer): '<S10>/SPI_Master_Transfer_To1' */
+%<SLibCG_DumpSSCode("/*@[25aa8*/",tlcOutputsFcnOfS8B1,"/*@]*/")>\
+%endif
+    /* {S!d3562}DataTypeConversion: '<S10>/Data Type Conversion' */
+    /*@>2311a*/ZT_VehCtrl_18B_B./*@>2b7b3*/VectorConcatenate1_m/*@>fe05*/[/*@>1db84*/0]/*@>d930*/ = /*@>1ef56*/(uint8_T)/*@>1f61d*/(int32_T)/*@>218d8*/fmod(/*@>1f622*/rtb_Flg_b, /*@>1f623*/256.0);
+    /* {S!d3564}DataTypeConversion: '<S10>/Data Type Conversion1' */
+    /*@>23126*/ZT_VehCtrl_18B_B./*@>2b7b9*/VectorConcatenate1_m/*@>fe1f*/[/*@>1db86*/1]/*@>d933*/ = /*@>1ef96*/(uint8_T)/*@>1f626*/(int32_T)/*@>218da*/fmod(/*@>1f62b*/rtb_low_b, /*@>1f62c*/256.0);
+    /* {E!d3231}End of Outputs for SubSystem: '<S2>/CS1 LS' */
+}
+/* {E!d3566}End of If: '<S2>/If1' */
+
+/* {S!d3570}If: '<S2>/If' */
+/*@>b63f*/if (/*@>1d544*/rtb_PulseGenerator/*@>b63e*/ == /*@>1d546*/1) {
+%if !WHITE_SPACE(tlcOutputsFcnOfS6B0)
+    /* {S!d3233}Outputs for IfAction SubSystem: '<S2>/CS2 CANB' incorporates:
+ *  ActionPort: '<S11>/Action Port'
+ */
+    /* {S!d3568}S-Function (spi_mpc_master_transfer): '<S11>/SPI_Master_Transfer_To2' */
+%<SLibCG_DumpSSCode("/*@[25aab*/",tlcOutputsFcnOfS6B0,"/*@]*/")>\
+    /* {E!d3233}End of Outputs for SubSystem: '<S2>/CS2 CANB' */
+%endif
+}
+/* {E!d3570}End of If: '<S2>/If' */
+
+/* {S!d3580}If: '<S2>/If3' */
+/*@>b69a*/if (/*@>1d547*/rtb_PulseGenerator/*@>b699*/ == /*@>1d549*/2) {
+    /* {S!d3235}Outputs for IfAction SubSystem: '<S2>/CS3 LS' incorporates:
+ *  ActionPort: '<S12>/Action Port'
+ */
+    /* {S!d3572}Chart: '<S12>/Chart' incorporates:
+ *  Constant: '<S12>/PIN'
+ */
+    /*@>dfc0*/if (/*@>235e2*/ZT_VehCtrl_18B_DW./*@>2b8a9*/is_active_c14_ZT_VehCtrl_18B/*@>dfbf*/ == /*@>1dad6*/0U) {
+        /*@>23606*/ZT_VehCtrl_18B_DW./*@>2b8b8*/is_active_c14_ZT_VehCtrl_18B/*@>dfe4*/ = /*@>2af5d*/1U;
+        /*@>23642*/ZT_VehCtrl_18B_DW./*@>2b8d0*/is_c14_ZT_VehCtrl_18B/*@>dfe8*/ = /*@>1daef*/ZT_VehCtrl_18B_IN_ConfigA;
+        /*@>230de*/ZT_VehCtrl_18B_B./*@>2b7a7*/high/*@>dfea*/ = /*@>1dc8e*/90.0;
+        /*@>23102*/ZT_VehCtrl_18B_B./*@>2b7ad*/low/*@>dfec*/ = /*@>1dc8f*/10.0;
+        /*@>2367e*/ZT_VehCtrl_18B_DW./*@>2b8eb*/cnt/*@>dfee*/ = /*@>1daf6*/0.0;
+    } else {
+        /*@>1afa2*/if (/*@>23600*/ZT_VehCtrl_18B_DW./*@>2b8b5*/is_c14_ZT_VehCtrl_18B/*@>1afa1*/ == /*@>2379c*/ZT_VehCtrl_18B_IN_ConfigA) {
+            /*@>dfc7*/if (/*@>2363c*/ZT_VehCtrl_18B_DW./*@>2b8cd*/cnt/*@>dfcc*/ > /*@>1dadc*/4.0) {
+                /*@>23660*/ZT_VehCtrl_18B_DW./*@>2b8dc*/is_c14_ZT_VehCtrl_18B/*@>dfca*/ = /*@>1dad9*/ZT_VehCtrl_18B_IN_en_g;
+                /*@>230fc*/ZT_VehCtrl_18B_B./*@>2b7aa*/high/*@>dfd7*/ = /*@>1dae4*/96.0;
+                /*@>23114*/ZT_VehCtrl_18B_B./*@>2b7b0*/low/*@>dfd8*/ = /*@>1dae7*/0.0;
+                /*@>2369c*/ZT_VehCtrl_18B_DW./*@>2b8fa*/cnt/*@>dfd9*/ = /*@>1daea*/0.0;
+            } else {
+                /*@>23654*/ZT_VehCtrl_18B_DW./*@>2b8d9*/cnt/*@>2afbe*/++;
+            }
+        }
+    }
+    /* {E!d3572}End of Chart: '<S12>/Chart' */
+%if !WHITE_SPACE(tlcOutputsFcnOfS12B2)
+
+    /* {S!d3574}S-Function (spi_mpc_master_transfer): '<S12>/SPI_Master_Transfer_To2' */
+%<SLibCG_DumpSSCode("/*@[25aae*/",tlcOutputsFcnOfS12B2,"/*@]*/")>\
+%endif
+    /* {S!d3576}DataTypeConversion: '<S12>/Data Type Conversion2' */
+    /*@>1e507*/tmp/*@>1e509*/ = /*@>218e0*/floor(/*@>23120*/ZT_VehCtrl_18B_B./*@>2b7b6*/high);
+    /*@>201bc*/if (/*@>218e2*/rtIsNaN(/*@>1e50b*/tmp)/*@>1e515*/ || /*@>218e4*/rtIsInf(/*@>1e510*/tmp)) {
+        /*@>201c0*/tmp/*@>201bf*/ = /*@>1e517*/0.0;
+    } else {
+        /*@>1e518*/tmp/*@>1e51a*/ = /*@>218e6*/fmod(/*@>1e51c*/tmp, /*@>1e520*/256.0);
+    }
+    /*@>23144*/ZT_VehCtrl_18B_B./*@>2b7bf*/VectorConcatenate1_a/*@>fe12*/[/*@>1db85*/0]/*@>d96e*/ = /*@>1ef7b*/(uint8_T)(/*@>1e52e*/tmp/*@>1e531*/ < /*@>1e52d*/0.0/*@>1e531*/ ? (int32_T)/*@>1e539*/(uint8_T)-/*@<1e542*//*@>1e537*/(int8_T)/*@>1e545*/(uint8_T)-/*@<1e535*//*@>1e532*/tmp : (int32_T)/*@>1e548*/(uint8_T)/*@>1e53a*/tmp);
+    /* {E!d3576}End of DataTypeConversion: '<S12>/Data Type Conversion2' */
+
+    /* {S!d3578}DataTypeConversion: '<S12>/Data Type Conversion3' */
+    /*@>1e4bf*/tmp/*@>1e4c1*/ = /*@>218e8*/floor(/*@>23150*/ZT_VehCtrl_18B_B./*@>2b7c5*/low);
+    /*@>201c1*/if (/*@>218ea*/rtIsNaN(/*@>1e4c3*/tmp)/*@>1e4cd*/ || /*@>218ec*/rtIsInf(/*@>1e4c8*/tmp)) {
+        /*@>201c5*/tmp/*@>201c4*/ = /*@>1e4cf*/0.0;
+    } else {
+        /*@>1e4d0*/tmp/*@>1e4d2*/ = /*@>218ee*/fmod(/*@>1e4d4*/tmp, /*@>1e4d8*/256.0);
+    }
+    /*@>23156*/ZT_VehCtrl_18B_B./*@>2b7c8*/VectorConcatenate1_a/*@>fe2c*/[/*@>1db87*/1]/*@>d971*/ = /*@>1efba*/(uint8_T)(/*@>1e4e6*/tmp/*@>1e4e9*/ < /*@>1e4e5*/0.0/*@>1e4e9*/ ? (int32_T)/*@>1e4f1*/(uint8_T)-/*@<1e4fa*//*@>1e4ef*/(int8_T)/*@>1e4fd*/(uint8_T)-/*@<1e4ed*//*@>1e4ea*/tmp : (int32_T)/*@>1e500*/(uint8_T)/*@>1e4f2*/tmp);
+    /* {E!d3578}End of DataTypeConversion: '<S12>/Data Type Conversion3' */
+    /* {E!d3235}End of Outputs for SubSystem: '<S2>/CS3 LS' */
+}
+/* {E!d3580}End of If: '<S2>/If3' */
+
+/* {S!d3590}If: '<S2>/If2' */
+/*@>b6cb*/if (/*@>1d54a*/rtb_PulseGenerator2/*@>b6ca*/ == /*@>1d54c*/2) {
+    /* {S!d3237}Outputs for IfAction SubSystem: '<S2>/CS5 LS' incorporates:
+ *  ActionPort: '<S13>/Action Port'
+ */
+    /* {S!d3582}Chart: '<S13>/Chart' */
+    /*@>e00c*/if (/*@>23636*/ZT_VehCtrl_18B_DW./*@>2b8ca*/is_active_c21_ZT_VehCtrl_18B/*@>e00b*/ == /*@>1dafa*/0U) {
+        /*@>2364e*/ZT_VehCtrl_18B_DW./*@>2b8d6*/is_active_c21_ZT_VehCtrl_18B/*@>e05e*/ = /*@>2af60*/1U;
+        /*@>23666*/ZT_VehCtrl_18B_DW./*@>2b8df*/is_c21_ZT_VehCtrl_18B/*@>e062*/ = /*@>1db36*/ZT_VehCtrl_18B_IN_clear;
+        /*@>1db37*/rtb_PulseGenerator2/*@>e064*/ = /*@>2af75*/135;
+        /*@>1db39*/rtb_PulseGenerator/*@>e065*/ = /*@>2af78*/1;
+        /*@>236cc*/ZT_VehCtrl_18B_DW./*@>2b90c*/cnt_o/*@>e066*/ = /*@>1db3e*/0.0;
+    } else {
+/*@>e00e*/        switch (/*@>23648*/ZT_VehCtrl_18B_DW./*@>2b8d3*/is_c21_ZT_VehCtrl_18B) {
+          case /*@>1dafd*/ZT_VehCtrl_18B_IN_clear:
+            /*@>1db1c*/rtb_PulseGenerator2/*@>e03e*/ = /*@>2af66*/135;
+            /*@>1db19*/rtb_PulseGenerator/*@>e03a*/ = /*@>2af6f*/1;
+            /*@>e035*/if (/*@>23696*/ZT_VehCtrl_18B_DW./*@>2b8f7*/cnt_o/*@>e041*/ > /*@>1db20*/5.0) {
+                /*@>236c6*/ZT_VehCtrl_18B_DW./*@>2b909*/is_c21_ZT_VehCtrl_18B/*@>e038*/ = /*@>1db18*/ZT_VehCtrl_18B_IN_en;
+                /*@>1db26*/rtb_PulseGenerator2/*@>e04c*/ = /*@>2af7e*/193;
+                /*@>1db28*/rtb_PulseGenerator/*@>e04d*/ = /*@>2af84*/0;
+                /*@>236f0*/ZT_VehCtrl_18B_DW./*@>2b91b*/cnt_o/*@>e04e*/ = /*@>1db2d*/0.0;
+            } else {
+                /*@>236ba*/ZT_VehCtrl_18B_DW./*@>2b906*/cnt_o/*@>2afc0*/++;
+            }
+            break;
+          case /*@>1dafe*/ZT_VehCtrl_18B_IN_config:
+            /*@>1db30*/rtb_PulseGenerator2/*@>e05a*/ = /*@>2af69*/199;
+            /*@>1db2e*/rtb_PulseGenerator/*@>e057*/ = /*@>2af72*/129;
+            break;
+          default:
+            /*@>1db05*/rtb_PulseGenerator2/*@>e01d*/ = /*@>2af63*/193;
+            /*@>1db02*/rtb_PulseGenerator/*@>e019*/ = /*@>2af6c*/0;
+            /*@>e014*/if (/*@>23690*/ZT_VehCtrl_18B_DW./*@>2b8f4*/cnt_o/*@>e020*/ > /*@>1db09*/5.0) {
+                /*@>236b4*/ZT_VehCtrl_18B_DW./*@>2b903*/is_c21_ZT_VehCtrl_18B/*@>e017*/ = /*@>1db01*/ZT_VehCtrl_18B_IN_config;
+                /*@>1db0f*/rtb_PulseGenerator2/*@>e02b*/ = /*@>2af7b*/199;
+                /*@>1db11*/rtb_PulseGenerator/*@>e02c*/ = /*@>2af81*/129;
+                /*@>236ea*/ZT_VehCtrl_18B_DW./*@>2b918*/cnt_o/*@>e02d*/ = /*@>1db15*/0.0;
+            } else {
+                /*@>236a8*/ZT_VehCtrl_18B_DW./*@>2b900*/cnt_o/*@>2afbf*/++;
+            }
+            break;
+        }
+    }
+    /* {E!d3582}End of Chart: '<S13>/Chart' */
+%if !WHITE_SPACE(tlcOutputsFcnOfS10B1)
+
+    /* {S!d3584}S-Function (spi_mpc_master_transfer): '<S13>/SPI_Master_Transfer_To1' */
+%<SLibCG_DumpSSCode("/*@[25ab1*/",tlcOutputsFcnOfS10B1,"/*@]*/")>\
+%endif
+    /* {S!d3586}DataTypeConversion: '<S13>/Data Type Conversion' */
+    /*@>2313e*/ZT_VehCtrl_18B_B./*@>2b7bc*/VectorConcatenate1_n/*@>fe39*/[/*@>1db88*/0]/*@>d996*/ = /*@>1efb1*/(uint8_T)/*@>1f63b*/(int32_T)/*@>218f2*/fmod(/*@>1f640*/rtb_PulseGenerator2, /*@>1f641*/256.0);
+    /* {S!d3588}DataTypeConversion: '<S13>/Data Type Conversion1' */
+    /*@>2314a*/ZT_VehCtrl_18B_B./*@>2b7c2*/VectorConcatenate1_n/*@>fe46*/[/*@>1db89*/1]/*@>d999*/ = /*@>1efd1*/(uint8_T)/*@>1f644*/(int32_T)/*@>218f4*/fmod(/*@>1f649*/rtb_PulseGenerator, /*@>1f64a*/256.0);
+    /* {E!d3237}End of Outputs for SubSystem: '<S2>/CS5 LS' */
+}
+/* {E!d3590}End of If: '<S2>/If2' */
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B74)
+
+/* {S!d3592}S-Function (gpio_mpc_output): '<S3>/HS1' */
+%<SLibCG_DumpSSCode("/*@[25ab3*/",tlcOutputsFcnOfS63B74,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B75)
+/* {S!d3594}S-Function (gpio_mpc_output): '<S3>/HS4' */
+%<SLibCG_DumpSSCode("/*@[25ab5*/",tlcOutputsFcnOfS63B75,"/*@]*/")>\
+%endif
+/* {S!d3596}DataStoreWrite: '<S2>/Data Store Write3' */
+/*@>23678*/ZT_VehCtrl_18B_DW./*@>2b8e8*/SPI3_CS/*@>b77b*/ = /*@>23379*/ZT_VehCtrl_18B_ConstB./*@>2b7ec*/DataTypeConversion1_o;
+/* {S!d3598}DiscretePulseGenerator: '<S2>/Pulse Generator' */
+/*@>1d570*/rtb_Add3/*@>b79c*/ = ((/*@>23684*/ZT_VehCtrl_18B_DW./*@>2b8ee*/clockTickCounter_p/*@>b796*/ < /*@>1dc48*/1)/*@>b799*/ && (/*@>2368a*/ZT_VehCtrl_18B_DW./*@>2b8f1*/clockTickCounter_p/*@>b798*/ >= /*@>1d56f*/0));
+/*@>201b7*/if (/*@>236a2*/ZT_VehCtrl_18B_DW./*@>2b8fd*/clockTickCounter_p/*@>b7a2*/ >= /*@>1dc4c*/1) {
+    /*@>236de*/ZT_VehCtrl_18B_DW./*@>2b912*/clockTickCounter_p/*@>201ba*/ = /*@>2af87*/0;
+} else {
+    /*@>236d2*/ZT_VehCtrl_18B_DW./*@>2b90f*/clockTickCounter_p/*@>2afc1*/++;
+}
+/* {E!d3598}End of DiscretePulseGenerator: '<S2>/Pulse Generator' */
+
+/* {S!d3600}DataTypeConversion: '<S2>/Data Type Conversion' incorporates:
+ *  DataStoreWrite: '<S2>/Data Store Write2'
+ */
+/*@>236e4*/ZT_VehCtrl_18B_DW./*@>2b915*/SPI0_CS/*@>b7ab*/ = (/*@>1d57a*/rtb_Add3/*@>1e421*/ != /*@>1e41f*/0.0);
+/* {S!d3239}Outputs for Atomic SubSystem: '<Root>/Init' */
+/* {S!d3670}If: '<S1>/If1' incorporates:
+ *  DataStoreRead: '<S1>/Data Store Read1'
+ */
+/*@>d9bd*/if (/*@>1d82e*/VCU_Mode/*@>d9bc*/ == /*@>1d830*/2) {
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B0)
+    /* {S!d3240}Outputs for IfAction SubSystem: '<S1>/CAN_init' incorporates:
+ *  ActionPort: '<S8>/Action Port'
+ */
+    /* {S!d3602}S-Function (fcan_mpc_receive): '<S8>/ACU1' */
+%<SLibCG_DumpSSCode("/*@[25ab6*/",tlcOutputsFcnOfS0B0,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B1)
+    /* {S!d3604}S-Function (fcan_mpc_receive): '<S8>/ACU2' */
+%<SLibCG_DumpSSCode("/*@[25ab7*/",tlcOutputsFcnOfS0B1,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B2)
+    /* {S!d3606}S-Function (fcan_mpc_receive): '<S8>/ACU3' */
+%<SLibCG_DumpSSCode("/*@[25ab8*/",tlcOutputsFcnOfS0B2,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B3)
+    /* {S!d3608}S-Function (fcan_mpc_receive): '<S8>/BMS Power Infor' */
+%<SLibCG_DumpSSCode("/*@[25ab9*/",tlcOutputsFcnOfS0B3,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B4)
+    /* {S!d3610}S-Function (fcan_mpc_receive): '<S8>/BMS Statistic_Temperature of Battery' */
+%<SLibCG_DumpSSCode("/*@[25aba*/",tlcOutputsFcnOfS0B4,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B5)
+    /* {S!d3612}S-Function (fcan_mpc_receive): '<S8>/BMS other Information3' */
+%<SLibCG_DumpSSCode("/*@[25abb*/",tlcOutputsFcnOfS0B5,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B6)
+    /* {S!d3614}S-Function (fcan_mpc_receive): '<S8>/BMSWarning Status' */
+%<SLibCG_DumpSSCode("/*@[25abc*/",tlcOutputsFcnOfS0B6,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B7)
+    /* {S!d3616}S-Function (fcan_mpc_receive): '<S8>/BMS_Information 1' */
+%<SLibCG_DumpSSCode("/*@[25abd*/",tlcOutputsFcnOfS0B7,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B8)
+    /* {S!d3618}S-Function (fcan_mpc_receive): '<S8>/BMS_Information 2' */
+%<SLibCG_DumpSSCode("/*@[25abe*/",tlcOutputsFcnOfS0B8,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B9)
+    /* {S!d3620}S-Function (fcan_mpc_receive): '<S8>/BRS2VCU1' */
+%<SLibCG_DumpSSCode("/*@[25abf*/",tlcOutputsFcnOfS0B9,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B10)
+    /* {S!d3622}S-Function (fcan_mpc_receive): '<S8>/BRS2VCU2' */
+%<SLibCG_DumpSSCode("/*@[25ac0*/",tlcOutputsFcnOfS0B10,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B11)
+    /* {S!d3624}S-Function (fcan_mpc_receive): '<S8>/BRS2VCU3' */
+%<SLibCG_DumpSSCode("/*@[25ac1*/",tlcOutputsFcnOfS0B11,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B12)
+    /* {S!d3626}S-Function (fcan_mpc_receive): '<S8>/DCDC1_1' */
+%<SLibCG_DumpSSCode("/*@[25ac2*/",tlcOutputsFcnOfS0B12,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B13)
+    /* {S!d3628}S-Function (fcan_mpc_receive): '<S8>/DCDC1_2' */
+%<SLibCG_DumpSSCode("/*@[25ac3*/",tlcOutputsFcnOfS0B13,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B14)
+    /* {S!d3630}S-Function (fcan_mpc_receive): '<S8>/HVC1_LV' */
+%<SLibCG_DumpSSCode("/*@[25ac4*/",tlcOutputsFcnOfS0B14,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B15)
+    /* {S!d3632}S-Function (fcan_mpc_receive): '<S8>/HVC3_Temp' */
+%<SLibCG_DumpSSCode("/*@[25ac5*/",tlcOutputsFcnOfS0B15,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B16)
+    /* {S!d3634}S-Function (fcan_mpc_receive): '<S8>/HVC4_RlySt' */
+%<SLibCG_DumpSSCode("/*@[25ac6*/",tlcOutputsFcnOfS0B16,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B17)
+    /* {S!d3636}S-Function (fcan_mpc_receive): '<S8>/HVC7_HV1' */
+%<SLibCG_DumpSSCode("/*@[25ac7*/",tlcOutputsFcnOfS0B17,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B18)
+    /* {S!d3638}S-Function (fcan_mpc_receive): '<S8>/ISG MCU STATUS1' */
+%<SLibCG_DumpSSCode("/*@[25ac8*/",tlcOutputsFcnOfS0B18,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B19)
+    /* {S!d3640}S-Function (fcan_mpc_receive): '<S8>/ISG MCU STATUS2' */
+%<SLibCG_DumpSSCode("/*@[25ac9*/",tlcOutputsFcnOfS0B19,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B20)
+    /* {S!d3642}S-Function (fcan_mpc_receive): '<S8>/ISG MCU STATUS3' */
+%<SLibCG_DumpSSCode("/*@[25aca*/",tlcOutputsFcnOfS0B20,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B21)
+    /* {S!d3644}S-Function (fcan_mpc_receive): '<S8>/MCU1Msg1' */
+%<SLibCG_DumpSSCode("/*@[25acb*/",tlcOutputsFcnOfS0B21,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B22)
+    /* {S!d3646}S-Function (fcan_mpc_receive): '<S8>/MCU1Msg2' */
+%<SLibCG_DumpSSCode("/*@[25acc*/",tlcOutputsFcnOfS0B22,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B23)
+    /* {S!d3648}S-Function (fcan_mpc_receive): '<S8>/MCU1Msg3' */
+%<SLibCG_DumpSSCode("/*@[25acd*/",tlcOutputsFcnOfS0B23,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B24)
+    /* {S!d3650}S-Function (fcan_mpc_receive): '<S8>/MCU2Msg1' */
+%<SLibCG_DumpSSCode("/*@[25ace*/",tlcOutputsFcnOfS0B24,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B25)
+    /* {S!d3652}S-Function (fcan_mpc_receive): '<S8>/MCU2Msg2' */
+%<SLibCG_DumpSSCode("/*@[25acf*/",tlcOutputsFcnOfS0B25,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B26)
+    /* {S!d3654}S-Function (fcan_mpc_receive): '<S8>/MCU2Msg3' */
+%<SLibCG_DumpSSCode("/*@[25ad0*/",tlcOutputsFcnOfS0B26,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B27)
+    /* {S!d3656}S-Function (fcan_mpc_receive): '<S8>/OBC_Charger Status' */
+%<SLibCG_DumpSSCode("/*@[25ad1*/",tlcOutputsFcnOfS0B27,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B28)
+    /* {S!d3658}S-Function (fcan_mpc_receive): '<S8>/PDU_RelaySts' */
+%<SLibCG_DumpSSCode("/*@[25ad2*/",tlcOutputsFcnOfS0B28,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B29)
+    /* {S!d3660}S-Function (fcan_mpc_receive): '<S8>/TM MCU STATUS1' */
+%<SLibCG_DumpSSCode("/*@[25ad3*/",tlcOutputsFcnOfS0B29,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B30)
+    /* {S!d3662}S-Function (fcan_mpc_receive): '<S8>/TM MCU STATUS2' */
+%<SLibCG_DumpSSCode("/*@[25ad4*/",tlcOutputsFcnOfS0B30,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B31)
+    /* {S!d3664}S-Function (fcan_mpc_receive): '<S8>/TM MCU STATUS3' */
+%<SLibCG_DumpSSCode("/*@[25ad5*/",tlcOutputsFcnOfS0B31,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B32)
+    /* {S!d3666}S-Function (fcan_mpc_receive): '<S8>/TMS2VCU' */
+%<SLibCG_DumpSSCode("/*@[25ad6*/",tlcOutputsFcnOfS0B32,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B33)
+    /* {S!d3668}S-Function (fcan_mpc_receive): '<S8>/TWV' */
+%<SLibCG_DumpSSCode("/*@[25ad7*/",tlcOutputsFcnOfS0B33,"/*@]*/")>\
+    /* {E!d3240}End of Outputs for SubSystem: '<S1>/CAN_init' */
+%endif
+}
+/* {E!d3670}End of If: '<S1>/If1' */
+
+/* {S!d3676}If: '<S1>/If2' incorporates:
+ *  DataStoreRead: '<S1>/Data Store Read3'
+ */
+/*@>d9c4*/if (/*@>236f6*/ZT_VehCtrl_18B_DW./*@>2b91e*/Init_flg/*@>d9c3*/ == /*@>1d833*/0) {
+    /* {S!d3242}Outputs for IfAction SubSystem: '<S1>/Init' incorporates:
+ *  ActionPort: '<S9>/Action Port'
+ */
+    /* {S!d3672}DataStoreWrite: '<S9>/Data Store Write3' */
+    /*@>236fc*/ZT_VehCtrl_18B_DW./*@>2b921*/Init_flg/*@>de85*/ = /*@>2337f*/ZT_VehCtrl_18B_ConstB./*@>2b7ef*/DataTypeConversion_bd;
+    /* {S!d3674}DataStoreWrite: '<S9>/Data Store Write' */
+    /*@>1da7d*/LS001/*@>de87*/ = /*@>23385*/ZT_VehCtrl_18B_ConstB./*@>2b7f2*/DataTypeConversion2_g;
+    /* {E!d3242}End of Outputs for SubSystem: '<S1>/Init' */
+}
+/* {E!d3676}End of If: '<S1>/If2' */
+/* {E!d3239}End of Outputs for SubSystem: '<Root>/Init' */
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B78)
+
+/* {S!d3678}S-Function (adc_mpc_config): '<Root>/ADC_Config' */
+%<SLibCG_DumpSSCode("/*@[25ad8*/",tlcOutputsFcnOfS63B78,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B79)
+/* {S!d3680}S-Function (adc_mpc_config): '<Root>/ADC_Config1' */
+%<SLibCG_DumpSSCode("/*@[25ad9*/",tlcOutputsFcnOfS63B79,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B80)
+/* {S!d3682}S-Function (fm_mpc_config): '<Root>/FreeMaster_Config' */
+%<SLibCG_DumpSSCode("/*@[25ada*/",tlcOutputsFcnOfS63B80,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B81)
+/* {S!d3684}S-Function (spi_mpc_config): '<Root>/SPI_Config_CANB&LS' */
+%<SLibCG_DumpSSCode("/*@[25adb*/",tlcOutputsFcnOfS63B81,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B82)
+/* {S!d3686}S-Function (spi_mpc_config): '<Root>/SPI_Config_EEPROM&LS' */
+%<SLibCG_DumpSSCode("/*@[25adc*/",tlcOutputsFcnOfS63B82,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B83)
+/* {S!d3688}S-Function (etimer_mpc_config): '<Root>/eTimer_Config' */
+%<SLibCG_DumpSSCode("/*@[25add*/",tlcOutputsFcnOfS63B83,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B84)
+/* {S!d3690}S-Function (etimer_mpc_config): '<Root>/eTimer_Config1' */
+%<SLibCG_DumpSSCode("/*@[25ade*/",tlcOutputsFcnOfS63B84,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B85)
+/* {S!d3692}S-Function (etimer_mpc_config): '<Root>/eTimer_Config10' */
+%<SLibCG_DumpSSCode("/*@[25adf*/",tlcOutputsFcnOfS63B85,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B86)
+/* {S!d3694}S-Function (etimer_mpc_config): '<Root>/eTimer_Config11' */
+%<SLibCG_DumpSSCode("/*@[25ae0*/",tlcOutputsFcnOfS63B86,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B87)
+/* {S!d3696}S-Function (etimer_mpc_config): '<Root>/eTimer_Config12' */
+%<SLibCG_DumpSSCode("/*@[25ae1*/",tlcOutputsFcnOfS63B87,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B88)
+/* {S!d3698}S-Function (etimer_mpc_config): '<Root>/eTimer_Config2' */
+%<SLibCG_DumpSSCode("/*@[25ae2*/",tlcOutputsFcnOfS63B88,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS63B89)
+/* {S!d3700}S-Function (etimer_mpc_config): '<Root>/eTimer_Config3' */
+%<SLibCG_DumpSSCode("/*@[25ae3*/",tlcOutputsFcnOfS63B89,"/*@]*/")>\
+%endif
+/* {S!d3702}Product: '<S190>/Divide3' incorporates:
+ *  Constant: '<S190>/Freq_MC3'
+ *  Constant: '<S190>/Pre5'
+ *  DataStoreRead: '<S190>/Data Store Read5'
+ */
+/*@>1d5f8*/rtb_Add3/*@>ba49*/ = /*@>1dc90*/1.25E+6/*@>1e41c*/ / %<SLibCG_DumpSSCode("/*@[25f7c*/",(SLibCG_SE(SLibCG_CSCDW(23, 1, "", -1, "", 0))),"/*@]*/")>;
+/* {S!d3704}Product: '<S190>/Product1' incorporates:
+ *  DataStoreRead: '<S190>/Data Store Read4'
+ */
+/*@>1d5fe*/rtb_Divide2/*@>ba50*/ = %<SLibCG_DumpSSCode("/*@[25f98*/",(SLibCG_SE(SLibCG_CSCDW(22, 1, "", -1, "", 0))),"/*@]*/")>/*@>1e418*/ * /*@>1d5fc*/rtb_Add3;
+/* {S!d3706}DataTypeConversion: '<S197>/Data Type Conversion1' */
+/*@>1e3d3*/tmp/*@>1e3d5*/ = /*@>21956*/floor(/*@>1d600*/rtb_Divide2);
+/*@>201c6*/if (/*@>21958*/rtIsNaN(/*@>1e3d7*/tmp)/*@>1e3e1*/ || /*@>2195a*/rtIsInf(/*@>1e3dc*/tmp)) {
+    /*@>201ca*/tmp/*@>201c9*/ = /*@>1e3e3*/0.0;
+} else {
+    /*@>1e3e4*/tmp/*@>1e3e6*/ = /*@>2195c*/fmod(/*@>1e3e8*/tmp, /*@>1e3ec*/65536.0);
+}
+/*@>2315c*/ZT_VehCtrl_18B_B./*@>2b7cb*/DataTypeConversion1/*@>ba53*/ = /*@>1efe5*/(uint16_T)(/*@>1e3fa*/tmp/*@>1e3fd*/ < /*@>1e3f9*/0.0/*@>1e3fd*/ ? (int32_T)/*@>1e405*/(uint16_T)-/*@<1e40e*//*@>1e403*/(int16_T)/*@>1e411*/(uint16_T)-/*@<1e401*//*@>1e3fe*/tmp : (int32_T)/*@>1e414*/(uint16_T)/*@>1e406*/tmp);
+/* {E!d3706}End of DataTypeConversion: '<S197>/Data Type Conversion1' */
+
+/* {S!d3708}Sum: '<S190>/Add1' */
+/*@>1db48*/rtb_Divide2/*@>ebe4*/ = /*@>1d606*/rtb_Add3/*@>ebe1*/ - /*@>1d604*/rtb_Divide2;
+/* {S!d3710}DataTypeConversion: '<S197>/Data Type Conversion2' */
+/*@>1e38b*/tmp/*@>1e38d*/ = /*@>2195e*/floor(/*@>1d608*/rtb_Divide2);
+/*@>201cb*/if (/*@>21960*/rtIsNaN(/*@>1e38f*/tmp)/*@>1e399*/ || /*@>21962*/rtIsInf(/*@>1e394*/tmp)) {
+    /*@>201cf*/tmp/*@>201ce*/ = /*@>1e39b*/0.0;
+} else {
+    /*@>1e39c*/tmp/*@>1e39e*/ = /*@>21964*/fmod(/*@>1e3a0*/tmp, /*@>1e3a4*/65536.0);
+}
+/*@>23162*/ZT_VehCtrl_18B_B./*@>2b7ce*/DataTypeConversion2/*@>ba65*/ = /*@>1eff7*/(uint16_T)(/*@>1e3b2*/tmp/*@>1e3b5*/ < /*@>1e3b1*/0.0/*@>1e3b5*/ ? (int32_T)/*@>1e3bd*/(uint16_T)-/*@<1e3c6*//*@>1e3bb*/(int16_T)/*@>1e3c9*/(uint16_T)-/*@<1e3b9*//*@>1e3b6*/tmp : (int32_T)/*@>1e3cc*/(uint16_T)/*@>1e3be*/tmp);
+/* {E!d3710}End of DataTypeConversion: '<S197>/Data Type Conversion2' */
+
+/* {S!d3712}Product: '<S190>/Divide4' incorporates:
+ *  Constant: '<S190>/Freq_MC4'
+ *  Constant: '<S190>/Pre4'
+ *  DataStoreRead: '<S190>/Data Store Read3'
+ */
+/*@>1d60e*/rtb_Divide2/*@>ba7e*/ = /*@>1dc91*/1.25E+6/*@>1e384*/ / %<SLibCG_DumpSSCode("/*@[25fb4*/",(SLibCG_SE(SLibCG_CSCDW(21, 1, "", -1, "", 0))),"/*@]*/")>;
+/* {S!d3714}Product: '<S190>/Product2' incorporates:
+ *  DataStoreRead: '<S190>/Data Store Read1'
+ */
+/*@>1d614*/rtb_Add3/*@>ba85*/ = %<SLibCG_DumpSSCode("/*@[25fd0*/",(SLibCG_SE(SLibCG_CSCDW(55, 1, "", -1, "", 0))),"/*@]*/")>/*@>1e380*/ * /*@>1d612*/rtb_Divide2;
+/* {S!d3716}DataTypeConversion: '<S196>/Data Type Conversion1' */
+/*@>1e33b*/tmp/*@>1e33d*/ = /*@>21966*/floor(/*@>1d616*/rtb_Add3);
+/*@>201d0*/if (/*@>21968*/rtIsNaN(/*@>1e33f*/tmp)/*@>1e349*/ || /*@>2196a*/rtIsInf(/*@>1e344*/tmp)) {
+    /*@>201d4*/tmp/*@>201d3*/ = /*@>1e34b*/0.0;
+} else {
+    /*@>1e34c*/tmp/*@>1e34e*/ = /*@>2196c*/fmod(/*@>1e350*/tmp, /*@>1e354*/65536.0);
+}
+/*@>23168*/ZT_VehCtrl_18B_B./*@>2b7d1*/DataTypeConversion1_n/*@>ba88*/ = /*@>1f00f*/(uint16_T)(/*@>1e362*/tmp/*@>1e365*/ < /*@>1e361*/0.0/*@>1e365*/ ? (int32_T)/*@>1e36d*/(uint16_T)-/*@<1e376*//*@>1e36b*/(int16_T)/*@>1e379*/(uint16_T)-/*@<1e369*//*@>1e366*/tmp : (int32_T)/*@>1e37c*/(uint16_T)/*@>1e36e*/tmp);
+/* {E!d3716}End of DataTypeConversion: '<S196>/Data Type Conversion1' */
+
+/* {S!d3718}Sum: '<S190>/Add2' */
+/*@>1db4a*/rtb_Add3/*@>ebe9*/ = /*@>1d61c*/rtb_Divide2/*@>ebe6*/ - /*@>1d61a*/rtb_Add3;
+/* {S!d3720}DataTypeConversion: '<S196>/Data Type Conversion2' */
+/*@>1e2f3*/tmp/*@>1e2f5*/ = /*@>2196e*/floor(/*@>1d61e*/rtb_Add3);
+/*@>201d5*/if (/*@>21970*/rtIsNaN(/*@>1e2f7*/tmp)/*@>1e301*/ || /*@>21972*/rtIsInf(/*@>1e2fc*/tmp)) {
+    /*@>201d9*/tmp/*@>201d8*/ = /*@>1e303*/0.0;
+} else {
+    /*@>1e304*/tmp/*@>1e306*/ = /*@>21974*/fmod(/*@>1e308*/tmp, /*@>1e30c*/65536.0);
+}
+/*@>2316e*/ZT_VehCtrl_18B_B./*@>2b7d4*/DataTypeConversion2_i/*@>ba9a*/ = /*@>1f021*/(uint16_T)(/*@>1e31a*/tmp/*@>1e31d*/ < /*@>1e319*/0.0/*@>1e31d*/ ? (int32_T)/*@>1e325*/(uint16_T)-/*@<1e32e*//*@>1e323*/(int16_T)/*@>1e331*/(uint16_T)-/*@<1e321*//*@>1e31e*/tmp : (int32_T)/*@>1e334*/(uint16_T)/*@>1e326*/tmp);
+/* {E!d3720}End of DataTypeConversion: '<S196>/Data Type Conversion2' */
+
+/* {S!d3722}Product: '<S190>/Divide2' incorporates:
+ *  Constant: '<S190>/Freq_MC5'
+ *  Constant: '<S190>/Pre3'
+ *  DataStoreRead: '<S190>/Data Store Read13'
+ */
+/*@>1d624*/rtb_Divide2/*@>bab3*/ = /*@>1dc92*/1.25E+6/*@>1e2ec*/ / %<SLibCG_DumpSSCode("/*@[25fec*/",(SLibCG_SE(SLibCG_CSCDW(10, 1, "", -1, "", 0))),"/*@]*/")>;
+/* {S!d3724}Product: '<S190>/Product6' incorporates:
+ *  DataStoreRead: '<S190>/Data Store Read12'
+ */
+/*@>1d62a*/rtb_Add3/*@>baba*/ = %<SLibCG_DumpSSCode("/*@[26008*/",(SLibCG_SE(SLibCG_CSCDW(9, 1, "", -1, "", 0))),"/*@]*/")>/*@>1e2e8*/ * /*@>1d628*/rtb_Divide2;
+/* {S!d3726}DataTypeConversion: '<S195>/Data Type Conversion1' */
+/*@>1e2a3*/tmp/*@>1e2a5*/ = /*@>21976*/floor(/*@>1d62c*/rtb_Add3);
+/*@>201da*/if (/*@>21978*/rtIsNaN(/*@>1e2a7*/tmp)/*@>1e2b1*/ || /*@>2197a*/rtIsInf(/*@>1e2ac*/tmp)) {
+    /*@>201de*/tmp/*@>201dd*/ = /*@>1e2b3*/0.0;
+} else {
+    /*@>1e2b4*/tmp/*@>1e2b6*/ = /*@>2197c*/fmod(/*@>1e2b8*/tmp, /*@>1e2bc*/65536.0);
+}
+/*@>23174*/ZT_VehCtrl_18B_B./*@>2b7d7*/DataTypeConversion1_p/*@>babd*/ = /*@>1f035*/(uint16_T)(/*@>1e2ca*/tmp/*@>1e2cd*/ < /*@>1e2c9*/0.0/*@>1e2cd*/ ? (int32_T)/*@>1e2d5*/(uint16_T)-/*@<1e2de*//*@>1e2d3*/(int16_T)/*@>1e2e1*/(uint16_T)-/*@<1e2d1*//*@>1e2ce*/tmp : (int32_T)/*@>1e2e4*/(uint16_T)/*@>1e2d6*/tmp);
+/* {E!d3726}End of DataTypeConversion: '<S195>/Data Type Conversion1' */
+
+/* {S!d3728}Sum: '<S190>/Add3' */
+/*@>1db4c*/rtb_Add3/*@>ebee*/ = /*@>1d632*/rtb_Divide2/*@>ebeb*/ - /*@>1d630*/rtb_Add3;
+/* {S!d3730}DataTypeConversion: '<S195>/Data Type Conversion2' */
+/*@>1e23b*/tmp/*@>1e23d*/ = /*@>2197e*/floor(/*@>1d634*/rtb_Add3);
+/*@>201df*/if (/*@>21980*/rtIsNaN(/*@>1e23f*/tmp)/*@>1e25d*/ || /*@>21982*/rtIsInf(/*@>1e24e*/tmp)) {
+    /*@>201e3*/tmp/*@>201e2*/ = /*@>1e25f*/0.0;
+} else {
+    /*@>1e260*/tmp/*@>1e262*/ = /*@>21984*/fmod(/*@>1e264*/tmp, /*@>1e268*/65536.0);
+}
+/*@>2317a*/ZT_VehCtrl_18B_B./*@>2b7da*/DataTypeConversion2_p/*@>bacf*/ = /*@>1f047*/(uint16_T)(/*@>1e282*/tmp/*@>1e285*/ < /*@>1e281*/0.0/*@>1e285*/ ? (int32_T)/*@>1e28d*/(uint16_T)-/*@<1e296*//*@>1e28b*/(int16_T)/*@>1e299*/(uint16_T)-/*@<1e289*//*@>1e286*/tmp : (int32_T)/*@>1e29c*/(uint16_T)/*@>1e28e*/tmp);
+/* {E!d3730}End of DataTypeConversion: '<S195>/Data Type Conversion2' */
+%<SLibInsertSolverResetCode()>\
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Outputs(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(2, 1, fcnProtoType)>
+%endfunction
