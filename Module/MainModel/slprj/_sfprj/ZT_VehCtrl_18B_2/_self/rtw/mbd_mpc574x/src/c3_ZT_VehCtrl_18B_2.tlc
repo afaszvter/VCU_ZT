@@ -1,0 +1,137 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   17 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c3_ZT_VehCtrl_18B_2"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_c3_ZT_VehCtrl_18B_2"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_OBC_FrontPwrOff"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "OBC_Down.OBC_FrontPwrOff"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_OBC_RearPwrOff"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "OBC_Down.OBC_RearPwrOff"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_FrontPwrOff"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "PowerOff.FrontPwrOff"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_RearPwrOff"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "PowerOff.RearPwrOff"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_OBCOn"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "OBCOn"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_OBC_HVC_path"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "OBCOn.OBC_Relay_PosPreEn.OBC_HVC_path"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_OBC_PDU_path"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "OBCOn.OBC_Relay_PosPreEn.OBC_PDU_path"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_PowerOn"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "PowerOn"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_HVC_path"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "PowerOn.Relay_PosPreEn.HVC_path"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_BRS_path"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "PowerOn.Relay_PosPreEn.BRS_path"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_PDU_path"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "PowerOn.Relay_PosPreEn.PDU_path"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "Cnt1"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "Cnt1"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "Cnt2"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "Cnt2"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "Cnt3"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "Cnt3"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "Cnt4"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "Cnt4"\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

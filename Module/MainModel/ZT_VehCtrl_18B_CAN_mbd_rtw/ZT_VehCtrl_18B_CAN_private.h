@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'ZT_VehCtrl_18B_CAN'.
  *
- * Model version                   : 1.7
+ * Model version                   : 1.9
  * Simulink Coder version          : 9.0 (R2018b) 24-May-2018
  * MBDT for MPC57xx Series Version : 3.2.0 (R2016a-R2020a) 14-Apr-2020
- * C/C++ source code generated on  : Mon Sep 21 10:04:31 2026
+ * C/C++ source code generated on  : Mon Sep 28 10:27:56 2026
  *
  * Target selection: mbd_mpc574x.tlc
  * Embedded hardware selection: Motorola PowerPC
@@ -97,7 +97,7 @@ extern flexcan_msgbuff_t canCom1_recvBuff33;
 extern flexcan_msgbuff_t canCom1_recvBuff34;
 extern flexcan_msgbuff_t canCom1_recvBuff35;
 extern flexcan_msgbuff_t canCom0_recvBuff9;
-extern flexcan_msgbuff_t canCom1_recvBuff39;
+extern flexcan_msgbuff_t canCom0_recvBuff39;
 extern flexcan_msgbuff_t canCom1_recvBuff40;
 extern flexcan_msgbuff_t canCom1_recvBuff41;
 extern flexcan_msgbuff_t canCom1_recvBuff42;

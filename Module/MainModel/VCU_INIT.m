@@ -19,14 +19,17 @@ PadleSignal2_max = 1.92;
 PadleValid = 0.05;
 Padle1Signal1_Th = [PadleSignal1_min,PadleSignal1_max];
 Padle1Signal2_Th = [PadleSignal2_min,PadleSignal2_max];
+D_map = [0 100];
+R_map = [0 80];
+
 
 %%能量管理
-Delay_Discharge = single(50);
-Delay_charge = single(60);
 BRS_PwrValid = single(5);
 BRSEnSpdTh1 = single(10);
 BRSEnSpdTh2 = single(20);
 ChargeVehTh = single(1);
+BMSInsulationResistanceTh = single(50);
+HVCVolValid = single(50);
 
 %%驱动控制
 MtrPwrFac = single(1/9550);

@@ -1,0 +1,2169 @@
+{
+  "metadata": {
+    "modelFile": "D:\\VCU\\VCU_SL_ZhengZhou\\ZT2\\Module\\MainModel\\ZT_VehCtrl_24B.slx",
+    "modelName": "ZT_VehCtrl_24B",
+    "targetChartPath": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+    "exportedAt": "2026-09-28 12:17:01 *",
+    "matlabVersion": "24.2.0.2712019 (R2024b)"
+  },
+  "chart": {
+    "id": 38,
+    "name": "Chart",
+    "path": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+    "fullPath": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+    "description": "",
+    "actionLanguage": "MATLAB",
+    "chartUpdate": "INHERITED",
+    "stateMachineType": "Classic",
+    "decomposition": "EXCLUSIVE_OR",
+    "executeAtInitialization": false,
+    "exportChartFunctions": false,
+    "allowDirectFeedthrough": []
+  },
+  "data": [
+    {
+      "id": 110,
+      "name": "VCU_PowerOnReq",
+      "scope": "Output",
+      "port": 1,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 111,
+      "name": "VCU_UrgencyCutOffPowerReq",
+      "scope": "Output",
+      "port": 2,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 112,
+      "name": "VCU_DCDC1_En",
+      "scope": "Output",
+      "port": 3,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 113,
+      "name": "MaxChargePowerLimit",
+      "scope": "Output",
+      "port": 4,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 114,
+      "name": "BRS_PowerReq",
+      "scope": "Output",
+      "port": 5,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 115,
+      "name": "OnOffCmd",
+      "scope": "Output",
+      "port": 6,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 116,
+      "name": "EDrv1_PowOnCmd",
+      "scope": "Output",
+      "port": 7,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 117,
+      "name": "EDrv2_PowOnCmd",
+      "scope": "Output",
+      "port": 8,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 118,
+      "name": "DcdcCmd",
+      "scope": "Output",
+      "port": 9,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 119,
+      "name": "VCU_ShrRlyCtl",
+      "scope": "Output",
+      "port": 10,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 120,
+      "name": "VCU_HghVtgCtl",
+      "scope": "Output",
+      "port": 11,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 121,
+      "name": "BMS_ReadySt",
+      "scope": "Input",
+      "port": 1,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 122,
+      "name": "BMS_SelfCheckStatus",
+      "scope": "Input",
+      "port": 2,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 123,
+      "name": "BMS_InsulationResistance",
+      "scope": "Input",
+      "port": 3,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 124,
+      "name": "BMS_ChargeStatus",
+      "scope": "Input",
+      "port": 4,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 125,
+      "name": "Vol_Bat",
+      "scope": "Input",
+      "port": 5,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 126,
+      "name": "Relay_NegativeStatus",
+      "scope": "Input",
+      "port": 6,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 127,
+      "name": "OBC_Start",
+      "scope": "Input",
+      "port": 7,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 128,
+      "name": "MotDrv1_PowOnSt_",
+      "scope": "Input",
+      "port": 8,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 129,
+      "name": "MotDrv2_PowOnSt_",
+      "scope": "Input",
+      "port": 9,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 130,
+      "name": "PwrPos_Vol",
+      "scope": "Input",
+      "port": 10,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 131,
+      "name": "PDU_PosRlyPcgRlySts",
+      "scope": "Input",
+      "port": 11,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 132,
+      "name": "PDU_PosRlySts",
+      "scope": "Input",
+      "port": 12,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 133,
+      "name": "PDU_ShrRlySts",
+      "scope": "Input",
+      "port": 13,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 134,
+      "name": "Ready",
+      "scope": "Output",
+      "port": 12,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 135,
+      "name": "Flag",
+      "scope": "Output",
+      "port": 13,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 136,
+      "name": "Key",
+      "scope": "Input",
+      "port": 14,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 137,
+      "name": "Cnt",
+      "scope": "Local",
+      "port": null,
+      "dataType": "Inherit: From definition in chart",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 138,
+      "name": "BRS_PwrValid",
+      "scope": "Parameter",
+      "port": null,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 139,
+      "name": "ShutDown",
+      "scope": "Input",
+      "port": 15,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 140,
+      "name": "NonBRS",
+      "scope": "Input",
+      "port": 16,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 141,
+      "name": "NonOBC",
+      "scope": "Input",
+      "port": 17,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 142,
+      "name": "ChargeSig",
+      "scope": "Input",
+      "port": 18,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 143,
+      "name": "AccPadle",
+      "scope": "Input",
+      "port": 19,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 144,
+      "name": "Gear",
+      "scope": "Input",
+      "port": 20,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 145,
+      "name": "ParkReleaseSw",
+      "scope": "Input",
+      "port": 21,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 146,
+      "name": "VehSpdFb",
+      "scope": "Input",
+      "port": 22,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 147,
+      "name": "BRSEnSpdTh1",
+      "scope": "Parameter",
+      "port": null,
+      "dataType": "double",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 148,
+      "name": "BRSEnSpdTh2",
+      "scope": "Parameter",
+      "port": null,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 149,
+      "name": "OBCEnSig",
+      "scope": "Output",
+      "port": 14,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 150,
+      "name": "PwrCupReq",
+      "scope": "Input",
+      "port": 23,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 151,
+      "name": "HVCVolValid",
+      "scope": "Parameter",
+      "port": null,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 152,
+      "name": "HVCReady",
+      "scope": "Local",
+      "port": null,
+      "dataType": "boolean",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 153,
+      "name": "PDUReady",
+      "scope": "Local",
+      "port": null,
+      "dataType": "boolean",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 154,
+      "name": "Cnt1",
+      "scope": "Local",
+      "port": null,
+      "dataType": "Inherit: From definition in chart",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 155,
+      "name": "Cnt2",
+      "scope": "Local",
+      "port": null,
+      "dataType": "Inherit: From definition in chart",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 156,
+      "name": "ChargeVehTh",
+      "scope": "Parameter",
+      "port": null,
+      "dataType": "Inherit: Same as Simulink",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 157,
+      "name": "OBC_Ready",
+      "scope": "Local",
+      "port": null,
+      "dataType": "Inherit: From definition in chart",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 158,
+      "name": "OBC_HVCReady",
+      "scope": "Local",
+      "port": null,
+      "dataType": "Inherit: From definition in chart",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 159,
+      "name": "OBC_PDUReady",
+      "scope": "Local",
+      "port": null,
+      "dataType": "Inherit: From definition in chart",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 160,
+      "name": "Cnt3",
+      "scope": "Local",
+      "port": null,
+      "dataType": "Inherit: From definition in chart",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 161,
+      "name": "Cnt4",
+      "scope": "Local",
+      "port": null,
+      "dataType": "Inherit: From definition in chart",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 162,
+      "name": "OBC_Front_OffDone",
+      "scope": "Local",
+      "port": null,
+      "dataType": "Inherit: From definition in chart",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    },
+    {
+      "id": 163,
+      "name": "OBC_Rear_OffDone",
+      "scope": "Local",
+      "port": null,
+      "dataType": "Inherit: From definition in chart",
+      "size": "",
+      "initialValue": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart"
+    }
+  ],
+  "events": [],
+  "states": [
+    {
+      "id": 39,
+      "name": "OBC_Down",
+      "label": "OBC_Down\nen:\nOBC_Front_OffDone = false;\nOBC_Rear_OffDone = false;\n",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart",
+      "decomposition": "PARALLEL_AND",
+      "type": "OR",
+      "executionOrder": 0,
+      "isSubchart": false,
+      "position": [
+        20.0093,
+        124.4145,
+        594.1285,
+        586.9164
+      ]
+    },
+    {
+      "id": 54,
+      "name": "OBC_BMS_PowerOn",
+      "label": "OBC_BMS_PowerOn\nen:\n    VCU_PowerOnReq = 0;\n    OBC_EnSig == 0;\n",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "OR",
+      "executionOrder": 0,
+      "isSubchart": false,
+      "position": [
+        936.487,
+        218.7793,
+        276.8793,
+        93.2859
+      ]
+    },
+    {
+      "id": 55,
+      "name": "BMS_PowerOff",
+      "label": "BMS_PowerOff\nen:\n    VCU_PowerOnReq = 0;\n    VCU_UrgencyCutOffPowerReq = 0;",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "OR",
+      "executionOrder": 0,
+      "isSubchart": false,
+      "position": [
+        1558.7692,
+        501.8349,
+        223.546,
+        78.8415
+      ]
+    },
+    {
+      "id": 56,
+      "name": "Init",
+      "label": "Init\nen:\nReady = false;\nVCU_PowerOnReq = 0;\nVCU_UrgencyCutOffPowerReq = 0;\nVCU_DCDC1_En = 2;\nEDrv1_PowOnCmd = 0;\nEDrv2_PowOnCmd = 0;\nDcdcCmd = 0;\nVCU_ShrRlyCtl = 0;\nVCU_HghVtgCtl = 0;\nOnOffCmd = 0;\nOBCEnSig = 0;\nFlag = 1;\n",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "OR",
+      "executionOrder": 0,
+      "isSubchart": false,
+      "position": [
+        941.76,
+        514.626,
+        266.3334,
+        388.2
+      ]
+    },
+    {
+      "id": 57,
+      "name": "PowerOff",
+      "label": "PowerOff\nen:\nFront_OffDone = false;\nRear_OffDone = false;",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart",
+      "decomposition": "PARALLEL_AND",
+      "type": "OR",
+      "executionOrder": 0,
+      "isSubchart": false,
+      "position": [
+        1482.3759,
+        636.1684,
+        594.1285,
+        586.9164
+      ]
+    },
+    {
+      "id": 72,
+      "name": "OBCOn",
+      "label": "OBCOn",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "OR",
+      "executionOrder": 0,
+      "isSubchart": false,
+      "position": [
+        132.6267,
+        782.3816,
+        415.2889,
+        905.8916
+      ]
+    },
+    {
+      "id": 89,
+      "name": "PowerOn",
+      "label": "PowerOn",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "parentClass": "Stateflow.Chart",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "OR",
+      "executionOrder": 0,
+      "isSubchart": false,
+      "position": [
+        721.5426,
+        1043.4733,
+        607.4619,
+        817.7497
+      ]
+    },
+    {
+      "id": 40,
+      "name": "OBC_FrontPwrOff",
+      "label": "OBC_FrontPwrOff",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBC_Down",
+      "parentClass": "Stateflow.State",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "AND",
+      "executionOrder": 1,
+      "isSubchart": false,
+      "position": [
+        73.8693,
+        193.826,
+        181.5,
+        470.5933
+      ]
+    },
+    {
+      "id": 47,
+      "name": "OBC_RearPwrOff",
+      "label": "OBC_RearPwrOff",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBC_Down",
+      "parentClass": "Stateflow.State",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "AND",
+      "executionOrder": 2,
+      "isSubchart": false,
+      "position": [
+        381.4112,
+        193.826,
+        194,
+        470.5933
+      ]
+    },
+    {
+      "id": 58,
+      "name": "FrontPwrOff",
+      "label": "FrontPwrOff",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOff",
+      "parentClass": "Stateflow.State",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "AND",
+      "executionOrder": 1,
+      "isSubchart": false,
+      "position": [
+        1536.2359,
+        705.5799,
+        181.5,
+        470.5933
+      ]
+    },
+    {
+      "id": 65,
+      "name": "RearPwrOff",
+      "label": "RearPwrOff",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOff",
+      "parentClass": "Stateflow.State",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "AND",
+      "executionOrder": 2,
+      "isSubchart": false,
+      "position": [
+        1843.7778,
+        705.5799,
+        194,
+        470.5933
+      ]
+    },
+    {
+      "id": 73,
+      "name": "OBCOff",
+      "label": "OBCOff\nen:\nOBCEnSig = 0;",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBCOn",
+      "parentClass": "Stateflow.State",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "OR",
+      "executionOrder": 0,
+      "isSubchart": false,
+      "position": [
+        272.0735,
+        819.7465,
+        90,
+        60
+      ]
+    },
+    {
+      "id": 74,
+      "name": "OBCEn",
+      "label": "OBCEn\nen:\nOBCEnSig = 1;\nVCU_PowerOnReq = 1;\n",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBCOn",
+      "parentClass": "Stateflow.State",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "OR",
+      "executionOrder": 0,
+      "isSubchart": false,
+      "position": [
+        232.8176,
+        904.9256,
+        156.8274,
+        71.902
+      ]
+    },
+    {
+      "id": 75,
+      "name": "OBC_Relay_PosPreEn",
+      "label": "OBC_Relay_PosPreEn\nen:\nEDrv1_PowOnCmd = 1;\nEDrv2_PowOnCmd = 1;\nVCU_ShrRlyCtl = 1;\nVCU_HghVtgCtl = 1;\nOBC_Ready = OBC_HVCReady && OBC_PDUReady;",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBCOn",
+      "parentClass": "Stateflow.State",
+      "decomposition": "PARALLEL_AND",
+      "type": "OR",
+      "executionOrder": 0,
+      "isSubchart": false,
+      "position": [
+        149.6267,
+        1032.1686,
+        389.6222,
+        645.4656
+      ]
+    },
+    {
+      "id": 90,
+      "name": "Relay_NegEn",
+      "label": "Relay_NegEn\nen:\nReady = false;\nVCU_PowerOnReq = 1;\nFlag = 3;\n",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn",
+      "parentClass": "Stateflow.State",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "OR",
+      "executionOrder": 0,
+      "isSubchart": false,
+      "position": [
+        795.5276,
+        1077.7718,
+        208.4,
+        89.5429
+      ]
+    },
+    {
+      "id": 91,
+      "name": "Relay_PosPreEn",
+      "label": "Relay_PosPreEn\ndu:\n    EDrv1_PowOnCmd = 1;\n    EDrv2_PowOnCmd = 1;\n    VCU_ShrRlyCtl = 1;\n    VCU_HghVtgCtl = 1;\n    Ready = HVCReady && PDUReady;\n",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn",
+      "parentClass": "Stateflow.State",
+      "decomposition": "PARALLEL_AND",
+      "type": "OR",
+      "executionOrder": 0,
+      "isSubchart": false,
+      "position": [
+        795.5276,
+        1176.9024,
+        475.0658,
+        667.3207
+      ]
+    },
+    {
+      "id": 41,
+      "name": "OBC_Front_LVDown",
+      "label": "OBC_Front_LVDown\nen:Cnt3 = 0;\ndu:\n    VCU_DCDC1_En = 2;     % 停止，不能写0\n    Cnt3 = Cnt3+1;",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBC_Down/OBC_FrontPwrOff",
+      "parentClass": "Stateflow.State",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "OR",
+      "executionOrder": 0,
+      "isSubchart": false,
+      "position": [
+        90.8693,
+        254.1688,
+        149.1667,
+        106.8571
+      ]
+    },
+    {
+      "id": 42,
+      "name": "OBC_Front_HVDown",
+      "label": "OBC_Front_HVDown\ndu:\n    EDrv1_PowOnCmd = 0;\n    EDrv2_PowOnCmd = 0;",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBC_Down/OBC_FrontPwrOff",
+      "parentClass": "Stateflow.State",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "OR",
+      "executionOrder": 0,
+      "isSubchart": false,
+      "position": [
+        90.8693,
+        401.706,
+        149.1667,
+        74.0952
+      ]
+    },
+    {
+      "id": 43,
+      "name": "Front_Off",
+      "label": "Front_Off\nen:\n    OBC_Front_OffDone = true",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBC_Down/OBC_FrontPwrOff",
+      "parentClass": "Stateflow.State",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "OR",
+      "executionOrder": 0,
+      "isSubchart": false,
+      "position": [
+        90.8693,
+        546.6257,
+        149.1667,
+        74.0952
+      ]
+    },
+    {
+      "id": 48,
+      "name": "OBC_Rear_LVDown",
+      "label": "OBC_Rear_LVDown\nen:Cnt4 = 0;\ndu:\n    DcdcCmd = 0;\n    Cnt4 = Cnt4+1;",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBC_Down/OBC_RearPwrOff",
+      "parentClass": "Stateflow.State",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "OR",
+      "executionOrder": 0,
+      "isSubchart": false,
+      "position": [
+        398.4112,
+        263.276,
+        149.1667,
+        106.8571
+      ]
+    },
+    {
+      "id": 49,
+      "name": "OBC_Rear_HVDown",
+      "label": "OBC_Rear_HVDown\ndu:\n    VCU_ShrRlyCtl = 0;\n    VCU_HghVtgCtl = 0;",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBC_Down/OBC_RearPwrOff",
+      "parentClass": "Stateflow.State",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "OR",
+      "executionOrder": 0,
+      "isSubchart": false,
+      "position": [
+        398.4112,
+        401.706,
+        149.1667,
+        74.0952
+      ]
+    },
+    {
+      "id": 50,
+      "name": "Rear_Off",
+      "label": "Rear_Off\nen:\n    OBC_Rear_OffDone = true",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBC_Down/OBC_RearPwrOff",
+      "parentClass": "Stateflow.State",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "OR",
+      "executionOrder": 0,
+      "isSubchart": false,
+      "position": [
+        398.4112,
+        546.6257,
+        170.5,
+        74.0952
+      ]
+    },
+    {
+      "id": 59,
+      "name": "Front_LVDown",
+      "label": "Front_LVDown\nen:Cnt1 = 0;\ndu:\n    VCU_DCDC1_En = 2;     % 停止，不能写0\n    VCU2OilMotor_En = 0;\n    VCU2DrvMotor_En = 0;\n    Cnt1 = Cnt1+1;",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOff/FrontPwrOff",
+      "parentClass": "Stateflow.State",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "OR",
+      "executionOrder": 0,
+      "isSubchart": false,
+      "position": [
+        1553.2359,
+        774.3672,
+        149.1667,
+        106.8571
+      ]
+    },
+    {
+      "id": 60,
+      "name": "Front_HVDown",
+      "label": "Front_HVDown\ndu:\n    EDrv1_PowOnCmd = 0;\n    EDrv2_PowOnCmd = 0;",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOff/FrontPwrOff",
+      "parentClass": "Stateflow.State",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "OR",
+      "executionOrder": 0,
+      "isSubchart": false,
+      "position": [
+        1553.2359,
+        913.4599,
+        149.1667,
+        74.0952
+      ]
+    },
+    {
+      "id": 61,
+      "name": "Front_Off",
+      "label": "Front_Off\nen:\n    Front_OffDone = true",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOff/FrontPwrOff",
+      "parentClass": "Stateflow.State",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "OR",
+      "executionOrder": 0,
+      "isSubchart": false,
+      "position": [
+        1553.2359,
+        1058.3796,
+        149.1667,
+        74.0952
+      ]
+    },
+    {
+      "id": 66,
+      "name": "Rear_LVDown",
+      "label": "Rear_LVDown\nen:Cnt2 = 0;\ndu:\n    DcdcCmd = 170;\n    TM_MCU_Enable = 0;\n    ISG_MCU_Enable = 0;\n    Cnt2 = Cnt2+1;",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOff/RearPwrOff",
+      "parentClass": "Stateflow.State",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "OR",
+      "executionOrder": 0,
+      "isSubchart": false,
+      "position": [
+        1860.7778,
+        775.0299,
+        149.1667,
+        106.8571
+      ]
+    },
+    {
+      "id": 67,
+      "name": "Rear_HVDown",
+      "label": "Rear_HVDown\ndu:\n    VCU_ShrRlyCtl = 0;\n    VCU_HghVtgCtl = 0;",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOff/RearPwrOff",
+      "parentClass": "Stateflow.State",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "OR",
+      "executionOrder": 0,
+      "isSubchart": false,
+      "position": [
+        1860.7778,
+        913.4599,
+        149.1667,
+        74.0952
+      ]
+    },
+    {
+      "id": 68,
+      "name": "Rear_Off",
+      "label": "Rear_Off\nen:\n    Rear_OffDone = true",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOff/RearPwrOff",
+      "parentClass": "Stateflow.State",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "OR",
+      "executionOrder": 0,
+      "isSubchart": false,
+      "position": [
+        1860.7778,
+        1058.3796,
+        149.1667,
+        74.0952
+      ]
+    },
+    {
+      "id": 76,
+      "name": "OBC_HVC_path",
+      "label": "OBC_HVC_path\n\n",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBCOn/OBC_Relay_PosPreEn",
+      "parentClass": "Stateflow.State",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "AND",
+      "executionOrder": 1,
+      "isSubchart": false,
+      "position": [
+        246.0812,
+        1146.2717,
+        221.4667,
+        237.1414
+      ]
+    },
+    {
+      "id": 81,
+      "name": "OBC_PDU_path",
+      "label": "OBC_PDU_path\n",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBCOn/OBC_Relay_PosPreEn",
+      "parentClass": "Stateflow.State",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "AND",
+      "executionOrder": 2,
+      "isSubchart": false,
+      "position": [
+        233.7191,
+        1391.6701,
+        246.1909,
+        256.3306
+      ]
+    },
+    {
+      "id": 92,
+      "name": "HVC_path",
+      "label": "HVC_path\n\n",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn/Relay_PosPreEn",
+      "parentClass": "Stateflow.State",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "AND",
+      "executionOrder": 1,
+      "isSubchart": false,
+      "position": [
+        825.9267,
+        1302.0711,
+        221.4667,
+        237.1414
+      ]
+    },
+    {
+      "id": 97,
+      "name": "BRS_path",
+      "label": "BRS_path",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn/Relay_PosPreEn",
+      "parentClass": "Stateflow.State",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "AND",
+      "executionOrder": 3,
+      "isSubchart": false,
+      "position": [
+        1100.5934,
+        1325.3032,
+        161.3333,
+        445
+      ]
+    },
+    {
+      "id": 103,
+      "name": "PDU_path",
+      "label": "PDU_path\n",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn/Relay_PosPreEn",
+      "parentClass": "Stateflow.State",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "AND",
+      "executionOrder": 2,
+      "isSubchart": false,
+      "position": [
+        822.5933,
+        1578.2655,
+        228.1333,
+        235.4747
+      ]
+    },
+    {
+      "id": 77,
+      "name": "OBC_HVC_wait",
+      "label": "OBC_HVC_wait\nen:\n   OBC_HVCReady = false;",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBCOn/OBC_Relay_PosPreEn/OBC_HVC_path",
+      "parentClass": "Stateflow.State",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "OR",
+      "executionOrder": 0,
+      "isSubchart": false,
+      "position": [
+        274.8821,
+        1187.3071,
+        129.1667,
+        63.3333
+      ]
+    },
+    {
+      "id": 78,
+      "name": "OBC_HVC_Ready",
+      "label": "OBC_HVC_Ready\nen:\n    OBC_HVCReady = true;\n    VCU_DCDC1_En = 1;\n",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBCOn/OBC_Relay_PosPreEn/OBC_HVC_path",
+      "parentClass": "Stateflow.State",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "OR",
+      "executionOrder": 0,
+      "isSubchart": false,
+      "position": [
+        269.8146,
+        1270.7464,
+        174,
+        95.6667
+      ]
+    },
+    {
+      "id": 82,
+      "name": "OBC_PDU_wait",
+      "label": "OBC_PDU_wait\nen:\n  OBC_PDUReady = false;",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBCOn/OBC_Relay_PosPreEn/OBC_PDU_path",
+      "parentClass": "Stateflow.State",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "OR",
+      "executionOrder": 0,
+      "isSubchart": false,
+      "position": [
+        292.0267,
+        1431.0388,
+        127.5,
+        60
+      ]
+    },
+    {
+      "id": 83,
+      "name": "OBC_PDU_Ready",
+      "label": "OBC_PDU_Ready\nen:\n    OBC_PDUReady = true;\n    DcdcCmd = 1;\n",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBCOn/OBC_Relay_PosPreEn/OBC_PDU_path",
+      "parentClass": "Stateflow.State",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "OR",
+      "executionOrder": 0,
+      "isSubchart": false,
+      "position": [
+        268.7767,
+        1535.3339,
+        174,
+        95.6667
+      ]
+    },
+    {
+      "id": 93,
+      "name": "HVC_wait",
+      "label": "HVC_wait\nen:\n   HVCReady = false;",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn/Relay_PosPreEn/HVC_path",
+      "parentClass": "Stateflow.State",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "OR",
+      "executionOrder": 0,
+      "isSubchart": false,
+      "position": [
+        854.7276,
+        1343.1065,
+        129.1667,
+        63.3333
+      ]
+    },
+    {
+      "id": 94,
+      "name": "HVC_Ready",
+      "label": "HVC_Ready\nen:\n    HVCReady = true;\n    VCU_DCDC1_En = 1;\n    VCU2OilMotor_En = 1;\n    VCU2DrvMotor_En = 1;",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn/Relay_PosPreEn/HVC_path",
+      "parentClass": "Stateflow.State",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "OR",
+      "executionOrder": 0,
+      "isSubchart": false,
+      "position": [
+        842.9267,
+        1424.8791,
+        174,
+        95.6667
+      ]
+    },
+    {
+      "id": 98,
+      "name": "BRS_wait",
+      "label": "BRS_wait\ndu:\n OnOffCmd = 0;",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn/Relay_PosPreEn/BRS_path",
+      "parentClass": "Stateflow.State",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "OR",
+      "executionOrder": 0,
+      "isSubchart": false,
+      "position": [
+        1132.0934,
+        1401.1366,
+        90,
+        60
+      ]
+    },
+    {
+      "id": 99,
+      "name": "BRS_en",
+      "label": "BRS_en\ndu:\n OnOffCmd = 1;",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn/Relay_PosPreEn/BRS_path",
+      "parentClass": "Stateflow.State",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "OR",
+      "executionOrder": 0,
+      "isSubchart": false,
+      "position": [
+        1132.0934,
+        1565.1366,
+        90,
+        60
+      ]
+    },
+    {
+      "id": 104,
+      "name": "PDU_wait",
+      "label": "PDU_wait\nen:\n   PDUReady = false;",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn/Relay_PosPreEn/PDU_path",
+      "parentClass": "Stateflow.State",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "OR",
+      "executionOrder": 0,
+      "isSubchart": false,
+      "position": [
+        862.8433,
+        1617.6342,
+        127.5,
+        60
+      ]
+    },
+    {
+      "id": 105,
+      "name": "PDU_Ready",
+      "label": "PDU_Ready\nen:\n    PDUReady = true;\n    DcdcCmd = 1;\n    TM_MCU_Enable = 1;\n    ISG_MCU_Enable = 1;",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn/Relay_PosPreEn/PDU_path",
+      "parentClass": "Stateflow.State",
+      "decomposition": "EXCLUSIVE_OR",
+      "type": "OR",
+      "executionOrder": 0,
+      "isSubchart": false,
+      "position": [
+        839.5933,
+        1701.0736,
+        174,
+        95.6667
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "id": 164,
+      "label": "[OBC_Front_OffDone&&OBC_Rear_OffDone]",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "executionOrder": 1,
+      "sourceId": 39,
+      "source": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBC_Down",
+      "sourceClass": "Stateflow.State",
+      "destinationId": 54,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBC_BMS_PowerOn",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        771.3124,
+        265.4223
+      ]
+    },
+    {
+      "id": 165,
+      "label": "[BMS_ChargeStatus==0]",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "executionOrder": 1,
+      "sourceId": 54,
+      "source": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBC_BMS_PowerOn",
+      "sourceClass": "Stateflow.State",
+      "destinationId": 56,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/Init",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        1034.5264,
+        409.3456
+      ]
+    },
+    {
+      "id": 166,
+      "label": "[Relay_NegativeStatus == 0]",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "executionOrder": 1,
+      "sourceId": 55,
+      "source": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/BMS_PowerOff",
+      "sourceClass": "Stateflow.State",
+      "destinationId": 56,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/Init",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        1387.4313,
+        545.8504
+      ]
+    },
+    {
+      "id": 167,
+      "label": "[Front_OffDone&&Rear_OffDone]",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "executionOrder": 1,
+      "sourceId": 57,
+      "source": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOff",
+      "sourceClass": "Stateflow.State",
+      "destinationId": 55,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/BMS_PowerOff",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        1649.3411,
+        612.4224
+      ]
+    },
+    {
+      "id": 168,
+      "label": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "executionOrder": 1,
+      "sourceId": -1,
+      "source": "",
+      "sourceClass": "",
+      "destinationId": 56,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/Init",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        897.7401,
+        634.0101
+      ]
+    },
+    {
+      "id": 169,
+      "label": "[Key == 0||ChargeSig ==0||ShutDown ~=0]",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "executionOrder": 1,
+      "sourceId": 72,
+      "source": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBCOn",
+      "sourceClass": "Stateflow.State",
+      "destinationId": 39,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBC_Down",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        454.9085,
+        750.8562
+      ]
+    },
+    {
+      "id": 170,
+      "label": "[Key == 0&&ChargeSig == 1&&ShutDown == 0]",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "executionOrder": 2,
+      "sourceId": 56,
+      "source": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/Init",
+      "sourceClass": "Stateflow.State",
+      "destinationId": 72,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBCOn",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        748.8378,
+        849.8502
+      ]
+    },
+    {
+      "id": 171,
+      "label": "[Key == 1&&ShutDown == 0]",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "executionOrder": 1,
+      "sourceId": 56,
+      "source": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/Init",
+      "sourceClass": "Stateflow.State",
+      "destinationId": 89,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        1067.1637,
+        969.1497
+      ]
+    },
+    {
+      "id": 172,
+      "label": "[Key == 0||ShutDown ~= 0]",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart",
+      "executionOrder": 1,
+      "sourceId": 89,
+      "source": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn",
+      "sourceClass": "Stateflow.State",
+      "destinationId": 57,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOff",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        1401.6902,
+        1162.7673
+      ]
+    },
+    {
+      "id": 86,
+      "label": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBCOn",
+      "executionOrder": 1,
+      "sourceId": -1,
+      "source": "",
+      "sourceClass": "",
+      "destinationId": 73,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBCOn/OBCOff",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        295.3202,
+        804.7465
+      ]
+    },
+    {
+      "id": 87,
+      "label": "[BMS_SelfCheckStatus == 1&&Gear == 0&&VehSpdFb<ChargeVehTh&&ParkReleaseSw == 0]",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBCOn",
+      "executionOrder": 1,
+      "sourceId": 73,
+      "source": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBCOn/OBCOff",
+      "sourceClass": "Stateflow.State",
+      "destinationId": 74,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBCOn/OBCEn",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        320.1101,
+        888.3361
+      ]
+    },
+    {
+      "id": 88,
+      "label": "[BMS_ChargeStatus==1&&Relay_NegativeStatus == 1]",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBCOn",
+      "executionOrder": 1,
+      "sourceId": 74,
+      "source": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBCOn/OBCEn",
+      "sourceClass": "Stateflow.State",
+      "destinationId": 75,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBCOn/OBC_Relay_PosPreEn",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        313.6384,
+        1000.4981
+      ]
+    },
+    {
+      "id": 108,
+      "label": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn",
+      "executionOrder": 1,
+      "sourceId": -1,
+      "source": "",
+      "sourceClass": "",
+      "destinationId": 90,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn/Relay_NegEn",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        841.5456,
+        1062.7718
+      ]
+    },
+    {
+      "id": 109,
+      "label": "[Relay_NegativeStatus == 1]",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn",
+      "executionOrder": 1,
+      "sourceId": 90,
+      "source": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn/Relay_NegEn",
+      "sourceClass": "Stateflow.State",
+      "destinationId": 91,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn/Relay_PosPreEn",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        1119.1001,
+        1120.253
+      ]
+    },
+    {
+      "id": 44,
+      "label": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBC_Down/OBC_FrontPwrOff",
+      "executionOrder": 1,
+      "sourceId": -1,
+      "source": "",
+      "sourceClass": "",
+      "destinationId": 41,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBC_Down/OBC_FrontPwrOff/OBC_Front_LVDown",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        126.9997,
+        239.1688
+      ]
+    },
+    {
+      "id": 45,
+      "label": "[Cnt3>=5]",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBC_Down/OBC_FrontPwrOff",
+      "executionOrder": 1,
+      "sourceId": 41,
+      "source": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBC_Down/OBC_FrontPwrOff/OBC_Front_LVDown",
+      "sourceClass": "Stateflow.State",
+      "destinationId": 42,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBC_Down/OBC_FrontPwrOff/OBC_Front_HVDown",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        121.6803,
+        377.366
+      ]
+    },
+    {
+      "id": 46,
+      "label": "[MotDrv1_PowOnSt == 0&&MotDrv2_PowOnSt==0]",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBC_Down/OBC_FrontPwrOff",
+      "executionOrder": 1,
+      "sourceId": 42,
+      "source": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBC_Down/OBC_FrontPwrOff/OBC_Front_HVDown",
+      "sourceClass": "Stateflow.State",
+      "destinationId": 43,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBC_Down/OBC_FrontPwrOff/Front_Off",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        121.0625,
+        507.2135
+      ]
+    },
+    {
+      "id": 51,
+      "label": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBC_Down/OBC_RearPwrOff",
+      "executionOrder": 1,
+      "sourceId": -1,
+      "source": "",
+      "sourceClass": "",
+      "destinationId": 48,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBC_Down/OBC_RearPwrOff/OBC_Rear_LVDown",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        434.5417,
+        248.276
+      ]
+    },
+    {
+      "id": 52,
+      "label": "[Cnt4>=5]",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBC_Down/OBC_RearPwrOff",
+      "executionOrder": 1,
+      "sourceId": 48,
+      "source": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBC_Down/OBC_RearPwrOff/OBC_Rear_LVDown",
+      "sourceClass": "Stateflow.State",
+      "destinationId": 49,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBC_Down/OBC_RearPwrOff/OBC_Rear_HVDown",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        429.2222,
+        381.9196
+      ]
+    },
+    {
+      "id": 53,
+      "label": "[PDU_ShrRlySts ==0&&PDU_PosRlySts ==0&&PDU_PosRlyPcgRlySts ==0]",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBC_Down/OBC_RearPwrOff",
+      "executionOrder": 1,
+      "sourceId": 49,
+      "source": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBC_Down/OBC_RearPwrOff/OBC_Rear_HVDown",
+      "sourceClass": "Stateflow.State",
+      "destinationId": 50,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBC_Down/OBC_RearPwrOff/Rear_Off",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        433.5,
+        507.2134
+      ]
+    },
+    {
+      "id": 62,
+      "label": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOff/FrontPwrOff",
+      "executionOrder": 1,
+      "sourceId": -1,
+      "source": "",
+      "sourceClass": "",
+      "destinationId": 59,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOff/FrontPwrOff/Front_LVDown",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        1589.3663,
+        759.3672
+      ]
+    },
+    {
+      "id": 63,
+      "label": "[Cnt1>=5]",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOff/FrontPwrOff",
+      "executionOrder": 1,
+      "sourceId": 59,
+      "source": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOff/FrontPwrOff/Front_LVDown",
+      "sourceClass": "Stateflow.State",
+      "destinationId": 60,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOff/FrontPwrOff/Front_HVDown",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        1584.0469,
+        893.3421
+      ]
+    },
+    {
+      "id": 64,
+      "label": "[MotDrv1_PowOnSt == 0&&MotDrv2_PowOnSt==0]",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOff/FrontPwrOff",
+      "executionOrder": 1,
+      "sourceId": 60,
+      "source": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOff/FrontPwrOff/Front_HVDown",
+      "sourceClass": "Stateflow.State",
+      "destinationId": 61,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOff/FrontPwrOff/Front_Off",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        1583.4291,
+        1018.9674
+      ]
+    },
+    {
+      "id": 69,
+      "label": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOff/RearPwrOff",
+      "executionOrder": 1,
+      "sourceId": -1,
+      "source": "",
+      "sourceClass": "",
+      "destinationId": 66,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOff/RearPwrOff/Rear_LVDown",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        1896.9083,
+        760.0299
+      ]
+    },
+    {
+      "id": 70,
+      "label": "[Cnt2>=5]",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOff/RearPwrOff",
+      "executionOrder": 1,
+      "sourceId": 66,
+      "source": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOff/RearPwrOff/Rear_LVDown",
+      "sourceClass": "Stateflow.State",
+      "destinationId": 67,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOff/RearPwrOff/Rear_HVDown",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        1891.5888,
+        893.6735
+      ]
+    },
+    {
+      "id": 71,
+      "label": "[PDU_ShrRlySts ==0&&PDU_PosRlySts ==0&&PDU_PosRlyPcgRlySts ==0]",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOff/RearPwrOff",
+      "executionOrder": 1,
+      "sourceId": 67,
+      "source": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOff/RearPwrOff/Rear_HVDown",
+      "sourceClass": "Stateflow.State",
+      "destinationId": 68,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOff/RearPwrOff/Rear_Off",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        1895.8666,
+        1018.9674
+      ]
+    },
+    {
+      "id": 79,
+      "label": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBCOn/OBC_Relay_PosPreEn/OBC_HVC_path",
+      "executionOrder": 1,
+      "sourceId": -1,
+      "source": "",
+      "sourceClass": "",
+      "destinationId": 77,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBCOn/OBC_Relay_PosPreEn/OBC_HVC_path/OBC_HVC_wait",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        327.9839,
+        1172.3071
+      ]
+    },
+    {
+      "id": 80,
+      "label": "[MotDrv1_PowOnSt == 1&&MotDrv2_PowOnSt==1]",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBCOn/OBC_Relay_PosPreEn/OBC_HVC_path",
+      "executionOrder": 1,
+      "sourceId": 77,
+      "source": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBCOn/OBC_Relay_PosPreEn/OBC_HVC_path/OBC_HVC_wait",
+      "sourceClass": "Stateflow.State",
+      "destinationId": 78,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBCOn/OBC_Relay_PosPreEn/OBC_HVC_path/OBC_HVC_Ready",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        315.7487,
+        1256.6934
+      ]
+    },
+    {
+      "id": 84,
+      "label": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBCOn/OBC_Relay_PosPreEn/OBC_PDU_path",
+      "executionOrder": 1,
+      "sourceId": -1,
+      "source": "",
+      "sourceClass": "",
+      "destinationId": 82,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBCOn/OBC_Relay_PosPreEn/OBC_PDU_path/OBC_PDU_wait",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        344.4434,
+        1416.0388
+      ]
+    },
+    {
+      "id": 85,
+      "label": "[PDU_ShrRlySts ==1&&PDU_PosRlySts ==1&&PDU_PosRlyPcgRlySts ==1]",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBCOn/OBC_Relay_PosPreEn/OBC_PDU_path",
+      "executionOrder": 1,
+      "sourceId": 82,
+      "source": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBCOn/OBC_Relay_PosPreEn/OBC_PDU_path/OBC_PDU_wait",
+      "sourceClass": "Stateflow.State",
+      "destinationId": 83,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/OBCOn/OBC_Relay_PosPreEn/OBC_PDU_path/OBC_PDU_Ready",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        332.8934,
+        1509.1863
+      ]
+    },
+    {
+      "id": 95,
+      "label": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn/Relay_PosPreEn/HVC_path",
+      "executionOrder": 1,
+      "sourceId": -1,
+      "source": "",
+      "sourceClass": "",
+      "destinationId": 93,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn/Relay_PosPreEn/HVC_path/HVC_wait",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        907.8294,
+        1328.1065
+      ]
+    },
+    {
+      "id": 96,
+      "label": "[MotDrv1_PowOnSt == 1&&MotDrv2_PowOnSt==1]",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn/Relay_PosPreEn/HVC_path",
+      "executionOrder": 1,
+      "sourceId": 93,
+      "source": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn/Relay_PosPreEn/HVC_path/HVC_wait",
+      "sourceClass": "Stateflow.State",
+      "destinationId": 94,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn/Relay_PosPreEn/HVC_path/HVC_Ready",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        895.5942,
+        1411.6595
+      ]
+    },
+    {
+      "id": 100,
+      "label": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn/Relay_PosPreEn/BRS_path",
+      "executionOrder": 1,
+      "sourceId": -1,
+      "source": "",
+      "sourceClass": "",
+      "destinationId": 98,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn/Relay_PosPreEn/BRS_path/BRS_wait",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        1152.6434,
+        1386.1366
+      ]
+    },
+    {
+      "id": 101,
+      "label": "[AccPadle >0.1||VehSpdFb<BRSEnSpdTh1]",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn/Relay_PosPreEn/BRS_path",
+      "executionOrder": 1,
+      "sourceId": 99,
+      "source": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn/Relay_PosPreEn/BRS_path/BRS_en",
+      "sourceClass": "Stateflow.State",
+      "destinationId": 98,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn/Relay_PosPreEn/BRS_path/BRS_wait",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        1159.0934,
+        1517.1366
+      ]
+    },
+    {
+      "id": 102,
+      "label": "[AccPadle <0.05&&VehSpdFb>BRSEnSpdTh2&&NonBRS == 0]",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn/Relay_PosPreEn/BRS_path",
+      "executionOrder": 1,
+      "sourceId": 98,
+      "source": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn/Relay_PosPreEn/BRS_path/BRS_wait",
+      "sourceClass": "Stateflow.State",
+      "destinationId": 99,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn/Relay_PosPreEn/BRS_path/BRS_en",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        1195.0934,
+        1509.1366
+      ]
+    },
+    {
+      "id": 106,
+      "label": "",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn/Relay_PosPreEn/PDU_path",
+      "executionOrder": 1,
+      "sourceId": -1,
+      "source": "",
+      "sourceClass": "",
+      "destinationId": 104,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn/Relay_PosPreEn/PDU_path/PDU_wait",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        915.26,
+        1602.6342
+      ]
+    },
+    {
+      "id": 107,
+      "label": "[PDU_ShrRlySts ==1&&PDU_PosRlySts ==1&&PDU_PosRlyPcgRlySts ==1]",
+      "description": "",
+      "parent": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn/Relay_PosPreEn/PDU_path",
+      "executionOrder": 1,
+      "sourceId": 104,
+      "source": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn/Relay_PosPreEn/PDU_path/PDU_wait",
+      "sourceClass": "Stateflow.State",
+      "destinationId": 105,
+      "destination": "ZT_VehCtrl_24B/VehCtrl/EnergyManage/Chart/PowerOn/Relay_PosPreEn/PDU_path/PDU_Ready",
+      "destinationClass": "Stateflow.State",
+      "sourceEndPoint": [],
+      "destinationEndPoint": [],
+      "midPoint": [
+        903.71,
+        1685.3539
+      ]
+    }
+  ],
+  "junctions": [],
+  "boxes": [],
+  "notes": [],
+  "functions": [],
+  "counts": {
+    "data": 54,
+    "events": 0,
+    "states": 43,
+    "transitions": 37,
+    "junctions": 0,
+    "boxes": 0,
+    "notes": 0,
+    "functions": 0
+  }
+}

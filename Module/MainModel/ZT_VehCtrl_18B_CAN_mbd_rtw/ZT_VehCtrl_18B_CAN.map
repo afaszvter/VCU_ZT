@@ -72,6 +72,7 @@ DI34                0x1               ZT_VehCtrl_18B_CAN.o
 LS004               0x1               ZT_VehCtrl_18B_CAN.o
 canCom1_recvBuff29  0x4c              ZT_VehCtrl_18B_CAN.o
 Cnt_TMS_OUT         0x1               ZT_VehCtrl_18B_CAN.o
+canCom0_recvBuff39  0x4c              ZT_VehCtrl_18B_CAN.o
 DI33_PWM_DC         0x4               ZT_VehCtrl_18B_CAN.o
 LS014               0x1               ZT_VehCtrl_18B_CAN.o
 PaxAC_PowOnCmd      0x1               ZT_VehCtrl_18B_CAN.o
@@ -244,7 +245,6 @@ pcm_wRecTimeDiv     0x2               freemaster_rec.o
 ZT_VehCtrl_18B_CAN_B
                     0x198             ZT_VehCtrl_18B_CAN.o
 HS014               0x1               ZT_VehCtrl_18B_CAN.o
-canCom1_recvBuff39  0x4c              ZT_VehCtrl_18B_CAN.o
 LS002               0x1               ZT_VehCtrl_18B_CAN.o
 DcacEpsCmd          0x4               ZT_VehCtrl_18B_CAN.o
 LSO19_PWM_FRQ       0x4               ZT_VehCtrl_18B_CAN.o
@@ -4137,11 +4137,11 @@ LOAD c:/users/22654/appdata/roaming/mathworks/matlab add-ons/toolboxes/nxp_mbdto
  .text          0x01004324       0x48 c:/users/22654/appdata/roaming/mathworks/matlab add-ons/toolboxes/nxp_mbdtoolbox_mpc57xx(2)/tools/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtend.o
  *(.text.*)
  .text.ZT_VehCtrl_18B_CAN_CAN0
-                0x0100436c      0x198 ZT_VehCtrl_18B_CAN.o
+                0x0100436c      0x1b8 ZT_VehCtrl_18B_CAN.o
                 0x0100436c                ZT_VehCtrl_18B_CAN_CAN0
  .text.ZT_VehCtrl_18B_CAN_CAN1
-                0x01004504      0x282 ZT_VehCtrl_18B_CAN.o
-                0x01004504                ZT_VehCtrl_18B_CAN_CAN1
+                0x01004524      0x262 ZT_VehCtrl_18B_CAN.o
+                0x01004524                ZT_VehCtrl_18B_CAN_CAN1
  *fill*         0x01004786        0x2 
  .text.ZT_VehCtrl_18B_CAN_step
                 0x01004788     0x2280 ZT_VehCtrl_18B_CAN.o
@@ -5737,43 +5737,43 @@ LOAD c:/users/22654/appdata/roaming/mathworks/matlab add-ons/toolboxes/nxp_mbdto
  *(COMMON)
  COMMON         0x40002b28     0x1588 ZT_VehCtrl_18B_CAN.o
                 0x40002b28                canCom1_recvBuff29
-                0x40002b74                canCom0_recvBuff3
-                0x40002bc0                canCom1_recvBuff27
-                0x40002c0c                canCom0_recvBuff12
-                0x40002c58                canCom0_recvBuff37
-                0x40002ca4                canCom1_recvBuff43
-                0x40002cf0                canCom1_recvBuff33
-                0x40002d3c                spiMasterState3
-                0x40002dd8                canCom1_recvBuff41
-                0x40002e24                canCom0_recvBuff6
-                0x40002e70                canCom1_recvBuff31
-                0x40002ebc                canCom0_recvBuff13
-                0x40002f08                canCom1_State
-                0x4000331c                canCom0_recvBuff9
-                0x40003368                canCom1_recvBuff35
-                0x400033b4                canCom1_recvBuff24
-                0x40003400                canCom0_recvBuff1
-                0x4000344c                canCom1_recvBuff45
-                0x40003498                canCom1_recvBuff26
-                0x400034e4                canCom0_recvBuff10
-                0x40003530                ZT_VehCtrl_18B_CAN_PrevZCX
-                0x4000353c                canCom0_recvBuff11
-                0x40003588                spiMasterState0
-                0x40003624                canCom0_recvBuff38
-                0x40003670                canCom1_recvBuff30
-                0x400036bc                canCom1_recvBuff42
-                0x40003708                canCom1_recvBuff34
-                0x40003754                canCom1_recvBuff40
-                0x400037a0                canCom0_recvBuff2
-                0x400037ec                canCom0_recvBuff36
-                0x40003838                canCom1_recvBuff28
-                0x40003884                canCom0_recvBuff5
-                0x400038d0                canCom1_recvBuff25
-                0x4000391c                canCom1_recvBuff46
-                0x40003968                canCom0_State
-                0x40003d80                ZT_VehCtrl_18B_CAN_B
-                0x40003f18                canCom1_recvBuff39
-                0x40003f64                canCom1_recvBuff32
+                0x40002b74                canCom0_recvBuff39
+                0x40002bc0                canCom0_recvBuff3
+                0x40002c0c                canCom1_recvBuff27
+                0x40002c58                canCom0_recvBuff12
+                0x40002ca4                canCom0_recvBuff37
+                0x40002cf0                canCom1_recvBuff43
+                0x40002d3c                canCom1_recvBuff33
+                0x40002d88                spiMasterState3
+                0x40002e24                canCom1_recvBuff41
+                0x40002e70                canCom0_recvBuff6
+                0x40002ebc                canCom1_recvBuff31
+                0x40002f08                canCom0_recvBuff13
+                0x40002f54                canCom1_State
+                0x40003368                canCom0_recvBuff9
+                0x400033b4                canCom1_recvBuff35
+                0x40003400                canCom1_recvBuff24
+                0x4000344c                canCom0_recvBuff1
+                0x40003498                canCom1_recvBuff45
+                0x400034e4                canCom1_recvBuff26
+                0x40003530                canCom0_recvBuff10
+                0x4000357c                ZT_VehCtrl_18B_CAN_PrevZCX
+                0x40003588                canCom0_recvBuff11
+                0x400035d4                spiMasterState0
+                0x40003670                canCom0_recvBuff38
+                0x400036bc                canCom1_recvBuff30
+                0x40003708                canCom1_recvBuff42
+                0x40003754                canCom1_recvBuff34
+                0x400037a0                canCom1_recvBuff40
+                0x400037ec                canCom0_recvBuff2
+                0x40003838                canCom0_recvBuff36
+                0x40003884                canCom1_recvBuff28
+                0x400038d0                canCom0_recvBuff5
+                0x4000391c                canCom1_recvBuff25
+                0x40003968                canCom1_recvBuff46
+                0x400039b4                canCom0_State
+                0x40003dc8                ZT_VehCtrl_18B_CAN_B
+                0x40003f60                canCom1_recvBuff32
                 0x40003fb0                ZT_VehCtrl_18B_CAN_DW
                 0x40004018                canCom1_recvBuff44
                 0x40004064                canCom0_recvBuff0
@@ -6155,69 +6155,69 @@ OUTPUT(ZT_VehCtrl_18B_CAN.elf elf32-powerpc)
  .debug_line    0x00011741      0x289 C:/Users/22654/AppData/Roaming/MathWorks/MATLAB Add-Ons/Toolboxes/NXP_MBDToolbox_MPC57xx(2)/tools/S32DS/build_tools/e200_ewl2/lib/e200z4/fp\libm.a(e_fmod.o)
  .debug_line    0x000119ca       0x4d C:/Users/22654/AppData/Roaming/MathWorks/MATLAB Add-Ons/Toolboxes/NXP_MBDToolbox_MPC57xx(2)/tools/S32DS/build_tools/e200_ewl2/lib/e200z4/fp\libc99.a(errno.o)
 
-.debug_info     0x00000000    0x3dcb8
+.debug_info     0x00000000    0x3dcbb
  .debug_info    0x00000000       0x87 core0_intc_sw_handlers.o
  .debug_info    0x00000087       0x82 interrupt_vectors.o
  .debug_info    0x00000109       0x7d startup_MPC5744P.o
- .debug_info    0x00000186     0x7f33 ZT_VehCtrl_18B_CAN.o
- .debug_info    0x000080b9      0x5a4 ZT_VehCtrl_18B_CAN_data.o
- .debug_info    0x0000865d      0xa67 adc0_params.o
- .debug_info    0x000090c4      0xa65 adc1_params.o
- .debug_info    0x00009b29     0x1f9b adc_sar_driver.o
- .debug_info    0x0000bac4     0x6790 clock_MPC57xx.o
- .debug_info    0x00012254     0x47cf dspi_driver.o
- .debug_info    0x00016a23     0x3612 edma_driver.o
- .debug_info    0x0001a035     0x1369 edma_hw_access.o
- .debug_info    0x0001b39e      0x94f edma_irq.o
- .debug_info    0x0001bced      0xd04 etimer0_channel2_config.o
- .debug_info    0x0001c9f1      0xd04 etimer0_channel3_config.o
- .debug_info    0x0001d6f5      0xd04 etimer0_channel5_config.o
- .debug_info    0x0001e3f9      0xd04 etimer1_channel1_config.o
- .debug_info    0x0001f0fd      0xd04 etimer1_channel2_config.o
- .debug_info    0x0001fe01      0xd04 etimer1_channel3_config.o
- .debug_info    0x00020b05      0xd04 etimer2_channel2_config.o
- .debug_info    0x00021809     0x1ec9 etimer_driver.o
- .debug_info    0x000236d2      0xc0f fcan0_mpc_event_callback.o
- .debug_info    0x000242e1      0xc0f fcan1_mpc_event_callback.o
- .debug_info    0x00024ef0     0x47eb flexcan_driver.o
- .debug_info    0x000296db     0x1570 flexcan_hw_access.o
- .debug_info    0x0002ac4b      0x57f flexcan_irq.o
- .debug_info    0x0002b1ca      0x266 freemaster_MPC57xx.o
- .debug_info    0x0002b430      0x1a8 freemaster_appcmd.o
- .debug_info    0x0002b5d8      0x5f4 freemaster_can.o
- .debug_info    0x0002bbcc      0x9c8 freemaster_interface_init.o
- .debug_info    0x0002c594      0x6bc freemaster_protocol.o
- .debug_info    0x0002cc50      0x72a freemaster_rec.o
- .debug_info    0x0002d37a      0x1c6 freemaster_scope.o
- .debug_info    0x0002d540      0x143 freemaster_tsa.o
- .debug_info    0x0002d683     0x106e interrupt_manager_MPC57xx.o
- .debug_info    0x0002e6f1     0x1351 mbd_main.o
- .debug_info    0x0002fa42      0x7a4 mbdt_adc.o
- .debug_info    0x000301e6      0x8fb mbdt_clock.o
- .debug_info    0x00030ae1     0x196e mpc_clock_init.o
- .debug_info    0x0003244f     0x166f mpc_clock_man_panther.o
- .debug_info    0x00033abe     0x141c osif_baremetal.o
- .debug_info    0x00034eda     0x1597 pins_siul2_driver.o
- .debug_info    0x00036471     0x1874 pit_driver.o
- .debug_info    0x00037ce5      0x1c6 pit_hw_access.o
- .debug_info    0x00037eab      0x97a power_manager.o
- .debug_info    0x00038825      0xf1a power_manager_MPC57xx.o
- .debug_info    0x0003973f      0x5f8 power_mc_me_hw_access.o
- .debug_info    0x00039d37      0x253 rtGetInf.o
- .debug_info    0x00039f8a      0x146 rtGetNaN.o
- .debug_info    0x0003a0d0      0x333 rt_nonfinite.o
- .debug_info    0x0003a403      0x1dc rt_zcfcn.o
- .debug_info    0x0003a5df      0x9b0 siul2_hw_access.o
- .debug_info    0x0003af8f      0x23b startup.o
- .debug_info    0x0003b1ca     0x10b8 system_MPC5744P.o
- .debug_info    0x0003c282      0x12e C:/Users/22654/AppData/Roaming/MathWorks/MATLAB Add-Ons/Toolboxes/NXP_MBDToolbox_MPC57xx(2)/tools/S32DS/build_tools/e200_ewl2/lib/e200z4/fp\libc99.a(memcpy.o)
- .debug_info    0x0003c3b0      0x125 C:/Users/22654/AppData/Roaming/MathWorks/MATLAB Add-Ons/Toolboxes/NXP_MBDToolbox_MPC57xx(2)/tools/S32DS/build_tools/e200_ewl2/lib/e200z4/fp\libc99.a(memset.o)
- .debug_info    0x0003c4d5      0x13b C:/Users/22654/AppData/Roaming/MathWorks/MATLAB Add-Ons/Toolboxes/NXP_MBDToolbox_MPC57xx(2)/tools/S32DS/build_tools/e200_ewl2/lib/e200z4/fp\libc99.a(__filll_mem.o)
- .debug_info    0x0003c610      0x6dd C:/Users/22654/AppData/Roaming/MathWorks/MATLAB Add-Ons/Toolboxes/NXP_MBDToolbox_MPC57xx(2)/tools/S32DS/build_tools/e200_ewl2/lib/e200z4/fp\libm.a(math_api.o)
- .debug_info    0x0003cced      0x508 C:/Users/22654/AppData/Roaming/MathWorks/MATLAB Add-Ons/Toolboxes/NXP_MBDToolbox_MPC57xx(2)/tools/S32DS/build_tools/e200_ewl2/lib/e200z4/fp\libm.a(s_floor.o)
- .debug_info    0x0003d1f5      0x479 C:/Users/22654/AppData/Roaming/MathWorks/MATLAB Add-Ons/Toolboxes/NXP_MBDToolbox_MPC57xx(2)/tools/S32DS/build_tools/e200_ewl2/lib/e200z4/fp\libm.a(w_fmod.o)
- .debug_info    0x0003d66e      0x5ae C:/Users/22654/AppData/Roaming/MathWorks/MATLAB Add-Ons/Toolboxes/NXP_MBDToolbox_MPC57xx(2)/tools/S32DS/build_tools/e200_ewl2/lib/e200z4/fp\libm.a(e_fmod.o)
- .debug_info    0x0003dc1c       0x9c C:/Users/22654/AppData/Roaming/MathWorks/MATLAB Add-Ons/Toolboxes/NXP_MBDToolbox_MPC57xx(2)/tools/S32DS/build_tools/e200_ewl2/lib/e200z4/fp\libc99.a(errno.o)
+ .debug_info    0x00000186     0x7f36 ZT_VehCtrl_18B_CAN.o
+ .debug_info    0x000080bc      0x5a4 ZT_VehCtrl_18B_CAN_data.o
+ .debug_info    0x00008660      0xa67 adc0_params.o
+ .debug_info    0x000090c7      0xa65 adc1_params.o
+ .debug_info    0x00009b2c     0x1f9b adc_sar_driver.o
+ .debug_info    0x0000bac7     0x6790 clock_MPC57xx.o
+ .debug_info    0x00012257     0x47cf dspi_driver.o
+ .debug_info    0x00016a26     0x3612 edma_driver.o
+ .debug_info    0x0001a038     0x1369 edma_hw_access.o
+ .debug_info    0x0001b3a1      0x94f edma_irq.o
+ .debug_info    0x0001bcf0      0xd04 etimer0_channel2_config.o
+ .debug_info    0x0001c9f4      0xd04 etimer0_channel3_config.o
+ .debug_info    0x0001d6f8      0xd04 etimer0_channel5_config.o
+ .debug_info    0x0001e3fc      0xd04 etimer1_channel1_config.o
+ .debug_info    0x0001f100      0xd04 etimer1_channel2_config.o
+ .debug_info    0x0001fe04      0xd04 etimer1_channel3_config.o
+ .debug_info    0x00020b08      0xd04 etimer2_channel2_config.o
+ .debug_info    0x0002180c     0x1ec9 etimer_driver.o
+ .debug_info    0x000236d5      0xc0f fcan0_mpc_event_callback.o
+ .debug_info    0x000242e4      0xc0f fcan1_mpc_event_callback.o
+ .debug_info    0x00024ef3     0x47eb flexcan_driver.o
+ .debug_info    0x000296de     0x1570 flexcan_hw_access.o
+ .debug_info    0x0002ac4e      0x57f flexcan_irq.o
+ .debug_info    0x0002b1cd      0x266 freemaster_MPC57xx.o
+ .debug_info    0x0002b433      0x1a8 freemaster_appcmd.o
+ .debug_info    0x0002b5db      0x5f4 freemaster_can.o
+ .debug_info    0x0002bbcf      0x9c8 freemaster_interface_init.o
+ .debug_info    0x0002c597      0x6bc freemaster_protocol.o
+ .debug_info    0x0002cc53      0x72a freemaster_rec.o
+ .debug_info    0x0002d37d      0x1c6 freemaster_scope.o
+ .debug_info    0x0002d543      0x143 freemaster_tsa.o
+ .debug_info    0x0002d686     0x106e interrupt_manager_MPC57xx.o
+ .debug_info    0x0002e6f4     0x1351 mbd_main.o
+ .debug_info    0x0002fa45      0x7a4 mbdt_adc.o
+ .debug_info    0x000301e9      0x8fb mbdt_clock.o
+ .debug_info    0x00030ae4     0x196e mpc_clock_init.o
+ .debug_info    0x00032452     0x166f mpc_clock_man_panther.o
+ .debug_info    0x00033ac1     0x141c osif_baremetal.o
+ .debug_info    0x00034edd     0x1597 pins_siul2_driver.o
+ .debug_info    0x00036474     0x1874 pit_driver.o
+ .debug_info    0x00037ce8      0x1c6 pit_hw_access.o
+ .debug_info    0x00037eae      0x97a power_manager.o
+ .debug_info    0x00038828      0xf1a power_manager_MPC57xx.o
+ .debug_info    0x00039742      0x5f8 power_mc_me_hw_access.o
+ .debug_info    0x00039d3a      0x253 rtGetInf.o
+ .debug_info    0x00039f8d      0x146 rtGetNaN.o
+ .debug_info    0x0003a0d3      0x333 rt_nonfinite.o
+ .debug_info    0x0003a406      0x1dc rt_zcfcn.o
+ .debug_info    0x0003a5e2      0x9b0 siul2_hw_access.o
+ .debug_info    0x0003af92      0x23b startup.o
+ .debug_info    0x0003b1cd     0x10b8 system_MPC5744P.o
+ .debug_info    0x0003c285      0x12e C:/Users/22654/AppData/Roaming/MathWorks/MATLAB Add-Ons/Toolboxes/NXP_MBDToolbox_MPC57xx(2)/tools/S32DS/build_tools/e200_ewl2/lib/e200z4/fp\libc99.a(memcpy.o)
+ .debug_info    0x0003c3b3      0x125 C:/Users/22654/AppData/Roaming/MathWorks/MATLAB Add-Ons/Toolboxes/NXP_MBDToolbox_MPC57xx(2)/tools/S32DS/build_tools/e200_ewl2/lib/e200z4/fp\libc99.a(memset.o)
+ .debug_info    0x0003c4d8      0x13b C:/Users/22654/AppData/Roaming/MathWorks/MATLAB Add-Ons/Toolboxes/NXP_MBDToolbox_MPC57xx(2)/tools/S32DS/build_tools/e200_ewl2/lib/e200z4/fp\libc99.a(__filll_mem.o)
+ .debug_info    0x0003c613      0x6dd C:/Users/22654/AppData/Roaming/MathWorks/MATLAB Add-Ons/Toolboxes/NXP_MBDToolbox_MPC57xx(2)/tools/S32DS/build_tools/e200_ewl2/lib/e200z4/fp\libm.a(math_api.o)
+ .debug_info    0x0003ccf0      0x508 C:/Users/22654/AppData/Roaming/MathWorks/MATLAB Add-Ons/Toolboxes/NXP_MBDToolbox_MPC57xx(2)/tools/S32DS/build_tools/e200_ewl2/lib/e200z4/fp\libm.a(s_floor.o)
+ .debug_info    0x0003d1f8      0x479 C:/Users/22654/AppData/Roaming/MathWorks/MATLAB Add-Ons/Toolboxes/NXP_MBDToolbox_MPC57xx(2)/tools/S32DS/build_tools/e200_ewl2/lib/e200z4/fp\libm.a(w_fmod.o)
+ .debug_info    0x0003d671      0x5ae C:/Users/22654/AppData/Roaming/MathWorks/MATLAB Add-Ons/Toolboxes/NXP_MBDToolbox_MPC57xx(2)/tools/S32DS/build_tools/e200_ewl2/lib/e200z4/fp\libm.a(e_fmod.o)
+ .debug_info    0x0003dc1f       0x9c C:/Users/22654/AppData/Roaming/MathWorks/MATLAB Add-Ons/Toolboxes/NXP_MBDToolbox_MPC57xx(2)/tools/S32DS/build_tools/e200_ewl2/lib/e200z4/fp\libc99.a(errno.o)
 
 .debug_abbrev   0x00000000     0x62bf
  .debug_abbrev  0x00000000       0x14 core0_intc_sw_handlers.o

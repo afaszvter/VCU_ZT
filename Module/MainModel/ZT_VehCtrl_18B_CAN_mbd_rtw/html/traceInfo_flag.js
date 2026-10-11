@@ -28,12 +28,12 @@ function TraceInfoFlag() {
     this.traceFlag["ZT_VehCtrl_18B_CAN.c:485c12"]=1;
     this.traceFlag["ZT_VehCtrl_18B_CAN.c:493c52"]=1;
     this.traceFlag["ZT_VehCtrl_18B_CAN.c:502c12"]=1;
-    this.traceFlag["ZT_VehCtrl_18B_CAN.c:514c52"]=1;
-    this.traceFlag["ZT_VehCtrl_18B_CAN.c:523c16"]=1;
+    this.traceFlag["ZT_VehCtrl_18B_CAN.c:510c52"]=1;
+    this.traceFlag["ZT_VehCtrl_18B_CAN.c:519c12"]=1;
     this.traceFlag["ZT_VehCtrl_18B_CAN.c:531c52"]=1;
     this.traceFlag["ZT_VehCtrl_18B_CAN.c:540c16"]=1;
     this.traceFlag["ZT_VehCtrl_18B_CAN.c:548c52"]=1;
-    this.traceFlag["ZT_VehCtrl_18B_CAN.c:557c13"]=1;
+    this.traceFlag["ZT_VehCtrl_18B_CAN.c:557c16"]=1;
     this.traceFlag["ZT_VehCtrl_18B_CAN.c:565c52"]=1;
     this.traceFlag["ZT_VehCtrl_18B_CAN.c:574c13"]=1;
     this.traceFlag["ZT_VehCtrl_18B_CAN.c:582c52"]=1;
@@ -47,7 +47,7 @@ function TraceInfoFlag() {
     this.traceFlag["ZT_VehCtrl_18B_CAN.c:650c52"]=1;
     this.traceFlag["ZT_VehCtrl_18B_CAN.c:659c13"]=1;
     this.traceFlag["ZT_VehCtrl_18B_CAN.c:667c52"]=1;
-    this.traceFlag["ZT_VehCtrl_18B_CAN.c:676c15"]=1;
+    this.traceFlag["ZT_VehCtrl_18B_CAN.c:676c13"]=1;
     this.traceFlag["ZT_VehCtrl_18B_CAN.c:684c52"]=1;
     this.traceFlag["ZT_VehCtrl_18B_CAN.c:693c15"]=1;
     this.traceFlag["ZT_VehCtrl_18B_CAN.c:701c52"]=1;
@@ -59,7 +59,7 @@ function TraceInfoFlag() {
     this.traceFlag["ZT_VehCtrl_18B_CAN.c:752c52"]=1;
     this.traceFlag["ZT_VehCtrl_18B_CAN.c:761c15"]=1;
     this.traceFlag["ZT_VehCtrl_18B_CAN.c:769c52"]=1;
-    this.traceFlag["ZT_VehCtrl_18B_CAN.c:778c12"]=1;
+    this.traceFlag["ZT_VehCtrl_18B_CAN.c:778c15"]=1;
     this.traceFlag["ZT_VehCtrl_18B_CAN.c:786c52"]=1;
     this.traceFlag["ZT_VehCtrl_18B_CAN.c:795c12"]=1;
     this.traceFlag["ZT_VehCtrl_18B_CAN.c:803c52"]=1;
@@ -641,8 +641,8 @@ function TraceInfoLineFlag() {
     this.lineTraceFlag["ZT_VehCtrl_18B_CAN.c:485"]=1;
     this.lineTraceFlag["ZT_VehCtrl_18B_CAN.c:493"]=1;
     this.lineTraceFlag["ZT_VehCtrl_18B_CAN.c:502"]=1;
-    this.lineTraceFlag["ZT_VehCtrl_18B_CAN.c:514"]=1;
-    this.lineTraceFlag["ZT_VehCtrl_18B_CAN.c:523"]=1;
+    this.lineTraceFlag["ZT_VehCtrl_18B_CAN.c:510"]=1;
+    this.lineTraceFlag["ZT_VehCtrl_18B_CAN.c:519"]=1;
     this.lineTraceFlag["ZT_VehCtrl_18B_CAN.c:531"]=1;
     this.lineTraceFlag["ZT_VehCtrl_18B_CAN.c:540"]=1;
     this.lineTraceFlag["ZT_VehCtrl_18B_CAN.c:548"]=1;

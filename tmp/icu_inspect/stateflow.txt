@@ -1,0 +1,172 @@
+=== CHART: ZT_VehCtrl_24B_2/Initialization & SPI timer1/Chart ===
+[Stateflow.State] Idle\\nen:Flg=0;\\n
+[Stateflow.State] Initialize\\nen:Flg=1;\\n
+[Stateflow.State] Normal\\nen:Flg=2;
+[Stateflow.Transition] 
+[Stateflow.Transition] [ResetFlg==1]
+[Stateflow.Transition] [ResetFlg==1]
+[Stateflow.Transition] [ResetFlg==0]
+[Stateflow.Transition] [InitFlg>0]
+=== CHART: ZT_VehCtrl_24B_2/Initialization & SPI timer1/Chart1 ===
+[Stateflow.State] IDLE\\nen:Flg=0;\\n
+[Stateflow.State] CS1\\nen:Flg=1;cnt=0;\\ndu:cnt = cnt + 1;
+[Stateflow.State] CS5\\nen:Flg=2;cnt=0;\\ndu:cnt = cnt + 1;
+[Stateflow.State] Done\\nen:Flg=9;
+[Stateflow.Transition] 
+[Stateflow.Transition] [VcuMode==0]
+[Stateflow.Transition] [VcuMode==1]
+[Stateflow.Transition] [cnt>20]
+[Stateflow.Transition] [cnt>20]
+=== CHART: ZT_VehCtrl_24B_2/Initialization & SPI timer1/Chart2 ===
+[Stateflow.State] IDLE\\nen:Flg=0;\\n
+[Stateflow.State] CS2\\nen:Flg=1;cnt=0;\\ndu:cnt = cnt + 1;
+[Stateflow.State] CS3\\nen:Flg=2;cnt=0;\\ndu:cnt = cnt + 1;
+[Stateflow.State] Done\\nen:Flg=9;
+[Stateflow.Transition] 
+[Stateflow.Transition] [VcuMode==0]
+[Stateflow.Transition] [VcuMode==1]
+[Stateflow.Transition] [cnt>20]
+[Stateflow.Transition] [cnt>20]
+=== CHART: ZT_VehCtrl_24B_2/SigIn/Chart ===
+[Stateflow.State] N\\nen:\\nGear = 0;\\n
+[Stateflow.State] D\\nen:\\nGear = 1;
+[Stateflow.State] R\\nen:\\nGear = 2;
+[Stateflow.Transition] 
+[Stateflow.Transition] [GearD == 1&&GearR == 0]
+[Stateflow.Transition] [GearD == 0&&GearR == 1]
+[Stateflow.Transition] [GearD == 0&&GearR == 0||GearD == 1&&GearR == 1]
+[Stateflow.Transition] [GearD == 0&&GearR == 0||GearD == 1&&GearR == 1]
+[Stateflow.Transition] [GearD == 0&&GearR == 1]
+[Stateflow.Transition] [GearD == 1&&GearR == 0]
+=== CHART: ZT_VehCtrl_24B_2/Initialization & SPI timer1/CS1 LS/Chart ===
+[Stateflow.State] clear\\nen:high=128+7;low=1;cnt=0;\\ndu:cnt = cnt + 1;
+[Stateflow.State] en\\nen:high=128+1+64;low=0;cnt=0;\\ndu:cnt = cnt + 1;\\n
+[Stateflow.State] config\\nen:high=128+7+64;low=1+128;cnt=0;\\ndu:cnt = cnt + 1;\\n
+[Stateflow.Transition] 
+[Stateflow.Transition] [cnt>5]
+[Stateflow.Transition] [cnt>5]
+=== CHART: ZT_VehCtrl_24B_2/Initialization & SPI timer1/CS3 LS/Chart ===
+[Stateflow.State] ConfigA\\nen:high=80+mode*(1+4);low=0+mode*(1+4);cnt=0;\\ndu:cnt = cnt + 1;
+[Stateflow.State] en\\nen:high=96;low=0;cnt=0;\\n
+[Stateflow.Transition] 
+[Stateflow.Transition] [cnt>4]
+=== CHART: ZT_VehCtrl_24B_2/Initialization & SPI timer1/CS5 LS/Chart ===
+[Stateflow.State] clear\\nen:high=128+7;low=1;cnt=0;\\ndu:cnt = cnt + 1;
+[Stateflow.State] en\\nen:high=128+1+64;low=0;cnt=0;\\ndu:cnt = cnt + 1;\\n
+[Stateflow.State] config\\nen:high=128+7+64;low=1+128;cnt=0;\\n
+[Stateflow.Transition] 
+[Stateflow.Transition] [cnt>5]
+[Stateflow.Transition] [cnt>5]
+=== CHART: ZT_VehCtrl_24B_2/VehCtrl/EnergyManage/Chart ===
+[Stateflow.State] OBC_Down\\nen:\\nOBC_Front_OffDone = false;\\nOBC_Rear_OffDone = false;\\nFlag = 9;\\n
+[Stateflow.State] OBC_BMS_PowerOn\\nen:\\n    VCU_PowerOnReq = 0;\\n    OBCEnSig = 0;\\n    Flag = 10;\\n
+[Stateflow.State] BMS_PowerOff\\nen:\\n    VCU_PowerOnReq = 0;\\n    VCU_UrgencyCutOffPowerReq = 0;\\n    Flag = 5;
+[Stateflow.State] Init\\nen:\\nReady = false;\\nVCU_PowerOnReq = 0;\\nVCU_UrgencyCutOffPowerReq = 0;\\nVCU_DCDC1_En = 2;\\nEDrv1_PowOnCmd = 0;\\nEDrv2_PowOnCmd = 0;\\nDcdcCmd = 0;\\nVCU_ShrRlyCtl = 0;\\nVCU_HghVtgCtl = 0;\\nOnOffCmd = 0;\\nOBCEnSig = 0;\\nFlag = 1;\\n
+[Stateflow.State] PowerOff\\nen:\\nFront_OffDone = false;\\nRear_OffDone = false;\\nFlag = 4;
+[Stateflow.State] OBCOn
+[Stateflow.State] PowerOn
+[Stateflow.Transition] [OBC_Front_OffDone&&OBC_Rear_OffDone]
+[Stateflow.Transition] [BMS_ChargeStatus==0]
+[Stateflow.Transition] [Relay_NegativeStatus == 0]
+[Stateflow.Transition] [Front_OffDone&&Rear_OffDone]
+[Stateflow.Transition] 
+[Stateflow.Transition] [Key == true||ChargeSig ==0||ShutDown ~=0]
+[Stateflow.Transition] [Key == false&&ChargeSig == 1&&ShutDown == 0]
+[Stateflow.Transition] [Key == true&&ShutDown == 0]
+[Stateflow.Transition] [Key == false||ShutDown ~= 0]
+[Stateflow.State] OBC_FrontPwrOff
+[Stateflow.State] OBC_RearPwrOff
+[Stateflow.State] FrontPwrOff
+[Stateflow.State] RearPwrOff
+[Stateflow.State] OBCOff\\nen:\\nOBCEnSig = 0;\\nFlag = 6;
+[Stateflow.State] OBCEn\\nen:\\nOBCEnSig = 1;\\nVCU_PowerOnReq = 1;\\nFlag = 7;\\n
+[Stateflow.State] OBC_Relay_PosPreEn\\nen:\\nEDrv1_PowOnCmd = 1;\\nEDrv2_PowOnCmd = 1;\\nVCU_ShrRlyCtl = 1;\\nVCU_HghVtgCtl = 1;\\nOBC_Ready = OBC_HVCReady && OBC_PDUReady;\\nFlag = 8;
+[Stateflow.Transition] 
+[Stateflow.Transition] [BMS_SelfCheckStatus == 1&&Gear == 0&&VehSpdFb<ChargeVehTh&&ParkReleaseSw == 0]
+[Stateflow.Transition] [BMS_ChargeStatus==1&&Relay_NegativeStatus == 1]
+[Stateflow.State] Relay_NegEn\\nen:\\nReady = false;\\nVCU_PowerOnReq = 1;\\nFlag = 2;\\n
+[Stateflow.State] Relay_PosPreEn\\nen:\\n    EDrv1_PowOnCmd = 1;\\n    EDrv2_PowOnCmd = 1;\\n    VCU_ShrRlyCtl = 1;\\n    VCU_HghVtgCtl = 1;\\n    Ready = HVCReady && PDUReady;\\n    Flag = 3;\\n
+[Stateflow.Transition] 
+[Stateflow.Transition] [Relay_NegativeStatus == 1]
+[Stateflow.State] OBC_Front_LVDown\\nen:Cnt3 = 0;\\ndu:\\n    VCU_DCDC1_En = 2;     % 停止，不能写0\\n    Cnt3 = Cnt3+1;
+[Stateflow.State] OBC_Front_HVDown\\ndu:\\n    EDrv1_PowOnCmd = 0;\\n    EDrv2_PowOnCmd = 0;
+[Stateflow.State] Front_Off\\nen:\\n    OBC_Front_OffDone = true
+[Stateflow.Transition] 
+[Stateflow.Transition] [Cnt3>=5]
+[Stateflow.Transition] [MotDrv1_PowOnSt == 0&&MotDrv2_PowOnSt==0]
+[Stateflow.State] OBC_Rear_LVDown\\nen:Cnt4 = 0;\\ndu:\\n    DcdcCmd = 0;\\n    Cnt4 = Cnt4+1;
+[Stateflow.State] OBC_Rear_HVDown\\ndu:\\n    VCU_ShrRlyCtl = 0;\\n    VCU_HghVtgCtl = 0;
+[Stateflow.State] Rear_Off\\nen:\\n    OBC_Rear_OffDone = true
+[Stateflow.Transition] 
+[Stateflow.Transition] [Cnt4>=5]
+[Stateflow.Transition] [PDU_ShrRlySts ==0&&PDU_PosRlySts ==0&&PDU_PosRlyPcgRlySts ==0]
+[Stateflow.State] Front_LVDown\\nen:Cnt1 = 0;\\ndu:\\n    VCU_DCDC1_En = 2;     % 停止，不能写0\\n    Cnt1 = Cnt1+1;
+[Stateflow.State] Front_HVDown\\ndu:\\n    EDrv1_PowOnCmd = 0;\\n    EDrv2_PowOnCmd = 0;
+[Stateflow.State] Front_Off\\nen:\\n    Front_OffDone = true
+[Stateflow.Transition] 
+[Stateflow.Transition] [Cnt1>=5]
+[Stateflow.Transition] [MotDrv1_PowOnSt == 0&&MotDrv2_PowOnSt==0]
+[Stateflow.State] Rear_LVDown\\nen:Cnt2 = 0;\\ndu:\\n    DcdcCmd = 0;\\n    Cnt2 = Cnt2+1;
+[Stateflow.State] Rear_HVDown\\ndu:\\n    VCU_ShrRlyCtl = 0;\\n    VCU_HghVtgCtl = 0;
+[Stateflow.State] Rear_Off\\nen:\\n    Rear_OffDone = true
+[Stateflow.Transition] 
+[Stateflow.Transition] [Cnt2>=5]
+[Stateflow.Transition] [PDU_ShrRlySts ==0&&PDU_PosRlySts ==0&&PDU_PosRlyPcgRlySts ==0]
+[Stateflow.State] OBC_HVC_path\\n\\n
+[Stateflow.State] OBC_PDU_path\\n
+[Stateflow.State] HVC_path\\n\\n
+[Stateflow.State] BRS_path
+[Stateflow.State] PDU_path\\n
+[Stateflow.State] OBC_HVC_wait\\nen:\\n   OBC_HVCReady = false;
+[Stateflow.State] OBC_HVC_Ready\\nen:\\n    OBC_HVCReady = true;\\n    VCU_DCDC1_En = 1;\\n
+[Stateflow.Transition] 
+[Stateflow.Transition] [MotDrv1_PowOnSt == 1&&MotDrv2_PowOnSt==1]
+[Stateflow.State] OBC_PDU_wait\\nen:\\n  OBC_PDUReady = false;
+[Stateflow.State] OBC_PDU_Ready\\nen:\\n    OBC_PDUReady = true;\\n    DcdcCmd = 1;\\n
+[Stateflow.Transition] 
+[Stateflow.Transition] [PDU_ShrRlySts ==1&&PDU_PosRlySts ==1&&PDU_PosRlyPcgRlySts ==1]
+[Stateflow.State] HVC_Wait\\nen:\\n   HVCReady = false;
+[Stateflow.State] HVC_Ready\\nen:\\n    HVCReady = true;\\n    VCU_DCDC1_En = 1;\\n
+[Stateflow.Transition] 
+[Stateflow.Transition] [MotDrv1_PowOnSt == 1&&MotDrv2_PowOnSt==1]
+[Stateflow.State] BRS_Wait\\ndu:\\n OnOffCmd = 0;\\n MaxChargePowerLimit =0;\\n BRS_PowerReq = 0
+[Stateflow.State] BRS_En\\ndu:\\n OnOffCmd = 1;
+[Stateflow.Transition] 
+[Stateflow.Transition] [AccPadle >0.1||VehSpdFb<BRSEnSpdTh1]
+[Stateflow.Transition] [AccPadle <0.05&&VehSpdFb>BRSEnSpdTh2&&NonBRS == 0]
+[Stateflow.State] PDU_Wait\\nen:\\n   PDUReady = false;
+[Stateflow.State] PDU_Ready\\nen:\\n    PDUReady = true;\\n    DcdcCmd = 1;\\n
+[Stateflow.Transition] 
+[Stateflow.Transition] [PDU_ShrRlySts ==1&&PDU_PosRlySts ==1&&PDU_PosRlyPcgRlySts ==1]
+=== CHART: ZT_VehCtrl_24B_2/VehCtrl/MontionControl/Chart ===
+[Stateflow.State] DriveControl\\n\\n
+[Stateflow.Transition] 
+[Stateflow.State] FrontDrive
+[Stateflow.State] RearDrive
+[Stateflow.State] FrontWait\\nen,du:\\n    VCU2DrvMotor_WorkMode = 0;\\n    VCU2DrvMotor_CtrlMode = 1;\\n    VCU2DrvMotor_TarTrq = 0;\\n    VCU2OilMotor_CtrlMode = 1;
+[Stateflow.State] FrontActive_D\\nen,du:\\n    VCU2DrvMotor_WorkMode = 0;\\n    VCU2DrvMotor_CtrlMode = 1;\\n    VCU2DrvMotor_TarTrq = TrqCmd_F;\\n    VCU2OilMotor_CtrlMode = 1;\\n
+[Stateflow.State] FrontActive_R\\nen,du:\\n    VCU2DrvMotor_WorkMode = 2;\\n    VCU2DrvMotor_CtrlMode = 1;\\n    VCU2DrvMotor_TarTrq = TrqCmd_F;\\n    VCU2OilMotor_CtrlMode = 1;\\n
+[Stateflow.Transition] 
+[Stateflow.Transition] [Gear == 1]
+[Stateflow.Transition] [Gear == 0]
+[Stateflow.Transition] [Gear == 0]
+[Stateflow.Transition] [Gear == 2]
+[Stateflow.Transition] [Gear == 2]
+[Stateflow.Transition] [Gear == 1]
+[Stateflow.State] RearWait\\nen,du:\\n    TM_Gear = 0;\\n    TM_Control_Mode = 2;\\n    TM_Demand_Torque = 0;\\n    ISG_Control_Mode = 0;\\n
+[Stateflow.State] RearActive_D\\nen,du:\\n    TM_Gear = 1;\\n    TM_Control_Mode = 2;\\n    TM_Demand_Torque = TrqCmd_R;\\n    ISG_Control_Mode = 2;\\n
+[Stateflow.State] RearActive_R\\nen,du:\\n    TM_Gear = 1;\\n    TM_Control_Mode = 2;\\n    TM_Demand_Torque = TrqCmd_R;\\n    ISG_Control_Mode = 2;\\n
+[Stateflow.Transition] 
+[Stateflow.Transition] [Gear == 1]
+[Stateflow.Transition] [Gear == 0]
+[Stateflow.Transition] [Gear == 0]
+[Stateflow.Transition] [Gear == 2]
+[Stateflow.Transition] [Gear == 2]
+[Stateflow.Transition] [Gear == 1]
+=== CHART: ZT_VehCtrl_24B_2/SigOut/GPIO
+/PWM_OUT/FreqCMD ===
+[Stateflow.State] A\\ndu:\\nfreq = 20000;\\ncntr = cntr + 1;\\ndc = 0.25;  
+[Stateflow.State] A1\\ndu:\\nfreq = 10000;\\ncntr = cntr - 1;\\ndc =  0.5;
+[Stateflow.Transition] {cntr=0;dc=0;}
+[Stateflow.Transition] [cntr < 1]
+[Stateflow.Transition] [cntr > 50]
